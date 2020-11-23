@@ -1,1 +1,321 @@
-<mxfile host="app.diagrams.net" modified="2020-11-23T17:54:02.904Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="u6p685VCsUi0KKDu64zx" version="13.9.9" type="github"><diagram id="JMxKD8hb092ScM9Eg6qc" name="Page-1">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</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-23T17:57:16.267Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="ZeRiYImJUcuO9f3BcOkq" version="13.9.9" type="github">
+  <diagram id="JMxKD8hb092ScM9Eg6qc" name="Page-1">
+    <mxGraphModel dx="1422" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-5" value="PROCES PRZELEWU ZEWNĘTRZNEGO STANDARDOWEGO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="10" y="10" width="1150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-1" value="BANK A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="10" y="40" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-3" value="JEDN. ROZLICZENIOWA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#3700CC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="40" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-4" value="BANK B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="40" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="74" width="350" height="456" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-7" target="vHtYU_74a8iZQ1tVg8qE-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-7" value="&lt;span style=&quot;font-weight: normal&quot;&gt;1. Zlecenie przelewu przez Klienta&lt;br&gt;(Wypełnienie formularza)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="120" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-9" target="vHtYU_74a8iZQ1tVg8qE-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-9" value="&lt;span style=&quot;font-weight: normal&quot;&gt;2. Określenie wypłacalności Klienta&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="190" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-10" target="vHtYU_74a8iZQ1tVg8qE-17" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-10" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3. Walidacja numeru konta:&lt;br&gt;&amp;nbsp; &amp;nbsp;- suma kontrolna&lt;br&gt;&amp;nbsp; &amp;nbsp;- określenie banku =&amp;gt; określenie typu przelewu (wewnętrzny / &lt;/span&gt;zewnętrzny&lt;span style=&quot;font-weight: 400&quot;&gt;)&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="260" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-17" target="vHtYU_74a8iZQ1tVg8qE-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-17" value="&lt;span style=&quot;font-weight: 400&quot;&gt;4. Odjęcie środków z konta - zapis w historii&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="380" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-19" target="vHtYU_74a8iZQ1tVg8qE-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-19" value="&lt;span style=&quot;font-weight: 400&quot;&gt;5. Zapytanie POST do JR (wysłanie dyspozycji)&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="453.5" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="74" width="350" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;shape=flexArrow;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-23" target="vHtYU_74a8iZQ1tVg8qE-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-23" value="&lt;span style=&quot;font-weight: 400&quot;&gt;~. Przyjęcie zapytania z danymi o przelewie. Zapis na &lt;i&gt;WEJŚCIU&lt;/i&gt;&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="120" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-24" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="230" width="350" height="920" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-25" value="Sesja (zgodnie z harmonogramem)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="410" y="230" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-26" value="Zlecenie Klienta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="10" y="80" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-27" value="Przyjmowanie dyspozycji" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="410" y="80" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-28" target="vHtYU_74a8iZQ1tVg8qE-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-28" value="&lt;span style=&quot;font-weight: 400&quot;&gt;O ustalonej porze:&lt;br&gt;1. Zrzut danych z &lt;i&gt;WEJŚCIA &lt;/i&gt;i czyszczenie &lt;i&gt;WEJŚCIA &lt;/i&gt;na nowe dyspozycje.&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="277" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-31" target="vHtYU_74a8iZQ1tVg8qE-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-31" value="&lt;span style=&quot;font-weight: 400&quot;&gt;2. Walidacja numeru konta:&lt;br&gt;- suma kontrolna&amp;nbsp;&lt;br&gt;- określenie banku Odbiorcy i Nadawcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="390" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-32" target="vHtYU_74a8iZQ1tVg8qE-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-32" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3c). Odjęcie kwoty przelewu z salda konta banku Odbiorcy&lt;br&gt;Dodanie kwoty przelewu do salda konta banku Odbiorcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="840" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-34" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="74" width="350" height="456" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-35" value="Rozliczenie" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#b1ddf0;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#10739e;" parent="1" vertex="1">
+          <mxGeometry x="810" y="80" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-38" value="&lt;span style=&quot;font-weight: 400&quot;&gt;~. Odebranie zapytania POST&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#6c8ebf;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="810" y="120" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-39" value="&lt;span style=&quot;font-weight: 400&quot;&gt;1. Walidacja numeru konta:&lt;br&gt;&amp;nbsp; &amp;nbsp;- suma kontrolna&lt;br&gt;&amp;nbsp; &amp;nbsp;- odnalezienie odbiorcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#6c8ebf;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="810" y="190" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-40" value="&lt;span style=&quot;font-weight: 400&quot;&gt;2a). W przypadku braku odbiorcy - przelew do nadawcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#6c8ebf;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="810" y="280" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-41" value="&lt;span style=&quot;font-weight: 400&quot;&gt;2b) Uznanie na koncie Odbiorcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#6c8ebf;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#dae8fc;" parent="1" vertex="1">
+          <mxGeometry x="810" y="380" width="350" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-43" target="vHtYU_74a8iZQ1tVg8qE-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-43" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3a). W przypadku braku banku Odbiorczego&lt;br&gt;przejście do kroku 4&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="503.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-45" target="vHtYU_74a8iZQ1tVg8qE-57" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-45" value="&lt;span style=&quot;font-weight: 400&quot;&gt;4. Wygenerowanie odpowiednich wpisów w historii JR&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="950" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-48" style="edgeStyle=orthogonalEdgeStyle;shape=flexArrow;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-46" target="vHtYU_74a8iZQ1tVg8qE-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-46" target="vHtYU_74a8iZQ1tVg8qE-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-46" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3b). Ustalenie weryfikacji&lt;br&gt;&amp;lt; 1001 zł - brak weryfikacji&lt;br&gt;&amp;gt;= 1001 zł - sprawdzenie historii dla nadawcy:&lt;br&gt;jeśli w ostatnim miesiącu &amp;gt; 2 przelewy powyżej 1001 zł - brak weryfikacji&lt;br&gt;w przeciwnym wypadku odesłanie do weryfikacji ręcznej przez pracownika&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="618.5" width="350" height="151.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-49" style="edgeStyle=orthogonalEdgeStyle;shape=flexArrow;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-47" target="vHtYU_74a8iZQ1tVg8qE-46" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-47" value="&lt;span style=&quot;font-weight: 400&quot;&gt;Weryfikacja przez pracownika:&lt;br&gt;otrzymywanie weryfikacji na bieżąco w panelu pracownika&lt;br&gt;&amp;gt; analiza nadawcy, tytułu przelewu &amp;gt;&lt;br&gt;decyzja o zakwalifikowaniu do dostarczenia do Odbiorcy bądź odesłanie do nadawcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="810" y="618.5" width="350" height="151.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-57" target="vHtYU_74a8iZQ1tVg8qE-38" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-57" value="&lt;span style=&quot;font-weight: 400&quot;&gt;5. &lt;i&gt;WYJŚCIE&lt;/i&gt;: Odesłanie rozliczonych przelewów do banków Odbiorczych (POST)&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8F0FF;strokeColor=#E5CCFF;" parent="1" vertex="1">
+          <mxGeometry x="410" y="1060" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-61" value="PROCES PRZELEWU ZEWNĘTRZNEGO EKSPRESOWEGO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1360" width="1150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-62" value="BANK A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1390" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-65" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1424" width="350" height="806" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-66" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="1866.5" width="350" height="363.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-68" value="Zlecenie Klienta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1430" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-70" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#E6E6E6;dashed=1;gradientDirection=north;fillColor=#FCFCFC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1866.5" width="350" height="363.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-71" value="Standardowe rozliczenie na koncie odbiorcy" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="810" y="2103.5" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-73" target="vHtYU_74a8iZQ1tVg8qE-74" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-73" value="&lt;span style=&quot;font-weight: normal&quot;&gt;1. Zlecenie przelewu przez Klienta&lt;br&gt;(Wypełnienie formularza)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1470" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-74" target="vHtYU_74a8iZQ1tVg8qE-75" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-74" value="&lt;span style=&quot;font-weight: normal&quot;&gt;2. Określenie wypłacalności Klienta&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1540" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-75" target="vHtYU_74a8iZQ1tVg8qE-76" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-75" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3. Walidacja numeru konta:&lt;br&gt;&amp;nbsp; &amp;nbsp;- suma kontrolna&lt;br&gt;&amp;nbsp; &amp;nbsp;- określenie banku =&amp;gt; określenie typu przelewu (wewnętrzny / &lt;/span&gt;zewnętrzny ekspresowy&lt;span style=&quot;font-weight: 400&quot;&gt;)&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1660" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-126" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-76" target="vHtYU_74a8iZQ1tVg8qE-77" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-76" value="&lt;span style=&quot;font-weight: 400&quot;&gt;4. Odjęcie środków z konta - zapis w historii&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1780" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-81" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-77" target="vHtYU_74a8iZQ1tVg8qE-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-77" value="&lt;span style=&quot;font-weight: 400&quot;&gt;5. Przelew wewnętrzny na konto DEJLI EXPRESS w Banku A&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1853.5" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-79" value="Obsłużenie dyspozycji" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#B20000;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="410" y="1929" width="350" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-80" target="vHtYU_74a8iZQ1tVg8qE-83" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-80" value="Konto DEJLI Express w Banku A - Odebranie przelewu wewnętrznego" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#B20000;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1926.5" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-83" target="vHtYU_74a8iZQ1tVg8qE-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-83" target="vHtYU_74a8iZQ1tVg8qE-85" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-83" value="&lt;span style=&quot;font-weight: 400&quot;&gt;1. Wysłanie &lt;/span&gt;&lt;u&gt;informacji&lt;/u&gt;&lt;span style=&quot;font-weight: 400&quot;&gt; do własnej aplikacji pośredniczącej o przelewie ekspresowym&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#FFFAFA;strokeColor=#FFCCCC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1993.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-85" target="vHtYU_74a8iZQ1tVg8qE-103" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-85" value="&lt;span style=&quot;font-weight: 400&quot;&gt;2. Wysłanie &lt;/span&gt;&lt;u&gt;przelewu&lt;/u&gt;&lt;span style=&quot;font-weight: 400&quot;&gt; tradycyjnego na własne konto w Banku B&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#FFFAFA;strokeColor=#FFCCCC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="2103.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-86" target="vHtYU_74a8iZQ1tVg8qE-91" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-86" value="&lt;span style=&quot;font-weight: 400&quot;&gt;Przyjęcie informacji o przelewie&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#FFFAFA;strokeColor=#FFCCCC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="1993.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-98" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-91" target="vHtYU_74a8iZQ1tVg8qE-94" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-91" value="&lt;span style=&quot;font-weight: 400&quot;&gt;Wysłanie informacji na konto DEJLI Express w Banku B, aby wykonać przelew wewnętrzny&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#FFFAFA;strokeColor=#FFCCCC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="2103.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-93" value="Konto DEJLI Express w Banku B - Odebranie informacji o wykonanie przelewu" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#B20000;fontColor=#ffffff;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1926.5" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-94" target="vHtYU_74a8iZQ1tVg8qE-71" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-94" value="&lt;span style=&quot;font-weight: 400&quot;&gt;1. Wysłanie &lt;/span&gt;&lt;u&gt;przelewu&lt;/u&gt;&lt;span style=&quot;font-weight: 400&quot;&gt; wewnętrznego na konto odbiorcy&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#FFFAFA;strokeColor=#FFCCCC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1993.5" width="350" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-99" target="vHtYU_74a8iZQ1tVg8qE-104" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-99" value="JEDN. ROZLICZENIOWA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6a00ff;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#3700CC;" parent="1" vertex="1">
+          <mxGeometry x="410" y="2296.5" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-100" value="Standardowa operacja przelewu zewnętrznego tradycyjnego" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="10" y="2406.5" width="1150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-102" value="Standardowe rozliczenie" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="810" y="2356.5" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-103" target="vHtYU_74a8iZQ1tVg8qE-99" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-103" value="BANK A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="10" y="2296.5" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" parent="1" source="vHtYU_74a8iZQ1tVg8qE-104" target="vHtYU_74a8iZQ1tVg8qE-102" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-104" value="BANK B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="2296.5" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-64" value="BANK B" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#001DBC;" parent="1" vertex="1">
+          <mxGeometry x="810" y="1860" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-63" value="DEJLI EXPRESS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e51400;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#B20000;" parent="1" vertex="1">
+          <mxGeometry x="410" y="1860" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-109" value="PROCES PRZELEWU WEWNĘTRZNEGO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="10" y="2490" width="1150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-110" value="BANK A" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#6d8764;fontColor=#ffffff;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#006600;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2520" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vRDZFxqzuGEfiEh31R39-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="vHtYU_74a8iZQ1tVg8qE-111" target="vHtYU_74a8iZQ1tVg8qE-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-111" value="&lt;span style=&quot;font-weight: normal&quot;&gt;1. Zlecenie przelewu przez Klienta&lt;br&gt;(Wypełnienie formularza)&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2600" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vRDZFxqzuGEfiEh31R39-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="vHtYU_74a8iZQ1tVg8qE-112" target="vHtYU_74a8iZQ1tVg8qE-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-112" value="&lt;span style=&quot;font-weight: normal&quot;&gt;2. Określenie wypłacalności Klienta&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2670" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vRDZFxqzuGEfiEh31R39-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=16;" edge="1" parent="1" source="vHtYU_74a8iZQ1tVg8qE-113" target="vHtYU_74a8iZQ1tVg8qE-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-113" value="&lt;span style=&quot;font-weight: 400&quot;&gt;3. Walidacja numeru konta:&lt;br&gt;&amp;nbsp; &amp;nbsp;- suma kontrolna&lt;br&gt;&amp;nbsp; &amp;nbsp;- określenie banku =&amp;gt; określenie typu przelewu (&lt;/span&gt;wewnętrzny&lt;span style=&quot;font-weight: 400&quot;&gt; / &lt;/span&gt;&lt;span style=&quot;font-weight: normal&quot;&gt;zewnętrzny&lt;/span&gt;&lt;span style=&quot;font-weight: 400&quot;&gt;)&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2740" width="350" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="vRDZFxqzuGEfiEh31R39-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=16;" edge="1" parent="1" source="vHtYU_74a8iZQ1tVg8qE-114">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="576" y="2930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-114" value="&lt;span style=&quot;font-weight: 400&quot;&gt;4. Odjęcie środków z konta - zapis w historii&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2860" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-115" value="&lt;span style=&quot;font-weight: 400&quot;&gt;5. Uznanie na koncie odbiorcy&lt;br&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;strokeColor=#CCFFCC;align=left;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#F8FFF2;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2933.5" width="350" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-116" value="Zlecenie Klienta" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="401" y="2560" width="350" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-118" value="&lt;span style=&quot;font-weight: 400&quot;&gt;Odpowiednio prowadzone zapisy w historii i statusowanie&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=center;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#f9f7ed;rotation=90;strokeColor=#FFE6CC;" parent="1" vertex="1">
+          <mxGeometry x="918.75" y="2736.75" width="459" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-120" value="&lt;span style=&quot;font-weight: 400 ; background-color: rgb(249 , 247 , 237)&quot;&gt;Odpowiednio prowadzone zapisy w historii i statusowanie&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=center;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#f9f7ed;rotation=0;strokeColor=#FFE6CC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="2450" width="1150" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vHtYU_74a8iZQ1tVg8qE-121" value="&lt;span style=&quot;font-weight: 400 ; background-color: rgb(249 , 247 , 237)&quot;&gt;Odpowiednio prowadzone zapisy w historii i statusowanie&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=center;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#f9f7ed;rotation=0;strokeColor=#FFE6CC;" parent="1" vertex="1">
+          <mxGeometry x="10" y="1174.5" width="1150" height="25.5" as="geometry" />
+        </mxCell>
+        <mxCell id="vRDZFxqzuGEfiEh31R39-2" value="&lt;div&gt;&lt;font&gt;&lt;b&gt;Karol Lech&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Przemysław Pleśniarski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Krzysztof Podkulski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Marcin Wielgos&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;i&gt;LAB 3&lt;/i&gt;&lt;/u&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontFamily=Helvetica;labelBackgroundColor=none;labelBorderColor=none;strokeWidth=1;glass=0;shadow=0;sketch=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="700" width="230" height="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
