@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-23T17:57:16.267Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="ZeRiYImJUcuO9f3BcOkq" version="13.9.9" type="github">
+<mxfile host="app.diagrams.net" modified="2020-11-23T17:58:18.441Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.66 Safari/537.36" etag="QlMbSnZg9hkdQt6EzD0C" version="13.9.9" type="github">
   <diagram id="JMxKD8hb092ScM9Eg6qc" name="Page-1">
     <mxGraphModel dx="1422" dy="737" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
@@ -312,7 +312,7 @@
         <mxCell id="vHtYU_74a8iZQ1tVg8qE-121" value="&lt;span style=&quot;font-weight: 400 ; background-color: rgb(249 , 247 , 237)&quot;&gt;Odpowiednio prowadzone zapisy w historii i statusowanie&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;labelBorderColor=none;strokeWidth=2;align=center;spacingTop=5;spacingLeft=5;spacingBottom=5;spacingRight=5;spacing=5;fillColor=#f9f7ed;rotation=0;strokeColor=#FFE6CC;" parent="1" vertex="1">
           <mxGeometry x="10" y="1174.5" width="1150" height="25.5" as="geometry" />
         </mxCell>
-        <mxCell id="vRDZFxqzuGEfiEh31R39-2" value="&lt;div&gt;&lt;font&gt;&lt;b&gt;Karol Lech&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Przemysław Pleśniarski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Krzysztof Podkulski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Marcin Wielgos&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;i&gt;LAB 3&lt;/i&gt;&lt;/u&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontFamily=Helvetica;labelBackgroundColor=none;labelBorderColor=none;strokeWidth=1;glass=0;shadow=0;sketch=0;" vertex="1" parent="1">
+        <mxCell id="vRDZFxqzuGEfiEh31R39-2" value="&lt;div&gt;&lt;font&gt;&lt;b&gt;Karol Lech&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Przemysław Pleśniarski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Krzysztof Podkulski&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font&gt;&lt;b&gt;Janusz Siek&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Marcin Wielgos&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;i&gt;LAB 3&lt;/i&gt;&lt;/u&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;fontFamily=Helvetica;labelBackgroundColor=none;labelBorderColor=none;strokeWidth=1;glass=0;shadow=0;sketch=0;" vertex="1" parent="1">
           <mxGeometry x="10" y="700" width="230" height="110" as="geometry" />
         </mxCell>
       </root>
