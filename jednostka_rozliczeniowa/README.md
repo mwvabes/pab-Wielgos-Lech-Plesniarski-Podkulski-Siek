@@ -1,5 +1,13 @@
 # Jednostka rozliczeniowa
 
+## Uruchomienie
+
+```
+cd jednostka-rozliczeniowa
+npm install
+npm run start
+```
+
 ## Obsługiwane banki
 
 1. PKO BP
@@ -25,6 +33,29 @@ PKO BP: PL 40 1020 2964 5040 9093 8192 5554 4792
                  ^^^^^^
                  numer oddziału: 02964
 ```
+
+### Przykład zapytania do walidacji numeru
+
+```http://localhost:3001/api/validatenumber?accountnumber=PL 85 1050 4475 6311 7698 7831 7488 1785```
+
+Parametr accountnumber: wymagany jest numer IBAN tzn z PL na początku. Dopuszczalne są spacje ` ` i/lub pauzy `-`.
+
+#### Parametr decyzyjny z zapytania
+
+```json
+{
+    "isAccountNumberValid": true
+    ...
+}
+```
+
+`isAccountNumberValid` będzie `true` i status `200` tylko wtedy gdy wszystko się zgadza tzn:
+- format numeru
+- numer banku
+- oddział banku
+- suma kontrolna
+
+w przeciwnym wypadku będzie `false` i status `400`
 
 ### Poprawne numery
 
