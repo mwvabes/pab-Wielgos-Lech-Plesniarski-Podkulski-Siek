@@ -29,8 +29,7 @@ public class Login {
     @Column(name = "moderator", columnDefinition = "tinyint")
     private boolean moderator;
 
-    public Login(int id_login, String login, String password, boolean moderator) {
-        this.id_login = id_login;
+    public Login(String login, String password, boolean moderator) {
         this.login = login;
         this.password = password;
         this.moderator = moderator;

@@ -5,8 +5,13 @@
  */
 package Servlets;
 
+import DAO.LoginService;
+import DAO.UserService;
+import Tables.Login;
+import Tables.User;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -70,12 +75,33 @@ public class RegisterServlet extends HttpServlet {
             throws ServletException, IOException {
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
+        String login = request.getParameter("login");
         String password = request.getParameter("password");
         String address = request.getParameter("address");
         String contact = request.getParameter("contact");
         String department = request.getParameter("department");
+
+        if("".equals(name) || "".equals(surname) || "".equals(login) || "".equals(password) || "".equals(address) || "".equals(contact)){
+            String message = "Nieprawidłowe dane.";
+            request.setAttribute("message", message);
+        }
+        else {
+            LoginService ls = new LoginService();
+            Login l = new Login(login, password, false);
+            ls.persist(l);
+            
+            UserService us = new UserService();
+            User user = new User(name, surname, address, contact, String.valueOf(l.getId_login()));
+            us.persist(user);
+            
+            String message = "Zarejstrowano nowego użytkownika.";
+            request.setAttribute("message", message);
+        }
         
         
+        String destPage = "admin.jsp";
+        RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+        dispatcher.forward(request, response);
     }
 
     /**

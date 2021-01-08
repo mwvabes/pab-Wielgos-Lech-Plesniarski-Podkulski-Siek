@@ -31,8 +31,7 @@ public class User {
     @Column(name = "id_login")
     private String id_login;
 
-    public User(int id_user, String name, String lastName, String address, String contact, String id_login) {
-        this.id_user = id_user;
+    public User(String name, String lastName, String address, String contact, String id_login) {
         this.name = name;
         this.lastName = lastName;
         this.address = address;

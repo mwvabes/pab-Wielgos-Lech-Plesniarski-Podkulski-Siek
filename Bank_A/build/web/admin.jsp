@@ -13,13 +13,15 @@
         <form action="RegisterServlet" method="post">
             Imie:<input type="text" name="name"></br>
             Nazwisko:<input type="text" name="surname"></br>
+            Login:<input type="text" name="login"></br>
             Hasło:<input type="text" name="password"></br>
             Adres:<input type="text" name="address"></br>
             Kontakt:<input type="text" name="contact"></br>
             Oddział</br>
-            <input type="radio" name="oddzial" value="02964">Grunwaldzka 1, 21-035 Rzeszów</br>
+            <input type="radio" name="oddzial" value="02964" checked>Grunwaldzka 1, 21-035 Rzeszów</br>
             <input type="radio" name="oddzial" value="01417">Al. Jerozolimskie 99, 00-012 Warszawa</br>
             <input type="submit" value="Zarejestruj">
+            ${message}
         </form>
     </body>
 </html>
