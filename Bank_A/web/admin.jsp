@@ -18,8 +18,8 @@
             Adres:<input type="text" name="address"></br>
             Kontakt:<input type="text" name="contact"></br>
             Oddział</br>
-            <input type="radio" name="oddzial" value="02964" checked>Grunwaldzka 1, 21-035 Rzeszów</br>
-            <input type="radio" name="oddzial" value="01417">Al. Jerozolimskie 99, 00-012 Warszawa</br>
+            <input type="radio" name="department" value="02964" checked>Grunwaldzka 1, 21-035 Rzeszów</br>
+            <input type="radio" name="department" value="01417">Al. Jerozolimskie 99, 00-012 Warszawa</br>
             <input type="submit" value="Zarejestruj">
             ${message}
         </form>
