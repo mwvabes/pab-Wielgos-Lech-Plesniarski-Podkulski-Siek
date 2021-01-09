@@ -53,6 +53,7 @@ Contributor(s):
     <property name="hbm2ddl.auto">update</property>
     <mapping class="Tables.Login"/>
     <mapping class="Tables.User"/>
+    <mapping class="Tables.Account"/>
     
   </session-factory>
   

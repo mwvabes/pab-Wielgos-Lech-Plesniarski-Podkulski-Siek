@@ -1,7 +1,7 @@
 
 package DAO;
 
-import Tables.Login;
+import Tables.Account;
 
 import java.util.List;
 import org.hibernate.Query;
@@ -11,13 +11,13 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-public class LoginDao {
+public class AccountDao {
     
     private Session currentSession;
 	
 	private Transaction currentTransaction;
 
-	public LoginDao() {
+	public AccountDao() {
 	}
 
 	public Session openCurrentSession() {
@@ -64,50 +64,35 @@ public class LoginDao {
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Login entity) {
+	public void persist(Account entity) {
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Login entity) {
+	public void update(Account entity) {
 		getCurrentSession().update(entity);
 	}
 
-	public Login findById(String id) {
-		Login login = (Login) getCurrentSession().get(Login.class, id);
-		return login; 
+	public Account findById(String id) {
+		Account account = (Account) getCurrentSession().get(Account.class, id);
+		return account; 
 	}
 
-	public void delete(Login entity) {
+	public void delete(Account entity) {
 		getCurrentSession().delete(entity);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Login> findAll() {
-		List<Login> loginy = (List<Login>) getCurrentSession().createQuery("from login").list();
-		return loginy;
+	public List<Account> findAll() {
+		List<Account> accounts = (List<Account>) getCurrentSession().createQuery("from account").list();
+		return accounts;
 	}
 
 	public void deleteAll() {
-		List<Login> entityList = findAll();
-		for (Login entity : entityList) {
+		List<Account> entityList = findAll();
+		for (Account entity : entityList) {
 			delete(entity);
 		}
 	}
         
-        public List<Login> find(String l, String pass) {
-                String hql = "select l from login l where l.login = :log and l.password = :pass";
-                Query query = getCurrentSession().createQuery(hql);
-                query.setParameter("log", l);
-                query.setParameter("pass", pass);
-		List<Login> login = (List<Login>) query.list();
-		return login; 
-	}
-        
-        public List<Login> findByLogin(String l) {
-                String hql = "select l from login l where l.login = :log";
-                Query query = getCurrentSession().createQuery(hql);
-                query.setParameter("log", l);
-		List<Login> login = (List<Login>) query.list();
-		return login; 
-	}
+    
 }

@@ -5,12 +5,15 @@
  */
 package Servlets;
 
+import DAO.AccountService;
 import DAO.LoginService;
 import DAO.UserService;
+import Tables.Account;
 import Tables.Login;
 import Tables.User;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -73,6 +76,8 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String destPage = "admin.jsp";
+        
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         String login = request.getParameter("login");
@@ -82,24 +87,32 @@ public class RegisterServlet extends HttpServlet {
         String department = request.getParameter("department");
 
         if("".equals(name) || "".equals(surname) || "".equals(login) || "".equals(password) || "".equals(address) || "".equals(contact)){
-            String message = "Nieprawidłowe dane.";
+            String message = "Uzupełnij wszystkie pola.";
             request.setAttribute("message", message);
         }
         else {
             LoginService ls = new LoginService();
             Login l = new Login(login, password, false);
-            ls.persist(l);
-            
-            UserService us = new UserService();
-            User user = new User(name, surname, address, contact, String.valueOf(l.getId_login()));
-            us.persist(user);
-            
-            String message = "Zarejstrowano nowego użytkownika.";
-            request.setAttribute("message", message);
+            if(ls.findByLogin(login).size() > 0){
+                String message = "Istniej już użytkownik o padnym loginie.";
+                request.setAttribute("message", message);
+            }
+            else {
+                ls.persist(l);
+
+                UserService us = new UserService();
+                User user = new User(name, surname, address, contact, String.valueOf(l.getId_login()));
+                us.persist(user);
+
+                AccountService as = new AccountService();
+                Account a = new Account("123", new BigDecimal(0), user.getId_user());
+                as.persist(a);
+
+                String message = "Zarejstrowano nowego użytkownika.";
+                request.setAttribute("message", message);
+            }
         }
         
-        
-        String destPage = "admin.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);
     }

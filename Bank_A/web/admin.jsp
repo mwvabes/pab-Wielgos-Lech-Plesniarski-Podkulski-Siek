@@ -14,7 +14,7 @@
             Imie:<input type="text" name="name"></br>
             Nazwisko:<input type="text" name="surname"></br>
             Login:<input type="text" name="login"></br>
-            Hasło:<input type="text" name="password"></br>
+            Hasło:<input type="password" name="password"></br>
             Adres:<input type="text" name="address"></br>
             Kontakt:<input type="text" name="contact"></br>
             Oddział</br>

@@ -3,14 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/DAO/LoginDao.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/web/admin.jsp</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/Servlets/LoginServlet.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/Servlets/RegisterServlet.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/Klasy/IBAN.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/NewMain.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/src/java/DAO/LoginService.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/Bank_A/web/index.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/RegisterServlet.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/UserDao.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Tables/Login.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Tables/Account.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/LoginService.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Tables/User.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/index.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/AccountDao.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/hibernate.cfg.xml</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/admin.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/AccountService.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,8 +1,5 @@
 
-import DAO.LoginRepositoryImpl;
-import DAO.LoginService;
 import Klasy.IBAN;
-import Tables.Login;
 
 public class NewMain {
 

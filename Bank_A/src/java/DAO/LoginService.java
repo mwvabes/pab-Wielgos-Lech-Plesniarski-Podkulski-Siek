@@ -69,11 +69,11 @@ public class LoginService {
 		return loginy;
 	}
         
-        public Login findByLoginAndPassword(String l, String p) {
+        public List<Login> findByLogin(String l) {
 		loginDao.openCurrentSession();
-		Login login = loginDao.findByLoginAndPassword(l, p);
+		List<Login> loginy = loginDao.findByLogin(l);
 		loginDao.closeCurrentSession();
-		return login;
+		return loginy;
 	}
     
 }
