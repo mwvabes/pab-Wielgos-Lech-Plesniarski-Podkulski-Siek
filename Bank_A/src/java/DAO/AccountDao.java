@@ -76,6 +76,11 @@ public class AccountDao {
 		Account account = (Account) getCurrentSession().get(Account.class, id);
 		return account; 
 	}
+        
+        public List<Account> findByIdUser(String id) {
+		List<Account> accounts = (List<Account>) getCurrentSession().createQuery("select a from account a where a.id_user = " + id).list();
+		return accounts;
+	}
 
 	public void delete(Account entity) {
 		getCurrentSession().delete(entity);

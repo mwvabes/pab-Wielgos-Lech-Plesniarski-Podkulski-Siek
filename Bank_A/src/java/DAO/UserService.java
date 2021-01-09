@@ -31,6 +31,13 @@ public class UserService {
 		loginDao.closeCurrentSession();
 		return login;
 	}
+        
+        public User findByIdLogin(String id) {
+		loginDao.openCurrentSession();
+		List<User> login = loginDao.findByIdLogin(id);
+		loginDao.closeCurrentSession();
+		return login.get(0);
+	}
 
 	public void delete(String id) {
 		loginDao.openCurrentSessionwithTransaction();

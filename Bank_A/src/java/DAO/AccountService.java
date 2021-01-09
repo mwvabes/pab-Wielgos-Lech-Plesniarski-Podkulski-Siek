@@ -31,6 +31,13 @@ public class AccountService {
 		accountDao.closeCurrentSession();
 		return account;
 	}
+        
+        public Account findByIdUser(String id) {
+		accountDao.openCurrentSession();
+		List<Account> account = accountDao.findByIdUser(id);
+		accountDao.closeCurrentSession();
+		return account.get(0);
+	}
 
 	public void delete(String id) {
 		accountDao.openCurrentSessionwithTransaction();

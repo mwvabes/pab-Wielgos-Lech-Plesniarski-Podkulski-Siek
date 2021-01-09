@@ -1,21 +1,25 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Servlets;
 
-
-import DAO.LoginService;
-import Tables.Login;
+import DAO.AccountService;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+/**
+ *
+ * @author UkeiS
+ */
+@WebServlet(name = "TransactionServlet", urlPatterns = {"/TransactionServlet"})
+public class TransactionServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,10 +38,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet TransactionServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet TransactionServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -70,36 +74,10 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        String l = request.getParameter("login");
-        String p = request.getParameter("pass");
-        
-        String destPage = "index.jsp";
-        
-        LoginService loginService = new LoginService();
-        //Login login = loginService.find(l, p);
-        List<Login> list = loginService.find(l, p);
-        
-        if(list.size() > 0){
-            Login login = list.get(0);
-            HttpSession session = request.getSession();
-            session.setAttribute("login", login);
-            
-            
-           if(login.isModerator()){
-                destPage = "admin.jsp";
-            }
-           else {
-               destPage = "user.jsp";
-           }
-        }
-        else {
-            String message = "Nieprawidłowe dane logowania!";
-            request.setAttribute("message", message);
-        }
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
-        dispatcher.forward(request, response);
+        AccountService as = new AccountService();
+       // Account a = as.
+       
+       
     }
 
     /**

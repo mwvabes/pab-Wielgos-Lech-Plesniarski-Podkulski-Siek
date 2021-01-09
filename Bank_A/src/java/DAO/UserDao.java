@@ -76,6 +76,14 @@ public class UserDao {
 		User login = (User) getCurrentSession().get(User.class, id);
 		return login; 
 	}
+        
+        public List<User> findByIdLogin(String id) {
+                String hql = "select u from user u where u.id_login = :id";
+                Query query = getCurrentSession().createQuery(hql);
+                query.setParameter("id", id);
+		List<User> users = (List<User>) query.list();
+                return users;
+	}
 
 	public void delete(User entity) {
 		getCurrentSession().delete(entity);
