@@ -25,8 +25,9 @@
             <%@ page language="java" import="Klasy.*" %>
             <%@ page language="java" import="java.math.BigDecimal" %>
             <%
+                /*
                 Login l = (Login) session.getAttribute("login");
-                out.println(l);
+               // out.println(l);
                 
                 UserService us = new UserService();
                 User u = us.findByIdLogin(Integer.toString(l.getId_login()));
@@ -36,6 +37,7 @@
                 
                 Transaction t = new Transaction();
                 out.println(t.isSolvent(a, new BigDecimal(10)));
+                */
                 %>
         </form>
     </body>
