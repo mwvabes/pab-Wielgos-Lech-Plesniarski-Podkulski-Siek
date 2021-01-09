@@ -8,6 +8,7 @@ package Servlets;
 import DAO.AccountService;
 import DAO.LoginService;
 import DAO.UserService;
+import Klasy.AccountNumber;
 import Tables.Account;
 import Tables.Login;
 import Tables.User;
@@ -107,7 +108,15 @@ public class RegisterServlet extends HttpServlet {
                 AccountService as = new AccountService();
                 Account a = new Account("123", new BigDecimal(0), user.getId_user());
                 as.persist(a);
-
+                String N = String.valueOf(a.getId_account());
+                while(N.length() < 16){
+                    N = "0" + N;
+                }
+                AccountNumber an = new AccountNumber();
+                String n = an.GenerateAccountNumber(department, N);
+                a.setNumber(n);
+                as.update(a);
+        
                 String message = "Zarejstrowano nowego użytkownika.";
                 request.setAttribute("message", message);
             }

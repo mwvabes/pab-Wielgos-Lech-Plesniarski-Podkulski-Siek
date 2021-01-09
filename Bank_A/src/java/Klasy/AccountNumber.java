@@ -1,8 +1,14 @@
 
 package Klasy;
 
-public class IBAN {
-    private String IBAN;
+import java.math.BigInteger;
+
+public class AccountNumber {
+    
+    public String GenerateAccountNumber(String department, String N) {
+        String IBAN = "PL00 102" + department + N;
+        return ControlSum(IBAN) + "102" + department + N;
+    }
     
     public String ControlSum(String IBAN){
         IBAN = IBAN.replaceAll("[^a-zA-Z0-9]", "");    //usuwanie niealfanumerycznych znaków
@@ -17,9 +23,14 @@ public class IBAN {
             }
                 
         }
-        
-        int pom = 98 - (Integer.valueOf(IBAN) % 97);
-        
+        BigInteger a = new BigInteger("98");
+        BigInteger b = new BigInteger(IBAN);
+        BigInteger c = new BigInteger("97");
+        BigInteger d;
+        d = a.subtract(b.mod(c));
+       // int pom = 98 - (Integer.valueOf(IBAN) % 97);
+       int pom = Integer.valueOf(d.toString());
+       
         if(pom <10){
             IBAN = "0" + pom;
         }
@@ -44,7 +55,7 @@ public class IBAN {
                 
         }
         
-        if(Integer.valueOf(IBAN) % 97 == 1){
+        if(new BigInteger(IBAN).mod(new BigInteger("97")).compareTo(BigInteger.ONE) == 0){
             return true;
         }
         else{
