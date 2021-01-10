@@ -29,12 +29,16 @@ public class Operation {
     
     @Column(name = "status")
     private String status;
+    
+    @Column(name = "id_account")
+    private int id_account;
 
-    public Operation(String type, Date date, BigDecimal amount, String status) {
+    public Operation(String type, Date date, BigDecimal amount, String status, int id_account) {
         this.type = type;
         this.date = date;
         this.amount = amount;
         this.status = status;
+        this.id_account = id_account;
     }
 
     public int getId_operation() {

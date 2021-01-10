@@ -27,7 +27,7 @@ public class Transaction {
     public void makeInternalTransaction(Account account, String number, BigDecimal amount){
         //ZAPIS OPERACJI
         OperationService os = new OperationService();
-        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany");
+        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", account.getId_account());
         os.persist(o);
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
