@@ -109,7 +109,12 @@ public class TransactionServlet extends HttpServlet {
            String message = "Nieprawidłowy numer konta.";
            request.setAttribute("message", message);
         }
-         
+        
+        if(t.isInternal(number)){   //określenie typu przelewu
+           String message = "Przelwe wewnętrzny.";
+           request.setAttribute("message", message);
+        }
+        
         String destPage = "user.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);

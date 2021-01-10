@@ -17,6 +17,7 @@ public class Transaction {
     }
     
     public boolean isInternal(String number){
-        return number.substring(2, 4).equals("102");
+        number = number.replaceAll("[^a-zA-Z0-9]", "");    //usuwanie niealfanumerycznych znaków
+        return number.substring(2, 5).equals("102");
     }
 }
