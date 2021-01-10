@@ -1,7 +1,12 @@
 const express = require('express')
-const validateNumber = require('./routes/validatenumber')
+const bodyParser = require("body-parser")
+const { join } = require("path")
+const axios = require("axios")
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
 
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method)
@@ -18,13 +23,18 @@ const requestLogger = (request, response, next) => {
 
 app.use(express.json())
 app.use(requestLogger)
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
+require("./routes/number.route")(app)
+require("./routes/payment.route")(app)
+require("./routes/session.route")(app)
 //app.use(unknownEndpoint)
 
 app.get('/', (request, response) => {
-  response.send('0.0.1')
+  response.send('Jednostka Rozliczeniowa - 0.0.1')
 })
-
-app.get('/api/validatenumber', validateNumber.validateNumber) 
 
 const PORT = 3001
 app.listen(PORT, () => {

@@ -1,0 +1,26 @@
+[
+  {
+    "sessionName": "_01",
+    "hourClose": "09:00",
+    "hourStartClearance": "09:10",
+    "hourStopClearance": "11:45",
+    "hourAnnounce": "11:50",
+    "verifyBoundary": "1000.00"
+  },
+  {
+    "sessionName": "_02",
+    "hourClose": "12:00",
+    "hourStartClearance": "12:10",
+    "hourStopClearance": "14:45",
+    "hourAnnounce": "14:50",
+    "verifyBoundary": "1000.00"
+  },
+  {
+    "sessionName": "_03",
+    "hourClose": "15:00",
+    "hourStartClearance": "15:10",
+    "hourStopClearance": "16:45",
+    "hourAnnounce": "16:50",
+    "verifyBoundary": "1000.00"
+  }
+]

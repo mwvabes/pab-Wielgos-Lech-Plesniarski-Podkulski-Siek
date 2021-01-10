@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  jr-app-service:
+    build: "./app"
+    volumes: 
+      - ./app:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      CHOKIDAR_USEPOLLING: "true"
+    ports: 
+      - "8011:3000"
+    networks:
+      - jr-network
+
+  jr-api-service:
+    build: './api'
+    volumes: 
+      - ./api:/usr/src/app
+      - /usr/src/api/node_modules
+    ports: 
+      - "8012:3001"
+    networks:
+      - jr-network
+    depends_on:
+      - jr-db-service
+
+  jr-db-service:
+    image: mongo:3.6.19-xenial
+    ports: 
+      - "8013:27017"
+    networks:
+      - jr-network
+    volumes:
+      - jr-db-data:/data/db
+
+networks:
+  jr-network:
+    driver: bridge
+volumes:
+  jr-db-data:
+    driver: local
