@@ -7,12 +7,12 @@ package Servlets;
 
 import DAO.AccountService;
 import DAO.UserService;
+import Klasy.AccountNumber;
 import Tables.Account;
 import Tables.Login;
 import Tables.User;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.math.BigDecimal;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -21,7 +21,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.hibernate.Transaction;
 
 /**
  *
@@ -83,7 +82,7 @@ public class TransactionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String number = request.getParameter("umber");
+        String number = request.getParameter("number");
         String address = request.getParameter("address");
         String amount = request.getParameter("amount");
         String title = request.getParameter("title");
@@ -91,19 +90,26 @@ public class TransactionServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Login l = (Login) session.getAttribute("login");
 
-         UserService us = new UserService();
-         User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+        UserService us = new UserService();
+        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
 
-         AccountService as = new AccountService();
-         Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+        AccountService as = new AccountService();
+        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
 
-         Klasy.Transaction t = new Klasy.Transaction();
-         
-         if(!t.isSolvent(a, new BigDecimal(amount))){
-             String message = "Niewystarczajaca ilość środków na koncie.";
-            request.setAttribute("message", message);
-         }
+        Klasy.Transaction t = new Klasy.Transaction();
+
+        if(!t.isSolvent(a, new BigDecimal(amount))){
+           String message = "Niewystarczajaca ilość środków na koncie.";
+           request.setAttribute("message", message);
+        }
         
+        AccountNumber an = new AccountNumber();
+        
+        if(!an.isValid("PL" + number)){
+           String message = "Nieprawidłowy numer konta.";
+           request.setAttribute("message", message);
+        }
+         
         String destPage = "user.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);

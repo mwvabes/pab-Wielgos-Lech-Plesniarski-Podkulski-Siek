@@ -42,6 +42,10 @@ public class AccountNumber {
     }
     
     public Boolean isValid(String IBAN){
+        if(IBAN.length() != 26){    //sprawdzenie długości
+            return false;
+        }
+        
         IBAN = IBAN.replaceAll("[^a-zA-Z0-9]", "");    //usuwanie niealfanumerycznych znaków
         
         IBAN = IBAN.substring(4) + IBAN.charAt(0) + IBAN.charAt(1) + IBAN.charAt(2) + IBAN.charAt(3);   //przesunięcie 4 pierwszych znaków na koniec

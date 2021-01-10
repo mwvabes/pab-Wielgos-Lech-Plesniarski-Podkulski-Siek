@@ -12,6 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <a href="LogoutServlet">Wyloguj</a>
         <h1>Przelew</h1>
         <form action="TransactionServlet" method="post">
             Numer rachunku:<input type="text" name="number"></br>

@@ -15,4 +15,8 @@ public class Transaction {
             return true;
         }
     }
+    
+    public boolean isInternal(String number){
+        return number.substring(2, 4).equals("102");
+    }
 }
