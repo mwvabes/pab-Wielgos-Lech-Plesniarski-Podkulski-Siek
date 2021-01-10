@@ -82,9 +82,9 @@ public class TransactionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String number = request.getParameter("number");
+        String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
         String address = request.getParameter("address");
-        String amount = request.getParameter("amount");
+        BigDecimal amount = new BigDecimal(request.getParameter("amount"));
         String title = request.getParameter("title");
         
         HttpSession session = request.getSession();
@@ -98,7 +98,7 @@ public class TransactionServlet extends HttpServlet {
 
         Klasy.Transaction t = new Klasy.Transaction();
 
-        if(!t.isSolvent(a, new BigDecimal(amount))){
+        if(!t.isSolvent(a, amount)){
            String message = "Niewystarczajaca ilość środków na koncie.";
            request.setAttribute("message", message);
         }
@@ -111,8 +111,7 @@ public class TransactionServlet extends HttpServlet {
         }
         
         if(t.isInternal(number)){   //określenie typu przelewu
-           String message = "Przelwe wewnętrzny.";
-           request.setAttribute("message", message);
+           t.makeInternalTransaction(a, number, amount);
         }
         
         String destPage = "user.jsp";

@@ -54,6 +54,7 @@ Contributor(s):
     <mapping class="Tables.Login"/>
     <mapping class="Tables.User"/>
     <mapping class="Tables.Account"/>
+    <mapping class="Tables.Operation"/>
     
   </session-factory>
   

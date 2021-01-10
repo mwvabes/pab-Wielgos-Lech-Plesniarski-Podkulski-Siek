@@ -38,6 +38,13 @@ public class AccountService {
 		accountDao.closeCurrentSession();
 		return account.get(0);
 	}
+        
+        public Account findByNumber(String number) {
+		accountDao.openCurrentSession();
+		List<Account> account = accountDao.findByNumber(number);
+		accountDao.closeCurrentSession();
+		return account.get(0);
+	}
 
 	public void delete(String id) {
 		accountDao.openCurrentSessionwithTransaction();

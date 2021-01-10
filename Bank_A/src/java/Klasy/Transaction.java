@@ -1,8 +1,12 @@
 
 package Klasy;
 
+import DAO.AccountService;
+import DAO.OperationService;
 import Tables.Account;
+import Tables.Operation;
 import java.math.BigDecimal;
+import java.sql.Date;
 
 public class Transaction {
 
@@ -17,7 +21,21 @@ public class Transaction {
     }
     
     public boolean isInternal(String number){
-        number = number.replaceAll("[^a-zA-Z0-9]", "");    //usuwanie niealfanumerycznych znaków
         return number.substring(2, 5).equals("102");
+    }
+    
+    public void makeInternalTransaction(Account account, String number, BigDecimal amount){
+        //ZAPIS OPERACJI
+        OperationService os = new OperationService();
+        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany");
+        os.persist(o);
+        //OBCIĄŻENIE KONTA
+        AccountService as = new AccountService();
+        account.setBalance(account.getBalance().subtract(amount));
+        as.update(account);
+        //UZNANIE KONTA
+        Account account2 = as.findByNumber(number);
+        account2.setBalance(account2.getBalance().add(amount));
+        as.update(account2);
     }
 }

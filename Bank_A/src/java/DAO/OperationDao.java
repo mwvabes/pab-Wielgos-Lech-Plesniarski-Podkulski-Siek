@@ -1,7 +1,7 @@
 
 package DAO;
 
-import Tables.Account;
+import Tables.Operation;
 
 import java.util.List;
 import org.hibernate.Query;
@@ -11,13 +11,13 @@ import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
-public class AccountDao {
+public class OperationDao {
     
     private Session currentSession;
 	
 	private Transaction currentTransaction;
 
-	public AccountDao() {
+	public OperationDao() {
 	}
 
 	public Session openCurrentSession() {
@@ -64,42 +64,32 @@ public class AccountDao {
 		this.currentTransaction = currentTransaction;
 	}
 
-	public void persist(Account entity) {
+	public void persist(Operation entity) {
 		getCurrentSession().save(entity);
 	}
 
-	public void update(Account entity) {
+	public void update(Operation entity) {
 		getCurrentSession().update(entity);
 	}
 
-	public Account findById(String id) {
-		Account account = (Account) getCurrentSession().get(Account.class, id);
-		return account; 
-	}
-        
-        public List<Account> findByIdUser(String id) {
-		List<Account> accounts = (List<Account>) getCurrentSession().createQuery("select a from account a where a.id_user = " + id).list();
-		return accounts;
-	}
-        
-        public List<Account> findByNumber(String number) {
-		List<Account> accounts = (List<Account>) getCurrentSession().createQuery("select a from account a where a.number = '" + number + "'").list();
-		return accounts;
+	public Operation findById(String id) {
+		Operation operation = (Operation) getCurrentSession().get(Operation.class, id);
+		return operation; 
 	}
 
-	public void delete(Account entity) {
+	public void delete(Operation entity) {
 		getCurrentSession().delete(entity);
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Account> findAll() {
-		List<Account> accounts = (List<Account>) getCurrentSession().createQuery("from account").list();
-		return accounts;
+	public List<Operation> findAll() {
+		List<Operation> users = (List<Operation>) getCurrentSession().createQuery("from user").list();
+		return users;
 	}
 
 	public void deleteAll() {
-		List<Account> entityList = findAll();
-		for (Account entity : entityList) {
+		List<Operation> entityList = findAll();
+		for (Operation entity : entityList) {
 			delete(entity);
 		}
 	}
