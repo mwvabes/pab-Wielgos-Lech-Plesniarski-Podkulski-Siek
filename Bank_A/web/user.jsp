@@ -13,7 +13,7 @@
     </head>
     <body>
         <a href="LogoutServlet">Wyloguj</a>
-        <h1>Przelew</h1>
+        <h2>Przelew</h2>
         <form action="TransactionServlet" method="post">
             Numer rachunku:<input type="text" name="number"></br>
             Nazwa i adres:<input type="text" name="address"></br>
@@ -22,23 +22,29 @@
             <input type="submit" value="Wyślij">
             ${message}
             
-            <h2>Historia operacji</h2>
+            
 
+            <h2>Stan konta</h2>
             <%@ page language="java" import="Tables.*" %>
             <%@ page language="java" import="DAO.*" %>
             <%@ page language="java" import="Klasy.*" %>
             <%@ page language="java" import="java.math.BigDecimal" %>
             <%@ page language="java" import="java.util.List" %>
             <%
-                
                 Login l = (Login) session.getAttribute("login");
-               // out.println(l);
                 
                 UserService us = new UserService();
                 User u = us.findByIdLogin(Integer.toString(l.getId_login()));
                 
                 AccountService as = new AccountService();
                 Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+                
+                out.println(a.getBalance().toString());
+            %>
+            <h2>Historia operacji</h2>
+            <%
+                
+                
                 
                 Transaction t = new Transaction();
                 
