@@ -11,9 +11,12 @@ import Klasy.AccountNumber;
 import Tables.Account;
 import Tables.Login;
 import Tables.User;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,7 +49,7 @@ public class TransactionServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TransactionServlet</title>");            
+            out.println("<title>Servlet TransactionServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet TransactionServlet at " + request.getContextPath() + "</h1>");
@@ -86,7 +89,7 @@ public class TransactionServlet extends HttpServlet {
         String address = request.getParameter("address");
         BigDecimal amount = new BigDecimal(request.getParameter("amount"));
         String title = request.getParameter("title");
-        
+
         HttpSession session = request.getSession();
         Login l = (Login) session.getAttribute("login");
 
@@ -98,22 +101,21 @@ public class TransactionServlet extends HttpServlet {
 
         Klasy.Transaction t = new Klasy.Transaction();
 
-        if(!t.isSolvent(a, amount)){
-           String message = "Niewystarczajaca ilość środków na koncie.";
-           request.setAttribute("message", message);
+        if (!t.isSolvent(a, amount)) {
+            String message = "Niewystarczajaca ilość środków na koncie.";
+            request.setAttribute("message", message);
         }
-        
+
         AccountNumber an = new AccountNumber();
-        
-        if(!an.isValid("PL" + number)){
-           String message = "Nieprawidłowy numer konta.";
-           request.setAttribute("message", message);
+
+        if (!an.isValid("PL" + number)) {
+            String message = "Nieprawidłowy numer konta.";
+            request.setAttribute("message", message);
         }
-        
-        if(t.isInternal(number)){   //określenie typu przelewu
-           t.makeInternalTransaction(a, number, amount, title);
-        }
-        else{   //przelew zewnętrzny
+
+        if (t.isInternal(number)) {   //określenie typu przelewu
+            t.makeInternalTransaction(a, number, amount, title);
+        } else {   //przelew zewnętrzny
             String json = "{"
                     + "\"senderAccountnumber\": \"PL" + a.getNumber() + "\","
                     + "\"recipientAccountnumber\": \"PL" + number + "\","
@@ -121,8 +123,35 @@ public class TransactionServlet extends HttpServlet {
                     + "\"paymentAmount\": \"" + amount.toString() + "\","
                     + "\"currency\": \"PLN\""
                     + "}";
+            
+            HttpURLConnection connection = null;
+            
+            try {
+                //Create connection
+                URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/");
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("POST");
+                connection.setRequestProperty("Content-Type",
+                        "application/json; charset=UTF-8");
+
+                connection.setUseCaches(false);
+                connection.setDoOutput(true);
+
+                //Send request
+                DataOutputStream wr = new DataOutputStream(
+                        connection.getOutputStream());
+                wr.writeBytes(json);
+                wr.close();
+                connection.getInputStream();
+            } catch (Exception e) {
+                e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+            }
         }
-        
+
         String destPage = "user.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);
