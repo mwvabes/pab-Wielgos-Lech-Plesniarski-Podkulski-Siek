@@ -42,7 +42,7 @@ public class Transaction {
     
     public List<Operation> getHistory(Account account){
         OperationService os = new OperationService();
-        List<Operation> list = os.findByIdAccount(Integer.toString(account.getId_account()));
+        List<Operation> list = os.findByNumber(account.getNumber());
         return list;
     }
 }

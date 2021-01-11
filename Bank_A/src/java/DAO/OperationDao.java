@@ -78,9 +78,12 @@ public class OperationDao {
 		return operation; 
 	}
         
-        public List<Operation> findByIdAccount(String id) {
-		List<Operation> operations = (List<Operation>) getCurrentSession().createQuery("select o from operation o where o.id_account = " + id).list();
-		return operations;
+        public List<Operation> findByNumber(String number) {
+                String hql = "select o from operation o where o.sender_number = :number or o.recipent_number = :number";
+                Query query = getCurrentSession().createQuery(hql);
+                query.setParameter("number", number);
+		List<Operation> operation = (List<Operation>) query.list();
+                return operation;
 	}
 
 	public void delete(Operation entity) {

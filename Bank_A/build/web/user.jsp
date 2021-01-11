@@ -30,7 +30,7 @@
             <%@ page language="java" import="java.math.BigDecimal" %>
             <%@ page language="java" import="java.util.List" %>
             <%
-                /*
+                
                 Login l = (Login) session.getAttribute("login");
                // out.println(l);
                 
@@ -45,14 +45,14 @@
                 
                 List<Operation> list = t.getHistory(a);
                 for(int i =0; i<list.size(); i++){
-                    if(list.get(i).getType().compareTo("obciążenie") == 0){
+                    if(list.get(i).getSender_number().compareTo(a.getNumber()) == 0){
                         out.println("-" + list.get(i).getAmount().toString() + "</br>");
                     }
                     else{
                         out.println(list.get(i).getAmount().toString() + "</br>");
                     }
                 }
-                */
+                
                 %>
         </form>
         

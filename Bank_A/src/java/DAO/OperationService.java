@@ -32,9 +32,9 @@ public class OperationService {
 		return operation;
 	}
         
-        public List<Operation> findByIdAccount(String id) {
+        public List<Operation> findByNumber(String number) {
 		operationDao.openCurrentSession();
-		List<Operation> operations = operationDao.findByIdAccount(id);
+		List<Operation> operations = operationDao.findByNumber(number);
 		operationDao.closeCurrentSession();
 		return operations;
 	}
