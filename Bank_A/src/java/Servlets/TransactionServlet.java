@@ -113,6 +113,15 @@ public class TransactionServlet extends HttpServlet {
         if(t.isInternal(number)){   //określenie typu przelewu
            t.makeInternalTransaction(a, number, amount, title);
         }
+        else{   //przelew zewnętrzny
+            String json = "{"
+                    + "\"senderAccountnumber\": \"PL" + a.getNumber() + "\","
+                    + "\"recipientAccountnumber\": \"PL" + number + "\","
+                    + "\"paymentTitle\": \"" + title + "\","
+                    + "\"paymentAmount\": \"" + amount.toString() + "\","
+                    + "\"currency\": \"PLN\""
+                    + "}";
+        }
         
         String destPage = "user.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
