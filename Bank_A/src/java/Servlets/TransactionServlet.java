@@ -116,40 +116,7 @@ public class TransactionServlet extends HttpServlet {
         if (t.isInternal(number)) {   //określenie typu przelewu
             t.makeInternalTransaction(a, number, amount, title);
         } else {   //przelew zewnętrzny
-            String json = "{"
-                    + "\"senderAccountnumber\": \"PL" + a.getNumber() + "\","
-                    + "\"recipientAccountnumber\": \"PL" + number + "\","
-                    + "\"paymentTitle\": \"" + title + "\","
-                    + "\"paymentAmount\": \"" + amount.toString() + "\","
-                    + "\"currency\": \"PLN\""
-                    + "}";
-            
-            HttpURLConnection connection = null;
-            
-            try {
-                //Create connection
-                URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/");
-                connection = (HttpURLConnection) url.openConnection();
-                connection.setRequestMethod("POST");
-                connection.setRequestProperty("Content-Type",
-                        "application/json; charset=UTF-8");
-
-                connection.setUseCaches(false);
-                connection.setDoOutput(true);
-
-                //Send request
-                DataOutputStream wr = new DataOutputStream(
-                        connection.getOutputStream());
-                wr.writeBytes(json);
-                wr.close();
-                connection.getInputStream();
-            } catch (Exception e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-            }
+            t.makeExternalTransaction(a, number, amount, title);
         }
 
         String destPage = "user.jsp";

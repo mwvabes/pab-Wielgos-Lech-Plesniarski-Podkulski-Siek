@@ -1,31 +1,31 @@
-
 package Klasy;
 
 import DAO.AccountService;
 import DAO.OperationService;
 import Tables.Account;
 import Tables.Operation;
+import java.io.DataOutputStream;
 import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.sql.Date;
 import java.util.List;
 
 public class Transaction {
 
-
-    public boolean isSolvent(Account account, BigDecimal amount){
-        if(account.getBalance().compareTo(amount) == -1){
+    public boolean isSolvent(Account account, BigDecimal amount) {
+        if (account.getBalance().compareTo(amount) == -1) {
             return false;
-        }
-        else {
+        } else {
             return true;
         }
     }
-    
-    public boolean isInternal(String number){
+
+    public boolean isInternal(String number) {
         return number.substring(2, 5).equals("102");
     }
-    
-    public void makeInternalTransaction(Account account, String number, BigDecimal amount, String title){
+
+    public void makeInternalTransaction(Account account, String number, BigDecimal amount, String title) {
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
         account.setBalance(account.getBalance().subtract(amount));
@@ -39,8 +39,45 @@ public class Transaction {
         account2.setBalance(account2.getBalance().add(amount));
         as.update(account2);
     }
-    
-    public List<Operation> getHistory(Account account){
+
+    public void makeExternalTransaction(Account account, String number, BigDecimal amount, String title) {
+        String json = "{"
+                + "\"senderAccountnumber\": \"PL" + account.getNumber() + "\","
+                + "\"recipientAccountnumber\": \"PL" + number + "\","
+                + "\"paymentTitle\": \"" + title + "\","
+                + "\"paymentAmount\": \"" + amount.toString() + "\","
+                + "\"currency\": \"PLN\""
+                + "}";
+
+        HttpURLConnection connection = null;
+
+        try {
+            //Create connection
+            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type",
+                    "application/json; charset=UTF-8");
+
+            connection.setUseCaches(false);
+            connection.setDoOutput(true);
+
+            //Send request
+            DataOutputStream wr = new DataOutputStream(
+                    connection.getOutputStream());
+            wr.writeBytes(json);
+            wr.close();
+            connection.getInputStream();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+    }
+
+    public List<Operation> getHistory(Account account) {
         OperationService os = new OperationService();
         List<Operation> list = os.findByNumber(account.getNumber());
         return list;
