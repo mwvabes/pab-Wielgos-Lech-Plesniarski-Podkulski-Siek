@@ -111,7 +111,7 @@ public class TransactionServlet extends HttpServlet {
         }
         
         if(t.isInternal(number)){   //określenie typu przelewu
-           t.makeInternalTransaction(a, number, amount);
+           t.makeInternalTransaction(a, number, amount, title);
         }
         
         String destPage = "user.jsp";

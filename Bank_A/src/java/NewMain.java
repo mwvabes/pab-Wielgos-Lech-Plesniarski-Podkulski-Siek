@@ -32,14 +32,16 @@ public class NewMain {
 //        System.out.println(iban.isValid("PL04 0000 0000 0000 0000 0000 0000"));
 //        System.out.println(iban.isValid("PL51102029640000000000000013"));
 //        
-//        Transaction t = new Transaction();
-//        System.out.println("51102029640000000000000013".substring(2, 5));
-//        System.out.println(t.isInternal("51102029640000000000000013"));
-//        System.out.println(t.isInternal("04 0000 0000 0000 0000 0000 0000"));
+        Transaction t = new Transaction();
+        System.out.println("51102029640000000000000013".substring(2, 5));
+        System.out.println(t.isInternal("51102029640000000000000013"));
+        System.out.println(t.isInternal("04 0000 0000 0000 0000 0000 0000"));
         
-//        AccountService as = new AccountService();
-//        Account account2 = as.findByNumber("12102014170000000000000017");
-//        System.out.println(account2);
+        AccountService as = new AccountService();
+        Account account2 = as.findByNumber("67102029640000000000000016");
+        System.out.println(account2);
+        
+        System.out.println(t.getHistory(account2));
         
         /*
         AccountService as = new AccountService();

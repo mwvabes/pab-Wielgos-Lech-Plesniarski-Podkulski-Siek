@@ -30,15 +30,27 @@ public class Operation {
     @Column(name = "status")
     private String status;
     
-    @Column(name = "id_account")
-    private int id_account;
+    @Column(name = "sender_number")
+    private String sender_number;
+    
+    @Column(name = "recipent_number")
+    private String recipent_number;
+    
+    @Column(name = "title")
+    private String title;
 
-    public Operation(String type, Date date, BigDecimal amount, String status, int id_account) {
+    public Operation(String type, Date date, BigDecimal amount, String status, String sender_number, String recipent_number, String title) {
         this.type = type;
         this.date = date;
         this.amount = amount;
         this.status = status;
-        this.id_account = id_account;
+        this.sender_number = sender_number;
+        this.recipent_number = recipent_number;
+        this.title = title;
+    }
+    
+    public Operation(){
+        
     }
 
     public int getId_operation() {
@@ -79,6 +91,30 @@ public class Operation {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getSender_number() {
+        return sender_number;
+    }
+
+    public void setSender_number(String sender_number) {
+        this.sender_number = sender_number;
+    }
+
+    public String getRecipent_number() {
+        return recipent_number;
+    }
+
+    public void setRecipent_number(String recipent_number) {
+        this.recipent_number = recipent_number;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
     
     

@@ -21,10 +21,14 @@
             Tytuł:<input type="text" name="title"></br>
             <input type="submit" value="Wyślij">
             ${message}
+            
+            <h2>Historia operacji</h2>
+
             <%@ page language="java" import="Tables.*" %>
             <%@ page language="java" import="DAO.*" %>
             <%@ page language="java" import="Klasy.*" %>
             <%@ page language="java" import="java.math.BigDecimal" %>
+            <%@ page language="java" import="java.util.List" %>
             <%
                 /*
                 Login l = (Login) session.getAttribute("login");
@@ -37,9 +41,20 @@
                 Account a = as.findByIdUser(Integer.toString(u.getId_user()));
                 
                 Transaction t = new Transaction();
-                out.println(t.isSolvent(a, new BigDecimal(10)));
+                
+                
+                List<Operation> list = t.getHistory(a);
+                for(int i =0; i<list.size(); i++){
+                    if(list.get(i).getType().compareTo("obciążenie") == 0){
+                        out.println("-" + list.get(i).getAmount().toString() + "</br>");
+                    }
+                    else{
+                        out.println(list.get(i).getAmount().toString() + "</br>");
+                    }
+                }
                 */
                 %>
         </form>
+        
     </body>
 </html>

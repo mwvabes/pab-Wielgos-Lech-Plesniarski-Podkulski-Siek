@@ -1,6 +1,7 @@
 
 package DAO;
 
+import Tables.Account;
 import Tables.Operation;
 
 import java.util.List;
@@ -75,6 +76,11 @@ public class OperationDao {
 	public Operation findById(String id) {
 		Operation operation = (Operation) getCurrentSession().get(Operation.class, id);
 		return operation; 
+	}
+        
+        public List<Operation> findByIdAccount(String id) {
+		List<Operation> operations = (List<Operation>) getCurrentSession().createQuery("select o from operation o where o.id_account = " + id).list();
+		return operations;
 	}
 
 	public void delete(Operation entity) {

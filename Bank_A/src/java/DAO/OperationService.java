@@ -31,6 +31,13 @@ public class OperationService {
 		operationDao.closeCurrentSession();
 		return operation;
 	}
+        
+        public List<Operation> findByIdAccount(String id) {
+		operationDao.openCurrentSession();
+		List<Operation> operations = operationDao.findByIdAccount(id);
+		operationDao.closeCurrentSession();
+		return operations;
+	}
 
 	public void delete(String id) {
 		operationDao.openCurrentSessionwithTransaction();
