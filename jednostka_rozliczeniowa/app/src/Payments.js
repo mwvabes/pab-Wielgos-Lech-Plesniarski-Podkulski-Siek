@@ -3,6 +3,10 @@ import axios from 'axios'
 import 'antd/dist/antd.css';
 import { Button, Divider, Table, Form, Input, InputNumber, Space, List } from 'antd'
 
+const PaymentConfirm = () => {
+  
+}
+
 const Payments = () => {
 
   const [paymentsInfo, setPaymentsInfo] = useState([])
@@ -33,20 +37,20 @@ const Payments = () => {
   const columns = [
     {
       title: 'Nadawca',
-      dataIndex: 'sender',
-      key: 'sender',
+      dataIndex: 'senderAccountnumber',
+      key: 'senderAccountnumber',
       render: text => <a>{text}</a>,
     },
     {
       title: 'Odbiorca',
-      dataIndex: 'sender',
-      key: 'sender',
+      dataIndex: 'recipientAccountnumber',
+      key: 'recipientAccountnumber',
       render: text => <a>{text}</a>,
     },
     {
       title: 'Kwota',
-      dataIndex: 'sender',
-      key: 'sender',
+      dataIndex: 'paymentAmount',
+      key: 'paymentAmount',
       render: text => <a>{text}</a>,
     },
     {
