@@ -3,30 +3,63 @@ import axios from 'axios'
 import 'antd/dist/antd.css';
 import { Button, Divider, Table, Form, Input, InputNumber, Space, List } from 'antd'
 
-const PaymentConfirm = () => {
+const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
   
+  if (status == "in_shipping") {
+    return (
+      <>
+        <Button onClick={() => confirmPayment(paymentId)} >Potwierdź</Button>
+        <Button onClick={() => declinePayment(paymentId)} >Odrzuć</Button>
+      </>
+    )
+  }
+  else {
+    return (
+      <>
+        <p>Operacja nie wymaga żadnej akcji</p>
+      </>
+    )
+  }
+
 }
 
 const Payments = () => {
 
   const [paymentsInfo, setPaymentsInfo] = useState([])
+  const [sessionStatus, setSessionStatus] = useState("Ładowanie informacji o sesji...")
 
   // const [formProductId, setFormProductId] = useState(null)
   // const [formAvailableQuantity, setFormAvailableQuantity] = useState(null)
 
   const fetchPayments = () => {
     axios
-      .get(`http://localhost:8005/api/payments/getCurrentlyServed`)
+      .get(`http://localhost:8012/api/payment/getCurrentlyServed`)
       .then(response => {
-        console.log(response)
-        setPaymentsInfo(response.data)
+        console.log("RES", response.data)
+        if (response.data.nosession) {
+          setSessionStatus("Brak aktualnie obsługiwanej sesji")
+          setPaymentsInfo([])
+        } else {
+          setSessionStatus(`Aktualnie obsługiwane przelewy sesji ${response.data.session}`)
+          setPaymentsInfo(response.data.payments)
+        }
+        
       })
       .catch(e => console.log(e))
   }
 
   useEffect(fetchPayments, [])
 
-  const confirmParcelArrival = (parcelId) => {
+  const confirmPayment = (paymentId) => {
+    axios
+      .post(`http://localhost:8005/api/payments/getCurrentlyServed`)
+      .then(response => {
+        fetchPayments()
+      })
+  }
+
+  
+  const declinePayment = (paymentId) => {
     axios
       .post(`http://localhost:8005/api/payments/getCurrentlyServed`)
       .then(response => {
@@ -55,15 +88,15 @@ const Payments = () => {
     },
     {
       title: 'Szczegóły',
-      dataIndex: 'parcelSettings',
-      key: 'sender',
-      render: (text, row) => <p>{text}</p>,
+      dataIndex: '',
+      key: 'confirmation',
+      render: (text, row) => <PaymentConfirm paymentId={row._id} status={row.paymentStatus} confirmPayment={confirmPayment} declinePayment={declinePayment} />,
     },
   ]
 
   return (
     <>
-      <Divider orientation="left">Aktualnie obsługiwane przelewy</Divider>
+      <Divider orientation="left">{sessionStatus}</Divider>
       <Table columns={columns} dataSource={paymentsInfo} rowKey={paymentsInfo => paymentsInfo._id}
         
       />

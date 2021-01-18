@@ -36,7 +36,6 @@ app.get('/', (request, response) => {
   response.send('Jednostka Rozliczeniowa - 0.0.1')
 })
 
-const PORT = 3001
 app.listen(process.env.PORT || 5000, () => {
-  console.log(`Server running on port ${PORT}`)
+  console.log(`Server started!`)
 })

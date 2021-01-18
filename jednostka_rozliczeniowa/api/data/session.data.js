@@ -110,13 +110,13 @@ exports.getCurrentlyServedSession = () => {
   }
   else {
 
-    let session = sessionsConf.find(s => {
-      return Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) > Date.parse(`01/01/1970/ ${s.hourClose}}:00`) && Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) < Date.parse(`01/01/1970/ ${s.hourAnnounce}}:00`)
-    })
+    console.log("DATE", currentDate)
+
+    let session = sessionsConf.find(s => Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) > Date.parse(`01/01/1970/ ${s.hourClose}`) && Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) < Date.parse(`01/01/1970/ ${s.hourAnnounce}`))
     
     if (session == undefined) return null
 
-    return session.sessionName
+    return `${currentDate.getFullYear()}${currentDate.getMonth() + 1 < 10 ? "0" + (currentDate.getMonth() + 1) : (currentDate.getMonth() + 1) }${currentDate.getDate() < 10 ? "0" + currentDate.getDate() : currentDate.getDate()}${session.sessionName}`
 
   }
 

@@ -130,13 +130,53 @@ exports.settlePayments = (request, result) => {
 
 }
 
-exports.getCurrentlyServedPayments = (request, result) => {
+exports.paymentConfirmation = (request, result) => {
 
-  const r = paymentData.getCurrentlyServedPayments()
+  const r = paymentData.settlePayments()
+
+  if (request.body.type == "confirm") {
+    Payment.findOneAndUpdate({ _id: request.body.id }, { status: "settled" }, { upsert: true })
+  } else {
+    Payment.findOneAndUpdate({ _id: request.body.id }, { status: "declined" }, { upsert: true })
+  }
 
   result.status(200).json({
     r
   })
+
+}
+
+exports.getCurrentlyServedPayments = (request, result) => {
+
+  const r = sessionData.getCurrentlyServedSession()
+
+  if (r == null) {
+    result.status(200).json({
+      "message": "No current session",
+      "nosession": true
+    })
+    return
+  }
+
+  paymentData.getCurrentlyServedPayments().then(payments => {
+    result.status(200).json({
+      "nosession": false,
+      "session": r,
+      "payments": payments
+    })
+  }
+
+  )
+
+
+
+  //   result.status(200).json({
+  //   "nosession": false,
+  //   "session": r
+  //   //p
+  // })
+
+
 
 }
 

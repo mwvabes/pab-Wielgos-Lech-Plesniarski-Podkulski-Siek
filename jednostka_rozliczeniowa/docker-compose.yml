@@ -19,11 +19,13 @@ services:
       - ./api:/usr/src/app
       - /usr/src/api/node_modules
     ports: 
-      - "8012:3001"
+      - "8012:5000"
     networks:
       - jr-network
     depends_on:
       - jr-db-service
+    environment:                                                    
+      - TZ=Europe/Warsaw 
 
   jr-db-service:
     image: mongo:3.6.19-xenial

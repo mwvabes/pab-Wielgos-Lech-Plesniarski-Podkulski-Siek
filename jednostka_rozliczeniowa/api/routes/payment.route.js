@@ -5,6 +5,7 @@ module.exports = (app) => {
   router.get('/', paymentController.getIncomingPayments)
   router.post('/', paymentController.addPaymentDisposition)
   router.post('/settle', paymentController.settlePayments)
+  router.post('/confirmation', paymentController.paymentConfirmation)
   router.get('/getCurrentlyServed', paymentController.getCurrentlyServedPayments)
 
   app.use('/api/payment', router)

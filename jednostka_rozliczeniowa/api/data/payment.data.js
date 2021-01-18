@@ -3,6 +3,26 @@ const sessionsConf = JSON.parse(fs.readFileSync('./conf/sessions_conf.json'))
 const sessionData = require("../data/session.data")
 const mongoose = require("mongoose")
 const db = require('./../conf/dbconfig')
+const schedule = require('node-schedule')
+
+const models = require("../models")
+const { settlePayments } = require('../controllers/payment.controller')
+const Payment = models.payment
+
+schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})
 
 exports.settlePayments = () => {
 
@@ -36,7 +56,7 @@ exports.acceptPayment = (paymentID) => {
 
   mongoose.connect(db.url, db.attr)
 
-  Payment.findOneAndUpdate({ _id: paymentID, status: "revision" }, { status: "settled" }, { upsert: true }).then(r => {
+  Payment.findOneAndUpdate({ _id: paymentID, status: "revision" }, { status: "accepted" }, { upsert: true }).then(r => {
     return 200;
   }).catch(e => {
     return 400;
@@ -58,14 +78,19 @@ exports.cancelPayment = (paymentID) => {
 
 exports.getCurrentlyServedPayments = () => {
 
-  mongoose.connect(db.url, db.attr)
-  
-  const currentSession = sessionData.getCurrentSession
+  const p = new Promise((resolve, reject) => {
+    const currentSession = sessionData.getCurrentlyServedSession()
 
-  Payment.findAll({ servingSession: currentSession }).then(r => {
-    return 200;
-  }).catch(e => {
-    return 400;
+    mongoose.connect(db.url, db.attr)
+
+    Payment.find({ servingSession: currentSession }).then(r => {
+      resolve(r)
+    }).catch(e => {
+      reject(400)
+    })
+
   })
+
+  return p
 
 }

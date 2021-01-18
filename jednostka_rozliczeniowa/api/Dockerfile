@@ -12,7 +12,7 @@ RUN npm install
 #COPY . .
 COPY . .
 
-EXPOSE 8005
+EXPOSE 5000
 
 # CMD [ "nodemon" ]
 CMD [ "npm", "run", "dev" ]

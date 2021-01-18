@@ -1,11 +1,11 @@
-const currentSessionAvailable = require('../data/session.data')
+const sessionData = require('../data/session.data')
 
 exports.getAvailableSession = (request, response) => {
 
   //console.log(currentSessionAvailable())
 
   response.json({
-    currentSessionAvailable: currentSessionAvailable.getCurrentSession(),
+    currentSessionAvailable: sessionData.getCurrentSession(),
   })
 
 }
@@ -13,7 +13,7 @@ exports.getAvailableSession = (request, response) => {
 exports.checkIfDone = (request, response) => {
 
   response.json({
-    isDone: currentSessionAvailable.checkIfDone(request.query.session),
+    isDone: sessionData.checkIfDone(request.query.session),
   })
 
 }
