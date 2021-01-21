@@ -31,7 +31,7 @@ const GeneralInfo = () => {
     <Alert message={<Badge status="processing" text={copyrights} />} type="info" style={{margin: "10px 0px"}} />
     
     <Collapse defaultActiveKey={['1']}>
-    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule">
+    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule" extra={<a href="https://jr-api-express.herokuapp.com/">API</a>}>
       {`Czas serwerowy: ${new Date().toLocaleString()}`}
       {
         sessionSchedule !== null ? sessionSchedule.map(s => { 
