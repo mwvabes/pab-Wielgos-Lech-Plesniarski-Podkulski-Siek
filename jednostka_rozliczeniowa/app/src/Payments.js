@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
-import { Button, Divider, Table, Form, Input, InputNumber, Space, List } from 'antd'
+import { Button, Divider, Table } from 'antd'
 
 const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
   
-  if (status == "in_shipping") {
+  if (status === "in_shipping") {
     return (
       <>
         <Button onClick={() => confirmPayment(paymentId)} >Potwierdź</Button>
@@ -33,7 +33,7 @@ const Payments = () => {
 
   const fetchPayments = () => {
     axios
-      .get(`http://localhost:8012/api/payment/getCurrentlyServed`)
+      .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`)
       .then(response => {
         console.log("RES", response.data)
         if (response.data.nosession) {
@@ -52,7 +52,7 @@ const Payments = () => {
 
   const confirmPayment = (paymentId) => {
     axios
-      .post(`http://localhost:8005/api/payments/getCurrentlyServed`)
+      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`)
       .then(response => {
         fetchPayments()
       })
@@ -61,7 +61,7 @@ const Payments = () => {
   
   const declinePayment = (paymentId) => {
     axios
-      .post(`http://localhost:8005/api/payments/getCurrentlyServed`)
+      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`)
       .then(response => {
         fetchPayments()
       })
@@ -72,7 +72,7 @@ const Payments = () => {
       title: 'Nadawca',
       dataIndex: 'senderAccountnumber',
       key: 'senderAccountnumber',
-      render: text => <a>{text}</a>,
+      render: text => <p>{text}</p>,
     },
     {
       title: 'Odbiorca',

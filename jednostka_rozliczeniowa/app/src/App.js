@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
 import Payments from './Payments'
+import GeneralInfo from './GeneralInfo';
 
 function App() {
   return (
     <div className="container">
+      <GeneralInfo />
       <Payments />
     </div>
   );

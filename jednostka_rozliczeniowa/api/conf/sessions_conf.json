@@ -1,8 +1,8 @@
 [
   {
     "sessionName": "_01",
-    "hourClose": "00:00",
-    "hourStartClearance": "00:10",
+    "hourClose": "09:00",
+    "hourStartClearance": "09:10",
     "hourStopClearance": "11:45",
     "hourAnnounce": "11:50",
     "verifyBoundary": "1000.00"
