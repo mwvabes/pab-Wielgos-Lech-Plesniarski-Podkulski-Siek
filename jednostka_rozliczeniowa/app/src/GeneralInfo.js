@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
-import { Collapse, Badge, Descriptions, Alert } from 'antd'
+import { Collapse, Badge, Descriptions, Alert, Button } from 'antd'
 
 const { Panel } = Collapse
 
@@ -31,7 +31,7 @@ const GeneralInfo = () => {
     <Alert message={<Badge status="processing" text={copyrights} />} type="info" style={{margin: "10px 0px"}} />
     
     <Collapse defaultActiveKey={['1']}>
-    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule" extra={<a href="https://jr-api-express.herokuapp.com/">API</a>}>
+    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule" extra={<a href="https://jr-api-express.herokuapp.com/"><Button type="primary">API</Button></a>}>
       {`Czas serwerowy: ${new Date().toLocaleString()}`}
       {
         sessionSchedule !== null ? sessionSchedule.map(s => { 
