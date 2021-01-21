@@ -3,6 +3,7 @@ module.exports = (app) => {
   const sessionController = require("../controllers/session.controller.js")
 
   router.get('/', sessionController.getAvailableSession)
+  router.get('/schedule', sessionController.getSchedule)
   router.get('/checkIfDone', sessionController.checkIfDone)
   router.get('/getCurrentlyServed', sessionController.getCurrentlyServedSession)
 

@@ -121,3 +121,9 @@ exports.getCurrentlyServedSession = () => {
   }
 
 }
+
+exports.getSchedule = () => {
+  
+  return sessionsConf
+
+}

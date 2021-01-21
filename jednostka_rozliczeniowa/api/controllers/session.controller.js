@@ -34,3 +34,13 @@ exports.getCurrentlyServedSession = (request, result) => {
   })
 
 }
+
+exports.getSchedule = (request, result) => {
+
+  const schedule = sessionData.getSchedule()
+
+  result.status(200).json({
+    schedule
+  })
+
+}
