@@ -33,7 +33,7 @@ require("./routes/session.route")(app)
 //app.use(unknownEndpoint)
 
 app.get('/', (request, response) => {
-  response.send('Jednostka Rozliczeniowa - 0.0.1')
+  response.send(`Jednostka Rozliczeniowa - 1.0.1 >> ${new Date().toLocaleString()}`)
 })
 
 app.listen(process.env.PORT || 5000, () => {
