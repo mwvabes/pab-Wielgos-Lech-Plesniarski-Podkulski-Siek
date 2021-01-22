@@ -145,14 +145,14 @@ exports.paymentConfirmation = (request, result) => {
 
   if (request.body.type === "confirm") {
     console.log("Confirm payment", request.body.paymentId)
-    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "accepted" }, { upsert: true }).then(r => {
+    Payment.update({ _id: request.body.paymentId }, { paymentStatus: "accepted" }).then(r => {
       result.status(200).json({
         r
       })
     })
   } else {
     console.log("Decline payment", request.body.paymentId)
-    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "declined" }, { upsert: true }).then(r => {
+    Payment.update({ _id: request.body.paymentId }, { paymentStatus: "declined" }).then(r => {
       result.status(200).json({
         r
       })

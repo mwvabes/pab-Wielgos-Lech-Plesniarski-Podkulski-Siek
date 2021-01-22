@@ -152,7 +152,7 @@ paths:
                   r:
                     type: boolean
                     description: Tablica przelewów przychodzących
-  /api/payment/confirm:
+  /api/payment/confirmation:
     post:
       summary: Zaakceptuj lub odrzuć przelew.
       description: |
