@@ -15,8 +15,7 @@ exports.settlePayments = () => {
 
   mongoose.connect(db.url, db.attr)
 
-  Payment.find({ servingSession: session, status: "accepted" }).then(p => {
-
+  Payment.find({ servingSession: session, paymentStatus: "accepted" }).then(p => {
     p.map(p => {
       Payment.update({ _id: p._id }, { status: "settled" })
       Bank.findOne({ bankID: p.senderBankCode }).then(b => {
