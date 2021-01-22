@@ -110,8 +110,6 @@ exports.getCurrentlyServedSession = () => {
   }
   else {
 
-    console.log("DATE", currentDate)
-
     let session = sessionsConf.find(s => Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) > Date.parse(`01/01/1970/ ${s.hourClose}`) && Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) < Date.parse(`01/01/1970/ ${s.hourAnnounce}`))
     
     if (session == undefined) return null

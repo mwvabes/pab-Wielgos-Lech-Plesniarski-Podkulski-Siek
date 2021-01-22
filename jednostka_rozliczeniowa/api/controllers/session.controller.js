@@ -2,8 +2,6 @@ const sessionData = require('../data/session.data')
 
 exports.getAvailableSession = (request, response) => {
 
-  //console.log(currentSessionAvailable())
-
   response.json({
     currentSessionAvailable: sessionData.getCurrentSession(),
   })

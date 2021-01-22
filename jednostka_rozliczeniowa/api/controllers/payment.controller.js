@@ -92,10 +92,7 @@ exports.addPaymentDisposition = (request, result) => {
       paymentStatus: paymentStatus
     })
 
-    console.log("PAY", payment)
-
     payment.save().then(r => {
-      console.log('Payment saved!')
       mongoose.connection.close()
       result.status(200).json({
         isPaymentAccepted: true,

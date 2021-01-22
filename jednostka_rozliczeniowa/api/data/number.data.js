@@ -3,8 +3,6 @@ const banks = JSON.parse(fs.readFileSync('./conf/banks_conf.json'))
 
 exports.validateNumber = (accountnumber) => {
 
-  console.log("Acc", accountnumber)
-
   accountnumber = accountnumber.replace(/[\s-]/g, '')
 
   if (accountnumber.substr(0, 2) != "PL") {
