@@ -139,7 +139,7 @@ exports.settlePayments = (request, result) => {
 
 exports.paymentConfirmation = (request, result) => {
 
-  console.log("Payment confirmation")
+  console.log("Payment confirmation body", request.body)
 
   const r = paymentData.settlePayments()
 
