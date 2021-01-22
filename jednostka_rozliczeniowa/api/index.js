@@ -37,6 +37,7 @@ app.use(bodyParser.json())
 require("./routes/number.route")(app)
 require("./routes/payment.route")(app)
 require("./routes/session.route")(app)
+require("./routes/bank.route")(app)
 //app.use(unknownEndpoint)
 
 app.get('/', (request, response) => {
