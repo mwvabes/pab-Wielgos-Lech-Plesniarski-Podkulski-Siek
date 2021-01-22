@@ -8,6 +8,10 @@ npm install
 npm run start
 ```
 
+## Dokumentacja zapytań
+
+[http://jr-api-express.herokuapp.com/docs/](http://jr-api-express.herokuapp.com/docs/)
+
 ## Obsługiwane banki
 
 1. PKO BP
