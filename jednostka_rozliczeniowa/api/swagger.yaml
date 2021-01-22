@@ -125,7 +125,7 @@ paths:
     get:
       summary: Zwraca przelewy przychodzące w danej sesji dla danego banku.
       tags:
-        - number
+        - payment
       parameters:
         - in: query
           name: bankCode
