@@ -205,20 +205,20 @@ exports.getCurrentlyServedPayments = (request, result) => {
 
 schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
   console.log("Settling payments by scheduler _01")
-  settlePayments()
+  sessionData.settlePayments()
 })
 
 schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
   console.log("Settling payments by scheduler _02")
-  settlePayments()
+  sessionData.settlePayments()
 })
 
 schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   console.log("Settling payments by scheduler _03")
-  settlePayments()
+  sessionData.settlePayments()
 })
 
-schedule.scheduleJob({ hour: 19, minute: 05 }, () => {
+schedule.scheduleJob({ hour: 19, minute: 25 }, () => {
   console.log("Settling payments by scheduler _04")
-  settlePayments()
+  sessionData.settlePayments()
 })
