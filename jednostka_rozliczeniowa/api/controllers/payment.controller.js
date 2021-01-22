@@ -141,6 +141,8 @@ exports.paymentConfirmation = (request, result) => {
 
   console.log("Payment confirmation body", request.body)
 
+  mongoose.connect(db.url, db.attr)
+
   const r = paymentData.settlePayments()
 
   if (request.body.type === "confirm") {
