@@ -5,7 +5,7 @@ const bank = mongoose.model(
   new mongoose.Schema({
     bankID: { type: String, unique : true },
     bankName: String,
-    bankBalance: { type: Number, default: 100000 },
+    bankBalance: { type: mongoose.Types.Decimal128, default: 100000 },
     bankUnits: Array,
   },
   { timestamps: true })

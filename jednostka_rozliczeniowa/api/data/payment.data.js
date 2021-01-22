@@ -25,15 +25,15 @@ exports.settlePayments = () => {
         Bank.findOne({ bankID: p.senderBankCode }).then(b => {
     
           Bank.updateOne({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true }).catch(e => console.log(e))
-          console.log("Updated sender bank", b)
+
           
         }).catch(e => console.log(e))
         Bank.findOne({ bankID: p.recipientBankCode }).then(b => {
           
           Bank.updateOne({ bankID: p.recipientBankCode }, { bankBalance: b.bankBalance + p.paymentAmount }, { upsert: true }).catch(e => console.log(e))
-          console.log("Updated recipient bank", b)
+
         }).catch(e => console.log(e))
-      })
+      }).catch(e => console.log(e))
 
 
     })
