@@ -142,8 +142,10 @@ exports.paymentConfirmation = (request, result) => {
   const r = paymentData.settlePayments()
 
   if (request.body.type == "confirm") {
+    console.log("Confirm payment", request.body.id)
     Payment.findOneAndUpdate({ _id: request.body.id }, { status: "accepted" }, { upsert: true })
   } else {
+    console.log("Decline payment", request.body.id)
     Payment.findOneAndUpdate({ _id: request.body.id }, { status: "declined" }, { upsert: true })
   }
 
