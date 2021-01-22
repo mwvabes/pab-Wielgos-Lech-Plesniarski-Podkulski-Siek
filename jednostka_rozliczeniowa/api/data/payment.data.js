@@ -5,7 +5,6 @@ const mongoose = require("mongoose")
 const db = require('./../conf/dbconfig')
 
 const models = require("../models")
-const { settlePayments } = require('../controllers/payment.controller')
 const Payment = models.payment
 
 exports.settlePayments = () => {

@@ -132,7 +132,7 @@ exports.getIncomingPayments = (request, result) => {
 
 }
 
-exports.settlePayments = (request, result) => {
+exports.settlePaymentsHandler = (request, result) => {
 
   const r = paymentData.settlePayments()
 
@@ -205,20 +205,20 @@ exports.getCurrentlyServedPayments = (request, result) => {
 
 schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
   console.log("Settling payments by scheduler _01")
-  sessionData.settlePayments()
+  paymentData.settlePayments()
 })
 
 schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
   console.log("Settling payments by scheduler _02")
-  sessionData.settlePayments()
+  paymentData.settlePayments()
 })
 
 schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   console.log("Settling payments by scheduler _03")
-  sessionData.settlePayments()
+  paymentData.settlePayments()
 })
 
-schedule.scheduleJob({ hour: 19, minute: 50 }, () => {
+schedule.scheduleJob({ hour: 20, minute: 12 }, () => {
   console.log("Settling payments by scheduler _04")
-  sessionData.settlePayments()
+  paymentData.settlePayments()
 })

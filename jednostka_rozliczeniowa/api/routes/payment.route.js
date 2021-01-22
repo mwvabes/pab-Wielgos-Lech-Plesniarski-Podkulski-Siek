@@ -4,7 +4,7 @@ module.exports = (app) => {
 
   router.get('/getIncoming', paymentController.getIncomingPayments)
   router.post('/', paymentController.addPaymentDisposition)
-  router.post('/settle', paymentController.settlePayments)
+  router.post('/settle', paymentController.settlePaymentsHandler)
   router.post('/confirmation', paymentController.paymentConfirmation)
   router.get('/getCurrentlyServed', paymentController.getCurrentlyServedPayments)
 
