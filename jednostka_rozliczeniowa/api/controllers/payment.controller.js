@@ -218,7 +218,7 @@ schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   sessionData.settlePayments()
 })
 
-schedule.scheduleJob({ hour: 19, minute: 33 }, () => {
+schedule.scheduleJob({ hour: 19, minute: 50 }, () => {
   console.log("Settling payments by scheduler _04")
   sessionData.settlePayments()
 })

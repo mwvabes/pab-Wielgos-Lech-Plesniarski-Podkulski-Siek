@@ -39,6 +39,8 @@ exports.settlePayments = () => {
 
   })
 
+  return;
+
 }
 
 exports.acceptPayment = (paymentID) => {
