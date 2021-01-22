@@ -50,8 +50,14 @@ const Payments = () => {
   useEffect(fetchPayments, [])
 
   const confirmPayment = (paymentId) => {
+
+    const params = {
+      paymentId: paymentId,
+      type: "confirm"
+    }
+
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, JSON.stringify({paymentId, type: "confirm"}), { headers: { "Content-Type": "text/plain" } })
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
       .then(response => {
         message.success('Zaakceptowano przelew')
         fetchPayments()
@@ -60,8 +66,14 @@ const Payments = () => {
 
   
   const declinePayment = (paymentId) => {
+
+    const params = {
+      paymentId: paymentId,
+      type: "decline"
+    }
+
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, JSON.stringify({paymentId, type: "decline"}), { headers: { "Content-Type": "text/plain" } })
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
       .then(response => {
         message.warning('Odrzucono przelew');
         fetchPayments()
