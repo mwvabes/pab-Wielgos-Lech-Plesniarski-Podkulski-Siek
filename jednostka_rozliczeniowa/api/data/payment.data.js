@@ -18,12 +18,12 @@ exports.settlePayments = () => {
   Payment.find({ servingSession: session, status: "accepted" }).then(p => {
 
     p.map(p => {
-      Payment.findOneAndUpdate({ _id: p._id }, { status: "settled" }, { upsert: true })
+      Payment.update({ _id: p._id }, { status: "settled" })
       Bank.findOne({ bankID: p.senderBankCode }).then(b => {
-        Bank.findOneAndUpdate({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true })
+        Bank.update({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true })
       })
       Bank.findOne({ bankID: p.recipientBankCode }).then(b => {
-        Bank.findOneAndUpdate({ bankID: p.recipientBankCode }, { bankBalance: b.bankBalance + p.paymentAmount }, { upsert: true })
+        Bank.update({ bankID: p.recipientBankCode }, { bankBalance: b.bankBalance + p.paymentAmount }, { upsert: true })
       })
 
     })

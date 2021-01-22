@@ -24,11 +24,11 @@
     "verifyBoundary": "1000.00"
   },
   {
-    "sessionName": "_05",
-    "hourClose": "20:00",
-    "hourStartClearance": "20:10",
-    "hourStopClearance": "20:45",
-    "hourAnnounce": "20:47",
+    "sessionName": "_06",
+    "hourClose": "21:00",
+    "hourStartClearance": "21:10",
+    "hourStopClearance": "21:45",
+    "hourAnnounce": "21:47",
     "verifyBoundary": "1000.00"
   }
 ]
