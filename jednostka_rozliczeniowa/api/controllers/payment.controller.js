@@ -218,7 +218,7 @@ schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   settlePayments()
 })
 
-schedule.scheduleJob({ hour: 18, minute: 58 }, () => {
+schedule.scheduleJob({ hour: 19, minute: 05 }, () => {
   console.log("Settling payments by scheduler _04")
   settlePayments()
 })
