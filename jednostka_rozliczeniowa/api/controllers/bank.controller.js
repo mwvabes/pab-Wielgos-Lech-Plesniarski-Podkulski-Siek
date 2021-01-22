@@ -10,7 +10,7 @@ const Bank = models.bank
 
 mongoose.connect(db.url, db.attr)
 Bank.find({}).then(p => {
-  if (p == null) {
+  if (p == null || p.length === 0) {
     banksConf.filter(b => {
       const newBank = new Bank({
         bankID: b.bankID,
