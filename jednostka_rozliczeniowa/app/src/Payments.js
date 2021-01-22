@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
-import { Button, Divider, Table, message } from 'antd'
+import { Button, Divider, Table, message, Alert } from 'antd'
 
 const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
   
@@ -9,16 +9,29 @@ const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => 
     return (
       <>
         <Button onClick={() => confirmPayment(paymentId)} >Potwierdź</Button>
-        <Button danger onClick={() => declinePayment(paymentId)} >Odrzuć</Button>
+        <Button style={{ marginLeft: "20px" }} danger onClick={() => declinePayment(paymentId)} >Odrzuć</Button>
       </>
     )
   }
-  else {
+  else if (status === "accepted") {
     return (
       <>
-        <p>Operacja nie wymaga żadnej akcji</p>
+        <Alert message="Przelew został zaakceptowany" type="success" showIcon />
       </>
     )
+  } 
+  else if (status === "declined") {
+    return (
+      <>
+        <Alert message="Przelew został odrzucony" type="error" showIcon />
+      </>
+    )
+  } else {
+      return (
+        <>
+          <Alert message="Przelew został rozliczony automatycznie" type="info" showIcon />
+        </>
+      )
   }
 
 }
@@ -27,6 +40,7 @@ const Payments = () => {
 
   const [paymentsInfo, setPaymentsInfo] = useState([])
   const [sessionStatus, setSessionStatus] = useState("Ładowanie informacji o sesji...")
+  const [banksConf, setBanksConf] = useState(null)
 
   // const [formProductId, setFormProductId] = useState(null)
   // const [formAvailableQuantity, setFormAvailableQuantity] = useState(null)
@@ -47,7 +61,17 @@ const Payments = () => {
       .catch(e => console.log(e))
   }
 
+  const fetchBanksConf = () => {
+    axios
+      .get(`https://jr-api-express.herokuapp.com/api/bank`)
+      .then(response => {
+        setBanksConf(response.data.banks)
+      })
+      .catch(e => setBanksConf(null))
+  }
+
   useEffect(fetchPayments, [])
+  useEffect(fetchBanksConf, [])
 
   const confirmPayment = (paymentId) => {
 
@@ -85,12 +109,46 @@ const Payments = () => {
       title: 'Nadawca',
       dataIndex: 'senderAccountnumber',
       key: 'senderAccountnumber',
-      render: text => <p>{text}</p>,
+      render: text => {
+        let t = ""
+        if (banksConf != null) {
+          const bank = banksConf.find(b => {
+            return b.bankID === text.substring(4,7)
+          })
+          t += bank.bankName
+          const unit = bank.bankUnits.find(u => {
+            return u.unitID === text.substring(7, 12)
+          })
+          t += " "
+          t += unit.unitAddress
+        }
+        return <p>{t}</p>
+      },
     },
     {
       title: 'Odbiorca',
       dataIndex: 'recipientAccountnumber',
       key: 'recipientAccountnumber',
+      render: text => {
+        let t = ""
+        if (banksConf != null) {
+          const bank = banksConf.find(b => {
+            return b.bankID === text.substring(4,7)
+          })
+          t += bank.bankName
+          const unit = bank.bankUnits.find(u => {
+            return u.unitID === text.substring(7, 12)
+          })
+          t += " "
+          t += unit.unitAddress
+        }
+        return <p>{t}</p>
+      },
+    },
+    {
+      title: 'Tytułem',
+      dataIndex: 'paymentTitle',
+      key: 'paymentTitle',
       render: text => <p>{text}</p>,
     },
     {
