@@ -217,8 +217,3 @@ schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   console.log("Settling payments by scheduler _03")
   paymentData.settlePayments()
 })
-
-schedule.scheduleJob({ hour: 20, minute: 12 }, () => {
-  console.log("Settling payments by scheduler _04")
-  paymentData.settlePayments()
-})
