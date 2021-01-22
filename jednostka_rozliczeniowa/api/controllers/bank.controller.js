@@ -34,7 +34,7 @@ exports.getAvailableSession = (request, response) => {
 
 }
 
-exports.getAvailableSession = (request, response) => {
+exports.getConf = (request, response) => {
 
   response.json({
     banks: banksConf
