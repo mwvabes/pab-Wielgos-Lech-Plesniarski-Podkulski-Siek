@@ -4,6 +4,7 @@ const banks = JSON.parse(fs.readFileSync('./conf/banks_conf.json'))
 const validateNumber = require("../data/number.data")
 const mongoose = require("mongoose")
 const db = require('./../conf/dbconfig')
+const schedule = require('node-schedule')
 
 const sessionData = require('../data/session.data')
 const paymentData = require('../data/payment.data')
@@ -202,3 +203,22 @@ exports.getCurrentlyServedPayments = (request, result) => {
 }
 
 
+schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
+  console.log("Settling payments by scheduler _01")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
+  console.log("Settling payments by scheduler _02")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
+  console.log("Settling payments by scheduler _03")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 18, minute: 58 }, () => {
+  console.log("Settling payments by scheduler _04")
+  settlePayments()
+})

@@ -3,7 +3,6 @@ const sessionsConf = JSON.parse(fs.readFileSync('./conf/sessions_conf.json'))
 const sessionData = require("../data/session.data")
 const mongoose = require("mongoose")
 const db = require('./../conf/dbconfig')
-const schedule = require('node-schedule')
 
 const models = require("../models")
 const { settlePayments } = require('../controllers/payment.controller')
@@ -85,22 +84,3 @@ exports.getCurrentlyServedPayments = () => {
 
 }
 
-schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
-  console.log("Settling payments by scheduler _01")
-  settlePayments()
-})
-
-schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
-  console.log("Settling payments by scheduler _02")
-  settlePayments()
-})
-
-schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
-  console.log("Settling payments by scheduler _03")
-  settlePayments()
-})
-
-schedule.scheduleJob({ hour: 18, minute: 55 }, () => {
-  console.log("Settling payments by scheduler _04")
-  settlePayments()
-})
