@@ -9,21 +9,6 @@ const models = require("../models")
 const { settlePayments } = require('../controllers/payment.controller')
 const Payment = models.payment
 
-schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
-  settlePayments()
-})
-
-schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
-  settlePayments()
-})
-
-schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
-  settlePayments()
-})
-
 exports.settlePayments = () => {
 
   const session = sessionData.getCurrentlyServedSession()
@@ -94,3 +79,18 @@ exports.getCurrentlyServedPayments = () => {
   return p
 
 }
+
+schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})
+
+schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
+  console.log("Settling payments by scheduler")
+  settlePayments()
+})

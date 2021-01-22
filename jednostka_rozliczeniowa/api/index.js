@@ -3,6 +3,9 @@ const bodyParser = require("body-parser")
 const { join } = require("path")
 const axios = require("axios")
 const cors = require('cors')
+const swaggerJsDoc = require("swagger-jsdoc")
+const swaggerUi = require("swagger-ui-express")
+const YAML = require('yamljs')
 
 const app = express()
 
@@ -16,6 +19,10 @@ const requestLogger = (request, response, next) => {
   console.log('---')
   next()
 }
+
+const swaggerDocument = YAML.load('./swagger.yaml');
+
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // const unknownEndpoint = (request, response) => {
 //   response.status(404).send({ error: 'unknown endpoint' })

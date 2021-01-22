@@ -1,0 +1,155 @@
+openapi: 3.0.0
+info:
+  title: Jednostka Rozliczeniowa - Docs
+  description: >-
+    Dokumentacja zapytań Jednostki Rozliczeniowej. 
+    Jednostka weryfikująca dostępna pod adresem [https://jr-app.netlify.app/](https://jr-app.netlify.app/)
+    [Repozytorium](https://github.com/mwvabes/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/tree/jr_heroku)
+  version: 1.0.1
+servers:
+  - url: https://jr-api-express.herokuapp.com/
+    description: Heroku API
+paths:
+  /:
+    get:
+      description: Zwraca nazwę aplikacji i czas serwerowy.
+      responses:
+        '200':
+          description: W każdym przypadku gdy numer konta jest poprawny
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isAccountNumberValid:
+                    type: boolean
+                    description: Wartość decyzyjna poprawności numeru (true dla response 200)
+  /api/number/validate:
+    get:
+      summary: Zwraca informację o walidacji numeru konta.
+      tags:
+        - number
+      parameters:
+        - in: query
+          name: accountnumber
+          schema:
+            type: string
+            example: "PL 85 1050 4475 6311 7698 7831 7488 1785"
+          required: true
+          description: Numer IBAN
+      responses:
+        '200':
+          description: W każdym przypadku gdy numer konta jest poprawny
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isAccountNumberValid:
+                    type: boolean
+                    description: Wartość decyzyjna poprawności numeru (true dla response 200)
+        '400':
+          description: W każdym przypadku gdy numer konta jest niepoprawny
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isAccountNumberValid:
+                    type: boolean
+                    description: Wartość decyzyjna poprawności numeru (false dla response 400)
+  /api/session:
+    get:
+      summary: Zwraca nazwę najbliższej sesji.
+      description: Nazwa zwrócona będzie tą sesją, do której zostaną przydzielone nowe zlecenia przelewów.
+      tags:
+        - session
+      responses:
+        '200':
+          description: W każdym przypadku gdy numer konta jest poprawny
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/session/schedule:
+    get:
+      summary: Zwraca aktualną konfigurację sesji.
+      description: |
+        Zwróci informacje o przedziałach czasowych dla poszczególnych akcji sesyjnych.
+        Sesje nie odbywają się w soboty i niedziele.
+      tags:
+        - session
+      responses:
+        '200':
+          description: W każdym przypadku gdy numer konta jest poprawny
+          content:
+            application/json:
+              schema:
+                type: object
+  /api/payment:
+    post:
+      summary: Utwórz dyspozycję przelewu.
+      description: |
+        Utworzy dyspozycję przelewu do najbliższej możliwej sesji
+      tags:
+        - payment
+      responses:
+        '200':
+          description: Standardowy wynik
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                senderAccountnumber:
+                  type: string
+                  example: "PL 63 1020 1417 3464 3146 7920 4129 4804"
+                recipientAccountnumber:
+                  type: string
+                  example: "PL 85 1050 4475 6311 7698 7831 7488 1785"
+                paymentTitle:
+                  type: string
+                  example: "Tytuł przykładowy"
+                paymentAmount:
+                  type: number
+                  example: 1500.00
+                currency:
+                  type: string
+                  example: "PLN"
+  /api/payment/getIncoming:
+    get:
+      summary: Zwraca przelewy przychodzące w danej sesji dla danego banku.
+      tags:
+        - number
+      parameters:
+        - in: query
+          name: bankCode
+          schema:
+            type: string
+            example: "105"
+          required: true
+          description: Trzycyfrowy kod banku
+        - in: query
+          name: session
+          schema:
+            type: string
+            example: "20210111_01"
+          required: true
+          description: Identyfikator sesji
+      responses:
+        '200':
+          description: W każdym przypadku
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  r:
+                    type: boolean
+                    description: Tablica przelewów przychodzących
+

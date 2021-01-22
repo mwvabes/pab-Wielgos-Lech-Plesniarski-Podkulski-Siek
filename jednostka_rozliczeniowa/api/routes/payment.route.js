@@ -2,7 +2,7 @@ module.exports = (app) => {
   const router = require("express").Router()
   const paymentController = require("../controllers/payment.controller.js")
 
-  router.get('/', paymentController.getIncomingPayments)
+  router.get('/getIncoming', paymentController.getIncomingPayments)
   router.post('/', paymentController.addPaymentDisposition)
   router.post('/settle', paymentController.settlePayments)
   router.post('/confirmation', paymentController.paymentConfirmation)
