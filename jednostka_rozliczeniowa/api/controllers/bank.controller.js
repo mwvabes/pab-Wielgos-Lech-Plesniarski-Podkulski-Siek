@@ -2,6 +2,29 @@ const fs = require('fs')
 const sessionsConf = JSON.parse(fs.readFileSync('./conf/sessions_conf.json'))
 const banksConf = JSON.parse(fs.readFileSync('./conf/banks_conf.json'))
 
+const mongoose = require("mongoose")
+const db = require('./../conf/dbconfig')
+
+const models = require("../models")
+const Bank = models.bank
+
+Bank.find({}).then(p => {
+  if (p == null) {
+    mongoose.connect(db.url, db.attr)
+    banksConf.filter(b => {
+      const newBank = new Bank({
+        bankID: b.bankID,
+        bankName: b.bankName,
+        bankBalance: 100000,
+        bankUnits: b.bankUnits
+      })
+      newBank.save()
+    })
+  }
+})
+
+
+
 exports.getAvailableSession = (request, response) => {
 
   const currentDate = new Date()

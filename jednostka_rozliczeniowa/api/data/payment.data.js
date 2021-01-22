@@ -21,43 +21,14 @@ exports.settlePayments = () => {
     p.map(p => {
       Payment.update({ _id: p._id }, { status: "settled" })
       Bank.findOne({ bankID: p.senderBankCode }).then(b => {
-        if (b == null) {
-
-          const bankConfiguration = banksConf.find(b => {
-            return b.bankID = p.senderBankCode
-          })
-
-          const newBank = new Bank({
-            bankID: bankConfiguration.bankID,
-            bankName: bankConfiguration.bankName,
-            bankBalance: 100000 - p.paymentAmount,
-            bankUnits: bankConfiguration.bankUnits
-          })
-
-          newBank.save()
-        } else {
-          Bank.update({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true })
-        }
+    
+        Bank.update({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true })
+        
         
       })
       Bank.findOne({ bankID: p.recipientBankCode }).then(b => {
-        if (b == null) {
-
-          const bankConfiguration = banksConf.find(b => {
-            return b.bankID = p.recipientBankCode
-          })
-
-          const newBank = new Bank({
-            bankID: bankConfiguration.bankID,
-            bankName: bankConfiguration.bankName,
-            bankBalance: 100000 + p.paymentAmount,
-            bankUnits: bankConfiguration.bankUnits
-          })
-
-          newBank.save()
-        } else {
-          Bank.update({ bankID: p.recipientBankCode }, { bankBalance: b.bankBalance + p.paymentAmount }, { upsert: true })
-        }
+        
+        Bank.update({ bankID: p.recipientBankCode }, { bankBalance: b.bankBalance + p.paymentAmount }, { upsert: true })
         
       })
 
