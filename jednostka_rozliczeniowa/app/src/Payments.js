@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
-import { Button, Divider, Table } from 'antd'
+import { Button, Divider, Table, message } from 'antd'
 
 const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
   
-  if (status === "in_shipping") {
+  if (status === "revision") {
     return (
       <>
         <Button onClick={() => confirmPayment(paymentId)} >Potwierdź</Button>
@@ -52,8 +52,9 @@ const Payments = () => {
 
   const confirmPayment = (paymentId) => {
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`, null, {paymentId})
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, null, {params: {paymentId, type: "confirm"}})
       .then(response => {
+        message.success('Zaakceptowano przelew')
         fetchPayments()
       })
   }
@@ -61,8 +62,9 @@ const Payments = () => {
   
   const declinePayment = (paymentId) => {
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`, null, {paymentId})
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, null, {params: {paymentId, type: "decline"}})
       .then(response => {
+        message.warning('Odrzucono przelew');
         fetchPayments()
       })
   }
@@ -78,13 +80,13 @@ const Payments = () => {
       title: 'Odbiorca',
       dataIndex: 'recipientAccountnumber',
       key: 'recipientAccountnumber',
-      render: text => <a>{text}</a>,
+      render: text => <p>{text}</p>,
     },
     {
       title: 'Kwota',
       dataIndex: 'paymentAmount',
       key: 'paymentAmount',
-      render: text => <a>{text}</a>,
+      render: text => <p>{text} PLN</p>,
     },
     {
       title: 'Szczegóły',
