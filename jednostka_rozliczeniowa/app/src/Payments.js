@@ -9,7 +9,7 @@ const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => 
     return (
       <>
         <Button onClick={() => confirmPayment(paymentId)} >Potwierdź</Button>
-        <Button onClick={() => declinePayment(paymentId)} >Odrzuć</Button>
+        <Button danger onClick={() => declinePayment(paymentId)} >Odrzuć</Button>
       </>
     )
   }
@@ -52,7 +52,7 @@ const Payments = () => {
 
   const confirmPayment = (paymentId) => {
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`)
+      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`, null, {paymentId})
       .then(response => {
         fetchPayments()
       })
@@ -61,7 +61,7 @@ const Payments = () => {
   
   const declinePayment = (paymentId) => {
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`)
+      .post(`https://jr-api-express.herokuapp.com/api/payments/getCurrentlyServed`, null, {paymentId})
       .then(response => {
         fetchPayments()
       })

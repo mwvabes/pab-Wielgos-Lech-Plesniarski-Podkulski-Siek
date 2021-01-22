@@ -12,7 +12,7 @@ servers:
 paths:
   /:
     get:
-      description: Zwraca nazwę aplikacji i czas serwerowy.
+      summary: Zwraca nazwę aplikacji i czas serwerowy.
       responses:
         '200':
           description: W każdym przypadku gdy numer konta jest poprawny

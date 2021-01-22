@@ -53,10 +53,17 @@ exports.addPaymentDisposition = (request, result) => {
     flag = true
   }
 
-  if (paymentAmount > 1000 && flag == false) {
+  if (paymentAmount > 1000000) {
+    flag = true
+    message += `| Kwota przekracza 1000000 PLN. System obsługuje przelewy poniżej tej kwoty | `
+  }
+
+  if (paymentAmount > 1000 && paymentAmount <= 1000000 && flag == false) {
     paymentStatus = "revision"
     message += `| Kwota przekracza 1000 PLN, przelew może zostać zlecony do zatwierdzenia ręcznego | `
   }
+
+
 
   if (flag) {
     result.status(400).json({
@@ -135,7 +142,7 @@ exports.paymentConfirmation = (request, result) => {
   const r = paymentData.settlePayments()
 
   if (request.body.type == "confirm") {
-    Payment.findOneAndUpdate({ _id: request.body.id }, { status: "settled" }, { upsert: true })
+    Payment.findOneAndUpdate({ _id: request.body.id }, { status: "accepted" }, { upsert: true })
   } else {
     Payment.findOneAndUpdate({ _id: request.body.id }, { status: "declined" }, { upsert: true })
   }

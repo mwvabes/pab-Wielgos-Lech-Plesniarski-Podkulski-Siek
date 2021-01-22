@@ -32,7 +32,15 @@ exports.settlePayments = () => {
 
   })
 
-  Payment.find({ servingSession: session, status: accepted }).then(payment => {
+  Payment.find({ servingSession: session, status: "revision" }).then(p => {
+
+    p.map(p => {
+      Payment.findOneAndUpdate({ _id: p._id }, { servingSession: sessionData.getCurrentSession() }, { upsert: true })
+    })
+
+  })
+
+  Payment.find({ servingSession: session, status: "accepted" }).then(payment => {
   })
 
 }
@@ -81,16 +89,16 @@ exports.getCurrentlyServedPayments = () => {
 }
 
 schedule.scheduleJob({ hour: 11, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
+  console.log("Settling payments by scheduler _01")
   settlePayments()
 })
 
 schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
+  console.log("Settling payments by scheduler _02")
   settlePayments()
 })
 
 schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
-  console.log("Settling payments by scheduler")
+  console.log("Settling payments by scheduler _03")
   settlePayments()
 })
