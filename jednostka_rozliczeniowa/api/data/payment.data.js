@@ -20,8 +20,8 @@ exports.settlePayments = () => {
   Payment.find({ servingSession: session, paymentStatus: "accepted" }).then(parr => {
 
     parr.map(p => {
-      return Payment.updateOne({ _id: p._id }, { status: "settled" }).then(x => {
-        console.log("Updated payment", x)
+      return Payment.updateOne({ _id: p._id }, { paymentStatus: "settled" }).then(x => {
+ 
         Bank.findOne({ bankID: p.senderBankCode }).then(b => {
     
           Bank.updateOne({ bankID: p.senderBankCode }, { bankBalance: b.bankBalance - p.paymentAmount }, { upsert: true }).catch(e => console.log(e))
