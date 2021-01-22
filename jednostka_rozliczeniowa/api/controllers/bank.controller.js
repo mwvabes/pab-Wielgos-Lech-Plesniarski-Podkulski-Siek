@@ -8,9 +8,9 @@ const db = require('./../conf/dbconfig')
 const models = require("../models")
 const Bank = models.bank
 
+mongoose.connect(db.url, db.attr)
 Bank.find({}).then(p => {
   if (p == null) {
-    mongoose.connect(db.url, db.attr)
     banksConf.filter(b => {
       const newBank = new Bank({
         bankID: b.bankID,
@@ -22,6 +22,7 @@ Bank.find({}).then(p => {
     })
   }
 })
+mongoose.connection.close()
 
 
 
