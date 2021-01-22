@@ -152,4 +152,29 @@ paths:
                   r:
                     type: boolean
                     description: Tablica przelewów przychodzących
+  /api/payment/confirm:
+    post:
+      summary: Zaakceptuj lub odrzuć przelew.
+      description: |
+        Rezultat zależny od parametru type. "accept" zaakceptuje przelew, "decline" odrzuci przelew.
+      tags:
+        - payment
+      responses:
+        '200':
+          description: Standardowy wynik
+          content:
+            application/json:
+              schema:
+                type: object
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                paymentId:
+                  type: string
+                type:
+                  type: string
+                  example: "confirm"
 
