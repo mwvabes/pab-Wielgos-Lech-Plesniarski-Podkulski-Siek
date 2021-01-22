@@ -17,6 +17,7 @@ const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => 
     return (
       <>
         <Alert message="Przelew został zaakceptowany" type="success" showIcon />
+        <Button style={{ marginLeft: "20px" }} danger onClick={() => reviseAgainPayment(paymentId)} >Anuluj</Button>
       </>
     )
   } 
@@ -24,12 +25,14 @@ const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => 
     return (
       <>
         <Alert message="Przelew został odrzucony" type="error" showIcon />
+        <Button style={{ marginLeft: "20px" }} danger onClick={() => reviseAgainPayment(paymentId)} >Anuluj</Button>
       </>
     )
   } else {
       return (
         <>
           <Alert message="Przelew został rozliczony automatycznie" type="info" showIcon />
+          <Button style={{ marginLeft: "20px" }} danger onClick={() => reviseAgainPayment(paymentId)} >Anuluj</Button>
         </>
       )
   }
@@ -83,7 +86,22 @@ const Payments = () => {
     axios
       .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
       .then(response => {
-        message.success('Zaakceptowano przelew')
+        message.success('Zaakceptowano przelew.')
+        fetchPayments()
+      })
+  }
+
+  const reviseAgainPayment = (paymentId) => {
+
+    const params = {
+      paymentId: paymentId,
+      type: "revision"
+    }
+
+    axios
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
+      .then(response => {
+        message.warning('Anulowano akcję. Przelew zamrożony.');
         fetchPayments()
       })
   }
@@ -99,7 +117,7 @@ const Payments = () => {
     axios
       .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
       .then(response => {
-        message.warning('Odrzucono przelew');
+        message.warning('Odrzucono przelew.');
         fetchPayments()
       })
   }

@@ -146,14 +146,19 @@ exports.paymentConfirmation = (request, result) => {
   mongoose.connect(db.url, db.attr)
 
   if (request.body.type === "confirm") {
-    console.log("Confirm payment", request.body.paymentId)
     Payment.update({ _id: request.body.paymentId }, { paymentStatus: "accepted" }).then(r => {
       result.status(200).json({
         r
       })
     })
-  } else {
-    console.log("Decline payment", request.body.paymentId)
+  } else if (request.body.type === "revision") {
+    Payment.update({ _id: request.body.paymentId }, { paymentStatus: "revision" }).then(r => {
+      result.status(200).json({
+        r
+      })
+    })
+  } 
+  else {
     Payment.update({ _id: request.body.paymentId }, { paymentStatus: "declined" }).then(r => {
       result.status(200).json({
         r

@@ -83,7 +83,7 @@ exports.getCurrentlyServedPayments = () => {
 
     mongoose.connect(db.url, db.attr)
 
-    Payment.find({ servingSession: currentSession }).then(r => {
+    Payment.find({ servingSession: currentSession }).sort( { "paymentStatus": 1, "_id": 1 } ).then(r => {
       resolve(r)
     }).catch(e => {
       reject(400)
