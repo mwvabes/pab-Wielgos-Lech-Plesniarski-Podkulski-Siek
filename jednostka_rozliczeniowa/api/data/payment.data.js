@@ -40,9 +40,6 @@ exports.settlePayments = () => {
 
   })
 
-  Payment.find({ servingSession: session, status: "accepted" }).then(payment => {
-  })
-
 }
 
 exports.acceptPayment = (paymentID) => {
@@ -103,7 +100,7 @@ schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   settlePayments()
 })
 
-schedule.scheduleJob({ hour: 18, minute: 45 }, () => {
+schedule.scheduleJob({ hour: 18, minute: 55 }, () => {
   console.log("Settling payments by scheduler _04")
   settlePayments()
 })
