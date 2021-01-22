@@ -143,19 +143,23 @@ exports.paymentConfirmation = (request, result) => {
 
   mongoose.connect(db.url, db.attr)
 
-  const r = paymentData.settlePayments()
-
   if (request.body.type === "confirm") {
     console.log("Confirm payment", request.body.paymentId)
-    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "accepted" }, { upsert: true })
+    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "accepted" }, { upsert: true }).then(r => {
+      result.status(200).json({
+        r
+      })
+    })
   } else {
     console.log("Decline payment", request.body.paymentId)
-    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "declined" }, { upsert: true })
+    Payment.findOneAndUpdate({ _id: request.body.paymentId }, { paymentStatus: "declined" }, { upsert: true }).then(r => {
+      result.status(200).json({
+        r
+      })
+    })
   }
 
-  result.status(200).json({
-    r
-  })
+
 
 }
 

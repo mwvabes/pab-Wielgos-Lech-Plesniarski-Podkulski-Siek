@@ -35,7 +35,6 @@ const Payments = () => {
     axios
       .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`)
       .then(response => {
-        console.log("RES", response.data)
         if (response.data.nosession) {
           setSessionStatus("Brak aktualnie obsługiwanej sesji")
           setPaymentsInfo([])
