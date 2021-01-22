@@ -1,9 +1,9 @@
 module.exports = (app) => {
   const router = require("express").Router()
-  const numberController = require("../controllers/number.controller.js")
+  const bankController = require("../controllers/bank.controller.js")
 
-  router.get('/validate', numberController.validate)
+  router.get('/', bankController.getConf)
 
-  app.use('/api/number', router)
+  app.use('/api/bank', router)
 
 }

@@ -1,5 +1,6 @@
 const fs = require('fs')
 const sessionsConf = JSON.parse(fs.readFileSync('./conf/sessions_conf.json'))
+const banksConf = JSON.parse(fs.readFileSync('./conf/banks_conf.json'))
 
 exports.getAvailableSession = (request, response) => {
 
@@ -29,6 +30,14 @@ exports.getAvailableSession = (request, response) => {
 
   response.json({
     currentSessionAvailable,
+  })
+
+}
+
+exports.getAvailableSession = (request, response) => {
+
+  response.json({
+    banks: banksConf
   })
 
 }
