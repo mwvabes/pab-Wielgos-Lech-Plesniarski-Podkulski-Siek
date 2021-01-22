@@ -22,7 +22,6 @@ Bank.find({}).then(p => {
     })
   }
 })
-mongoose.connection.close()
 
 
 
