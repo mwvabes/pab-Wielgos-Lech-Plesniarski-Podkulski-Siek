@@ -6,6 +6,7 @@ const db = require('./../conf/dbconfig')
 
 const models = require("../models")
 const Payment = models.payment
+const Bank = models.bank
 
 exports.settlePayments = () => {
 
