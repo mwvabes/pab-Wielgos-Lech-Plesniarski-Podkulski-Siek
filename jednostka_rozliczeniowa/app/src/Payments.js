@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
-import { Button, Divider, Table, message, Alert } from 'antd'
+import { Button, Divider, Table, message, Alert, Spin } from 'antd'
 
 const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
   
@@ -42,8 +42,10 @@ const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => 
 const Payments = () => {
 
   const [paymentsInfo, setPaymentsInfo] = useState([])
-  const [sessionStatus, setSessionStatus] = useState("Ładowanie informacji o sesji...")
+  const [sessionStatus, setSessionStatus] = useState(loadingSessionText)
   const [banksConf, setBanksConf] = useState(null)
+
+  const loadingSessionText = <Spin /> + "Ładowanie informacji o sesji..."
 
   // const [formProductId, setFormProductId] = useState(null)
   // const [formAvailableQuantity, setFormAvailableQuantity] = useState(null)
