@@ -117,9 +117,11 @@ exports.getIncomingPayments = (request, result) => {
 
   mongoose.connect(db.url, db.attr)
 
-  Payment.find({ servingSession: request.query.session, recipientBankCode: request.query.bankCode, "$or": [{
+  Payment.find({ servingSession: request.query.session, "$or": [{
+        recipientBankCode: request.query.bankCode, 
         "paymentStatus": "settled"
     }, {
+        senderBankCode: request.query.bankCode,
         "paymentStatus": "declined"
     }] }).then(r => {
     result.status(200).json({
