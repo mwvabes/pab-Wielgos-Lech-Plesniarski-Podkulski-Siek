@@ -37,16 +37,16 @@ npm run start
     - Numer banku: `105`
     - Oddziały: 
         - `04475`, Grunwaldzka 1, 21-035 Rzeszów
-        - `01417`, Al. Jerozolimskie 99, 00-012 Warszawa
+        - `01416`, Al. Jerozolimskie 99, 00-012 Warszawa
 
 ## Przykłady
 
 ```
-PKO BP: PL 40 1020 2964 5040 9093 8192 5554 4792
+PKO BP: PL 52 1020 2964 0589 2425 9345 9630
               ^^^
               numer banku: 102
 
-PKO BP: PL 40 1020 2964 5040 9093 8192 5554 4792
+PKO BP: PL 52 1020 2964 0589 2425 9345 9630
                  ^^^^^^
                  numer oddziału: 02964
 ```
@@ -77,10 +77,12 @@ w przeciwnym wypadku będzie `false` i status `400`
 ### Poprawne numery
 
 ```
-Proper number PKO BP Rzeszów: PL 40 1020 2964 5040 9093 8192 5554 4792
-Proper number PKO BP W-wa   : PL 63 1020 1417 3464 3146 7920 4129 4804
+Proper number PKO BP Rzeszów: PL 52 1020 2964 0589 2425 9345 9630
+Proper number PKO BP W-wa   : PL 34 1020 1417 3109 9087 2047 4799
 
-Proper number ING BŚ Rzeszów: PL 85 1050 4475 6311 7698 7831 7488 1785
-Proper number ING BŚ W-wa   : PL 74 1050 2963 6283 9086 2470 9980 6719
+Proper number ING BŚ Rzeszów: PL 27 1050 4475 9393 0635 9401 7658
+Proper number ING BŚ Rzeszów: PL 87 1050 4475 4135 2700 6690 2937
+Proper number ING BŚ W-wa   : PL 35 1050 1416 4430 8094 1693 8388
+Proper number ING BŚ W-wa   : PL 69 1050 1416 3479 2267 8029 0421
 ```
 

@@ -8,23 +8,23 @@ exports.validateNumber = (accountnumber) => {
   if (accountnumber.substr(0, 2) != "PL") {
     return ({
       isAccountNumberValid: false,
-      comment: "Nieobsługiwany kraj bądź niepoprawny format numeru rachunku. Poprawny przykład: PL 00 1111 2222 3333 4444 5555.",
+      comment: "Nieobsługiwany kraj bądź niepoprawny format numeru rachunku. Poprawny przykład: PL 00 1111 2222 3333 4444 5555 6666.",
       status: 400
     })
   }
   
-  if (accountnumber.length != 32) {
+  if (accountnumber.length != 28) {
     return ({
       isAccountNumberValid: false,
-      comment: "Zły format numeru rachunku. Poprawny przykład: PL 00 1111 2222 3333 4444 5555.",
+      comment: "Zły format numeru rachunku. Poprawny przykład: PL 00 1111 2222 3333 4444 5555 6666.",
       status: 400
     })
   }
 
-  if (isNaN(accountnumber.substr(2, 27))) {
+  if (isNaN(accountnumber.substr(2, 28))) {
     return ({
       isAccountNumberValid: false,
-      comment: "Część zasadnicza numeru rachunku zawiera niepoprawne znaki. Poprawny przykład: PL 00 1111 2222 3333 4444 5555.",
+      comment: "Część zasadnicza numeru rachunku zawiera niepoprawne znaki. Poprawny przykład: PL 00 1111 2222 3333 4444 5555 6666.",
       status: 400
     })
   }
@@ -76,8 +76,9 @@ exports.validateNumber = (accountnumber) => {
     }
 
     let iban = (accountnumber.substr(4, 28) + accountnumber.substr(0, 4)).split("")
-    iban[28] = dict[iban[28]]
-    iban[29] = dict[iban[29]]
+    console.log("NEW", iban)
+    iban[24] = dict[iban[24]]
+    iban[25] = dict[iban[25]]
     iban = iban.join("")
     iban = BigInt(iban)
 
