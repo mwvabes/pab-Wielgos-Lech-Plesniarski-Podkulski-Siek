@@ -54,7 +54,7 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += (operatingDate.getMonth() + 1) < 10 ? "0" + (operatingDate.getMonth() + 1) : (operatingDate.getMonth() + 1)
     lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
@@ -65,7 +65,7 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += (operatingDate.getMonth() + 1) < 10 ? "0" + (operatingDate.getMonth() + 1) : (operatingDate.getMonth() + 1)
     lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
@@ -79,7 +79,7 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += (operatingDate.getMonth() + 1) < 10 ? "0" + (operatingDate.getMonth() + 1) : (operatingDate.getMonth() + 1)
     lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
@@ -91,9 +91,11 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += (operatingDate.getMonth() + 1) < 10 ? "0" + (operatingDate.getMonth() + 1) : (operatingDate.getMonth() + 1)
     lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += closestSession.sessionName
+
+    return lastlyServedSession
 
   }
 
