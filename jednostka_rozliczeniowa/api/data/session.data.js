@@ -54,8 +54,8 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
-    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
     return lastlyServedSession
@@ -65,13 +65,13 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
-    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
     return lastlyServedSession
   }
-  else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)) {
+  else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)) {
     
     if (weekDay == 1) {
       (operatingDate.setDate(operatingDate.getDate()-3))
@@ -79,24 +79,23 @@ exports.lastlyServedSession = () => {
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
-    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
 
     return lastlyServedSession
   } else {
     let closestSession = sessionsConf.find(s => {
-      return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)
+      return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)
     })
 
     lastlyServedSession += operatingDate.getFullYear()
 
-    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
-    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += operatingDate.getMonth() < 10 ? "0" + operatingDate.getMonth() : operatingDate.getMonth()
+    lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += closestSession.sessionName
 
   }
-
 
 }
 

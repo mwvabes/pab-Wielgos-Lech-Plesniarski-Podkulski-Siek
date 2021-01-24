@@ -41,11 +41,13 @@ const PaymentConfirm = ({confirmPayment, declinePayment, reviseAgainPayment, pay
 
 const Payments = () => {
 
+  const loadingSessionText = <><Spin /> Ładowanie informacji o sesji...</>
+
   const [paymentsInfo, setPaymentsInfo] = useState([])
   const [sessionStatus, setSessionStatus] = useState(loadingSessionText)
   const [banksConf, setBanksConf] = useState(null)
 
-  const loadingSessionText = <Spin /> + "Ładowanie informacji o sesji..."
+  
 
   // const [formProductId, setFormProductId] = useState(null)
   // const [formAvailableQuantity, setFormAvailableQuantity] = useState(null)
