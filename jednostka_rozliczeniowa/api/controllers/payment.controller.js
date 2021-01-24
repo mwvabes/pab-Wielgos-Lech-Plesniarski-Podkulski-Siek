@@ -107,8 +107,7 @@ exports.addPaymentDisposition = (request, result) => {
 
 exports.getIncomingPayments = (request, result) => {
 
-  if (request.query.bankCode == undefined ||
-    request.query.session == undefined) {
+  if (request.query.bankCode == undefined) {
     result.status(400).json({
       message: `Brakujące parametry zapytania`
     })
