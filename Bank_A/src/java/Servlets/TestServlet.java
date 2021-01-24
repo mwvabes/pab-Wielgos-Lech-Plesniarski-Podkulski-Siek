@@ -1,9 +1,9 @@
-
 package Servlets;
 
+import Klasy.Transaction;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -34,7 +34,7 @@ public class TestServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TestServlet</title>");            
+            out.println("<title>Servlet TestServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet TestServlet at " + request.getContextPath() + "</h1>");
@@ -56,20 +56,36 @@ public class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        Calendar today = Calendar.getInstance();
-        today.set(Calendar.HOUR_OF_DAY, 0);
-        today.set(Calendar.MINUTE, 0);
-        today.set(Calendar.SECOND, 2);
-
-        // every night at 2am you run your task
         Timer timer = new Timer();
-        timer.schedule(new TimerTask(){
-            public void run()
-            {
-                out.print("Dizała");
+        TimerTask task = new TimerTask() {
+            public void run() {
+                
+                Calendar cal = Calendar.getInstance();
+                if(cal.getTime().getDay() != 0 && cal.getTime().getDay() != 6){ //sprawdzenie czy nie weekend
+                    Transaction t = new Transaction();
+                    t.receiveExternalTransaction(t.getSession());
+                }
+                
+                
             }
-        }, today.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.SECONDS)); // period: 1 day
+        };
         
+        Calendar date = Calendar.getInstance();
+        date.set(Calendar.HOUR_OF_DAY, 11);
+        date.set(Calendar.MINUTE, 55);
+
+        timer.schedule(task, date.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS) * 7); // Sesja 1
+        
+        date.set(Calendar.HOUR_OF_DAY, 14);
+        date.set(Calendar.MINUTE, 55);
+
+        timer.schedule(task, date.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS) * 7); // Sesja 2
+        
+        date.set(Calendar.HOUR_OF_DAY, 18);
+        date.set(Calendar.MINUTE, 5);
+
+        timer.schedule(task, date.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.DAYS) * 7); // Sesja 3
+
         processRequest(request, response);
     }
 

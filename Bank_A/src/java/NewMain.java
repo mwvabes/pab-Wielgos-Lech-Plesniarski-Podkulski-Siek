@@ -1,5 +1,5 @@
 
-import Klasy.AccountNumber;
+import Klasy.Transaction;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -184,13 +184,14 @@ public class NewMain {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+        String code = "";
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd_");
+        SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
         System.out.println(sdf.format(cal.getTime()));
-
-        AccountNumber an = new AccountNumber();
-        System.out.println(an.GenerateAccountNumber("02964", "0000000000000001"));
+        System.out.println(cal.getTime().getHours());
         
+        Transaction t = new Transaction();
+        System.out.println(t.getSession());
     }
 
 }

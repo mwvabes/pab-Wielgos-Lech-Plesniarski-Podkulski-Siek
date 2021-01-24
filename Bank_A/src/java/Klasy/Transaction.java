@@ -91,9 +91,9 @@ public class Transaction {
         }
     }
 
-    public void receiveExternalTransaction() {
+    public void receiveExternalTransaction(String session) {
         try {
-            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=20210123_04");
+            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=" + session);
             InputStream is = url.openStream();
             JsonReader rdr = Json.createReader(is);
 
@@ -105,7 +105,7 @@ public class Transaction {
                 BigDecimal amount = new BigDecimal(result.getString("paymentAmount"));
                 String senderAccountNumber = result.getString("senderAccountnumber");
                 String recipientAccountNumber = result.getString("recipientAccountnumber");
-                
+
                 if (status.compareTo("settled") == 0) {    //czy udany przelew
                     AccountNumber an = new AccountNumber();
                     if (an.isValid(recipientAccountNumber)) { //czy prawidłowy format nr konta odbiorcy
@@ -160,7 +160,6 @@ public class Transaction {
                         connection.setDoOutput(true);
                         //Send request
                         DataOutputStream wr = new DataOutputStream(
-
                                 connection.getOutputStream());
                         wr.writeBytes(json);
                         wr.close();
@@ -183,5 +182,21 @@ public class Transaction {
         OperationService os = new OperationService();
         List<Operation> list = os.findByNumber(account.getNumber());
         return list;
+    }
+
+    public String getSession() {
+        String session = null;
+        try {
+            URL url = new URL("https://jr-api-express.herokuapp.com/api/session");
+            InputStream is = url.openStream();
+            JsonReader rdr = Json.createReader(is);
+
+            JsonObject obj = rdr.readObject();
+            session = obj.getString("currentSessionAvailable");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return session;
     }
 }
