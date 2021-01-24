@@ -1,12 +1,7 @@
 
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Scanner;
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
+import Klasy.AccountNumber;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class NewMain {
 
@@ -33,7 +28,6 @@ public class NewMain {
 //        System.out.println(test);
 //        System.out.println(iban.isValid("PL04 0000 0000 0000 0000 0000 0000"));
 //        System.out.println(iban.isValid("PL51102029640000000000000013"));
-
 //        System.out.println(iban.isValid("PL 85 1050 4475 6311 7698 7831 7488 1785"));
 //        System.out.println(iban.isValid("PL87105044754135270066902937"));
 //        
@@ -45,6 +39,8 @@ public class NewMain {
 //        AccountService as = new AccountService();
 //        Account account2 = as.findByNumber("67102029640000000000000016");
 //        System.out.println(account2);
+//        Account account3 = as.findByNumber("17102029640000000000000016");
+//        System.out.println(account3);
 //        
 //        System.out.println(t.getHistory(account2));
         /*
@@ -137,7 +133,6 @@ public class NewMain {
 //            System.out.println("Dizała");
 //        }
 //    }, today.getTime(), TimeUnit.MILLISECONDS.convert(1, TimeUnit.SECONDS)); // period: 1 day
-
 //        try {
 //
 //            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=20210123_04");
@@ -171,26 +166,31 @@ public class NewMain {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+//        try {
+//            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=20210123_04");
+//            InputStream is = url.openStream();
+//            JsonReader rdr = Json.createReader(is);
+//
+//            JsonObject obj = rdr.readObject();
+//            JsonArray results = obj.getJsonArray("r");
+//            for (JsonObject result : results.getValuesAs(JsonObject.class)) {
+//                if(result.getString("paymentStatus").compareTo("settled") == 0){    //czy udany przelew
+//                    System.out.println("Przelano");
+//                }
+//                else {
+//                    System.out.println("Nie przelano");
+//                }
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd_");
+        System.out.println(sdf.format(cal.getTime()));
 
-        try {
-            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=20210123_04");
-            InputStream is = url.openStream();
-            JsonReader rdr = Json.createReader(is);
-
-            JsonObject obj = rdr.readObject();
-            JsonArray results = obj.getJsonArray("r");
-            for (JsonObject result : results.getValuesAs(JsonObject.class)) {
-                if(result.getString("paymentStatus").compareTo("settled") == 0){    //czy udany przelew
-                    System.out.println("Przelano");
-                }
-                else {
-                    System.out.println("Nie przelano");
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        AccountNumber an = new AccountNumber();
+        System.out.println(an.GenerateAccountNumber("02964", "0000000000000001"));
+        
     }
 
 }

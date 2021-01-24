@@ -90,8 +90,8 @@ public class Transaction {
             }
         }
     }
-    
-    public void receiveExternalTransaction(){
+
+    public void receiveExternalTransaction() {
         try {
             URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=20210123_04");
             InputStream is = url.openStream();
@@ -100,11 +100,78 @@ public class Transaction {
             JsonObject obj = rdr.readObject();
             JsonArray results = obj.getJsonArray("r");
             for (JsonObject result : results.getValuesAs(JsonObject.class)) {
-                if(result.getString("paymentStatus").compareTo("settled") == 0){    //czy udany przelew
-                    
+                Boolean returnToSender = false;
+                String status = result.getString("paymentStatus");
+                BigDecimal amount = new BigDecimal(result.getString("paymentAmount"));
+                String senderAccountNumber = result.getString("senderAccountnumber");
+                String recipientAccountNumber = result.getString("recipientAccountnumber");
+                
+                if (status.compareTo("settled") == 0) {    //czy udany przelew
+                    AccountNumber an = new AccountNumber();
+                    if (an.isValid(recipientAccountNumber)) { //czy prawidłowy format nr konta odbiorcy
+                        AccountService as = new AccountService();
+                        Account account = as.findByNumber(recipientAccountNumber);
+                        if (account == null) {  //czy nie znaleziono odbiorcę w banku
+                            returnToSender = true;
+                        } else {
+                            //ZAPIS OPERACJI
+                            OperationService os = new OperationService();
+                            Operation o = new Operation("uznaniee",
+                                    new Date(new java.util.Date().getTime()),
+                                    amount,
+                                    "Zrealizowany",
+                                    senderAccountNumber,
+                                    recipientAccountNumber,
+                                    result.getString("paymentTitle"));
+                            os.persist(o);
+                            //UZNANIE KONTA
+                            account.setBalance(account.getBalance().add(amount));
+                            as.update(account);
+                        }
+
+                    } else {
+                        returnToSender = true;
+                    }
+                } else {
+                    returnToSender = true;
                 }
-                else {
-                    
+
+                if (returnToSender) {   //Przelew do nadawcy
+                    //WYSŁANIE ZAPYTANIA DO JEDNOSTKI ROZLICZENIOWEJ
+                    String json = "{"
+                            + "\"senderAccountnumber\": \"PL84102029640000000000000001\","
+                            + "\"recipientAccountnumber\": \"PL" + senderAccountNumber + "\","
+                            + "\"paymentTitle\": \"Zwrot należności\","
+                            + "\"paymentAmount\": \"" + amount.toString() + "\","
+                            + "\"currency\": \"PLN\""
+                            + "}";
+
+                    HttpURLConnection connection = null;
+
+                    try {
+                        //Create connection
+                        URL url2 = new URL("https://jr-api-express.herokuapp.com/api/payment/");
+                        connection = (HttpURLConnection) url2.openConnection();
+                        connection.setRequestMethod("POST");
+                        connection.setRequestProperty("Content-Type",
+                                "application/json; charset=UTF-8");
+
+                        connection.setUseCaches(false);
+                        connection.setDoOutput(true);
+                        //Send request
+                        DataOutputStream wr = new DataOutputStream(
+
+                                connection.getOutputStream());
+                        wr.writeBytes(json);
+                        wr.close();
+                        connection.getInputStream();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    } finally {
+                        if (connection != null) {
+                            connection.disconnect();
+                        }
+                    }
                 }
             }
         } catch (Exception e) {

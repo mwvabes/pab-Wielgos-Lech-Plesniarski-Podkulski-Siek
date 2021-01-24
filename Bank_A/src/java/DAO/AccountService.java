@@ -43,7 +43,10 @@ public class AccountService {
 		accountDao.openCurrentSession();
 		List<Account> account = accountDao.findByNumber(number);
 		accountDao.closeCurrentSession();
-		return account.get(0);
+		if(account.size() > 0){
+                    return account.get(0);
+                }
+                return null;
 	}
 
 	public void delete(String id) {
