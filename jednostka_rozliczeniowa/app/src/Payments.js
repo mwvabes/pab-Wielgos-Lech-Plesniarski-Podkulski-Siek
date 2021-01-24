@@ -3,7 +3,7 @@ import axios from 'axios'
 import 'antd/dist/antd.css';
 import { Button, Divider, Table, message, Alert, Spin } from 'antd'
 
-const PaymentConfirm = ({confirmPayment, declinePayment, paymentId, status}) => {
+const PaymentConfirm = ({confirmPayment, declinePayment, reviseAgainPayment, paymentId, status}) => {
   
   if (status === "revision") {
     return (
@@ -181,7 +181,7 @@ const Payments = () => {
       title: 'Szczegóły',
       dataIndex: '',
       key: 'confirmation',
-      render: (text, row) => <PaymentConfirm paymentId={row._id} status={row.paymentStatus} confirmPayment={confirmPayment} declinePayment={declinePayment} />,
+      render: (text, row) => <PaymentConfirm paymentId={row._id} status={row.paymentStatus} confirmPayment={confirmPayment} declinePayment={declinePayment} reviseAgainPayment={reviseAgainPayment} />,
     },
   ]
 

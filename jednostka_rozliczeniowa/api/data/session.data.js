@@ -44,6 +44,62 @@ exports.getCurrentSession = () => {
 
 }
 
+exports.lastlyServedSession = () => {
+  const operatingDate = new Date()
+  const weekDay = currentDate.getDay()
+
+  let lastlyServedSession = ""
+  if (weekDay == 0) {
+    operatingDate.setDate(operatingDate.getDate()-2)
+
+    lastlyServedSession += operatingDate.getFullYear()
+
+    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
+    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
+
+    return lastlyServedSession
+  }
+  else if (weekDay == 6) {
+    operatingDate.setDate(operatingDate.getDate()-1)
+
+    lastlyServedSession += operatingDate.getFullYear()
+
+    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
+    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
+
+    return lastlyServedSession
+  }
+  else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)) {
+    
+    if (weekDay == 1) {
+      (operatingDate.setDate(operatingDate.getDate()-3))
+    }
+
+    lastlyServedSession += operatingDate.getFullYear()
+
+    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
+    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += sessionsConf[sessionsConf.length -1].sessionName
+
+    return lastlyServedSession
+  } else {
+    let closestSession = sessionsConf.find(s => {
+      return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)
+    })
+
+    lastlyServedSession += operatingDate.getFullYear()
+
+    lastlyServedSession += currentDate.getMonth() < 10 ? "0" + currentDate.getMonth() : currentDate.getMonth()
+    lastlyServedSession += currentDate.getDate() < 10 ? "0" + currentDate.getDate()  : currentDate.getDate()
+    lastlyServedSession += closestSession.sessionName
+
+  }
+
+
+}
+
 exports.checkIfDone = (testedSession) => {
 
   const currentDate = new Date()
@@ -105,9 +161,9 @@ exports.getCurrentlyServedSession = () => {
   if (weekDay == 0) {
     return null
   }
-  // else if (weekDay == 6) {
-  //   return null
-  // }
+  else if (weekDay == 6) {
+    return null
+  }
   else {
 
     let session = sessionsConf.find(s => Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) > Date.parse(`01/01/1970/ ${s.hourClose}`) && Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) < Date.parse(`01/01/1970/ ${s.hourAnnounce}`))

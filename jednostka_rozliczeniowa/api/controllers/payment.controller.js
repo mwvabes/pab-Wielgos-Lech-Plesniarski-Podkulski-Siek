@@ -115,9 +115,11 @@ exports.getIncomingPayments = (request, result) => {
     return;
   }
 
+  const sess = request.query.session == undefined ? sessionData.lastlyServedSession() : request.query.session
+
   mongoose.connect(db.url, db.attr)
 
-  Payment.find({ servingSession: request.query.session, "$or": [{
+  Payment.find({ servingSession: sess, "$or": [{
         recipientBankCode: request.query.bankCode, 
         "paymentStatus": "settled"
     }, {
