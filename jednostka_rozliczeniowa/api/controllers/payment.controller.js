@@ -126,8 +126,8 @@ exports.getIncomingPayments = (request, result) => {
         "paymentStatus": "declined"
     }] }).then(r => {
     result.status(200).json({
-      r,
-      sessionName: sess
+      sessionName: sess,
+      r      
     })
   })
 
