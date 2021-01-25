@@ -87,7 +87,7 @@ exports.lastlyServedSession = () => {
 
     return lastlyServedSession
   } else {
-    let closestSession = sessionsConf.find(s => {
+    let closestSession = sessionsConf.reverse().find(s => {
       return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)
     })
 
