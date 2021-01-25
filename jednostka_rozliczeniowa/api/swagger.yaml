@@ -124,6 +124,7 @@ paths:
   /api/payment/getIncoming:
     get:
       summary: Zwraca przelewy przychodzące w danej sesji dla danego banku.
+      description: Jako parametry należy podać kod banku i opcjonalnie sesję dla której chcemy pobrać przelewy. W przypadku braku parametru o nazwie sesji zostaną zwrócone przelewy z ostatnio zrealizowanej sesji.
       tags:
         - payment
       parameters:
@@ -139,7 +140,7 @@ paths:
           schema:
             type: string
             example: "20210111_01"
-          required: true
+          required: false
           description: Identyfikator sesji
       responses:
         '200':
@@ -156,7 +157,7 @@ paths:
     post:
       summary: Zaakceptuj lub odrzuć przelew.
       description: |
-        Rezultat zależny od parametru type. "accept" zaakceptuje przelew, "decline" odrzuci przelew.
+        Rezultat zależny od parametru type. "accept" zaakceptuje przelew, "decline" odrzuci przelew, "revision" zamrozi przelew i trzeba go będzie zaakceptować / odrzucić ponownie ręcznie.
       tags:
         - payment
       responses:
