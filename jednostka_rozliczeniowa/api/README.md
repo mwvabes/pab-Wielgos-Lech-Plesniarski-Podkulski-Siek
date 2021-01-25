@@ -23,8 +23,8 @@ npm run start
 2. ING Bank Śląski
     - Numer banku: `105`
     - Oddziały: 
-        - `04475`, Grunwaldzka 1, 21-035 Rzeszów
-        - `01417`, Al. Jerozolimskie 99, 00-012 Warszawa
+        - `04475`, Jana Pawła II 5/8, 21-035 Rzeszów
+        - `01417`, Rokitnicka 20, 02-131 Warszawa
 
 ## Przykłady
 
