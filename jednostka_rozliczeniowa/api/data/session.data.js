@@ -71,7 +71,7 @@ exports.lastlyServedSession = () => {
 
     return lastlyServedSession
   }
-  else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)) {
+  else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) > Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)) {
     
     if (weekDay == 1) {
       (operatingDate.setDate(operatingDate.getDate()-3))
