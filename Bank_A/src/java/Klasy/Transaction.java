@@ -102,13 +102,13 @@ public class Transaction {
             for (JsonObject result : results.getValuesAs(JsonObject.class)) {
                 Boolean returnToSender = false;
                 String status = result.getString("paymentStatus");
-                BigDecimal amount = new BigDecimal(result.getString("paymentAmount"));
-                String senderAccountNumber = result.getString("senderAccountnumber");
-                String recipientAccountNumber = result.getString("recipientAccountnumber");
+                BigDecimal amount = new BigDecimal(Integer.toString((result.getInt("paymentAmount"))));
+                String senderAccountNumber = result.getString("senderAccountnumber").substring(2); //nr nadawcy bez PL
+                String recipientAccountNumber = result.getString("recipientAccountnumber").substring(2); //nr odbiorcy bez PL
 
                 if (status.compareTo("settled") == 0) {    //czy udany przelew
                     AccountNumber an = new AccountNumber();
-                    if (an.isValid(recipientAccountNumber)) { //czy prawidłowy format nr konta odbiorcy
+                    if (an.isValid("PL" + recipientAccountNumber)) { //czy prawidłowy format nr konta odbiorcy
                         AccountService as = new AccountService();
                         Account account = as.findByNumber(recipientAccountNumber);
                         if (account == null) {  //czy nie znaleziono odbiorcę w banku
@@ -116,7 +116,7 @@ public class Transaction {
                         } else {
                             //ZAPIS OPERACJI
                             OperationService os = new OperationService();
-                            Operation o = new Operation("uznaniee",
+                            Operation o = new Operation("uznanie",
                                     new Date(new java.util.Date().getTime()),
                                     amount,
                                     "Zrealizowany",
@@ -171,6 +171,7 @@ public class Transaction {
                             connection.disconnect();
                         }
                     }
+                    
                 }
             }
         } catch (Exception e) {

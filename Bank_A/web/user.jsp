@@ -1,8 +1,3 @@
-<%-- 
-    Document   : user
-    Created on : 2021-01-09, 11:00:15
-    Author     : UkeiS
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

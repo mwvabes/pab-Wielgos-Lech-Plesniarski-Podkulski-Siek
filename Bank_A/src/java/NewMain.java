@@ -1,7 +1,18 @@
 
+import DAO.AccountService;
+import DAO.OperationService;
+import Klasy.AccountNumber;
 import Klasy.Transaction;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import Tables.Account;
+import Tables.Operation;
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.net.URL;
+import java.sql.Date;
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
 
 public class NewMain {
 
@@ -184,14 +195,24 @@ public class NewMain {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        String code = "";
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
-        System.out.println(sdf.format(cal.getTime()));
-        System.out.println(cal.getTime().getHours());
+//        String code = "";
+//        Calendar cal = Calendar.getInstance();
+//        SimpleDateFormat sdf = new SimpleDateFormat("YYYYMMdd");
+//        if(cal.getTime().getDay() != 0 && cal.getTime().getDay() != 6){
+//            
+//        }
+//        System.out.println(sdf.format(cal.getTime()));
+//        System.out.println(cal.getTime().getHours());
+//        
+//        Transaction t = new Transaction();
+//        System.out.println(t.getSession());
         
-        Transaction t = new Transaction();
-        System.out.println(t.getSession());
+      //  AccountNumber an = new AccountNumber();
+       // System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
+       
+       Transaction t = new Transaction();
+      // t.receiveExternalTransaction("20210125_04");
+      
     }
 
 }
