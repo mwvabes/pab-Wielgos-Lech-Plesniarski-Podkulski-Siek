@@ -11,14 +11,14 @@
     "sessionName": "_02",
     "hourClose": "12:00",
     "hourStartClearance": "12:10",
-    "hourStopClearance": "14:45",
-    "hourAnnounce": "14:50",
+    "hourStopClearance": "12:45",
+    "hourAnnounce": "12:50",
     "verifyBoundary": "1000.00"
   },
   {
     "sessionName": "_03",
-    "hourClose": "15:00",
-    "hourStartClearance": "15:10",
+    "hourClose": "14:00",
+    "hourStartClearance": "14:10",
     "hourStopClearance": "17:55",
     "hourAnnounce": "18:00",
     "verifyBoundary": "1000.00"
