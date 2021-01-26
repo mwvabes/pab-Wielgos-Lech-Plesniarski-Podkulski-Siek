@@ -15,15 +15,11 @@ paths:
       summary: Zwraca nazwę aplikacji i czas serwerowy.
       responses:
         '200':
-          description: W każdym przypadku gdy numer konta jest poprawny
+          description: =
           content:
             application/json:
               schema:
                 type: object
-                properties:
-                  isAccountNumberValid:
-                    type: boolean
-                    description: Wartość decyzyjna poprawności numeru (true dla response 200)
   /api/number/validate:
     get:
       summary: Zwraca informację o walidacji numeru konta.
