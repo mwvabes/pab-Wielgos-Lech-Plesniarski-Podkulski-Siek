@@ -1,5 +1,5 @@
 
-import org.mindrot.jbcrypt.BCrypt;
+import Klasy.AccountNumber;
 
 
 
@@ -200,24 +200,18 @@ public class NewMain {
         //     Transaction t = new Transaction();
         //  t.receiveExternalTransaction("20210125_04");
         
-        String password = "2";
+//        String password = "2";
+//        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
+//        System.out.println(hashed);
+//        if (BCrypt.checkpw("hasło", hashed)) {
+//            System.out.println("It matches");
+//        } else {
+//            System.out.println("It does not match");
+//        }
         
-        // Hash a password for the first time
-      //  String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
-
-// gensalt's log_rounds parameter determines the complexity
-// the work factor is 2**log_rounds, and the default is 10
-        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
-        
-        System.out.println(hashed);
-
-// Check that an unencrypted password matches one that has
-// previously been hashed
-        if (BCrypt.checkpw("hasło", hashed)) {
-            System.out.println("It matches");
-        } else {
-            System.out.println("It does not match");
-        }
+        AccountNumber an = new AccountNumber();
+        System.out.println(an.GenerateAccountNumber("02964", "0000000000000002"));
+        System.out.println(an.isValid("PL" + "57102029640000000000000002"));
     }
 
 }

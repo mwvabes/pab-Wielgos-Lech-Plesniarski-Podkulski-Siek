@@ -171,12 +171,32 @@ public class Transaction {
                             connection.disconnect();
                         }
                     }
-                    
+
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void makeExpressTransaction() {
+
+    }
+
+    public void receiveExpressTransaction(String senderAccountnumber, String recipientAccountnumber, String paymentTitle, BigDecimal amount) {
+        //OBCIĄŻENIE KONTA
+        AccountService as = new AccountService();
+        Account account = as.findByNumber("57102029640000000000000002");
+        account.setBalance(account.getBalance().subtract(amount));
+        as.update(account);
+        //ZAPIS OPERACJI
+        OperationService os = new OperationService();
+        Operation o = new Operation("uznanie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", senderAccountnumber, recipientAccountnumber, paymentTitle);
+        os.persist(o);
+        //UZNANIE KONTA
+        Account account2 = as.findByNumber(recipientAccountnumber);
+        account2.setBalance(account2.getBalance().add(amount));
+        as.update(account2);
     }
 
     public List<Operation> getHistory(Account account) {

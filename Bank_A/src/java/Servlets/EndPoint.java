@@ -5,6 +5,7 @@
  */
 package Servlets;
 
+import Klasy.AccountNumber;
 import Klasy.Transaction;
 import java.io.IOException;
 import java.io.InputStream;
@@ -88,20 +89,33 @@ public class EndPoint extends HttpServlet {
 
         JsonObject obj = rdr.readObject();
 
-        String senderAccountnumber = obj.getString("senderAccountnumber");
-        String recipientAccountnumber = obj.getString("recipientAccountnumber");
+        String senderAccountnumber = obj.getString("senderAccountnumber").replaceAll("[^a-zA-Z0-9]", "").substring(2);
+        String recipientAccountnumber = obj.getString("recipientAccountnumber").replaceAll("[^a-zA-Z0-9]", "").substring(2);
         String paymentTitle = obj.getString("paymentTitle");
         BigDecimal paymentAmount = new BigDecimal(Integer.toString(obj.getInt("paymentAmount")));
         String currency = obj.getString("currency");
+        String message = "Przelew odrzucony";
 
         //Obsługa tranzakcji
-        Transaction t = new Transaction();
-        t.makeInternalTransaction(account, currency, paymentAmount, currency);
+        AccountNumber an = new AccountNumber();
+        if (currency.equals("PLN") == true) {
+            if (an.isValid("PL" + senderAccountnumber) && an.isValid("PL" + recipientAccountnumber)) {
+                Transaction t = new Transaction();
+                t.receiveExpressTransaction(senderAccountnumber, recipientAccountnumber, paymentTitle, paymentAmount);
+                message = "Przelew przyjęty";
+            } else {
+                message += " | Błędny nr konta";
+            }
+        }
+        else{
+            message += " | Nieobsługiwana waluta";
+        }
 
         //Wysłanie Jsona
         response.setContentType("application/json;charset=UTF-8");
         JsonObjectBuilder loginBuilder = Json.createObjectBuilder();
 
+        loginBuilder.add("message", message);
         loginBuilder.add("senderAccountnumber", senderAccountnumber);
         loginBuilder.add("recipientAccountnumber", recipientAccountnumber);
 
