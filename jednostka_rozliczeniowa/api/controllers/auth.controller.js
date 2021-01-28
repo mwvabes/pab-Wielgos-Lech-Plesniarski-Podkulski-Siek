@@ -5,7 +5,7 @@ const db = require('./../conf/dbconfig')
 const models = require("../models")
 const User = models.user
 
-mongoose.connect(db.url, db.attr)
+
 
 exports.register = (request, response) => {
 
@@ -18,6 +18,8 @@ exports.register = (request, response) => {
     })
     return
   }
+
+  mongoose.connect(db.url, db.attr)
 
   let bankIDs;
   if (request.body.bankIDs == undefined) {
