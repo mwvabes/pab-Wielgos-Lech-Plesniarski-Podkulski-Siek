@@ -1,5 +1,5 @@
 const mongoose = require("mongoose")
-const plm = 'passport-local-mongoose'
+const plm = require('passport-local-mongoose')
 
 const user = mongoose.model(
   "user",
