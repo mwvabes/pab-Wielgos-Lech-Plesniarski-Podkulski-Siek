@@ -21,6 +21,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.mindrot.jbcrypt.BCrypt;
 
 @WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
 public class RegisterServlet extends HttpServlet {
@@ -93,7 +94,8 @@ public class RegisterServlet extends HttpServlet {
         }
         else {
             LoginService ls = new LoginService();
-            Login l = new Login(login, password, false);
+            String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
+            Login l = new Login(login, hashed, false);
             if(ls.findByLogin(login).size() > 0){
                 String message = "Istniej już użytkownik o padnym loginie.";
                 request.setAttribute("message", message);

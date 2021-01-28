@@ -1,18 +1,7 @@
 
-import DAO.AccountService;
-import DAO.OperationService;
-import Klasy.AccountNumber;
-import Klasy.Transaction;
-import Tables.Account;
-import Tables.Operation;
-import java.io.InputStream;
-import java.math.BigDecimal;
-import java.net.URL;
-import java.sql.Date;
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonObject;
-import javax.json.JsonReader;
+import org.mindrot.jbcrypt.BCrypt;
+
+
 
 public class NewMain {
 
@@ -206,13 +195,29 @@ public class NewMain {
 //        
 //        Transaction t = new Transaction();
 //        System.out.println(t.getSession());
+        //  AccountNumber an = new AccountNumber();
+        // System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
+        //     Transaction t = new Transaction();
+        //  t.receiveExternalTransaction("20210125_04");
         
-      //  AccountNumber an = new AccountNumber();
-       // System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
-       
-       Transaction t = new Transaction();
-      // t.receiveExternalTransaction("20210125_04");
-      
+        String password = "2";
+        
+        // Hash a password for the first time
+      //  String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
+
+// gensalt's log_rounds parameter determines the complexity
+// the work factor is 2**log_rounds, and the default is 10
+        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
+        
+        System.out.println(hashed);
+
+// Check that an unencrypted password matches one that has
+// previously been hashed
+        if (BCrypt.checkpw("hasło", hashed)) {
+            System.out.println("It matches");
+        } else {
+            System.out.println("It does not match");
+        }
     }
 
 }

@@ -1,6 +1,5 @@
 package Servlets;
 
-
 import DAO.LoginService;
 import Tables.Login;
 import java.io.IOException;
@@ -13,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.mindrot.jbcrypt.BCrypt;
 
 @WebServlet(urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
@@ -34,7 +34,7 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LoginServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
@@ -69,35 +69,37 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
+
         String l = request.getParameter("login");
         String p = request.getParameter("pass");
-        
+
         String destPage = "index.jsp";
-        
+
         LoginService loginService = new LoginService();
         //Login login = loginService.find(l, p);
-        List<Login> list = loginService.find(l, p);
-        
-        if(list.size() > 0){
-            Login login = list.get(0);
-            HttpSession session = request.getSession();
-            session.setAttribute("login", login);
-            
-            
-           if(login.isModerator()){
-                destPage = "admin.jsp";
+        List<Login> list = loginService.findByLogin(l);
+
+        if (list.size() > 0) {
+            for (Login login : list) {
+
+                if (BCrypt.checkpw(p, login.getPassword())) {
+                    HttpSession session = request.getSession();
+                    session.setAttribute("login", login);
+
+                    if (login.isModerator()) {
+                        destPage = "admin.jsp";
+                    } else {
+                        destPage = "user.jsp";
+                    }
+                }
+
             }
-           else {
-               destPage = "user.jsp";
-           }
-        }
-        else {
+
+        } else {
             String message = "Nieprawidłowe dane logowania!";
             request.setAttribute("message", message);
         }
-        
+
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);
     }
