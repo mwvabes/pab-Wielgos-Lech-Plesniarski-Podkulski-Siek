@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <title>Logowanie</title> -->
+
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/kantor.css" />
+
+</head>
+
+<body>
+
+  <div class="circle"></div>
+
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="right">
+          <div class="logo">
+            <img src="./../icons/ryba_logo.png" alt="">
+          </div>
+        </div>
+        <div class="left">
+          <div class="row">
+            <div class="links">
+              <div class="links">
+                <a href="./logowanie.html">Strona główna</a>
+                <a href="./oferty_promocje.html">Oferty i promocje</a>
+                <a href="#">Kalkulator sesji ELIXIR</a>
+                <a href="./kantor.html" class="active">Kantor</a>
+                <a href="./kontakt.html">Kontakt</a>
+              </div>
+            </div>
+            <div class="clientLogin">
+              <a href="./logowanie.html"><img src="./../icons/" alt=""><img src="./../icons/padlock_white.png" alt=""
+                  class="smallIcon">
+                Logowanie Klienta</a>
+            </div>
+            <a href="#" class="mobileHamburgerMenu"><img src="./../icons/hamburgericon_blue.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <div class="title">
+        <h1>Kantor</h1>
+      </div>
+
+      <div class="exchangeWrapper">
+        <div class="exchangeProperties">
+          <div class="exchangeCard">
+            <div class="exchangeInputs">
+              <label for="">Waluta źródłowa</label>
+              <input type="text" value="30">
+              <select>
+                <option value="zloty"><img src="./../icons/countries/poland.png" />PLN Polski złoty</option>
+                <option value="euro"><img src="./../icons/countries/european-union.png" />EUR Euro złoty</option>
+              </select>
+
+              <label for="">Waluta destynacji</label>
+              <select>
+                <option value="euro"><img src="./../icons/countries/european-union.png" />EUR Euro</option>
+                <option value="zloty"><img src="./../icons/countries/poland.png" />PLN Polski złoty</option>
+              </select>
+            </div>
+            <button>
+              <img src="./../icons/expand_blue.png" alt="">
+              <span>Przelicz</span>
+            </button>
+          </div>
+          <div class="exchangeResult">
+            <label for="">Kurs wynikowy</label>
+            <input type="text" disabled value="6.70">
+          </div>
+        </div>
+        <div class="exchangeRateInfo">
+          <p>Aktualny kurs: 1 PLN Polski złoty = 0,22 EUR Euro</p>
+        </div>
+      </div>
+
+      <div class="ratings">
+        <div class="ratingHeader">
+          <p>Symbol/Waluta</p>
+          <p>Kurs</p>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/united-states-of-america.png" alt="">
+            <p>USD Dolar amerykański</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">3,8353</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/european-union.png" alt="">
+            <p>EUR Euro</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">4,5233</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/united-states-of-america.png" alt="">
+            <p>CHF Frank szwajcarski </p>
+          </div>
+          <div class="values">
+            <p class="currentValue">4,2248</p>
+            <img src="./../icons/currency_up.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/united-kingdom.png" alt="">
+            <p>GBP Funt szterling </p>
+          </div>
+          <div class="values">
+            <p class="currentValue">5,0042</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/thailand.png" alt="">
+            <p>THB Bat tajlandzki</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">0,1242</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/australia.png" alt="">
+            <p>AUD Dolar australijski</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">2,7657</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/hong-kong.png" alt="">
+            <p>HKD Dolar hongkoński</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">0,4946</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/canada.png" alt="">
+            <p>CAD Dolar kanadyjski</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">2,9214</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/new-zealand.png" alt="">
+            <p>NZD Dolar nowozelandzki</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">2,5800</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/singapore.png" alt="">
+            <p>SGD Dolar singapurski</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">2,8318</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/hungary.png" alt="">
+            <p>HUF Forint węgierski</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">1,2565</p>
+            <img src="./../icons/currency_up.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/ukraine.png" alt="">
+            <p>UAH Hrywna ukraińska</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">0,1351</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+        <div class="rating">
+          <div class="naming">
+            <img src="./../icons/countries/japan.png" alt="">
+            <p>JPY Jen japoński</p>
+          </div>
+          <div class="values">
+            <p class="currentValue">3,6790</p>
+            <img src="./../icons/currency_down.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="left">
+          &copy; 2020 Banki Polskie RYBA
+        </div>
+        <div class="right">
+          <div class="links">
+            <a href="#">Bankowość Osobista</a>
+            <a href="#">Bankowość Firmowa</a>
+            <a href="#">Zastrzeż kartę</a>
+            <a href="#">Przerwy techniczne</a>
+            <a href="#">Infolinia: 800 800 008</a>
+            <a href="#"><img src="./../icons/en.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

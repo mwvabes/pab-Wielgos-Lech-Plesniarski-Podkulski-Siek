@@ -1,0 +1,222 @@
+$red: #A31621;
+$blue: #4E8098;
+$grey: #858585;
+$mediumgrey: #CED3DC;
+$lightgrey: #F9F9F9;
+$green: #508104;
+$greyfilter: invert(99%) sepia(1%) saturate(32%) hue-rotate(37deg) brightness(113%) contrast(89%);
+
+.container {
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: $grey;
+  margin: 20px;
+}
+
+.exchangeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: $grey;
+}
+
+.exchangeCard {
+  display: flex;
+  flex-direction: row;
+}
+
+.exchangeInputs {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 60px;
+  color: $grey;
+}
+
+.exchangeCard {
+  border: 1px solid $blue;
+  border-radius: 0px 16px 16px 0px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px 5px $mediumgrey;
+}
+
+.exchangeWrapper label {
+  margin: 15px 5px 5px;
+}
+
+.exchangeWrapper input, .exchangeWrapper select {
+  font-family: 'Fira Sans', sans-serif;
+  color: $blue;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.exchangeCard button {
+  font-family: 'Fira Sans', sans-serif;
+  border: 0px;
+  padding: 10px;
+  color: $blue;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid $blue;
+}
+
+.exchangeCard button img {
+  height: 50px;
+  transform: rotate(-90deg);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.exchangeProperties {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.exchangeResult {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exchangeResult input {
+  color: $lightgrey;
+  background-color: $blue;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.exchangeRateInfo {
+  padding: 20px;
+  border-bottom: 1px solid $mediumgrey;
+}
+
+.ratings {
+  margin: 20px;
+  border: 1px solid $blue;
+  display: flex;
+  flex-direction: column;
+  color: $grey;
+  max-height: 380px;
+  overflow-y: scroll;
+}
+
+.ratings .values {
+  color: $blue;
+  font-weight: bold;
+}
+
+.ratings::-webkit-scrollbar {
+  width: 8px;
+}
+.ratings::-webkit-scrollbar-track {
+  background: $mediumgrey;
+}
+.ratings::-webkit-scrollbar-thumb {
+  background-color: $blue;
+  border-radius: 4px;
+  border: 1px solid $grey;
+}
+
+.ratings img {
+  height: 1.3rem;
+}
+
+.ratingHeader, .rating {
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px;
+  border-bottom: 1px solid $mediumgrey;
+}
+
+.ratingHeader {
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.rating .naming, .rating .values {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+}
+
+.rating {
+  justify-content: space-between;
+}
+
+.rating .naming img {
+  margin-right: 10px;
+}
+
+.rating .values img {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1261px) {
+  .ratings {
+    max-width: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .ratings {
+    margin: 0px;
+  }
+
+  .exchangeWrapper, .exchangeProperties {
+    flex-direction: column;
+  }
+
+  .exchangeCard {
+    border: 0px;
+    box-shadow: none;
+    flex-direction: column;
+  }
+
+  .exchangeCard button {
+    border-radius: 0px 0px 16px 16px;
+    border: 1px solid $mediumgrey;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exchangeCard button img {
+    transform: rotate(0deg);
+    max-height: 30px;
+    padding: 0px;
+    margin-left: 20px;
+  }
+
+  .exchangeInputs {
+    padding: 10px 0px;
+  }
+
+  .exchangeCard {
+    width: 100%;
+  }
+
+  .title {
+    margin: 0px;
+  }
+
+  .ratings {
+    margin-top: 20px;
+    overflow-y: unset;
+    max-height: unset;
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,427 @@
+$red: #A31621;
+$blue: #4E8098;
+$grey: #858585;
+$mediumgrey: #CED3DC;
+$lightgrey: #F9F9F9;
+$raregrey: #CED3DC;
+$green: #508104;
+$greyfilter: invert(99%) sepia(1%) saturate(32%) hue-rotate(37deg) brightness(113%) contrast(89%);
+
+$navyD: #00010D;
+$navyL: #0F1D37;
+$navyL2: #264d96;
+$lightblue: #81D6FF;
+
+$lighterred: #FF8089;
+$lightergreen: #6AC971;
+
+$redHistoryGradient: linear-gradient(90deg, rgba(255,128,137,1) 0%, $navyL 10%, $navyL 100%);
+$greenHistoryGradient: linear-gradient(90deg, rgba(106,201,113,1) 0%, $navyL 10%, $navyL 100%);
+$yellowHistoryGradient: linear-gradient(90deg, rgba(239,220,58,1) 0%, $navyL 10%, $navyL 100%);
+$greenHistoryCollapsedGradient: linear-gradient(90deg, rgba(106,201,113,1) 0%, $navyL 10%, $navyL 80%, #00318d 100%);
+
+
+header {
+  background-color: $navyD;
+  box-shadow: none;
+  color: $mediumgrey;
+}
+
+header .links > a {
+  color: $lightblue;
+}
+
+body {
+  color: $mediumgrey;
+  background-color: $navyD;
+  background-image: none;
+}
+
+.messagesCentre {
+  background-color: $blue;
+}
+
+.messagesProperties a {
+  color: #FFF;
+}
+
+.headerQuickInfo {
+  background-image: url(./../../icons/circlegrid_2_plus_dark.svg);
+}
+
+.headerQuickInfo a {
+  color: $lightblue;
+}
+
+.headerWrapper {
+  border-bottom: 1px solid $navyL2;
+}
+
+.subMenuContainer a {
+  color: $lightblue;
+}
+
+footer .left::before {
+  box-shadow: none;
+}
+
+body .redDotInfo {
+  color: #FFF;
+  background-color: $red;
+  border: 2px solid red;
+}
+
+
+.warningContainer {
+  color: #FFF;
+  background-color: $red;
+}
+
+.warningConfirm {
+  background-color: transparent;
+  color: #FFF;
+}
+
+.warningPanic {
+  color: $red;
+  background-color: $lightgrey;
+  border: 2px solid red;
+}
+
+.quickCard {
+  background-color: $navyL;
+  box-shadow: none;
+  color: $lightgrey;
+}
+
+.quickStandingOrderEntity {
+  border-top: 1px solid $blue;
+}
+
+p.standingOrderHeading {
+  color: $lightblue;
+}
+
+p.standingOrderTimeInfo {
+  color: $lightgrey;
+}
+
+
+.standingOrderReceiver button {
+  background-color: $navyD;
+  border: 2px solid $blue;
+  color: #FFF;
+}
+
+.standingOrderPostponing {
+  background-color: $navyD;
+  border: 1px solid $blue;
+}
+
+.quickStandingOrderEntity button {
+  background-color: $navyD;
+}
+
+.quickStandingOrderEntity:last-of-type {
+  border-bottom: 1px solid $blue;
+}
+
+.standingOrderPostponing button {
+  color: #FFF;
+  font-weight: bold;
+  background-color: $blue;
+  border: 1px solid $raregrey;
+}
+
+.standingOrderPostponing strong {
+  font-weight: bold;
+}
+
+.standingOrderHeading img {
+  width: .7rem;
+  margin-left: 2px;
+}
+
+a.addNew {
+  background-color: $navyD;
+  border: 1px solid $blue;
+  color: #FFF;
+}
+
+
+.mainSummary {
+  border: 1px solid $lightblue;
+  background-color: $navyL;
+}
+
+.col2 {
+  border-right: 1px solid $navyL2;
+}
+
+
+.copyButtons button {
+  border: 1px solid $lightblue;
+  background-color: $navyL;
+  color: #FFF;
+}
+
+.balanceInfo span {
+  color: $mediumgrey;
+}
+
+h2.mainBalance {
+  color: $lightblue;
+}
+
+.mainButtons a {
+  border: 1px solid $lightblue;
+}
+
+.selectionBox {
+  border-left: 1px solid $mediumgrey;
+}
+
+.mainActionButton {
+  background-color: $blue;
+  color: #FFF;
+}
+
+.historyButton {
+  background-color: $lightgrey;
+  color: $blue;
+}
+
+.tableLike {
+  border: 1px solid $navyL2;
+}
+
+.tableLike .badgeNew {
+  color: #FFF;
+  background-color: $red;
+  border: 1px solid red;
+}
+
+.tableLikeContainer .tableLike:last-of-type {
+  border-bottom: 1px solid $navyL2;
+}
+
+.tableLikeContainer .val {
+  color: $lightblue;
+}
+
+.generateActive, .generateInactive {
+  border: 1px solid $raregrey;
+}
+
+.generateInactive {
+  color: $lightblue;
+  background-color: $navyD;
+}
+
+.generateActive {
+  background-color: $blue;
+  color: #FFF;
+}
+
+.tableLikeContainer a {
+  color: $lightblue;
+}
+
+.summaryThirdCol a {
+  color: #FFF;
+}
+
+.juniorColor {
+  color: $green;
+}
+
+.summaryFirstCol {
+  background-image: url(./../../icons/circlegrid_11_6_dark.svg);
+}
+
+.mainPropWindow {
+  background-color: $navyL;
+}
+
+.mainPropHeader {
+  color: $mediumgrey;
+}
+
+.mainPropMenu a {
+  color: $raregrey;
+}
+
+.mainPropMenu a.mainPropAActive {
+  color: $lightblue;
+}
+
+.historyEntityProps {
+  border: 2px solid $navyL2;
+  box-shadow: none;
+  background-color: $navyD;
+}
+
+.mainImage {
+  border: 1px solid $mediumgrey;
+  background-color: #FFF;
+}
+
+
+.operationTypeImage {
+  border: 1px solid $navyL2;
+  background-color: $navyL;
+}
+
+.operationInfo h4 {
+  color: $lightblue;
+}
+
+.operationMinus {
+  color: $lighterred;
+}
+
+.operationPlus {
+  color: $lightergreen;
+}
+
+.historyEntityCollapseIcon {
+  border-left: 1px solid $raregrey;
+}
+
+.historyEntityCollapsed {
+  border: 1px solid $navyL2;
+  box-shadow: none;
+}
+
+.historyCollapsedProps a {
+  color: $lightblue;
+}
+
+.historyCollapsedIsDone h5.done {
+  color: $lightergreen;
+}
+
+.historyCollapsedIsDone h5.notdone {
+  color: $lighterred;
+}
+
+.historyCollapsedButtons .return {
+  color: #FFF;
+  background-color: $navyL2;
+}
+
+.historyCollapsedButtons .generatePDF {
+  color: $lightblue;
+  background-color: $navyD;
+}
+
+.historyCollapsedButtons > div button {
+  border: 1px solid $raregrey;
+  box-shadow: none;
+}
+
+.historyTypeGreen {
+  background: $greenHistoryGradient;
+}
+
+.historyTypeGreenCollapsed {
+  background: $greenHistoryCollapsedGradient
+}
+
+.historyTypeRed {
+  background: $redHistoryGradient;
+}
+
+.historyTypeYellow {
+  background: $yellowHistoryGradient;
+}
+
+footer {
+  color: $lightblue;
+  background-color: $navyD;
+}
+
+footer .links a {
+  color: $lightblue;
+}
+
+footer .links a:not(:last-child)::after {
+  background-color: $lightblue;
+}
+
+.paymentTypeChooseWrapper {
+  color: $grey;
+}
+
+.paymentTypeChooseWrapper select {
+  color: $blue;
+  border: 1px solid $blue;
+  background: url(./../../icons/expand_blue_margin.png) no-repeat;
+}
+
+.paymentOption::after {
+  background-color: $lightblue;
+  box-shadow: 0px 0px 8px 1px $lightblue;
+}
+
+.newPaymentDispositionCard {
+  border: 1px solid $navyL2;
+}
+
+.newPaymentDispositionCardHeader {
+  border-bottom: 1px solid $navyL2;
+}
+
+.newPaymentDispositionWindow .contactListAnchor {
+  color: #FFF;
+  border: 1px solid $blue;
+  background-color: $navyL2;
+}
+
+.newPaymentDispositionWindow form input, .newPaymentDispositionWindow form textarea, .newPaymentDispositionWindow form select {
+  border: 1px solid $lightblue;
+  background-color: $navyD;
+  color: #FFF;
+}
+
+.newPaymentDispositionWindow a {
+  color: $lightblue;
+  text-decoration: underline;
+}
+
+.newPaymentDispositionWindow input[type=submit] {
+  background-color: $navyD;
+  color: $lightblue;
+  border-color: $lightblue;
+}
+
+.paymentOption button {
+  border: 1px solid $navyL2;
+}
+
+.paymentOptionActive {
+  color: $lightblue;
+}
+
+.paymentOptionActive button {
+  color: $navyD;
+  background-color: $lightblue;
+}
+
+.paymentOptionInactive {
+  color: $mediumgrey;
+}
+
+.paymentOptionInactive button {
+  background-color: $navyD;
+  color: $lightblue;
+}
+
+.paymentOptionInactive::after {
+  background-color: $mediumgrey;
+  box-shadow: none;
+}
+
+.borderedLabel {
+  border: 1px solid $lightblue;
+}

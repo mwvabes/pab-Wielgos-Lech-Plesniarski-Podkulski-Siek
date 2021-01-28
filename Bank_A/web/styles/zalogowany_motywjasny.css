@@ -1,0 +1,1809 @@
+body {
+  color: #858585;
+}
+
+header .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.messagesCentre {
+  background-color: #4E8098;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #FFF;
+  height: 80px;
+  padding: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.messagesCentre img {
+  max-height: 40px;
+}
+
+.messagesCentreIcon {
+  position: relative;
+}
+
+.messagesCentreIcon .redDotInfo {
+  top: -10px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+}
+
+.messagesCentre .messageProperties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.messagesProperties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  padding-right: 0px;
+}
+
+.messagesProperties a {
+  color: #FFF;
+  text-decoration: underline;
+  font-size: .8rem;
+}
+
+.headerQuickInfo {
+  font-size: .8rem;
+  justify-self: flex-start;
+  margin-left: 20px;
+  background-image: url(./../../icons/circlegrid_2_plus.svg);
+  background-repeat: repeat-x;
+}
+
+.headerQuickInfo strong {
+  font-weight: bold;
+}
+
+.headerQuickInfo a {
+  color: #4E8098;
+  text-decoration: underline;
+}
+
+.currentlyLoggedInfo {
+  text-align: right;
+  margin-right: 10px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headerWrapper {
+  border-bottom: 1px solid #CED3DC;
+}
+
+.subMenuContainer {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.submenuIcon {
+  width: 1.2rem;
+  margin: 0px 5px;
+}
+
+.subMenuContainer .leftMenu {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.subMenuContainer > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subMenuContainer a {
+  color: #4E8098;
+  font-size: 1.1rem;
+  padding: 10px;
+  text-decoration: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subMenuContainer span {
+  font-size: 1.2rem;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.subMenuContainer span a {
+  text-decoration: underline;
+  padding: 10px 5px;
+}
+
+.subMenuContainer .subMenu {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .redDotInfo {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: #FFF;
+  background-color: #A31621;
+  border: 2px solid red;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: hidden;
+  top: 2px;
+  right: 0;
+  font-size: .7rem;
+  margin: 0;
+  padding: 0;
+}
+
+.superContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+aside {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  margin-right: 5px;
+}
+
+.warningContainer {
+  color: #FFF;
+  background-color: #A31621;
+  padding: 10px;
+  font-size: .8rem;
+}
+
+aside h1 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.warningButtonSection {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.warningButtonSection button {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 5px 10px;
+}
+
+.warningConfirm {
+  background-color: transparent;
+  border: 0px;
+  color: #FFF;
+}
+
+.warningPanic {
+  color: #A31621;
+  background-color: #F9F9F9;
+  border: 2px solid red;
+}
+
+.quickCard {
+  margin: 20px 0px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 0 10px 7px #e7e7e7;
+          box-shadow: 0 0 10px 7px #e7e7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cardHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardHeader img {
+  width: 2rem;
+}
+
+.quickStandingOrderEntity {
+  border-top: 1px solid #4E8098;
+  padding: 10px;
+  width: 100%;
+}
+
+.quickStandingOrderEntity p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+p.standingOrderHeading {
+  color: #4E8098;
+  font-size: 1rem;
+}
+
+p.standingOrderTimeInfo {
+  font-size: .8rem;
+  color: #858585;
+  font-weight: lighter;
+}
+
+p.standingOrderReceiver {
+  font-size: .8rem;
+}
+
+.standingOrderReceiver button {
+  background-color: #F9F9F9;
+  border: 2px solid #4E8098;
+  color: #4E8098;
+}
+
+.standingOrderPostponing {
+  background-color: #F9F9F9;
+  border: 1px solid #CED3DC;
+  font-size: .7rem;
+}
+
+.quickStandingOrderEntity button {
+  font-size: .7rem;
+  padding: 5px;
+  border-radius: 0px;
+  background-color: #FFF;
+}
+
+.quickStandingOrderEntity:last-of-type {
+  border-bottom: 1px solid #4E8098;
+}
+
+.standingOrderPostponing button {
+  color: #A31621;
+  font-weight: bold;
+  background-color: #CED3DC;
+  border: 1px solid #CED3DC;
+}
+
+p.standingOrderPostponing {
+  padding-left: 5px;
+}
+
+.standingOrderPostponing strong {
+  font-weight: bold;
+}
+
+.standingOrderHeading img {
+  width: .7rem;
+  margin-left: 2px;
+}
+
+a.addNew {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+  background-color: #FFF;
+  border: 1px solid #A31621;
+  color: #A31621;
+  font-weight: lighter;
+  margin: 20px 5px;
+  max-width: 80%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+a.addNew img {
+  width: .6rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin: 5px;
+}
+
+main {
+  -webkit-box-flex: 12;
+      -ms-flex: 12;
+          flex: 12;
+  margin: 0;
+}
+
+.mainSummary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #CED3DC;
+}
+
+.mainSummary h1 {
+  font-size: 1.8rem;
+}
+
+.mainSummary h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.mainSummary img {
+  width: 1.6rem;
+  margin: 5px;
+}
+
+.col2 {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px;
+  border-right: 1px solid #CED3DC;
+}
+
+.col1 {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5px;
+}
+
+.accountNumber {
+  font-weight: lighter;
+  font-size: 1.2rem;
+}
+
+.copyButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.copyButtons button {
+  border-radius: 0;
+  border: 1px solid #4E8098;
+  font-size: .9rem;
+  color: #4E8098;
+  padding: 3px 6px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.copyButtons button:first-of-type {
+  margin-right: 10px;
+}
+
+.balanceInfo {
+  text-align: right;
+  margin: 10px 0px;
+}
+
+.balanceInfo span {
+  font-size: .7em;
+  color: #858585;
+}
+
+h2.mainBalance {
+  color: #4E8098;
+  font-size: 2rem;
+}
+
+h3.debitInfo {
+  font-size: 1.2rem;
+}
+
+.mainButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainButtons a:first-of-type {
+  margin-right: 10px;
+}
+
+.mainButtons a {
+  border: 1px solid #4E8098;
+  text-decoration: none;
+  font-weight: lighter;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  font-size: .9rem;
+  cursor: pointer;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 5px;
+}
+
+.mainButtons span {
+  margin-left: 5px;
+}
+
+.selectionBox {
+  border-left: 1px solid #CED3DC;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 5px;
+}
+
+.mainButtons .mainActionButton {
+  background-color: #4E8098;
+  color: #FFF;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainActionButton span {
+  margin-right: 10px;
+}
+
+.historyButton {
+  background-color: #F9F9F9;
+  color: #4E8098;
+}
+
+.tableLikeContainer {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tableLike {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 1px solid #CED3DC;
+  border-bottom: 0px;
+  font-size: .9rem;
+  position: relative;
+}
+
+.tableLike .badgeNew {
+  position: absolute;
+  top: -12px;
+  left: 5px;
+  font-size: .7rem;
+  font-weight: bold;
+  color: #FFF;
+  background-color: #A31621;
+  border: 1px solid red;
+  padding: 1px 5px;
+}
+
+.tableLikeContainer .tableLike:last-of-type {
+  border-bottom: 1px solid #CED3DC;
+}
+
+.tableLikeContainer .val {
+  color: #A31621;
+}
+
+.tableLike span, .tableLike a {
+  padding: 3px;
+}
+
+.generateActive, .generateInactive {
+  font-size: .8rem;
+  border: 1px solid #CED3DC;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.generateInactive {
+  color: #4E8098;
+}
+
+.generateActive {
+  background-color: #4E8098;
+  color: #FFF;
+}
+
+.tableLikeContainer a {
+  color: #4E8098;
+}
+
+.summaryThirdCol {
+  font-size: .8rem;
+}
+
+.juniorColor {
+  color: #508104;
+}
+
+.summaryFirstCol {
+  background-image: url(./../../icons/circlegrid_11_6.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.mainPropWindow {
+  margin-bottom: 50px;
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mainPropHeader {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #858585;
+}
+
+.mainPropHeader h2, .mainPropCard h2 {
+  font-size: 1.6rem;
+}
+
+.mainPropMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPropMenu a {
+  color: #858585;
+  padding: 10px;
+}
+
+.mainPropMenu a.mainPropAActive {
+  color: #4E8098;
+}
+
+.historyWrapper img {
+  width: 2rem;
+}
+
+.historyEntity {
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.historyEntityProps {
+  height: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 1px solid #CED3DC;
+  border-radius: 45px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 10px 2px #CED3DC;
+          box-shadow: 0px 0px 10px 2px #CED3DC;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.historyImageSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+}
+
+.mainImage {
+  border: 1px solid #CED3DC;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5px;
+  position: relative;
+  z-index: 2;
+  background-color: #FFF;
+}
+
+.mainImage img {
+  width: 90%;
+}
+
+.operationTypeImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 1px solid #CED3DC;
+  height: 80px;
+  margin: 5px;
+  position: absolute;
+  width: 80px;
+  left: 40px;
+  z-index: 1;
+  background-color: #FFF;
+  border-radius: 0 45px 45px 0;
+}
+
+.beneficiary {
+  margin-left: 45px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+.paymentInfo {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+}
+
+.operationInfo {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+
+.beneficiary, .paymentInfo, .operationInfo {
+  margin-right: 10px;
+  font-size: .85rem;
+}
+
+.operationInfo {
+  text-align: right;
+}
+
+.operationInfo h4 {
+  font-size: .85rem;
+  color: #4E8098;
+}
+
+.operationInfo h3 {
+  font-size: 1.8rem;
+}
+
+.operationMinus {
+  color: #A31621;
+}
+
+.operationPlus {
+  color: #508104;
+}
+
+.historyEntityContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.historyEntityCollapseIcon {
+  padding: 15px 15px;
+  padding-right: 20px;
+  border-left: 1px solid #CED3DC;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.historyEntityCollapsed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: .85em;
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #CED3DC;
+  border-radius: 0px 0px 16px 16px;
+  -webkit-box-shadow: 0px 5px 10px 2px #CED3DC;
+          box-shadow: 0px 5px 10px 2px #CED3DC;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.historyCollapsedProps a {
+  color: #4E8098;
+}
+
+.historyCollapsedIsDone h5 {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
+.historyCollapsedIsDone h5.done {
+  color: #508104;
+}
+
+.historyCollapsedIsDone h5.notdone {
+  color: #A31621;
+}
+
+.historyCollapsedButtons {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.historyCollapsedButtons > div {
+  margin-top: 10px;
+}
+
+.historyCollapsedButtons .return {
+  color: #FFF;
+  background-color: #4E8098;
+}
+
+.historyCollapsedButtons .generatePDF {
+  color: #4E8098;
+  background-color: #FFF;
+}
+
+.historyCollapsedButtons > div button {
+  height: 30px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: 1px solid #CED3DC;
+  -webkit-box-shadow: 0px 0px 4px 2px #CED3DC;
+          box-shadow: 0px 0px 4px 2px #CED3DC;
+  font-size: .9rem;
+}
+
+.historyEntityCollapsed strong {
+  font-weight: bold;
+}
+
+.rotated180 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.historyTypeGreen {
+  background: -webkit-gradient(linear, left top, right top, from(#6ac971), color-stop(10%, white), to(white));
+  background: linear-gradient(90deg, #6ac971 0%, white 10%, white 100%);
+}
+
+.historyTypeGreenCollapsed {
+  background: -webkit-gradient(linear, left top, right top, from(#6ac971), color-stop(10%, white), color-stop(51%, white), to(#e8eaec));
+  background: linear-gradient(90deg, #6ac971 0%, white 10%, white 51%, #e8eaec 100%);
+}
+
+.historyTypeRed {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8089), color-stop(10%, white), to(white));
+  background: linear-gradient(90deg, #ff8089 0%, white 10%, white 100%);
+}
+
+.historyTypeYellow {
+  background: -webkit-gradient(linear, left top, right top, from(#efdc3a), color-stop(10%, white), to(white));
+  background: linear-gradient(90deg, #efdc3a 0%, white 10%, white 100%);
+}
+
+.juniorMainSummary {
+  border: 2px solid #508104;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.juniorMainSummary a.createNewAccount {
+  color: #508104;
+  padding: 5px;
+}
+
+.juniorMainSummary .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.mainSummaryHeader {
+  padding: 5px;
+  border-bottom: 1px solid #CED3DC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.colsWrapper > div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.juniorMainSummary button {
+  border: 1px solid #508104;
+  color: #508104;
+}
+
+.juniorMainSummary a {
+  color: #508104;
+}
+
+.juniorMainSummary h2.mainBalance {
+  color: #508104;
+}
+
+.juniorMainSummary .mainActionButton {
+  background-color: #508104;
+  color: #FFF;
+}
+
+.juniorMainSummary .historyButton {
+  border-color: #508104;
+}
+
+.juniorMainSummary .tableLike .val {
+  color: #508104;
+  margin-left: 10px;
+}
+
+.juniorMainSummary .tableLike {
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.juniorMainSummary .mainSummaryHeader .tableLikeContainer {
+  margin-bottom: 0px;
+}
+
+.mainPropWindowJunior {
+  border: 1px solid #CED3DC;
+}
+
+.juniorOwnerInfo {
+  color: #508104;
+  text-align: right;
+}
+
+.mainPropWindowJunior .juniorOwnerInfo {
+  color: #508104;
+  font-weight: bold;
+  font-size: .8rem;
+}
+
+.iconImg {
+  width: 1.2rem;
+  margin: 0px 5px;
+}
+
+.mainPropCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0px 0px 10px 3px #CED3DC;
+          box-shadow: 0px 0px 10px 3px #CED3DC;
+  padding-top: 5px;
+  padding-bottom: 16px;
+}
+
+.mainPropCardRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #CED3DC;
+  border-bottom: 1px solid #CED3DC;
+}
+
+.mainPropCardHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  margin: 0px 10px;
+}
+
+.mainPropCardHeader a {
+  text-align: right;
+}
+
+.mainPropWindowJunior a {
+  color: #508104;
+  text-decoration: underline;
+}
+
+.mainPropCardRow .col2 {
+  padding: 0px;
+  border: 0px;
+}
+
+.mainPropCardRow > div:not(:first-of-type) {
+  border-left: 1px solid #CED3DC;
+}
+
+.mainPropCardRow .tableLike {
+  border: 0px;
+  padding: 5px 10px;
+}
+
+.mainPropCardRow .tableLike:not(:last-of-type), .mainPropCardRow .tableLike:first-of-type {
+  border-bottom: 1px solid #CED3DC;
+}
+
+.mainPropCardRow .tableLike .val {
+  color: #508104;
+  text-align: right;
+}
+
+.colExpander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mainPropWindowJunior .mainPropMenu a {
+  color: #858585;
+}
+
+.mainPropWindowJunior .mainPropMenu a.mainPropAActive {
+  color: #508104;
+}
+
+.colExpander img {
+  width: 2rem;
+  margin: 10px 20px;
+}
+
+.cardImage img {
+  width: 11rem;
+  margin: 5px;
+}
+
+.cardImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardSummary h3, .tableLike h3 {
+  font-size: 1.4rem;
+}
+
+.cardSummary h4, .tableLike h4 {
+  font-size: 1.2rem;
+}
+
+.cardButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cardButtons button {
+  font-family: 'Fira Sans', sans-serif;
+  border-radius: 0px;
+  color: #508104;
+  margin: 2px 0px;
+  border: 1px solid #CED3DC;
+  background-color: #F9F9F9;
+  padding: 2px 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.mainPropCardRow .cardBasicInfo {
+  padding: 5px;
+}
+
+.cardButtons .cardExtraButton {
+  border-color: #A31621;
+}
+
+.cardOperatorSection {
+  color: #A31621;
+  font-size: .8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.cardOperatorSection > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardOperatorSection img {
+  width: 2rem;
+  margin: 5px;
+}
+
+h2.accountNumber {
+  text-align: center;
+}
+
+.newPaymentDispositionWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+  margin: 0px auto;
+}
+
+.paymentTypeChooseWrapper {
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  color: #858585;
+  -ms-flex-item-align: center;
+      align-self: center;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.paymentTypeChooseWrapper select {
+  padding: 10px;
+  font-size: 1.4rem;
+  color: #4E8098;
+  font-family: 'Fira Sans', sans-serif;
+  border: 1px solid #4E8098;
+  border-radius: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+  background: url(./../../icons/expand_blue_margin.png) no-repeat;
+  background-position-x: right;
+  background-position-y: center;
+  background-size: 2rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.paymentOption::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: #4E8098;
+  -webkit-box-shadow: 0px 0px 8px 1px #4E8098;
+          box-shadow: 0px 0px 8px 1px #4E8098;
+}
+
+.paymentTypeChooseWrapper p {
+  padding: 2px;
+}
+
+.newPaymentDispositionWindow h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.newPaymentDispositionWindow {
+  padding-bottom: 30px;
+}
+
+.newPaymentDispositionCard {
+  border-radius: 12px 12px 0px 0px;
+  border: 1px solid #CED3DC;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.newPaymentDispositionCardHeader {
+  padding: 10px;
+  border-bottom: 1px solid #CED3DC;
+  font-size: .8rem;
+}
+
+.newPaymentDispositionWindow form {
+  padding: 10px;
+}
+
+.newPaymentDispositionWindow form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.newPaymentDispositionWindow .contactListAnchor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-size: .8rem;
+  color: #FFF;
+  margin: 0px;
+  margin-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid #4E8098;
+  padding: 3px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-bottom: 2px;
+  background-color: #4E8098;
+}
+
+.newPaymentDispositionWindow form img {
+  height: 1.4rem;
+  margin: 0px 5px;
+}
+
+.newPaymentDispositionWindow form input, .newPaymentDispositionWindow form textarea, .newPaymentDispositionWindow form select {
+  border-radius: 0;
+  border: 1px solid #4E8098;
+  background-color: #F9F9F9;
+  color: #4E8098;
+  font-family: 'Fira Sans', sans-serif;
+  resize: none;
+  font-size: 1rem;
+}
+
+.newPaymentDispositionWindow form label span {
+  font-size: 1.2rem;
+}
+
+.newPaymentDispositionWindow p {
+  text-align: center;
+  margin: 3px;
+}
+
+.newPaymentDispositionWindow a {
+  color: #4E8098;
+  text-decoration: underline;
+}
+
+.newPaymentDispositionWindow input[type=submit] {
+  background-color: #4E8098;
+  color: #FFF;
+}
+
+.newPaymentDispositionWindow form label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.paymentOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  position: relative;
+  padding-bottom: 10px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.paymentOption img {
+  height: 2rem;
+}
+
+.paymentOption button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 1.2rem;
+  border: 1px solid #4E8098;
+  margin-bottom: 5px;
+}
+
+.paymentOptionActive {
+  color: #4E8098;
+}
+
+.paymentOptionActive button {
+  color: #FFF;
+  background-color: #4E8098;
+}
+
+.paymentOptionInactive {
+  color: #858585;
+}
+
+.paymentOptionInactive button {
+  background-color: #FFF;
+  color: #4E8098;
+}
+
+.paymentOptionInactive::after {
+  background-color: #CED3DC;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.borderedLabel {
+  border: 1px solid #CED3DC;
+  padding: 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.newPaymentDispositionWindow form label.radioLabel {
+  margin: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.newPaymentDispositionWindow form label.radioLabel input[type=radio] {
+  margin-right: 5px;
+}
+
+.addHorizontalMargins {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1260px) {
+  .subMenuContainer, .currentlyLoggedInfo, .messagesCentre, .headerQuickInfo {
+    display: none;
+  }
+  aside {
+    display: none;
+  }
+  main {
+    margin-top: 90px;
+    margin-bottom: 220px;
+  }
+  .mainSummary {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainPropWindow {
+    font-size: .9rem;
+  }
+  .mainPropMenu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .historyEntity {
+    margin: 10px 0px;
+  }
+  .historyEntityProps {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 0;
+  }
+  .historyEntityProps p {
+    font-size: .7rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .mainImage, .operationTypeImage {
+    margin-left: 2px;
+  }
+  .beneficiary, .paymentInfo, .operationInfo {
+    margin-right: 4px;
+  }
+  .operationInfo h4 {
+    font-size: .75rem;
+  }
+  .operationInfo h3 {
+    font-size: 1.2rem;
+  }
+  .historyEntityCollapseIcon {
+    padding: 10px;
+  }
+  .beneficiary {
+    margin-left: 35px;
+  }
+  .mainImage {
+    height: 70px;
+    width: 70px;
+  }
+  .historyEntityProps {
+    overflow: hidden;
+  }
+  .operationTypeImage {
+    height: 70px;
+    width: 65px;
+  }
+  .historyEntityCollapsed {
+    width: unset;
+    padding: 10px 8px;
+  }
+  .historyEntityCollapsed > div {
+    margin: 2px;
+  }
+  .historyCollapsedIsDone h5 {
+    font-size: 1rem;
+  }
+  .historyCollapsedButtons p {
+    font-size: .8rem;
+  }
+  .historyCollapsedButtons > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    margin-top: 0;
+  }
+  .historyCollapsedButtons button {
+    width: 100%;
+  }
+  .copyButtons button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+  .mainActionButton {
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
+  }
+  .historyButton {
+    -webkit-box-flex: 4;
+        -ms-flex: 4;
+            flex: 4;
+  }
+  .tableLike button {
+    padding: 10px;
+    font-size: .9rem;
+  }
+  .historyCollapsedButtons > div button {
+    height: unset;
+    margin-top: 10px;
+  }
+  .paymentInfo {
+    display: none;
+  }
+  header {
+    min-height: unset;
+  }
+  .mainPropCard, .mainPropCardRow, .juniorMainSummary .colsWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainSummaryHeader .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newPaymentDispositionWrapper {
+    width: unset;
+  }
+  .paymentTypeChooseWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newPaymentDispositionWindow form {
+    padding: 0px;
+  }
+  .newPaymentDispositionWindow form .row {
+    display: block;
+  }
+  .newPaymentDispositionWindow form input, .newPaymentDispositionWindow form textarea, .newPaymentDispositionWindow form select {
+    font-size: 1.4rem;
+  }
+  .newPaymentDispositionWindow .contactListAnchor {
+    margin-left: 0;
+  }
+  .newPaymentDispositionWindow form label span {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1261px) {
+  header {
+    -webkit-box-shadow: 0 0 15px 5px #CED3DC;
+            box-shadow: 0 0 15px 5px #CED3DC;
+  }
+  .superContainer {
+    margin: 160px 0px 80px;
+  }
+}
+/*# sourceMappingURL=zalogowany_motywjasny.css.map */

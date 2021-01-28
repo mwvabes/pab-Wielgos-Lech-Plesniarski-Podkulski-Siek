@@ -1,0 +1,116 @@
+$red: #A31621;
+$blue: #4E8098;
+$grey: #858585;
+$mediumgrey: #CED3DC;
+$lightgrey: #F9F9F9;
+$green: #508104;
+$greyfilter: invert(99%) sepia(1%) saturate(32%) hue-rotate(37deg) brightness(113%) contrast(89%);
+
+
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: $grey;
+  margin: 20px;
+}
+
+.offer {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.offerCard {
+  flex: 3;
+  border-radius: 16px;
+  border: 1px solid $lightgrey;
+  box-shadow: 0px 0px 5px 3px $mediumgrey;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: row;
+  color: $grey;
+  margin: 0px 10px;
+}
+
+.offerCard ul {
+  list-style-type: disc;
+}
+
+.offerCard li {
+  margin-left: 20px;
+}
+
+.offerCardLeft {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.offerCardRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.offerCard a {
+  color: $blue;
+}
+
+.juniorOffer a {
+  color: $green;
+}
+
+.offerCard h2 {
+  font-size: 1.6rem;
+  color: $blue;
+  margin-bottom: 20px;
+}
+
+.juniorOffer h2 {
+  color: $green;
+}
+
+.offerCard img {
+  height: 55px;
+}
+
+.offerAction {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./../../icons/circlegrid_14_3.svg);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  margin: 20px;
+}
+
+.offerAction button {
+  background-color: $red;
+  padding: 10px 20px;
+  border: 0px;
+  color: #FFF;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
+  min-width: 270px;
+}
+
+.juniorOffer button {
+  background-color: $green;
+}
+
+@media screen and (max-width: 1260px) {
+  .offer {
+    flex-direction: column;
+  }
+}
