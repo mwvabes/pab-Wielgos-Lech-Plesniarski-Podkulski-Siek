@@ -11,6 +11,6 @@ const user = mongoose.model(
   { timestamps: true })
 )
 
-user.plugin(plm(), {usernameField: 'username'})
+user.plugin(plm, {usernameField: 'username'})
 
 module.exports = user
