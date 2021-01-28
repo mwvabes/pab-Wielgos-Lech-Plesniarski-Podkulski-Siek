@@ -13,7 +13,7 @@ exports.register = (request, response) => {
     || request.body.type == undefined
     || request.body.password == undefined) {
 
-    result.status(400).json({
+    response.status(400).json({
       message: "Niepoprawne parametry zapytania"
     })
     return
