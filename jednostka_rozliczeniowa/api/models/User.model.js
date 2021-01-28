@@ -8,9 +8,7 @@ const user = mongoose.model(
     bankIDs: Array,
     type: String
   },
-  { timestamps: true })
+  { timestamps: true }).plugin(plm, {usernameField: 'username'})
 )
-
-user.plugin(plm, {usernameField: 'username'})
 
 module.exports = user
