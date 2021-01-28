@@ -38,6 +38,7 @@ require("./routes/number.route")(app)
 require("./routes/payment.route")(app)
 require("./routes/session.route")(app)
 require("./routes/bank.route")(app)
+require("./routes/auth.route")(app)
 //app.use(unknownEndpoint)
 
 app.get('/', (request, response) => {
