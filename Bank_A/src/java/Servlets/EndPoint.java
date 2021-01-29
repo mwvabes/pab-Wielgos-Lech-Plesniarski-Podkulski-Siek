@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author UkeiS
  */
-@WebServlet(name = "EndPoint", urlPatterns = {"/EndPoint"})
+@WebServlet(name = "EndPoint", urlPatterns = {"/dejli/create"})
 public class EndPoint extends HttpServlet {
 
     /**

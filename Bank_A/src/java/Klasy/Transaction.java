@@ -179,8 +179,21 @@ public class Transaction {
         }
     }
 
-    public void makeExpressTransaction() {
-
+    public void makeExpressTransaction(String senderAccountnumber, String recipientAccountnumber, String paymentTitle, BigDecimal amount) {
+        //OBCIĄŻENIE KONTA
+        AccountService as = new AccountService();
+        Account account = as.findByNumber(senderAccountnumber);
+        account.setBalance(account.getBalance().subtract(amount));
+        as.update(account);
+        //UZNANIE KONTA DEJLI EXPRESS
+        Account account2 = as.findByNumber("57102029640000000000000002");
+        account2.setBalance(account2.getBalance().add(amount));
+        as.update(account2);
+        //ZAPIS OPERACJI
+        OperationService os = new OperationService();
+        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", senderAccountnumber, recipientAccountnumber, paymentTitle);
+        os.persist(o);
+        //WYSŁANIE ZAPYTANIA DO BANKU B
     }
 
     public void receiveExpressTransaction(String senderAccountnumber, String recipientAccountnumber, String paymentTitle, BigDecimal amount) {

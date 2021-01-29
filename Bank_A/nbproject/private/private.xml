@@ -5,12 +5,9 @@
         <group>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/NewMain.java</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/RegisterServlet.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/LoginDao.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/styles/global.css</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/LoginServlet.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/LoginService.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/styles/reset.css</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/logowanie.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/TransactionServlet.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/EndPoint.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Klasy/Transaction.java</file>
         </group>
     </open-files>
 </project-private>

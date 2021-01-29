@@ -5,7 +5,7 @@
   font-weight: normal;
 }
 
-button {
+button, submit {
   font-family: 'Fira Sans', sans-serif;
 }
 
@@ -356,7 +356,7 @@ main {
   width: 370px;
 }
 
-.loginInputs button {
+.loginInputs button,  .loginInputs submit{
   color: #FFF;
   font-family: 'Fira Sans', sans-serif;
   font-weight: bold;
