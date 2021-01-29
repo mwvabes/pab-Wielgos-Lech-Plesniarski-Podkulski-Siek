@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import 'antd/dist/antd.css';
 import { Button, Divider, Table, message, Alert, Spin } from 'antd'
+import GeneralInfo from './GeneralInfo'
 
 const PaymentConfirm = ({confirmPayment, declinePayment, reviseAgainPayment, paymentId, status}) => {
   
@@ -39,7 +40,7 @@ const PaymentConfirm = ({confirmPayment, declinePayment, reviseAgainPayment, pay
 
 }
 
-const Payments = () => {
+const Payments = ({ handleLogout }) => {
 
   const loadingSessionText = <><Spin /> Ładowanie informacji o sesji...</>
 
@@ -54,7 +55,10 @@ const Payments = () => {
 
   const fetchPayments = () => {
     axios
-      .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`)
+      .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+        }})
       .then(response => {
         if (response.data.nosession) {
           setSessionStatus("Brak aktualnie obsługiwanej sesji")
@@ -88,12 +92,16 @@ const Payments = () => {
     }
 
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
-      .then(response => {
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+        }}
+      ).then(response => {
         message.success('Zaakceptowano przelew.')
         fetchPayments()
       })
   }
+
 
   const reviseAgainPayment = (paymentId) => {
 
@@ -103,7 +111,10 @@ const Payments = () => {
     }
 
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+        }})
       .then(response => {
         message.warning('Anulowano akcję. Przelew zamrożony.');
         fetchPayments()
@@ -119,7 +130,10 @@ const Payments = () => {
     }
 
     axios
-      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params)
+      .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+        }})
       .then(response => {
         message.warning('Odrzucono przelew.');
         fetchPayments()
@@ -189,10 +203,9 @@ const Payments = () => {
 
   return (
     <>
+      <GeneralInfo handleLogout={handleLogout} />
       <Divider orientation="left">{sessionStatus}</Divider>
-      <Table columns={columns} dataSource={paymentsInfo} rowKey={paymentsInfo => paymentsInfo._id}
-        
-      />
+      <Table columns={columns} dataSource={paymentsInfo} rowKey={paymentsInfo => paymentsInfo._id} />
     </>
   )
 }

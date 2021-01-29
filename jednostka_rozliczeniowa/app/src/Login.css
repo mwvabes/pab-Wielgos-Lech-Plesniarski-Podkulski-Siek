@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap");
+body {
+  background-color: #FFF;
+  font-family: 'Mukta', sans-serif;
+  color: #3d3d3d;
+  font-size: 16px;
+}
+
+.loginWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-height: 100vh;
+}
+
+.loginLeftWrapper {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  background: -webkit-gradient(linear, left bottom, left top, from(#0a3ec2), to(#4a0ac2));
+  background: linear-gradient(0deg, #0a3ec2, #4a0ac2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.loginLeft {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #FFF;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 3px 0px 6px #868686;
+          box-shadow: 3px 0px 6px #868686;
+  background-image: url(./bg_circle.png);
+}
+
+.loginLeftMain {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #5950cf;
+}
+
+.loginLeftEnhance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 120px;
+  font-weight: lighter;
+}
+
+.loginRight {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #4a0ac2;
+}
+
+.inputsBox {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  min-width: 500px;
+}
+
+.inputsBox input {
+  font-size: 1.1rem;
+  font-family: 'Mukta', sans-serif;
+  font-weight: lighter;
+  color: #4a0ac2;
+}
+
+.inputsBox button, .inputsBox button:focus {
+  font-size: .9rem;
+  font-weight: lighter;
+  font-family: 'Mukta', sans-serif;
+  padding: 0px 30px;
+  background: linear-gradient(45deg, #0a3ec2, #4a0ac2);
+}
+
+footer {
+  font-size: .8rem;
+  color: #a5a5a5;
+}
+/*# sourceMappingURL=Login.css.map */

@@ -5,7 +5,7 @@ import { Collapse, Badge, Descriptions, Alert, Button } from 'antd'
 
 const { Panel } = Collapse
 
-const GeneralInfo = () => {
+const GeneralInfo = ({ handleLogout }) => {
 
   const [sessionSchedule, setSessionSchedule] = useState(null)
 
@@ -31,7 +31,7 @@ const GeneralInfo = () => {
     <Alert message={<Badge status="processing" text={copyrights} />} type="info" style={{margin: "10px 0px"}} />
     
     <Collapse defaultActiveKey={['1']}>
-    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule" extra={<a href="https://jr-api-express.herokuapp.com/"><Button type="primary">API</Button></a>}>
+    <Panel header="Aktualna konfiguracja sesji" key="sessionSchedule" extra={<><a href="https://jr-api-express.herokuapp.com/"><Button type="dashed">API</Button></a><Button danger style={{marginLeft: "20px"}} onClick={() => handleLogout()}>Wyloguj się</Button></>}>
       {`Czas serwerowy: ${new Date().toLocaleString()}`}
       {
         sessionSchedule !== null ? sessionSchedule.map(s => { 

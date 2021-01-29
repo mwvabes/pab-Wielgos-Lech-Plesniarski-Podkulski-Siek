@@ -1,14 +1,33 @@
-import './App.css';
+import React, { useState } from 'react'
+import './reset.css'
+import 'antd/dist/antd.css'
+import './Login.css'
+import './App.css'
 import Payments from './Payments'
-import GeneralInfo from './GeneralInfo';
+import Login from './Login'
 
-function App() {
+const App = () => {
+
+  const [welcomeMessage, setWelcomeMessage] = useState("Zaloguj się, aby uzyskać dostęp")
+  const [isTokenExpired, setIsTokenExpired] = useState(null)
+
+  const handleTokenExpirationStatusChange = (bool) => {
+    setIsTokenExpired(bool)
+  }  
+
+  const handleLogout = () => {
+    handleTokenExpirationStatusChange(null)
+    setWelcomeMessage("Wylogowano")
+  }
+
   return (
-    <div className="container">
-      <GeneralInfo />
-      <Payments />
-    </div>
+    <>
+      {isTokenExpired === false ? 
+        <div className="container"><Payments handleLogout={handleLogout} /></div> :
+      <Login welcomeMessage={welcomeMessage} handleTokenExpirationStatusChange={handleTokenExpirationStatusChange} />
+      }
+    </>
   );
 }
 
-export default App;
+export default App
