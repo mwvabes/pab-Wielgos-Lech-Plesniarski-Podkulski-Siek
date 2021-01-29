@@ -1,5 +1,19 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" import="Tables.Login" %>
+<%
+    Login l = (Login) session.getAttribute("login");
+    
+    if(l != null){
+        if(l.isModerator() == false){
+            response.sendRedirect("user.jsp");
+        }
+        else{
+            response.sendRedirect("admin.jsp");
+        }
+    }
+    else{
+ %>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -126,3 +140,4 @@
     </body>
 
 </html>
+<% }; %>

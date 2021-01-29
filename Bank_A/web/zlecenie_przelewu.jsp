@@ -23,13 +23,17 @@
     <%@ page language="java" import="java.util.List" %>
     <%@ page language="java" import="java.text.SimpleDateFormat" %>
     <%
-        Login l = (Login) session.getAttribute("login");
+        if(session.getAttribute("login") == null){
+            response.sendRedirect("index.jsp");
+        }
+        else{
+            Login l = (Login) session.getAttribute("login");
 
-        UserService us = new UserService();
-        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+            UserService us = new UserService();
+            User u = us.findByIdLogin(Integer.toString(l.getId_login()));
 
-        AccountService as = new AccountService();
-        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+            AccountService as = new AccountService();
+            Account a = as.findByIdUser(Integer.toString(u.getId_user()));
     %>
 
   <div class="circle"></div>
@@ -168,7 +172,7 @@
                 <h4>PRZELEW STANDARDOWY 0zł</h4>
                 <h4></h4>
               </div>
-              <form action="">
+              <form action="TransactionServlet" method="post">
                 <div class="row">
                   <label for="">
                     <div class="row">
@@ -176,24 +180,24 @@
                       <a href="#" class="contactListAnchor">Lista kontaktów<img
                           src="icons/contacts_white.png" /></a>
                     </div>
-                    <textarea type="text" rows="4"></textarea>
+                    <textarea type="text" rows="4" name="address"></textarea>
                   </label>
                   <label for="">Tytułem
-                    <textarea type="text" rows="4"></textarea>
+                    <textarea type="text" rows="4" name="title"></textarea>
                   </label>
                 </div>
                 <div class="row">
                   <label for="">Numer rachunku odbiorcy
-                    <input type="text">
+                    <input type="text" name="number">
                   </label>
                   <label for="">Kwota
                     <div class="row">
-                      <input type="text" size="10"> PLN
+                      <input type="text" size="10" name="amount"> PLN
                     </div>
                   </label>
                 </div>
                 <div class="row">
-                  <label></label>
+                  <label>${message}</label>
                   <label>
                     <input type="submit" value="Zleć dyspozycję przelewu">
                   </label>
@@ -227,7 +231,7 @@
             <a href="#">Zastrzeż kartę</a>
             <a href="#">Przerwy techniczne</a>
             <a href="#">Infolinia: 800 800 008</a>
-            <a href="#"><img src="./../icons/en.png" alt=""></a>
+            <a href="#"><img src="icons/en.png" alt=""></a>
           </div>
         </div>
       </div>
@@ -237,3 +241,4 @@
 </body>
 
 </html>
+<% }; %>

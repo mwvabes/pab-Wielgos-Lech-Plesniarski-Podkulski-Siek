@@ -1,5 +1,25 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" import="Tables.*" %>
+<%@ page language="java" import="DAO.*" %>
+<%@ page language="java" import="Klasy.*" %>
+<%@ page language="java" import="java.math.BigDecimal" %>
+<%@ page language="java" import="java.util.List" %>
+<%@ page language="java" import="java.text.SimpleDateFormat" %>
+<%
+    if(session.getAttribute("login") == null){
+        response.sendRedirect("index.jsp");
+    }
+    else{
+        Login l = (Login) session.getAttribute("login");
+
+        UserService us = new UserService();
+        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+
+        AccountService as = new AccountService();
+        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+    
+%>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -16,22 +36,6 @@
 
 <body>
 
-    <%@ page language="java" import="Tables.*" %>
-    <%@ page language="java" import="DAO.*" %>
-    <%@ page language="java" import="Klasy.*" %>
-    <%@ page language="java" import="java.math.BigDecimal" %>
-    <%@ page language="java" import="java.util.List" %>
-    <%@ page language="java" import="java.text.SimpleDateFormat" %>
-    <%
-        Login l = (Login) session.getAttribute("login");
-
-        UserService us = new UserService();
-        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
-
-        AccountService as = new AccountService();
-        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
-    %>
-    
   <div class="circle"></div>
 
   <header>
@@ -260,3 +264,4 @@
 </body>
 
 </html>
+<%};%>

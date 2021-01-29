@@ -1,5 +1,17 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page language="java" import="Tables.*" %>
+<%
+    Login l = (Login) session.getAttribute("login");
+    
+    if(l == null){
+        response.sendRedirect("index.jsp");
+    }
+    else{
+        if(l.isModerator() == false){
+            response.sendRedirect("user.jsp");
+        }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,3 +37,4 @@
         </form>
     </body>
 </html>
+<% }; %>
