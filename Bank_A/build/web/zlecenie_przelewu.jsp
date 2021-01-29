@@ -25,15 +25,15 @@
     <%
         if(session.getAttribute("login") == null){
             response.sendRedirect("index.jsp");
+            return;
         }
-        else{
-            Login l = (Login) session.getAttribute("login");
+        Login l = (Login) session.getAttribute("login");
 
-            UserService us = new UserService();
-            User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+        UserService us = new UserService();
+        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
 
-            AccountService as = new AccountService();
-            Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+        AccountService as = new AccountService();
+        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
     %>
 
   <div class="circle"></div>
@@ -156,8 +156,8 @@
           <div class="paymentTypeChooseWrapper">
             <div class="paymentOption">
               <select>
-                <option value="standard">Przelew standardowy</option>
-                <option value="express">Przelew EXPRESS</option>
+                <option name="type" value="standard">Przelew standardowy</option>
+                <option name="type" value="express">Przelew EXPRESS</option>
               </select>
               <p>Przelew standardowy księgowany zgodnie z sesjami ELIXIR.</p>
               <p>Wyślij swój przelew natychmiast wybierając opcję przelewu ekspresowego.</p>
@@ -241,4 +241,3 @@
 </body>
 
 </html>
-<% }; %>

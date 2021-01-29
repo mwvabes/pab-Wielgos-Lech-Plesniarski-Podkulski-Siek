@@ -9,15 +9,16 @@
 <%
     if(session.getAttribute("login") == null){
         response.sendRedirect("index.jsp");
+        return;
     }
-    else{
-        Login l = (Login) session.getAttribute("login");
 
-        UserService us = new UserService();
-        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+    Login l = (Login) session.getAttribute("login");
 
-        AccountService as = new AccountService();
-        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+    UserService us = new UserService();
+    User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+
+    AccountService as = new AccountService();
+    Account a = as.findByIdUser(Integer.toString(u.getId_user()));
     
 %>
 <!DOCTYPE html>
@@ -264,4 +265,3 @@
 </body>
 
 </html>
-<%};%>

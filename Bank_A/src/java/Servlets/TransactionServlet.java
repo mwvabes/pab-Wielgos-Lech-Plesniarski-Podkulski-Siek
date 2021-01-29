@@ -119,7 +119,7 @@ public class TransactionServlet extends HttpServlet {
 
         } catch (Exception e) {
             String message = "Niepoprawne dane.";
-            String title = request.getParameter("title");
+            String title = request.getParameter("type");
             request.setAttribute("message", title);
             String destPage = "zlecenie_przelewu.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);

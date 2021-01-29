@@ -6,11 +6,14 @@
     
     if(l == null){
         response.sendRedirect("index.jsp");
+        return;
     }
     else{
         if(l.isModerator() == false){
             response.sendRedirect("user.jsp");
+            return;
         }
+    }
 %>
 <!DOCTYPE html>
 <html>
@@ -37,4 +40,3 @@
         </form>
     </body>
 </html>
-<% }; %>
