@@ -157,7 +157,7 @@
             <div class="paymentOption">
               <select>
                 <option value="standard">Przelew standardowy</option>
-                <option value="standard">Przelew EXPRESS</option>
+                <option value="express">Przelew EXPRESS</option>
               </select>
               <p>Przelew standardowy księgowany zgodnie z sesjami ELIXIR.</p>
               <p>Wyślij swój przelew natychmiast wybierając opcję przelewu ekspresowego.</p>

@@ -11,12 +11,9 @@ import Klasy.AccountNumber;
 import Tables.Account;
 import Tables.Login;
 import Tables.User;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -84,7 +81,7 @@ public class TransactionServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        request.setCharacterEncoding("UTF-8");
         try {
             String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
             String address = request.getParameter("address");
@@ -122,7 +119,8 @@ public class TransactionServlet extends HttpServlet {
 
         } catch (Exception e) {
             String message = "Niepoprawne dane.";
-            request.setAttribute("message", message);
+            String title = request.getParameter("title");
+            request.setAttribute("message", title);
             String destPage = "zlecenie_przelewu.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
             dispatcher.forward(request, response);

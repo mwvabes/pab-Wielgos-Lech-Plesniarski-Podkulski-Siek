@@ -81,7 +81,7 @@
     <div class="headerWrapper">
       <div class="container subMenuContainer">
         <div class="subMenu">
-          <a href="./ekran_powitalny_motywjasny.html"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
+          <a href="user.jsp"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
             główna</a>
           <a href="#">Moje konta <img class="submenuIcon" src="icons/expand_blue.png" /></a>
           <a href="#">Karty płatnicze <img class="submenuIcon" src="icons/expand_blue.png" /></a>
