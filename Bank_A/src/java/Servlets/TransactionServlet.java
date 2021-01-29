@@ -85,38 +85,47 @@ public class TransactionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
-        String address = request.getParameter("address");
-        BigDecimal amount = new BigDecimal(request.getParameter("amount"));
-        String title = request.getParameter("title");
+        try {
+            String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
+            String address = request.getParameter("address");
+            BigDecimal amount = new BigDecimal(request.getParameter("amount"));
+            String title = request.getParameter("title");
 
-        HttpSession session = request.getSession();
-        Login l = (Login) session.getAttribute("login");
+            HttpSession session = request.getSession();
+            Login l = (Login) session.getAttribute("login");
 
-        UserService us = new UserService();
-        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+            UserService us = new UserService();
+            User u = us.findByIdLogin(Integer.toString(l.getId_login()));
 
-        AccountService as = new AccountService();
-        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+            AccountService as = new AccountService();
+            Account a = as.findByIdUser(Integer.toString(u.getId_user()));
 
-        Klasy.Transaction t = new Klasy.Transaction();
+            Klasy.Transaction t = new Klasy.Transaction();
 
-        if (!t.isSolvent(a, amount)) {
-            String message = "Niewystarczajaca ilość środków na koncie.";
+            if (!t.isSolvent(a, amount)) {
+                String message = "Niewystarczajaca ilość środków na koncie.";
+                request.setAttribute("message", message);
+            }
+
+            AccountNumber an = new AccountNumber();
+
+            if (!an.isValid("PL" + number)) {
+                String message = "Nieprawidłowy numer konta.";
+                request.setAttribute("message", message);
+            }
+
+            if (t.isInternal(number)) {   //określenie typu przelewu
+                t.makeInternalTransaction(a, number, amount, title);
+            } else {   //przelew zewnętrzny
+                t.makeExternalTransaction(a, number, amount, title);
+            }
+
+        } catch (Exception e) {
+            String message = "Niepoprawne dane.";
             request.setAttribute("message", message);
-        }
-
-        AccountNumber an = new AccountNumber();
-
-        if (!an.isValid("PL" + number)) {
-            String message = "Nieprawidłowy numer konta.";
-            request.setAttribute("message", message);
-        }
-
-        if (t.isInternal(number)) {   //określenie typu przelewu
-            t.makeInternalTransaction(a, number, amount, title);
-        } else {   //przelew zewnętrzny
-            t.makeExternalTransaction(a, number, amount, title);
+            String destPage = "zlecenie_przelewu.jsp";
+            RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
+            dispatcher.forward(request, response);
         }
 
         String destPage = "user.jsp";

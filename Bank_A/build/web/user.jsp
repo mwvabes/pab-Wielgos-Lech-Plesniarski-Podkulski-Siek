@@ -245,7 +245,7 @@
     <div class="container">
       <div class="row">
         <div class="left">
-          &copy; 2020 Banki Polskie RYBA
+          &copy; 2021 Banki Polskie RYBA
         </div>
         <div class="right">
           <div class="links">
