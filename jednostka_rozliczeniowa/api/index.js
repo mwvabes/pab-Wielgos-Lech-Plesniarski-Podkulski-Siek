@@ -14,8 +14,8 @@ const app = express()
 app.use(cors())
 
 const requestLogger = (request, response, next) => {
-  console.log('Method:', request.method)
-  console.log('Path:  ', request.path)
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  console.log(`${ip} > ${request.method} ${request.path}`)
   console.log('Body:  ', request.body)
   console.log('Params:', request.params)
   console.log('---')
