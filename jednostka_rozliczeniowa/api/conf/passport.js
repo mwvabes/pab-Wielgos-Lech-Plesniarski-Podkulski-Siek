@@ -4,7 +4,7 @@ const models = require("../models")
 const User = models.user
 
 const JWTStrategy = passportJWT.Strategy
-const ExctractJWT = passportJWT.ExtractJwt
+const ExtractJWT = passportJWT.ExtractJwt
 
 
 const verifyCallback = (payload, done) => {
@@ -17,7 +17,7 @@ const verifyCallback = (payload, done) => {
 
 exports.passport = () => {
   const config = {
-    jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderAsBearerToken(),
+    jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET
   }
   passport.use(User.createStrategy())
