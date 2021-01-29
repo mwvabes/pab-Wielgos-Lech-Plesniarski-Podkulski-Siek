@@ -5,6 +5,11 @@ const db = require('./../conf/dbconfig')
 const models = require("../models")
 const User = models.user
 
+exports.login = (request, response) => {
+  return response.send({
+    status: "success!"
+  })
+}
 
 
 exports.register = (request, response) => {
