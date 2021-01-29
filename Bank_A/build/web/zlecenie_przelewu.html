@@ -13,20 +13,36 @@
 </head>
 
 <body>
+    
+    <%@ page language="java" import="Tables.*" %>
+    <%@ page language="java" import="DAO.*" %>
+    <%@ page language="java" import="Klasy.*" %>
+    <%@ page language="java" import="java.math.BigDecimal" %>
+    <%@ page language="java" import="java.util.List" %>
+    <%@ page language="java" import="java.text.SimpleDateFormat" %>
+    <%
+        Login l = (Login) session.getAttribute("login");
+
+        UserService us = new UserService();
+        User u = us.findByIdLogin(Integer.toString(l.getId_login()));
+
+        AccountService as = new AccountService();
+        Account a = as.findByIdUser(Integer.toString(u.getId_user()));
+    %>
 
   <div class="circle"></div>
 
-  <header>
+ <header>
     <div class="headerWrapper">
       <div class="container">
         <div class="row">
           <div class="right">
             <div class="logo">
-              <img src="./../icons/ryba_logo.png" alt="">
+              <img src="icons/transfer_pkobp.png" alt="">
             </div>
             <div class="messagesCentre">
               <div class="messagesCentreIcon">
-                <img src="./../icons/phone_white.png" />
+                <img src="icons/phone_white.png" />
                 <span class="redDotInfo">4</span>
               </div>
               <div class="messagesProperties">
@@ -43,11 +59,10 @@
           <div class="left">
             <div class="row">
               <div class="currentlyLoggedInfo">
-                <p>Anna Nowak</p>
-                <p>konto aktywne od: 11.08.2018</p>
+                <p><% out.println(u.getName() + " " + u.getLastName()); %></p>
               </div>
               <div class="clientLogin">
-                <a href="#"><img src="./../icons/" alt=""><img src="./../icons/logout_white.png" alt=""
+                <a href="LogoutServlet"><img src="./../icons/" alt=""><img src="icons/logout_white.png" alt=""
                     class="smallIcon">
                   Wyloguj</a>
               </div>
@@ -60,12 +75,12 @@
     <div class="headerWrapper">
       <div class="container subMenuContainer">
         <div class="subMenu">
-          <a href="#"><img class="submenuIcon" src="./../icons/house_blue.png" /> Strona główna</a>
-          <a href="#">Moje konta <img class="submenuIcon" src="./../icons/expand_blue.png" /></a>
-          <a href="#">Karty płatnicze <img class="submenuIcon" src="./../icons/expand_blue.png" /></a>
+          <a href="./ekran_powitalny_motywjasny.html"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
+            główna</a>
+          <a href="#">Moje konta <img class="submenuIcon" src="icons/expand_blue.png" /></a>
+          <a href="#">Karty płatnicze <img class="submenuIcon" src="icons/expand_blue.png" /></a>
           <a href="#">Ostrzeżenia <span class="redDotInfo">1</span></a>
           <a href="#">Moje ubezpieczenia</a>
-          <span>Czas do końca sesji: 06:38 <a href="#">Odśwież</a></span>
         </div>
       </div>
     </div>
@@ -73,90 +88,7 @@
   </header>
 
   <div class="container superContainer">
-    <aside>
-      <div class="warningContainer">
-        <h1>Drogi Kliencie!</h1>
-        <p>
-          Wykryliśmy podejrzaną aktywność na
-          Twoim koncie. Nasz system bezpieczeństwa
-          wykrył w dniu <strong>08.09.2020 01:34</strong> logowanie z
-          kraju: <strong>Norwegia, NOR</strong>. Jeśli to nie Ty,
-          powiadom nas o tym niezwłocznie.
-        </p>
-        <div class="warningButtonSection">
-          <button class="warningConfirm">
-            Tak, to ja
-          </button>
-          <button class="warningPanic">
-            To nie ja
-          </button>
-        </div>
-      </div>
-
-      <div class="quickStandingOrders quickCard">
-        <div class="cardHeader">
-          <h1>Moje zlecenia stałe</h1>
-          <img src="./../icons/hourglass.png" />
-        </div>
-
-        <div class="quickStandingOrderEntity">
-          <p class="standingOrderHeading"><span>Prenumerata magazynu</span><span>30,00 PLN</span></p>
-          <p class="standingOrderTimeInfo"><span>operacja cykliczna 30 dni</span><span>status: aktywne</span></p>
-          <p class="standingOrderReceiver"><span>Odbiorca: Wydawnictwo TT S.A</span><button>Edytuj szczegóły</button>
-          </p>
-          <p class="standingOrderPostponing"><span>Do najbliższej realizacji pozostało: <strong>13 dni</strong></string>
-              </span><button>WZNÓW</button></p>
-        </div>
-
-        <div class="quickStandingOrderEntity">
-          <p class="standingOrderHeading"><span>Rachunek - Internet</span><span>100,00 PLN</span></p>
-          <p class="standingOrderTimeInfo"><span>operacja cykliczna 30 dni</span><span>status: wstrzymano</span></p>
-          <p class="standingOrderReceiver"><span>Odbiorca: SkyWare S.A</span><button>Edytuj szczegóły</button></p>
-          <p class="standingOrderPostponing"><span>Zlecenie wstrzymane</span><button>WZNÓW</button></p>
-        </div>
-
-        <a href="zlecenie_przelewu.html" class="addNew">
-          
-          <img src="./../icons/close_red.png" alt=""> Dodaj nowe zlecenie
-        
-      </a>
-
-      </div>
-
-      <div class="quickStandingOrders quickCard">
-        <div class="cardHeader">
-          <h1>Zlecenia zmienne</h1>
-          <img src="./../icons/counter.png" />
-        </div>
-
-        <div class="quickStandingOrderEntity">
-          <p class="standingOrderHeading"><span>Rachunek - prąd</span><span>październik <img
-                src="./../icons/correct.png" /></span></p>
-          <p class="standingOrderTimeInfo"><span>operacja cykliczna 30 dni</span><span>status: aktywne</span></p>
-          <p class="standingOrderReceiver"><span>Odbiorca: PGE S.A</span><button>Edytuj szczegóły</button></p>
-          <p class="standingOrderPostponing"><span>Do najbliższej realizacji pozostało: <strong>13 dni</strong></string>
-              </span><button>WZNÓW</button></p>
-        </div>
-
-        <div class="quickStandingOrderEntity">
-          <p class="standingOrderHeading"><span>Rachunek - Gaz</span><span>październik <img
-                src="./../icons/correct.png" /></span></p>
-          <p class="standingOrderTimeInfo"><span>operacja cykliczna 30 dni</span><span>status: aktywne</span></p>
-          <p class="standingOrderReceiver"><span>Odbiorca: SkyWare S.A</span><button>Edytuj szczegóły</button></p>
-          <p class="standingOrderPostponing"><span>Do najbliższej realizacji pozostało: <strong>13
-                dni</strong></span><button>WSTRZYMAJ</button></p>
-        </div>
-
-        <a href="zlecenie_przelewu.html" class="addNew">
-          
-          <img src="./../icons/close_red.png" alt=""> Dodaj nowe zlecenie
-        
-      </a>
-
-      </div>
-
-    </aside>
-
+    
     <main>
 
       <div class="mainSummary">

@@ -8,14 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <title>Logowanie</title> -->
 
-  <link rel="stylesheet" href="styles/reset.css" />
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/zalogowany_motywjasny.css" />
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/global.css" />
+  <link rel="stylesheet" href="./styles/zalogowany_motywjasny.css" />
 
 </head>
 
 <body>
-
+    
     <%@ page language="java" import="Tables.*" %>
     <%@ page language="java" import="DAO.*" %>
     <%@ page language="java" import="Klasy.*" %>
@@ -31,10 +31,10 @@
         AccountService as = new AccountService();
         Account a = as.findByIdUser(Integer.toString(u.getId_user()));
     %>
-    
+
   <div class="circle"></div>
 
-  <header>
+ <header>
     <div class="headerWrapper">
       <div class="container">
         <div class="row">
@@ -77,7 +77,7 @@
     <div class="headerWrapper">
       <div class="container subMenuContainer">
         <div class="subMenu">
-          <a href="./ekran_powitalny_motywjasny.html"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
+          <a href="user.jsp"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
             główna</a>
           <a href="#">Moje konta <img class="submenuIcon" src="icons/expand_blue.png" /></a>
           <a href="#">Karty płatnicze <img class="submenuIcon" src="icons/expand_blue.png" /></a>
@@ -90,7 +90,7 @@
   </header>
 
   <div class="container superContainer">
-
+    
     <main>
 
       <div class="mainSummary">
@@ -145,89 +145,66 @@
 
       <div class="mainPropWindow">
         <div class="mainPropHeader">
-          <h2>Historia operacji</h2>
+          <h2>Nowe zlecenie</h2>
           <h2></h2>
         </div>
+        <div class="newPaymentDispositionWrapper">
+          <div class="paymentTypeChooseWrapper">
+            <div class="paymentOption">
+              <select>
+                <option value="standard">Przelew standardowy</option>
+                <option value="standard">Przelew EXPRESS</option>
+              </select>
+              <p>Przelew standardowy księgowany zgodnie z sesjami ELIXIR.</p>
+              <p>Wyślij swój przelew natychmiast wybierając opcję przelewu ekspresowego.</p>
 
-        <div class="historyWrapper">
-            
-            <%
-                Transaction t = new Transaction();    
-                List<Operation> list = t.getHistory(a);
-                
-                for(int i =0; i<list.size(); i++){
-                    if(list.get(i).getSender_number().compareTo(a.getNumber()) == 0){
-                        %>
-                        <div class="historyEntity">
-                            <div class="historyEntityContainer">
-                              <div class="historyEntityProps historyTypeRed">
-                                <div class="historyImageSection">
-                                  <div class="mainImage">
-                                    <img src="icons/transfers.png" />
-                                  </div>
-                                  <div class="operationTypeImage">
-                                    <img src="icons/outgoing_transfer.png" />
-                                  </div>
-                                </div>
-                                <div class="beneficiary">
-                                  <p>Anna Nowak</p>
-                                  <p>ul. Chmielewskiej 10/12</p>
-                                  <p>37-500 Jarosław</p>
-                                </div>
-                                <div class="paymentInfo">
-                                  <p><% out.println(new SimpleDateFormat("yyyy-MM-dd").format(list.get(i).getDate())); %></p>
-                                  <p>Numer konta: <% out.println(list.get(i).getRecipent_number()); %></p>
-                                  <p>Tytuł: <% out.println(list.get(i).getTitle()); %></p>
-                                </div>
-                                <div class="operationInfo">
-                                  <h4>Przelew wychodzący</h4>
-                                  <h3 class="operationMinus"><% out.println("-" + list.get(i).getAmount().toString() + " PLN"); %></h3>
-                                </div>
-                                <div class="historyEntityCollapseIcon">
-                                  <img src="icons/expand_blue.png" />
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <%
-                    }
-                    else{                 
-                        %>
-                        <div class="historyEntity">
-                            <div class="historyEntityContainer">
-                              <div class="historyEntityProps historyTypeGreen">
-                                <div class="historyImageSection">
-                                  <div class="mainImage">
-                                    <img src="icons/transfers.png" />
-                                  </div>
-                                  <div class="operationTypeImage">
-                                    <img src="icons/incoming_transfer.png" />
-                                  </div>
-                                </div>
-                                <div class="beneficiary">
-                                  <p>ZTM Rzeszów</p>
-                                  <p>ul. Trembeckiego 2</p>
-                                  <p>37-566 Rzeszów</p>
-                                </div>
-                                <div class="paymentInfo">
-                                  <p><% out.println(new SimpleDateFormat("yyyy-MM-dd").format(list.get(i).getDate())); %></p>
-                                  <p>Numer konta: <% out.println(list.get(i).getSender_number()); %></p>
-                                  <p>Tytuł: <% out.println(list.get(i).getTitle()); %></p>
-                                </div>
-                                <div class="operationInfo">
-                                  <h4>Przelew przychodzący</h4>
-                                  <h3 class="operationPlus"><% out.println(list.get(i).getAmount().toString() + " PLN"); %></h3>
-                                </div>
-                                <div class="historyEntityCollapseIcon">
-                                  <img src="icons/expand_blue.png" />
-                                </div>
-                              </div>
-                            </div>
-                        </div>
-                        <%
-                    }
-                }
-            %>
+            </div>
+          </div>
+
+          <div class="newPaymentDispositionWindow">
+            <h3>Zlecanie dyspozycji nowego zlecenia</h3>
+            <div class="newPaymentDispositionCard">
+              <div class="newPaymentDispositionCardHeader">
+                <h4>PRZELEW STANDARDOWY 0zł</h4>
+                <h4></h4>
+              </div>
+              <form action="">
+                <div class="row">
+                  <label for="">
+                    <div class="row">
+                      Nazwa odbiorcy
+                      <a href="#" class="contactListAnchor">Lista kontaktów<img
+                          src="icons/contacts_white.png" /></a>
+                    </div>
+                    <textarea type="text" rows="4"></textarea>
+                  </label>
+                  <label for="">Tytułem
+                    <textarea type="text" rows="4"></textarea>
+                  </label>
+                </div>
+                <div class="row">
+                  <label for="">Numer rachunku odbiorcy
+                    <input type="text">
+                  </label>
+                  <label for="">Kwota
+                    <div class="row">
+                      <input type="text" size="10"> PLN
+                    </div>
+                  </label>
+                </div>
+                <div class="row">
+                  <label></label>
+                  <label>
+                    <input type="submit" value="Zleć dyspozycję przelewu">
+                  </label>
+                </div>
+              </form>
+            </div>
+            <p>Przelewy standardowe księgowane są zgodnie z sesjami ELIXIR.</p>
+            <p>
+              Sprawdź <a>kalkulator sesji</a> i dowiedz się kiedy Twój przelew zostanie zrealizowany.
+            </p>
+          </div>
 
         </div>
 
@@ -250,7 +227,7 @@
             <a href="#">Zastrzeż kartę</a>
             <a href="#">Przerwy techniczne</a>
             <a href="#">Infolinia: 800 800 008</a>
-            <a href="#"><img src="icons/en.png" alt=""></a>
+            <a href="#"><img src="./../icons/en.png" alt=""></a>
           </div>
         </div>
       </div>
