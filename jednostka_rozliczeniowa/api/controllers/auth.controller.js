@@ -5,9 +5,14 @@ const db = require('./../conf/dbconfig')
 const models = require("../models")
 const User = models.user
 
+const jwt = require('jsonwebtoken')
+
 exports.login = (request, response) => {
+
+  const token = jwt.sign({ id: request.user._id, type: request.user.type}, process.env.JWT_SECRET, { expiresIn: 1200 })
+
   return response.send({
-    status: "success!"
+    token
   })
 }
 
