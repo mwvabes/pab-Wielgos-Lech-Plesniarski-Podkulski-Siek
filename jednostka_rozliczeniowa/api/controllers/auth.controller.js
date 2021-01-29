@@ -7,6 +7,22 @@ const User = models.user
 
 const jwt = require('jsonwebtoken')
 
+exports.checkIfAdmin = (user) => {
+  return user.type === "admin" ? true : false
+}
+
+exports.checkIfHasAccessToBank = (user, bank) => {
+  
+  if (user.type !== "bank")
+    return false
+  
+  const found = user.bankIDs.find(u => {
+    return u === bank
+  })
+
+  return found != undefined ? true : false
+}
+
 exports.login = (request, response) => {
 
   const token = jwt.sign({ id: request.user._id, type: request.user.type, bankIDs: request.user.bankIDs}, process.env.JWT_SECRET, { expiresIn: 1200 })

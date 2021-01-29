@@ -6,6 +6,8 @@ const mongoose = require("mongoose")
 const db = require('./../conf/dbconfig')
 const schedule = require('node-schedule')
 
+const auth = require('./auth.controller')
+
 const sessionData = require('../data/session.data')
 const paymentData = require('../data/payment.data')
 
@@ -14,6 +16,8 @@ const Payment = models.payment
 
 exports.addPaymentDisposition = (request, result) => {
 
+  
+
   if (request.body.senderAccountnumber == undefined
     || request.body.recipientAccountnumber == undefined
     || request.body.paymentTitle == undefined
@@ -21,10 +25,13 @@ exports.addPaymentDisposition = (request, result) => {
     || request.body.paymentAmount == undefined) {
 
     result.status(400).json({
+      isPaymentAccepted: false,
       message: "Niepoprawne parametry zapytania"
     })
     return
   }
+
+  
 
   const senderAccountnumber = validateNumber.validateNumber(request.body.senderAccountnumber)
   const recipientAccountnumber = validateNumber.validateNumber(request.body.recipientAccountnumber)
@@ -38,30 +45,30 @@ exports.addPaymentDisposition = (request, result) => {
   let flag = false
 
   if (senderAccountnumber.status != 200) {
-    message += `Błąd w numerze konta nadawcy: ${senderAccountnumber.comment} | `
+    message += `Błąd w numerze konta nadawcy: ${senderAccountnumber.comment}. `
     flag = true
   }
 
   if (recipientAccountnumber.status != 200) {
-    message += `Błąd w numerze konta odbiorcy: ${recipientAccountnumber.comment} | `
+    message += `Błąd w numerze konta odbiorcy: ${recipientAccountnumber.comment}. `
     flag = true
   }
 
   let paymentStatus = "accepted"
 
   if (currency != "PLN") {
-    message += `Nieobsługiwana waluta | `
+    message += `Nieobsługiwana waluta. `
     flag = true
   }
 
   if (paymentAmount > 1000000) {
     flag = true
-    message += `| Kwota przekracza 1000000 PLN. System obsługuje przelewy poniżej tej kwoty | `
+    message += `Kwota przekracza 1000000 PLN. System obsługuje przelewy poniżej tej kwoty. `
   }
 
   if (paymentAmount > 1000 && paymentAmount <= 1000000 && flag == false) {
     paymentStatus = "revision"
-    message += `| Kwota przekracza 1000 PLN, przelew może zostać zlecony do zatwierdzenia ręcznego | `
+    message += `Kwota przekracza 1000 PLN, przelew może zostać zlecony do zatwierdzenia ręcznego. `
   }
 
 
@@ -69,7 +76,7 @@ exports.addPaymentDisposition = (request, result) => {
   if (flag) {
     result.status(400).json({
       isPaymentAccepted: false,
-      message: `||| Przyjęcie przelewu odrzucone ||| ${message}`
+      message: `Przyjęcie przelewu odrzucone. ${message}`
     })
   }
 
@@ -78,6 +85,13 @@ exports.addPaymentDisposition = (request, result) => {
     const senderBankCode = senderAccountnumber.accountnumber.substring(4, 7)
     const recipientBankCode = recipientAccountnumber.accountnumber.substring(4, 7)
 
+    if (!auth.checkIfHasAccessToBank(request.user, senderBankCode)) {
+      result.status(400).json({
+        isPaymentAccepted: false,
+        message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
+      })
+      return
+    }
 
 
     const payment = new Payment({
@@ -116,6 +130,13 @@ exports.getIncomingPayments = (request, result) => {
 
   const sess = request.query.session == undefined ? sessionData.lastlyServedSession() : request.query.session
 
+  if (!auth.checkIfHasAccessToBank(request.user, request.query.bankCode)) {
+    result.status(400).json({
+      message: `Niewystarczające uprawnienia`
+    })
+    return
+  }
+
   mongoose.connect(db.url, db.attr)
 
   Payment.find({ servingSession: sess, "$or": [{
@@ -135,6 +156,13 @@ exports.getIncomingPayments = (request, result) => {
 
 exports.settlePaymentsHandler = (request, result) => {
 
+  if (!auth.checkIfAdmin(request.user)) {
+    result.status(400).json({
+      message: `Niewystarczające uprawnienia`
+    })
+    return
+  }
+
   const r = paymentData.settlePayments()
 
   result.status(200).json({
@@ -144,6 +172,13 @@ exports.settlePaymentsHandler = (request, result) => {
 }
 
 exports.paymentConfirmation = (request, result) => {
+
+  if (!auth.checkIfAdmin(request.user)) {
+    result.status(400).json({
+      message: `Niewystarczające uprawnienia`
+    })
+    return
+  }
 
   console.log("Payment confirmation body", request.body)
 
@@ -175,6 +210,13 @@ exports.paymentConfirmation = (request, result) => {
 }
 
 exports.getCurrentlyServedPayments = (request, result) => {
+
+  if (!auth.checkIfAdmin(request.user)) {
+    result.status(400).json({
+      message: `Niewystarczające uprawnienia`
+    })
+    return
+  }
 
   const r = sessionData.getCurrentlyServedSession()
 
