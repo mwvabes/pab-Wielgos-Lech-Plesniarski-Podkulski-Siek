@@ -5,8 +5,12 @@ const payment = mongoose.model(
   new mongoose.Schema({
     senderAccountnumber: String,
     senderBankCode: String,
+    senderName: String,
+    senderAddress: String,
     recipientAccountnumber: String,
     recipientBankCode: String,
+    recipientName: String,
+    recipientAddress: String,
     paymentTitle: String,
     paymentAmount: Number,
     delegatingSession: String,

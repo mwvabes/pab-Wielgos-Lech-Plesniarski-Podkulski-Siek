@@ -48,11 +48,6 @@ const Payments = ({ handleLogout }) => {
   const [sessionStatus, setSessionStatus] = useState(loadingSessionText)
   const [banksConf, setBanksConf] = useState(null)
 
-  
-
-  // const [formProductId, setFormProductId] = useState(null)
-  // const [formAvailableQuantity, setFormAvailableQuantity] = useState(null)
-
   const fetchPayments = () => {
     axios
       .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`, {

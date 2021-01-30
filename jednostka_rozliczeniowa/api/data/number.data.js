@@ -76,7 +76,6 @@ exports.validateNumber = (accountnumber) => {
     }
 
     let iban = (accountnumber.substr(4, 28) + accountnumber.substr(0, 4)).split("")
-    console.log("NEW", iban)
     iban[24] = dict[iban[24]]
     iban[25] = dict[iban[25]]
     iban = iban.join("")
