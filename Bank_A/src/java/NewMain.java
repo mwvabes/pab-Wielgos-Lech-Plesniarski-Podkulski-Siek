@@ -1,5 +1,9 @@
 
 import Klasy.AccountNumber;
+import Klasy.Transaction;
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 
 
 
@@ -209,9 +213,20 @@ public class NewMain {
 //            System.out.println("It does not match");
 //        }
         
-        AccountNumber an = new AccountNumber();
-        System.out.println(an.GenerateAccountNumber("02964", "0000000000000002"));
-        System.out.println(an.isValid("PL" + "57102029640000000000000002"));
+//        AccountNumber an = new AccountNumber();
+//        System.out.println(an.GenerateAccountNumber("02964", "0000000000000002"));
+//        System.out.println(an.isValid("PL" + "57102029640000000000000002"));
+
+        Transaction t = new Transaction();
+        System.out.println(t.getToken());
+        
+        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+
+        objectBuilder.add("username", "b102");
+        objectBuilder.add("password", "operator5");
+
+        JsonObject object = objectBuilder.build();
+        System.out.println(object.toString());
     }
 
 }

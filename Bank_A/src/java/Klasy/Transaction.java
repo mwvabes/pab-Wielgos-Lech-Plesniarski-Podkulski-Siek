@@ -6,6 +6,7 @@ import Tables.Account;
 import Tables.Operation;
 import java.io.DataOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -14,7 +15,10 @@ import java.util.List;
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
+import javax.json.JsonObjectBuilder;
 import javax.json.JsonReader;
+import javax.json.JsonWriter;
+import sun.misc.IOUtils;
 
 public class Transaction {
 
@@ -232,5 +236,46 @@ public class Transaction {
         }
 
         return session;
+    }
+
+    public String getToken() {
+        String token = null;
+
+        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+        objectBuilder.add("username", "b102");
+        objectBuilder.add("password", "operator5");
+        JsonObject json = objectBuilder.build();
+
+        HttpURLConnection connection = null;
+
+        try {
+            //Create connection
+            URL url = new URL("http://jr-api-express.herokuapp.com/api/auth/login");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type",
+                    "application/json; charset=UTF-8");
+
+            connection.setUseCaches(false);
+            connection.setDoOutput(true);
+            //Send request
+            DataOutputStream wr = new DataOutputStream(
+                    connection.getOutputStream());
+            wr.writeBytes(json.toString());
+            wr.close();
+            //Recieve request
+            InputStream is = connection.getInputStream();
+            JsonReader rdr = Json.createReader(is);
+            JsonObject obj = rdr.readObject();
+            token = obj.getString("token");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+
+        return token;
     }
 }

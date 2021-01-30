@@ -79,7 +79,7 @@ public class OperationDao {
 	}
         
         public List<Operation> findByNumber(String number) {
-                String hql = "select o from operation o where o.sender_number = :number or o.recipent_number = :number order by date desc";
+                String hql = "select o from operation o where o.sender_number = :number or o.recipent_number = :number order by id_operation desc";
                 Query query = getCurrentSession().createQuery(hql);
                 query.setParameter("number", number);
 		List<Operation> operation = (List<Operation>) query.list();
