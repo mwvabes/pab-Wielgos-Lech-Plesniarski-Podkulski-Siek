@@ -16,7 +16,7 @@ const verifyCallback = (payload, done) => {
   //mongoose.connect(db.url, db.attr)
 
   User.find({ _id: payload.id }).then(user => {
-    return done(null, user)
+    return done(null, user[0])
   }).catch(e => {
     return done(e)
   })
