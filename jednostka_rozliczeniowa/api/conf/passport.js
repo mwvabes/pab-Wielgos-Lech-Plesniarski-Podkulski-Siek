@@ -25,6 +25,7 @@ const verifyCallback = (payload, done) => {
 
 exports.passport = () => {
   //mongoose.connect(db.url, db.attr)
+  console.log("Passport!")
   const config = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET
