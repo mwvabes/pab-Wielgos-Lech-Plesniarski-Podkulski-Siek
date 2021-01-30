@@ -23,6 +23,20 @@ const verifyCallback = (payload, done) => {
   })
 }
 
+
+
+const verifyCallback = (payload, done) => {
+
+  //mongoose.connect(db.url, db.attr)
+
+  User.find({ _id: payload.id }).then(user => {
+    console.log("pload", payload)
+    return done(null, user[0])
+  }).catch(e => {
+    return done(e)
+  })
+}
+
 exports.passport = () => {
   //mongoose.connect(db.url, db.attr)
   const config = {
@@ -31,4 +45,5 @@ exports.passport = () => {
   }
   passport.use(User.createStrategy())
   passport.use(new JWTStrategy(config, verifyCallback))
+  passport.deserializeUser()
 }

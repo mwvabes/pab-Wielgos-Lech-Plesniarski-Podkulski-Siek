@@ -16,9 +16,6 @@ exports.checkIfHasAccessToBank = (user, bank) => {
   if (`${user.type}` !== "bank") {
     return false
   }
-
-  
-    
   
   const found = user.bankIDs.find(u => {
     return `${u}` === `${bank}`
