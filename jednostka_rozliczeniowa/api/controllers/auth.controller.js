@@ -8,18 +8,16 @@ const User = models.user
 const jwt = require('jsonwebtoken')
 
 exports.checkIfAdmin = (user) => {
-  return user.type === "admin" ? true : false
+  return `${user.type}` === "admin" ? true : false
 }
 
 exports.checkIfHasAccessToBank = (user, bank) => {
-
-  console.log("U, b", user, bank)
   
   if (user.type !== "bank")
     return false
   
   const found = user.bankIDs.find(u => {
-    return u === bank
+    return `${u}` === `${bank}`
   })
 
   return found != undefined ? true : false
