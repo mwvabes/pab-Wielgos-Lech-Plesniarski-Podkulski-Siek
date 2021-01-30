@@ -12,7 +12,7 @@ exports.auth = (request, response, next) => {
       } 
       try {
           const user = await User.findOne({
-              where: { id: token.id },
+              where: { _id: token.id },
           });
           request.user = user;
       } catch (error) {
