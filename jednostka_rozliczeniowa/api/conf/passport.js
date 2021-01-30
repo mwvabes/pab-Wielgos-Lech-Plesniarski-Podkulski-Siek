@@ -1,6 +1,5 @@
-import passport from 'passport'
-import passportJWT from 'passport-jwt'
-
+const passport = require("passport");
+const passportJWT = require("passport-jwt");
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
@@ -9,7 +8,7 @@ const User = models.user;
 
 const verifyCallback = (payload, done) => {
 
-  return User.findOne({ _id: payload.id })
+  User.findOne({ _id: payload.id })
     .then((user) => {
       console.log("pload", payload);
       return done(null, user);
@@ -19,11 +18,11 @@ const verifyCallback = (payload, done) => {
     });
 };
 
-export default () => {
+exports = () => {
   const config = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
   passport.use(User.createStrategy());
-  passport.use(new JWTStrategy(config, verifyCallback))
+  passport.use(new JWTStrategy(config, verifyCallback));
 }
