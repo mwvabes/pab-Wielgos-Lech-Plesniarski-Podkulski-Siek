@@ -18,7 +18,7 @@ const verifyCallback = (payload, done) => {
     });
 };
 
-exports = () => {
+exports.passport = () => {
   const config = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
