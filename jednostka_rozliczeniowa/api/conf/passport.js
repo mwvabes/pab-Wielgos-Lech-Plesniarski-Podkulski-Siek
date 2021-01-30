@@ -9,11 +9,11 @@ const db = require('./../conf/dbconfig')
 const models = require("../models")
 const User = models.user
 
-mongoose.connect(db.url, db.attr)
+//mongoose.connect(db.url, db.attr)
 
 const verifyCallback = (payload, done) => {
 
-  mongoose.connect(db.url, db.attr)
+  //mongoose.connect(db.url, db.attr)
 
   User.findOne({ _id: payload.id }).then(user => {
     return done(null, user)
@@ -23,7 +23,7 @@ const verifyCallback = (payload, done) => {
 }
 
 exports.passport = () => {
-  mongoose.connect(db.url, db.attr)
+  //mongoose.connect(db.url, db.attr)
   const config = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET
