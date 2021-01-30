@@ -1,5 +1,5 @@
 const passport = require('passport')
-const passportConf = require('./conf/passport')
+const passportConf = require('./../conf/passport')
 
 
 exports.auth = (request, result, next) => {
