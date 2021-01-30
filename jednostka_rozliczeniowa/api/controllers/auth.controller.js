@@ -13,7 +13,7 @@ exports.checkIfAdmin = (user) => {
 
 exports.checkIfHasAccessToBank = (user, bank) => {
   
-  if (user.type !== "bank")
+  if (`${user.type}` !== "bank")
     return false
   
   const found = user.bankIDs.find(u => {
