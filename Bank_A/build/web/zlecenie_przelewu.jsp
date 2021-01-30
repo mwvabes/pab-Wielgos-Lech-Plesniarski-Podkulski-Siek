@@ -153,26 +153,29 @@
           <h2></h2>
         </div>
         <div class="newPaymentDispositionWrapper">
-          <div class="paymentTypeChooseWrapper">
-            <div class="paymentOption">
-              <select>
-                <option name="type" value="standard">Przelew standardowy</option>
-                <option name="type" value="express">Przelew EXPRESS</option>
-              </select>
-              <p>Przelew standardowy księgowany zgodnie z sesjami ELIXIR.</p>
-              <p>Wyślij swój przelew natychmiast wybierając opcję przelewu ekspresowego.</p>
-
-            </div>
-          </div>
+          
 
           <div class="newPaymentDispositionWindow">
             <h3>Zlecanie dyspozycji nowego zlecenia</h3>
             <div class="newPaymentDispositionCard">
               <div class="newPaymentDispositionCardHeader">
-                <h4>PRZELEW STANDARDOWY 0zł</h4>
+                <h4>ZEWNĘTRZNY PRZELEW EKSPRESOWY 3zł</h4>
                 <h4></h4>
               </div>
               <form action="TransactionServlet" method="post">
+                  
+                <div class="paymentTypeChooseWrapper">
+                    <div class="paymentOption">
+                      <select name="type">
+                        <option value="standard">Przelew standardowy</option>
+                        <option value="express">Przelew EXPRESS</option>
+                      </select>
+                      <p>Przelew standardowy księgowany zgodnie z sesjami ELIXIR.</p>
+                      <p>Wyślij swój przelew natychmiast wybierając opcję przelewu ekspresowego.</p>
+
+                    </div>
+                </div>
+                  
                 <div class="row">
                   <label for="">
                     <div class="row">

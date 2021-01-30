@@ -183,11 +183,11 @@ public class Transaction {
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
         Account account = as.findByNumber(senderAccountnumber);
-        account.setBalance(account.getBalance().subtract(amount));
+        account.setBalance(account.getBalance().subtract(amount.add(new BigDecimal("3"))));
         as.update(account);
         //UZNANIE KONTA DEJLI EXPRESS
         Account account2 = as.findByNumber("57102029640000000000000002");
-        account2.setBalance(account2.getBalance().add(amount));
+        account2.setBalance(account2.getBalance().add(amount.add(new BigDecimal("3"))));
         as.update(account2);
         //ZAPIS OPERACJI
         OperationService os = new OperationService();
