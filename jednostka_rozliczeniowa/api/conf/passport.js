@@ -7,6 +7,7 @@ const JWTStrategy = passportJWT.Strategy
 const ExtractJWT = passportJWT.ExtractJwt
 
 const mongoose = require("mongoose")
+const db = require('./../conf/dbconfig')
 
 const verifyCallback = (payload, done) => {
   mongoose.connect(db.url, db.attr)
