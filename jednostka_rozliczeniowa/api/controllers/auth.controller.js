@@ -13,7 +13,7 @@ exports.checkIfAdmin = (user) => {
 
 exports.checkIfHasAccessToBank = (user, bank) => {
 
-  console.log("U, b", request.user, request.query.bankCode)
+  console.log("U, b", user, bank)
   
   if (user.type !== "bank")
     return false
