@@ -31,5 +31,4 @@ exports.passport = () => {
   }
   passport.use(User.createStrategy())
   passport.use(new JWTStrategy(config, verifyCallback))
-  passport.deserializeUser()
 }
