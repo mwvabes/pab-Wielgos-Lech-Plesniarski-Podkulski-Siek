@@ -6,8 +6,10 @@ const User = models.user
 const JWTStrategy = passportJWT.Strategy
 const ExtractJWT = passportJWT.ExtractJwt
 
+const mongoose = require("mongoose")
 
 const verifyCallback = (payload, done) => {
+  mongoose.connect(db.url, db.attr)
   return User.findOne( {_id: payload.id }).then(user => {
     return done(null, user)
   }).catch(e => {

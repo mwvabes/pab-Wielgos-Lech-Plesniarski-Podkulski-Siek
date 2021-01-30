@@ -62,8 +62,6 @@ exports.register = (request, response) => {
 
   User.register(user, request.body.password)
 
-
-
   response.json({
     message: `Użytkownik ${request.body.username} utworzony poprawnie`
   })
