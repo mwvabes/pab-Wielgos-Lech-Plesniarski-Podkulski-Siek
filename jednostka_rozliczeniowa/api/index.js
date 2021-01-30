@@ -8,6 +8,7 @@ const swaggerUi = require("swagger-ui-express")
 const YAML = require('yamljs')
 
 const passport = require('./conf/passport')
+passport.passport()
 
 const app = express()
 
@@ -22,7 +23,7 @@ const requestLogger = (request, response, next) => {
   next()
 }
 
-passport.passport()
+
 
 const swaggerDocument = YAML.load('./swagger.yaml');
 
