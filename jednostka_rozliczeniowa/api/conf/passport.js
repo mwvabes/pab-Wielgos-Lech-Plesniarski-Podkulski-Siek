@@ -6,17 +6,6 @@ const ExtractJWT = passportJWT.ExtractJwt;
 const models = require("../models");
 const User = models.user;
 
-const verifyCallback = (payload, done) => {
-
-  User.findOne({ _id: payload.id })
-    .then((user) => {
-      console.log("pload", payload);
-      return done(null, user);
-    })
-    .catch((e) => {
-      return done(e);
-    });
-};
 
 exports.passport = () => {
   const config = {
@@ -24,5 +13,15 @@ exports.passport = () => {
     secretOrKey: process.env.JWT_SECRET,
   };
   passport.use('local', User.createStrategy());
-  passport.use('jwt', new JWTStrategy(config, verifyCallback));
+  passport.use('jwt', new JWTStrategy(config, function (payload, done){
+
+    User.findOne({ _id: payload.id })
+      .then((user) => {
+        console.log("pload", payload);
+        return done(null, user);
+      })
+      .catch((e) => {
+        return done(e);
+      });
+  }));
 }
