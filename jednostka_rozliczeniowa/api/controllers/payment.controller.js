@@ -109,7 +109,6 @@ exports.addPaymentDisposition = (request, result) => {
     })
 
     payment.save().then(r => {
-      mongoose.connection.close()
       result.status(200).json({
         isPaymentAccepted: true,
         message: `Zlecenie przelewu zostało przyjęte do realizacji ${message} `,
