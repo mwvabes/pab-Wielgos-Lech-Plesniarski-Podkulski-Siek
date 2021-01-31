@@ -14,7 +14,7 @@ const User = models.user
 // }
 
 exports.auth = (request, response, next) => {
-    const token = request.header.authentication;
+    const token = request.headers.authentication;
 
     console.log("Req", request)
 
