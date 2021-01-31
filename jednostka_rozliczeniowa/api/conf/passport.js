@@ -13,7 +13,7 @@ exports.passportInit = () => {
     secretOrKey: process.env.JWT_SECRET,
   };
   passport.use(User.authenticate());
-  passport.use('myJwtStrategy', new JWTStrategy(config, function (payload, done){
+  passport.use(new JWTStrategy(config, function (payload, done){
 
     if (payload == undefined) {
       return done("Empty payload")
