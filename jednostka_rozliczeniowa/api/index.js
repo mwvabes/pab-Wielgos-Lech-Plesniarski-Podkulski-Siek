@@ -39,7 +39,7 @@ app.use(requestLogger)
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
-passport.passport()
+passport.passportInit()
 
 require("./routes/number.route")(app)
 require("./routes/payment.route")(app)
