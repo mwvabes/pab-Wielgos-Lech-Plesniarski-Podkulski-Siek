@@ -14,7 +14,7 @@ const User = models.user
 // }
 
 exports.auth = (request, response, next) => {
-    const token = request.headers.authentication;
+    const token = request.headers.authorization;
 
     console.log("Req", request)
 
@@ -23,7 +23,7 @@ exports.auth = (request, response, next) => {
       jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
         if (err) {
           console.log("Token verify error", err.message);
-          response.redirect('/');
+          response.send({message: "Nie udało się zautoryzować użytkownika"});
         } else {
           console.log(decodedToken);
           request.user = decodedToken
@@ -32,6 +32,6 @@ exports.auth = (request, response, next) => {
       });
     } else {
         console.log("Empty token")
-      response.redirect('/');
+      response.send({message: "Nie udało się zautoryzować użytkownika"});
     }
 }
