@@ -16,12 +16,14 @@ const User = models.user
 exports.auth = (request, response, next) => {
     const token = request.header.authentication;
 
+    console.log("Req", request)
+
     // check json web token exists & is verified
     if (token) {
       jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
-        if (err) {
+        if ("Token verify error", err) {
           console.log(err.message);
-          response.redirect('/login');
+          response.redirect('/api/auth/login');
         } else {
           console.log(decodedToken);
           request.user = decodedToken
@@ -29,6 +31,7 @@ exports.auth = (request, response, next) => {
         }
       });
     } else {
-      response.redirect('/login');
+        console.log("Empty token")
+      response.redirect('/api/auth/login');
     }
 }
