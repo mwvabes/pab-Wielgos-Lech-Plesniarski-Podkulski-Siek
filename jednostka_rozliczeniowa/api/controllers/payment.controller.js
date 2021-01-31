@@ -87,13 +87,13 @@ exports.addPaymentDisposition = (request, result) => {
 
     
 
-    if (!auth.checkIfHasAccessToBank(myUser, senderBankCode)) {
-      result.status(400).json({
-        isPaymentAccepted: false,
-        message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
-      })
-      return
-    }
+    // if (!auth.checkIfHasAccessToBank(myUser, senderBankCode)) {
+    //   result.status(400).json({
+    //     isPaymentAccepted: false,
+    //     message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
+    //   })
+    //   return
+    // }
 
 
     const payment = new Payment({
