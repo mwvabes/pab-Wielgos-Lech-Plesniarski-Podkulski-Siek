@@ -9,5 +9,5 @@ const models = require("../models")
 const User = models.user
 
 exports.auth = (request, response, next) => {
-    return passport.authenticate('jwt', { session: false, })(request, response, next)
+    return passport.authenticate('jwt', { session: false })(request, response, next)
 }

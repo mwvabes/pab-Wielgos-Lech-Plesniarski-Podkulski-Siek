@@ -19,6 +19,8 @@ exports.passport = () => {
       return done("Empty payload")
     }
 
+    console.log("Payload", payload)
+
     User.findOne({ _id: payload.id })
       .then((user) => {
         console.log("pload", payload);
