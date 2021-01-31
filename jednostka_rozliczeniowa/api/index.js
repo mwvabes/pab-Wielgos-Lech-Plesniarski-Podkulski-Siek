@@ -8,7 +8,7 @@ const swaggerUi = require("swagger-ui-express")
 const YAML = require('yamljs')
 
 const passport = require('./conf/passport')
-passport.passport()
+
 
 const app = express()
 
@@ -38,6 +38,8 @@ app.use(requestLogger)
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+
+passport.passport()
 
 require("./routes/number.route")(app)
 require("./routes/payment.route")(app)
