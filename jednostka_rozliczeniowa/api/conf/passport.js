@@ -1,6 +1,5 @@
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
-const LocalStrategy = passport.Strategy;
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
@@ -13,7 +12,7 @@ exports.passportInit = () => {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
-  passport.use('myLocalStrategy', new LocalStrategy(User.authenticate()));
+  passport.use(User.authenticate());
   passport.use('myJwtStrategy', new JWTStrategy(config, function (payload, done){
 
     if (payload == undefined) {
