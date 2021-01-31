@@ -12,7 +12,7 @@ exports.passportInit = () => {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
-  passport.use('local', User.authenticate());
+  passport.use(User.createStrategy());
   passport.use('jwt', new JWTStrategy(config, function (payload, done){
 
     if (payload == undefined) {
