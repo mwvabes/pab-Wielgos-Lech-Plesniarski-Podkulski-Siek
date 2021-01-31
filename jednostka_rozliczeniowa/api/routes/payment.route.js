@@ -2,10 +2,9 @@ module.exports = (app) => {
   const router = require("express").Router()
   const paymentController = require("../controllers/payment.controller.js")
   const jwtAuth = require('./../data/auth.middleware')
-  const passport = require('passport')
 
   router.get('/getIncoming', jwtAuth.auth, paymentController.getIncomingPayments)
-  router.post('/', passport.authenticate('local'), paymentController.addPaymentDisposition)
+  router.post('/', jwtAuth.auth, paymentController.addPaymentDisposition)
   router.post('/settle', jwtAuth.auth, paymentController.settlePaymentsHandler)
   router.post('/confirmation', jwtAuth.auth, paymentController.paymentConfirmation)
   router.get('/getCurrentlyServed', jwtAuth.auth, paymentController.getCurrentlyServedPayments)
