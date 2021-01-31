@@ -15,6 +15,10 @@ exports.passport = () => {
   passport.use('local', User.createStrategy());
   passport.use('jwt', new JWTStrategy(config, function (payload, done){
 
+    if (payload == undefined) {
+      return done("Empty payload")
+    }
+
     User.findOne({ _id: payload.id })
       .then((user) => {
         console.log("pload", payload);
