@@ -16,7 +16,7 @@ const Payment = models.payment
 
 exports.addPaymentDisposition = (request, result) => {
 
-  
+  const myUser = request.user
 
   if (request.body.senderAccountnumber == undefined
     || request.body.recipientAccountnumber == undefined
@@ -87,7 +87,7 @@ exports.addPaymentDisposition = (request, result) => {
 
     
 
-    if (!auth.checkIfHasAccessToBank(request.user, senderBankCode)) {
+    if (!auth.checkIfHasAccessToBank(myUser, senderBankCode)) {
       result.status(400).json({
         isPaymentAccepted: false,
         message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
@@ -123,6 +123,8 @@ exports.addPaymentDisposition = (request, result) => {
 
 exports.getIncomingPayments = (request, result) => {
 
+  const myUser = request.user
+
   if (request.query.bankCode == undefined) {
     result.status(400).json({
       message: `Brakujące parametry zapytania`
@@ -132,7 +134,7 @@ exports.getIncomingPayments = (request, result) => {
 
   const sess = request.query.session == undefined ? sessionData.lastlyServedSession() : request.query.session
 
-  if (!auth.checkIfHasAccessToBank(request.user, request.query.bankCode)) {
+  if (!auth.checkIfHasAccessToBank(myUser, request.query.bankCode)) {
     result.status(400).json({
       message: `Niewystarczające uprawnienia`
     })
@@ -158,7 +160,9 @@ exports.getIncomingPayments = (request, result) => {
 
 exports.settlePaymentsHandler = (request, result) => {
 
-  if (!auth.checkIfAdmin(request.user)) {
+  const myUser = request.user
+
+  if (!auth.checkIfAdmin(myUser)) {
     result.status(400).json({
       message: `Niewystarczające uprawnienia`
     })
@@ -175,7 +179,7 @@ exports.settlePaymentsHandler = (request, result) => {
 
 exports.paymentConfirmation = (request, result) => {
 
-  if (!auth.checkIfAdmin(request.user)) {
+  if (!auth.checkIfAdmin(myUser)) {
     result.status(400).json({
       message: `Niewystarczające uprawnienia`
     })
@@ -213,7 +217,7 @@ exports.paymentConfirmation = (request, result) => {
 
 exports.getCurrentlyServedPayments = (request, result) => {
 
-  if (!auth.checkIfAdmin(request.user)) {
+  if (!auth.checkIfAdmin(myUser)) {
     result.status(400).json({
       message: `Niewystarczające uprawnienia`
     })
