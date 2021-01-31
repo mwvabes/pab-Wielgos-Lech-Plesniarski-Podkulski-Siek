@@ -73,56 +73,56 @@ exports.addPaymentDisposition = (request, result) => {
 
 
 
-  // if (flag) {
-  //   result.status(400).json({
-  //     isPaymentAccepted: false,
-  //     message: `Przyjęcie przelewu odrzucone. ${message}`
-  //   })
-  // }
+  if (flag) {
+    result.status(400).json({
+      isPaymentAccepted: false,
+      message: `Przyjęcie przelewu odrzucone. ${message}`
+    })
+  }
 
-  // else {
+  else {
 
-  //   const senderBankCode = senderAccountnumber.accountnumber.substring(4, 7)
-  //   const recipientBankCode = recipientAccountnumber.accountnumber.substring(4, 7)
+    const senderBankCode = senderAccountnumber.accountnumber.substring(4, 7)
+    const recipientBankCode = recipientAccountnumber.accountnumber.substring(4, 7)
 
     
 
-  //   if (!auth.checkIfHasAccessToBank(myUser, senderBankCode)) {
-  //     result.status(400).json({
-  //       isPaymentAccepted: false,
-  //       message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
-  //     })
-  //     return
-  //   }
+    if (!auth.checkIfHasAccessToBank(myUser, senderBankCode)) {
+      result.status(400).json({
+        isPaymentAccepted: false,
+        message: `Niewystarczające uprawnienia. Przyjęcie przelewu odrzucone. ${message}`
+      })
+      return
+    }
 
 
-  //   const payment = new Payment({
-  //     senderAccountnumber: senderAccountnumber.accountnumber,
-  //     senderBankCode,
-  //     recipientAccountnumber: recipientAccountnumber.accountnumber,
-  //     recipientBankCode,
-  //     paymentTitle: paymentTitle,
-  //     paymentAmount: paymentAmount,
-  //     delegatingSession: sessionData.getCurrentSession(),
-  //     servingSession: sessionData.getCurrentSession(),
-  //     paymentStatus: paymentStatus
-  //   })
+    const payment = new Payment({
+      senderAccountnumber: senderAccountnumber.accountnumber,
+      senderBankCode,
+      recipientAccountnumber: recipientAccountnumber.accountnumber,
+      recipientBankCode,
+      paymentTitle: paymentTitle,
+      paymentAmount: paymentAmount,
+      delegatingSession: sessionData.getCurrentSession(),
+      servingSession: sessionData.getCurrentSession(),
+      paymentStatus: paymentStatus
+    })
 
-  //   payment.save().then(r => {
-  //     mongoose.connection.close()
-  //     result.status(200).json({
-  //       isPaymentAccepted: true,
-  //       message: `Zlecenie przelewu zostało przyjęte do realizacji ${message} `,
-  //       payment
-  //     })
+    payment.save().then(r => {
+      mongoose.connection.close()
+      result.status(200).json({
+        isPaymentAccepted: true,
+        message: `Zlecenie przelewu zostało przyjęte do realizacji ${message} `,
+        payment
+      })
 
-  //   })
-  // }
+    })
+  }
 
-  result.status(200).json({
-          isPaymentAccepted: true,
-          message: `OK `
-        })
+  // result.status(200).json({
+  //         isPaymentAccepted: true,
+  //         message: `OK `
+  //       })
 
 }
 
