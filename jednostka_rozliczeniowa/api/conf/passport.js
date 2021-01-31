@@ -5,11 +5,12 @@ const LocalStrategy = require('passport-local').Strategy;
 const models = require("../models");
 const User = models.user;
 
+const LocalStrategy = require('passport-local').Strategy; 
 
 exports.passportInit = () => {
   //passport.use(new LocalStrategy(User.authenticate()));
-  passport.use(User.createStrategy());
-
+  //passport.use(User.createStrategy());
+  passport.use(new LocalStrategy(User.authenticate())); 
   // passport.use(new LocalStrategy({
   //   usernameField: username,
   //   passwordField: password,
