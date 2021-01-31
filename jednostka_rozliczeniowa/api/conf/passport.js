@@ -23,6 +23,6 @@ exports.passport = () => {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
-  passport.use(User.createStrategy());
+  passport.use('local', User.createStrategy());
   passport.use('jwt', new JWTStrategy(config, verifyCallback));
 }
