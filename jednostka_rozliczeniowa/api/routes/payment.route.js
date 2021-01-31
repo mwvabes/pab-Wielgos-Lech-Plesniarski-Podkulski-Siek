@@ -4,7 +4,7 @@ module.exports = (app) => {
   const jwtAuth = require('./../data/auth.middleware')
 
   router.get('/getIncoming', jwtAuth.auth, paymentController.getIncomingPayments)
-  router.post('/', jwtAuth.auth, paymentController.addPaymentDisposition)
+  router.post('/', passport.authenticate('local'), paymentController.addPaymentDisposition)
   router.post('/settle', jwtAuth.auth, paymentController.settlePaymentsHandler)
   router.post('/confirmation', jwtAuth.auth, paymentController.paymentConfirmation)
   router.get('/getCurrentlyServed', jwtAuth.auth, paymentController.getCurrentlyServedPayments)
