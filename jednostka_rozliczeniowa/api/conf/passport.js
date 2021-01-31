@@ -9,5 +9,25 @@ const User = models.user;
 
 
 exports.passportInit = () => {
-  passport.use(new LocalStrategy(User.authenticate()));
+  //passport.use(new LocalStrategy(User.authenticate()));
+  // passport.use(User.createStrategy());
+
+  passport.use(new LocalStrategy({
+    usernameField: username,
+    passwordField: password,
+  }, async (username, password, done) => {
+    try {
+      const userDocument = await UserModel.findOne({username: username}).exec();
+      const passwordsMatch = await bcrypt.compare(password, userDocument.passwordHash);
+  
+      if (passwordsMatch) {
+        return done(null, userDocument);
+      } else {
+        return done('Incorrect Username / Password');
+      }
+    } catch (error) {
+      done(error);
+    }
+  }));
+
 }
