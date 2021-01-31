@@ -17,6 +17,8 @@ exports.auth = (request, response, next) => {
           const user = await User.findOne({
               where: { _id: token.id },
           });
+          console.log("Logging user", user)
+          console.log("Logging token", token)
           request.user = user;
           next();
       } catch (error) {
