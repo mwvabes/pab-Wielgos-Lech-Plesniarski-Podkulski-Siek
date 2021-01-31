@@ -8,7 +8,7 @@ const swaggerUi = require("swagger-ui-express")
 const YAML = require('yamljs')
 
 const passport = require('./conf/passport')
-passport.init()
+passport.passport()
 
 const app = express()
 

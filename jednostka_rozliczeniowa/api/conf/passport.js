@@ -18,15 +18,11 @@ const verifyCallback = (payload, done) => {
     });
 };
 
-exports.init = () => {
-  passport.use(User.createStrategy());
-}
-
 exports.passport = () => {
   const config = {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
-  
+  passport.use(User.createStrategy());
   passport.use(new JWTStrategy(config, verifyCallback));
 }
