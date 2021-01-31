@@ -5,6 +5,9 @@ const passport = require('passport')
 //   return passport.authenticate('jwt', { session: false })(request, result, next)
 // }
 
+const models = require("../models")
+const User = models.user
+
 exports.auth = (request, response, next) => {
   passport.authenticate('jwt', { session: false, }, async (error, token) => {
       if (error || !token) {
