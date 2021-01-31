@@ -85,6 +85,8 @@ exports.addPaymentDisposition = (request, result) => {
     const senderBankCode = senderAccountnumber.accountnumber.substring(4, 7)
     const recipientBankCode = recipientAccountnumber.accountnumber.substring(4, 7)
 
+    console.log("Logging request", request)
+
     if (!auth.checkIfHasAccessToBank(request.user, senderBankCode)) {
       result.status(400).json({
         isPaymentAccepted: false,

@@ -18,9 +18,10 @@ exports.auth = (request, response, next) => {
               where: { _id: token.id },
           });
           request.user = user;
+          next();
       } catch (error) {
           next(error);
       }
-      next();
+      
   })(request, response, next);   
 }
