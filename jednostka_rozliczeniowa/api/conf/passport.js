@@ -24,5 +24,5 @@ exports.passport = () => {
     secretOrKey: process.env.JWT_SECRET,
   };
   passport.use(User.createStrategy());
-  passport.use(new JWTStrategy(config, verifyCallback));
+  passport.use('jwt', new JWTStrategy(config, verifyCallback));
 }
