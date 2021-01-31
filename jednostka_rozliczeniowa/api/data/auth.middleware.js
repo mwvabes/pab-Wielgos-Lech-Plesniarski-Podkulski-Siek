@@ -23,7 +23,7 @@ exports.auth = (request, response, next) => {
       jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
         if ("Token verify error", err) {
           console.log(err.message);
-          response.redirect('/api/auth/login');
+          response.redirect('/');
         } else {
           console.log(decodedToken);
           request.user = decodedToken
@@ -32,6 +32,6 @@ exports.auth = (request, response, next) => {
       });
     } else {
         console.log("Empty token")
-      response.redirect('/api/auth/login');
+      response.redirect('/');
     }
 }
