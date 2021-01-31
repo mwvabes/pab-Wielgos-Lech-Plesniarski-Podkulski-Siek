@@ -26,5 +26,7 @@ exports.auth = (request, response, next) => {
 //       }
       
 //   })(request, response, next);   
-    passport.authenticate('local', { session: false, })(request, response, next); 
+    const p = passport.authenticate('local', { session: false, })(request, response, next)
+    console.log("PP", p)
+    return p; 
 }
