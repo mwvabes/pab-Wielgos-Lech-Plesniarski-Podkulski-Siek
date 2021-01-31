@@ -12,8 +12,8 @@ exports.passportInit = () => {
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.JWT_SECRET,
   };
-  passport.use(User.authenticate());
-  passport.use(new JWTStrategy(config, function (payload, done){
+  passport.use('local', User.authenticate());
+  passport.use('jwt', new JWTStrategy(config, function (payload, done){
 
     if (payload == undefined) {
       return done("Empty payload")
