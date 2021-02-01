@@ -112,9 +112,12 @@ public class Transaction {
     }
 
     public void receiveExternalTransaction(String session) {
+        HttpURLConnection connection = null;
         try {
             URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=102&session=" + session);
-            InputStream is = url.openStream();
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestProperty("Authorization", getToken());
+            InputStream is = connection.getInputStream(); //url.openStream();
             JsonReader rdr = Json.createReader(is);
 
             JsonObject obj = rdr.readObject();
@@ -166,29 +169,29 @@ public class Transaction {
                             + "\"currency\": \"PLN\""
                             + "}";
 
-                    HttpURLConnection connection = null;
+                    HttpURLConnection connection2 = null;
 
                     try {
                         //Create connection
                         URL url2 = new URL("https://jr-api-express.herokuapp.com/api/payment/");
-                        connection = (HttpURLConnection) url2.openConnection();
-                        connection.setRequestMethod("POST");
-                        connection.setRequestProperty("Content-Type",
+                        connection2 = (HttpURLConnection) url2.openConnection();
+                        connection2.setRequestMethod("POST");
+                        connection2.setRequestProperty("Content-Type",
                                 "application/json; charset=UTF-8");
 
-                        connection.setUseCaches(false);
-                        connection.setDoOutput(true);
+                        connection2.setUseCaches(false);
+                        connection2.setDoOutput(true);
                         //Send request
                         DataOutputStream wr = new DataOutputStream(
-                                connection.getOutputStream());
+                                connection2.getOutputStream());
                         wr.writeBytes(json);
                         wr.close();
-                        connection.getInputStream();
+                        connection2.getInputStream();
                     } catch (Exception e) {
                         e.printStackTrace();
                     } finally {
-                        if (connection != null) {
-                            connection.disconnect();
+                        if (connection2 != null) {
+                            connection2.disconnect();
                         }
                     }
 

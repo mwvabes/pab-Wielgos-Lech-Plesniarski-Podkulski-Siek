@@ -278,10 +278,13 @@ public class NewMain {
 //            }
 //        }
 
-        AccountService as = new AccountService();
-        Account account = as.findByIdUser("16");
-
-        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
+//        AccountService as = new AccountService();
+//        Account account = as.findByIdUser("16");
+//
+//        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
+        
+        Transaction t = new Transaction();
+        t.receiveExternalTransaction("20210125_04");
     }
 
     public static boolean makeExternalTransaction(Account account, String number, BigDecimal amount, String title) {
