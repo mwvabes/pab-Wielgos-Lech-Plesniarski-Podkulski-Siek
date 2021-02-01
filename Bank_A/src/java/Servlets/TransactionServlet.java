@@ -82,6 +82,7 @@ public class TransactionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
+        String message = null;
         try {
             String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
             String address = request.getParameter("address");
@@ -102,13 +103,13 @@ public class TransactionServlet extends HttpServlet {
 
             if (type.equals("standard")) {
                 if (!t.isSolvent(a, amount)) {
-                    String message = "Niewystarczajaca ilość środków na koncie.";
+                    message = "Niewystarczajaca ilość środków na koncie.";
                     request.setAttribute("message", message);
                 }
             }
             else{
                 if (!t.isSolvent(a, amount.add(new BigDecimal("3")))) {
-                    String message = "Niewystarczajaca ilość środków na koncie.";
+                    message = "Niewystarczajaca ilość środków na koncie.";
                     request.setAttribute("message", message);
                 }
             }
@@ -116,7 +117,7 @@ public class TransactionServlet extends HttpServlet {
             AccountNumber an = new AccountNumber();
 
             if (!an.isValid("PL" + number)) {
-                String message = "Nieprawidłowy numer konta.";
+                message = "Nieprawidłowy numer konta.";
                 request.setAttribute("message", message);
             }
 
@@ -124,14 +125,16 @@ public class TransactionServlet extends HttpServlet {
                 t.makeInternalTransaction(a, number, amount, title);
             } else {   //przelew zewnętrzny
                 if (type.equals("standard")) {
-                    t.makeExternalTransaction(a, number, amount, title);
+                    if(t.makeExternalTransaction(a, number, amount, title) == false){
+                        message = "Wystąpił błąd, spróbuj jeszcze raz później.";
+                    }
                 } else {
                     t.makeExpressTransaction(a.getNumber(), number, title, amount);
                 }
             }
 
         } catch (Exception e) {
-            String message = "Niepoprawne dane.";
+            message = "Niepoprawne dane.";
             request.setAttribute("message", message);
             String destPage = "zlecenie_przelewu.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);

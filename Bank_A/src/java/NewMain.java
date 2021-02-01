@@ -1,11 +1,20 @@
 
+import DAO.AccountService;
+import DAO.OperationService;
 import Klasy.AccountNumber;
 import Klasy.Transaction;
+import Tables.Account;
+import Tables.Operation;
+import java.io.DataOutputStream;
+import java.io.InputStream;
+import java.math.BigDecimal;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.sql.Date;
 import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
-
-
+import javax.json.JsonReader;
 
 public class NewMain {
 
@@ -203,7 +212,6 @@ public class NewMain {
         // System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
         //     Transaction t = new Transaction();
         //  t.receiveExternalTransaction("20210125_04");
-        
 //        String password = "2";
 //        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
 //        System.out.println(hashed);
@@ -212,21 +220,132 @@ public class NewMain {
 //        } else {
 //            System.out.println("It does not match");
 //        }
-        
 //        AccountNumber an = new AccountNumber();
 //        System.out.println(an.GenerateAccountNumber("02964", "0000000000000002"));
 //        System.out.println(an.isValid("PL" + "57102029640000000000000002"));
 
-        Transaction t = new Transaction();
-        System.out.println(t.getToken());
-        
+
+//        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+//        objectBuilder.add("senderAccountnumber", "PL 34 1020 1417 3109 9087 2047 4799");
+//        objectBuilder.add("recipientAccountnumber", "PL 87 1050 4475 4135 2700 6690 2937");
+//        objectBuilder.add("paymentTitle", "Tytułem test 1");
+//        objectBuilder.add("paymentAmount", 20);
+//        objectBuilder.add("currency", "PLN");
+//        JsonObject json = objectBuilder.build();
+//
+//        System.out.println(json.toString());
+//
+//        HttpURLConnection connection = null;
+//
+//        try {
+//            Transaction t = new Transaction();
+//            //Create connection
+//            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/");
+//            connection = (HttpURLConnection) url.openConnection();
+//            connection.setRequestMethod("POST");
+//            connection.setRequestProperty("Content-Type",
+//                    "application/json; charset=UTF-8");
+//            connection.setRequestProperty("Authorization", t.getToken());
+//
+//            connection.setUseCaches(false);
+//            connection.setDoOutput(true);
+//
+//            //Send request
+//            DataOutputStream wr = new DataOutputStream(
+//                    connection.getOutputStream());
+//            wr.writeBytes(json.toString());
+//            wr.close();
+//            //Recieve request
+//            InputStream is = connection.getInputStream();
+//            if (connection.getResponseCode() == 200) {
+//                JsonReader rdr = Json.createReader(is);
+//                JsonObject obj = rdr.readObject();
+//                Boolean accepted = obj.getBoolean("isPaymentAccepted");
+//                if (accepted) {
+//
+//                }
+//                String message = obj.getString("message");
+//                System.out.println(message);
+//            } else {
+//
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        } finally {
+//            if (connection != null) {
+//                connection.disconnect();
+//            }
+//        }
+
+        AccountService as = new AccountService();
+        Account account = as.findByIdUser("16");
+
+        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
+    }
+
+    public static boolean makeExternalTransaction(Account account, String number, BigDecimal amount, String title) {
+        boolean success = false;
+        //WYSŁANIE ZAPYTANIA DO JEDNOSTKI ROZLICZENIOWEJ
         JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
+        objectBuilder.add("senderAccountnumber", "PL" + account.getNumber());
+        objectBuilder.add("recipientAccountnumber", "PL" + number);
+        objectBuilder.add("paymentTitle", title);
+        objectBuilder.add("paymentAmount", amount);
+        objectBuilder.add("currency", "PLN");
+        JsonObject json = objectBuilder.build();
+        
+        System.out.println(json.toString());
 
-        objectBuilder.add("username", "b102");
-        objectBuilder.add("password", "operator5");
+        HttpURLConnection connection = null;
 
-        JsonObject object = objectBuilder.build();
-        System.out.println(object.toString());
+        try {
+            Transaction t = new Transaction();
+            //Create connection
+            URL url = new URL("https://jr-api-express.herokuapp.com/api/payment/");
+            connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("POST");
+            connection.setRequestProperty("Content-Type",
+                    "application/json; charset=UTF-8");
+            connection.setRequestProperty("Authorization", t.getToken());
+
+            connection.setUseCaches(false);
+            connection.setDoOutput(true);
+
+            //Send request
+            DataOutputStream wr = new DataOutputStream(
+                    connection.getOutputStream());
+            wr.writeBytes(json.toString());
+            wr.close();
+            //Recieve request
+            InputStream is = connection.getInputStream();
+            if (connection.getResponseCode() == 200) {
+                JsonReader rdr = Json.createReader(is);
+                JsonObject obj = rdr.readObject();
+                Boolean accepted = obj.getBoolean("isPaymentAccepted");
+                if (accepted) {
+                    success = true;
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+        }
+        if (success) {
+            //OBCIĄŻENIE KONTA
+            AccountService as = new AccountService();
+            account.setBalance(account.getBalance().subtract(amount));
+            as.update(account);
+            //ZAPIS OPERACJI
+            OperationService os = new OperationService();
+            Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zlecony", account.getNumber(), number, title);
+            os.persist(o);
+        }
+
+        return success;
     }
 
 }

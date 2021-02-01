@@ -4,11 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/user.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/NewMain.java</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/RegisterServlet.java</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/TransactionServlet.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/EndPoint.java</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/zlecenie_przelewu.jsp</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/index.jsp</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Klasy/Transaction.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/admin.jsp</file>
         </group>
     </open-files>
 </project-private>
