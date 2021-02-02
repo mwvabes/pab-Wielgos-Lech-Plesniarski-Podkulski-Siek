@@ -85,7 +85,7 @@
           <a href="user.jsp"><img class="submenuIcon" src="icons/house_blue.png" /> Strona
             główna</a>
           <a href="#">Moje konta <img class="submenuIcon" src="icons/expand_blue.png" /></a>
-          <a href="#">Karty płatnicze <img class="submenuIcon" src="icons/expand_blue.png" /></a>
+          <a href="mojeDane.jsp">Moje dane</a>
           <a href="#">Ostrzeżenia <span class="redDotInfo">1</span></a>
           <a href="#">Moje ubezpieczenia</a>
         </div>

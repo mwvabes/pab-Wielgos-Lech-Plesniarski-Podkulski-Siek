@@ -42,14 +42,14 @@
                     <div class="left">
                         <div class="row">
                             <div class="links">
-                                <a href="./logowanie.html" class="active">Strona główna</a>
-                                <a href="./oferty_promocje.html">Oferty i promocje</a>
+                                <a href="index.jsp" class="active">Strona główna</a>
+                                <a href="#">Oferty i promocje</a>
                                 <a href="#">Kalkulator sesji ELIXIR</a>
-                                <a href="./kantor.html">Kantor</a>
-                                <a href="./kontakt.html">Kontakt</a>
+                                <a href="#">Kantor</a>
+                                <a href="#">Kontakt</a>
                             </div>
                             <div class="clientLogin">
-                                <a href="./logowanie.html"><img src="./../icons/" alt=""><img src="icons/padlock_white.png" alt=""
+                                <a href="index.jsp"><img src="./../icons/" alt=""><img src="icons/padlock_white.png" alt=""
                                                                                               class="smallIcon">
                                     Logowanie Klienta</a>
                             </div>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="row">
                             <div class="helpInfo">
-                                <p>Nie możesz się zalogować? <a href="./logowanie3.html">Skorzystaj z pomocy w logowaniu</a>.</p>
+                                <p>Nie możesz się zalogować? <a href="#">Skorzystaj z pomocy w logowaniu</a>.</p>
                             </div>
                         </div>
                     </form>

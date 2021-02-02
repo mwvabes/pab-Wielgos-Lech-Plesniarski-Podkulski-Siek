@@ -5,14 +5,13 @@
         <group>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/user.jsp</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/NewMain.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/UserDao.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/LoginServlet.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Klasy/Transaction.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Tables/Operation.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/mojeDane.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/edycjaKlienta.jsp</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/zlecenie_przelewu.jsp</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/klienci.jsp</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Tables/User.java</file>
+            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/index.jsp</file>
             <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/Servlets/CRUD/UpdateUser.java</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/web/admin.jsp</file>
-            <file>file:/F:/Studia/Semestr%20V/PAB/pab-Wielgos-Lech-Plesniarski-Podkulski-Siek/Bank_A/src/java/DAO/UserService.java</file>
         </group>
     </open-files>
 </project-private>

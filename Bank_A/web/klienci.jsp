@@ -102,10 +102,10 @@
                                 for (int i = 0; i < users.size(); i++) {
                             %>
                             <tr>
-                                <td contenteditable><%=users.get(i).getName()%></td>
-                                <td contenteditable><%=users.get(i).getLastName()%></td>
-                                <td contenteditable><%=users.get(i).getAddress()%></td>
-                                <td contenteditable><%=users.get(i).getContact()%></td>
+                                <td><%=users.get(i).getName()%></td>
+                                <td><%=users.get(i).getLastName()%></td>
+                                <td><%=users.get(i).getAddress()%></td>
+                                <td><%=users.get(i).getContact()%></td>
                                 <td><a href="edycjaKlienta.jsp?id=<%=users.get(i).getId_user()%>">Edytuj</a>
                                 <td>Usuń</td>
                             </tr>
