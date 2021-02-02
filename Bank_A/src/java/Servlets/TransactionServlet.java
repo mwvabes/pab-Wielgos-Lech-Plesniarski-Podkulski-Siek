@@ -82,10 +82,14 @@ public class TransactionServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
+        
         String message = null;
+        String destPage = "user.jsp";
+        
         try {
             String number = request.getParameter("number").replaceAll("[^a-zA-Z0-9]", ""); //pobranie i usuwanie niealfanumerycznych znaków
             String address = request.getParameter("address");
+            String name = request.getParameter("name");
             BigDecimal amount = new BigDecimal(request.getParameter("amount"));
             String title = request.getParameter("title");
             String type = request.getParameter("type");
@@ -125,8 +129,10 @@ public class TransactionServlet extends HttpServlet {
                 t.makeInternalTransaction(a, number, amount, title);
             } else {   //przelew zewnętrzny
                 if (type.equals("standard")) {
-                    if(t.makeExternalTransaction(a, number, amount, title) == false){
+                    if(t.makeExternalTransaction(a, u, number, name, address, amount, title) == false){
                         message = "Wystąpił błąd, spróbuj jeszcze raz później.";
+                        request.setAttribute("message", message);
+                        destPage = "zlecenie_przelewu.jsp";
                     }
                 } else {
                     t.makeExpressTransaction(a.getNumber(), number, title, amount);
@@ -136,12 +142,11 @@ public class TransactionServlet extends HttpServlet {
         } catch (Exception e) {
             message = "Niepoprawne dane.";
             request.setAttribute("message", message);
-            String destPage = "zlecenie_przelewu.jsp";
+            destPage = "zlecenie_przelewu.jsp";
             RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
             dispatcher.forward(request, response);
         }
 
-        String destPage = "user.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(destPage);
         dispatcher.forward(request, response);
     }

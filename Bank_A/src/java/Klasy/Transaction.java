@@ -4,6 +4,7 @@ import DAO.AccountService;
 import DAO.OperationService;
 import Tables.Account;
 import Tables.Operation;
+import Tables.User;
 import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -46,12 +47,16 @@ public class Transaction {
         as.update(account2);
     }
 
-    public boolean makeExternalTransaction(Account account, String number, BigDecimal amount, String title) {
+    public boolean makeExternalTransaction(Account account, User user, String number, String name, String address, BigDecimal amount, String title) {
         boolean success = false;
         //WYSŁANIE ZAPYTANIA DO JEDNOSTKI ROZLICZENIOWEJ
         JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
         objectBuilder.add("senderAccountnumber", "PL" + account.getNumber());
+        objectBuilder.add("senderName", user.getName() + " " + user.getLastName());
+        objectBuilder.add("senderAddress", user.getAddress());
         objectBuilder.add("recipientAccountnumber", "PL" + number);
+        objectBuilder.add("recipientName", name);
+        objectBuilder.add("recipientAddress", address);
         objectBuilder.add("paymentTitle", title);
         objectBuilder.add("paymentAmount", 25);
         objectBuilder.add("currency", "PLN");

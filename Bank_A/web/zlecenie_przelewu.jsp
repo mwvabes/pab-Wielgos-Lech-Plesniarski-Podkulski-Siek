@@ -183,11 +183,16 @@
                       <a href="#" class="contactListAnchor">Lista kontaktów<img
                           src="icons/contacts_white.png" /></a>
                     </div>
-                    <textarea type="text" rows="4" name="address"></textarea>
+                    <textarea type="text" rows="4" name="name"></textarea>
                   </label>
                   <label for="">Tytułem
                     <textarea type="text" rows="4" name="title"></textarea>
                   </label>
+                </div>
+                <div class="row">
+                    <label for="">Adres
+                      <input type="text" name="address">
+                    </label>
                 </div>
                 <div class="row">
                   <label for="">Numer rachunku odbiorcy
