@@ -137,7 +137,7 @@ const Payments = ({ handleLogout }) => {
 
   const columns = [
     {
-      title: 'Nadawca',
+      title: 'Nadawca >bank',
       dataIndex: 'senderAccountnumber',
       key: 'senderAccountnumber',
       render: text => {
@@ -150,14 +150,20 @@ const Payments = ({ handleLogout }) => {
           const unit = bank.bankUnits.find(u => {
             return u.unitID === text.substring(7, 12)
           })
-          t += " "
-          t += unit.unitAddress
         }
         return <p>{t}</p>
       },
     },
     {
-      title: 'Odbiorca',
+      title: 'Nadawca >nazwa',
+      dataIndex: 'senderName',
+      key: 'senderName',
+      render: text => {
+        return <p>{text}</p>
+      },
+    },
+    {
+      title: 'Odbiorca >bank',
       dataIndex: 'recipientAccountnumber',
       key: 'recipientAccountnumber',
       render: text => {
@@ -170,10 +176,16 @@ const Payments = ({ handleLogout }) => {
           const unit = bank.bankUnits.find(u => {
             return u.unitID === text.substring(7, 12)
           })
-          t += " "
-          t += unit.unitAddress
         }
         return <p>{t}</p>
+      },
+    },
+    {
+      title: 'Odbiorca >nazwa',
+      dataIndex: 'recipientName',
+      key: 'recipientName',
+      render: text => {
+        return <p>{text}</p>
       },
     },
     {
