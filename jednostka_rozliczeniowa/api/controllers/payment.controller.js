@@ -202,6 +202,8 @@ exports.settlePaymentsHandler = (request, result) => {
 
 exports.paymentConfirmation = (request, result) => {
 
+  const myUser = request.user
+
   if (!auth.checkIfAdmin(myUser)) {
     result.status(400).json({
       message: `Niewystarczające uprawnienia`
@@ -239,6 +241,8 @@ exports.paymentConfirmation = (request, result) => {
 }
 
 exports.getCurrentlyServedPayments = (request, result) => {
+
+  const myUser = request.user
 
   if (!auth.checkIfAdmin(myUser)) {
     result.status(400).json({
