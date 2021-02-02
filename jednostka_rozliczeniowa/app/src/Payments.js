@@ -52,7 +52,7 @@ const Payments = ({ handleLogout }) => {
     axios
       .get(`https://jr-api-express.herokuapp.com/api/payment/getCurrentlyServed`, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+          'Authorization': `${localStorage.getItem('jwt')}` 
         }})
       .then(response => {
         if (response.data.nosession) {
@@ -89,7 +89,7 @@ const Payments = ({ handleLogout }) => {
     axios
       .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+          'Authorization': `${localStorage.getItem('jwt')}` 
         }}
       ).then(response => {
         message.success('Zaakceptowano przelew.')
@@ -108,7 +108,7 @@ const Payments = ({ handleLogout }) => {
     axios
       .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+          'Authorization': `${localStorage.getItem('jwt')}` 
         }})
       .then(response => {
         message.warning('Anulowano akcję. Przelew zamrożony.');
@@ -127,7 +127,7 @@ const Payments = ({ handleLogout }) => {
     axios
       .post(`https://jr-api-express.herokuapp.com/api/payment/confirmation`, params, {
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('jwt')}` 
+          'Authorization': `${localStorage.getItem('jwt')}` 
         }})
       .then(response => {
         message.warning('Odrzucono przelew.');
