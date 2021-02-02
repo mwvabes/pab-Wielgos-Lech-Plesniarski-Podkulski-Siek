@@ -71,6 +71,22 @@ public class Operation {
         
     }
 
+    public String getSender_name() {
+        return sender_name;
+    }
+
+    public String getSender_address() {
+        return sender_address;
+    }
+
+    public String getRecipent_name() {
+        return recipent_name;
+    }
+
+    public String getRecipent_address() {
+        return recipent_address;
+    }
+
     public int getId_operation() {
         return id_operation;
     }

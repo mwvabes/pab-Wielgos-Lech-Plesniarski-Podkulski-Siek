@@ -175,9 +175,8 @@
                                   </div>
                                 </div>
                                 <div class="beneficiary">
-                                  <p>Anna Nowak</p>
-                                  <p>ul. Chmielewskiej 10/12</p>
-                                  <p>37-500 Jarosław</p>
+                                    <p><%=list.get(i).getRecipent_name() %></p>
+                                    <p><%=list.get(i).getRecipent_address()%></p>
                                 </div>
                                 <div class="paymentInfo">
                                   <p><% out.println(new SimpleDateFormat("yyyy-MM-dd").format(list.get(i).getDate())); %></p>
@@ -210,9 +209,8 @@
                                   </div>
                                 </div>
                                 <div class="beneficiary">
-                                  <p>ZTM Rzeszów</p>
-                                  <p>ul. Trembeckiego 2</p>
-                                  <p>37-566 Rzeszów</p>
+                                  <p><%=list.get(i).getSender_name()%></p>
+                                  <p><%=list.get(i).getSender_address()%></p>
                                 </div>
                                 <div class="paymentInfo">
                                   <p><% out.println(new SimpleDateFormat("yyyy-MM-dd").format(list.get(i).getDate())); %></p>
