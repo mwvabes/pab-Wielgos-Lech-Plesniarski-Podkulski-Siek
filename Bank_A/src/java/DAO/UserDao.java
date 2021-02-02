@@ -72,7 +72,7 @@ public class UserDao {
 		getCurrentSession().update(entity);
 	}
 
-	public User findById(String id) {
+	public User findById(int id) {
 		User login = (User) getCurrentSession().get(User.class, id);
 		return login; 
 	}

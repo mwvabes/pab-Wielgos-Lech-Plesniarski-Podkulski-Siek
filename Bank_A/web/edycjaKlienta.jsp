@@ -1,4 +1,5 @@
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page language="java" import="Tables.*" %>
 <%
@@ -79,58 +80,58 @@
             <main>
 
                 <div class="newPaymentDispositionWindow">
-                    <h3>Rejestracja nowego klienta</h3>
+                    <h3>Edycja danych klienta</h3>
                     <div class="newPaymentDispositionCard">
-                        <form action="RegisterServlet" method="post">
+                        <%@ page language="java" import="DAO.*" %>
+                        <%@page import="java.util.List"%>
+                        <%
+                            int id = Integer.valueOf(request.getParameter("id"));
+                            UserService us = new UserService();
+                            User user = us.findById(id);
+                            //user.getContact()
+                        %>
+                        <form action="UpdateUser" method="post">
+                            <input type="hidden" name="id" value="<%=id%>">
                             <div class="row">
-                                <label> Imie<input type="text" name="name"> </label>
-                                <label> Nazwisko<input type="text" name="surname"> </label>
+                                <label> Imie<input type="text" name="name" value="<%=user.getName()%>"> </label>
+                                <label> Nazwisko<input type="text" name="surname" value="<%=user.getLastName()%>"> </label>
                             </div>
                             <div class="row">
-                                <label> Login<input type="text" name="login"> </label>
-                                <label> Hasło<input type="password" name="password"> </label>
-                            </div>
-                            <div class="row">
-                                <label> Adres<input type="text" name="address"> </label>
-                                <label> Kontakt<input type="text" name="contact"> </label>
-                            </div>
-                            <div class="row"><label>Oddział</label></div>
-                            <div class="row">
-                                <label> Grunwaldzka 1, 21-035 Rzeszów<input type="radio" name="department" value="02964" checked=""> </label>
-                                <label> Al. Jerozolimskie 99, 00-012 Warszawat<input type="radio" name="department" value="01417"> </label>
+                                <label> Adres<input type="text" name="address" value="<%=user.getAddress()%>"> </label>
+                                <label> Kontakt<input type="text" name="contact" value="<%=user.getContact()%>"> </label>
                             </div>
                             <div class="row">
                                 <label>${message}</label>
-                                <input type="submit" value="Zarejestruj">
-                            <div>         
-                        </form>
+                                <input type="submit" value="Zmień">
+                                <div>         
+                                    </form>
+                                </div>
+                            </div>
+
+                            </main>
+
                     </div>
-                </div>
 
-            </main>
-
-        </div>
-
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="left">
-                        &copy; 2021 Banki Polskie RYBA
-                    </div>
-                    <div class="right">
-                        <div class="links">
-                            <a href="#">Bankowość Osobista</a>
-                            <a href="#">Bankowość Firmowa</a>
-                            <a href="#">Zastrzeż kartę</a>
-                            <a href="#">Przerwy techniczne</a>
-                            <a href="#">Infolinia: 800 800 008</a>
-                            <a href="#"><img src="icons/en.png" alt=""></a>
+                    <footer>
+                        <div class="container">
+                            <div class="row">
+                                <div class="left">
+                                    &copy; 2021 Banki Polskie RYBA
+                                </div>
+                                <div class="right">
+                                    <div class="links">
+                                        <a href="#">Bankowość Osobista</a>
+                                        <a href="#">Bankowość Firmowa</a>
+                                        <a href="#">Zastrzeż kartę</a>
+                                        <a href="#">Przerwy techniczne</a>
+                                        <a href="#">Infolinia: 800 800 008</a>
+                                        <a href="#"><img src="icons/en.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+                    </footer>
 
-    </body>
+                    </body>
 
-</html>
+                    </html>

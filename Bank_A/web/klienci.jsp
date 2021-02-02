@@ -1,4 +1,5 @@
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page language="java" import="Tables.*" %>
 <%
@@ -79,31 +80,39 @@
             <main>
 
                 <div class="newPaymentDispositionWindow">
-                    <h3>Rejestracja nowego klienta</h3>
+                    <h3>Zarządzanie kontami</h3>
                     <div class="newPaymentDispositionCard">
-                        <form action="RegisterServlet" method="post">
-                            <div class="row">
-                                <label> Imie<input type="text" name="name"> </label>
-                                <label> Nazwisko<input type="text" name="surname"> </label>
-                            </div>
-                            <div class="row">
-                                <label> Login<input type="text" name="login"> </label>
-                                <label> Hasło<input type="password" name="password"> </label>
-                            </div>
-                            <div class="row">
-                                <label> Adres<input type="text" name="address"> </label>
-                                <label> Kontakt<input type="text" name="contact"> </label>
-                            </div>
-                            <div class="row"><label>Oddział</label></div>
-                            <div class="row">
-                                <label> Grunwaldzka 1, 21-035 Rzeszów<input type="radio" name="department" value="02964" checked=""> </label>
-                                <label> Al. Jerozolimskie 99, 00-012 Warszawat<input type="radio" name="department" value="01417"> </label>
-                            </div>
-                            <div class="row">
-                                <label>${message}</label>
-                                <input type="submit" value="Zarejestruj">
-                            <div>         
-                        </form>
+                        <%@ page language="java" import="DAO.*" %>
+                        <%@page import="java.util.List"%>
+                        <%
+                            UserService us = new UserService();
+                            List<User> users = us.findAll();
+                            users.get(0).getId_user();
+                        %>
+                        <table>
+                            <tr>
+                                <td>Imie</td>
+                                <td>Nazwisko</td>
+                                <td>Adres</td>
+                                <td>Kontakt</td>
+                                <td>Edytuj</td>
+                                <td>Usuń</td>
+                            </tr>
+                            <%
+                                for (int i = 0; i < users.size(); i++) {
+                            %>
+                            <tr>
+                                <td contenteditable><%=users.get(i).getName()%></td>
+                                <td contenteditable><%=users.get(i).getLastName()%></td>
+                                <td contenteditable><%=users.get(i).getAddress()%></td>
+                                <td contenteditable><%=users.get(i).getContact()%></td>
+                                <td><a href="edycjaKlienta.jsp?id=<%=users.get(i).getId_user()%>">Edytuj</a>
+                                <td>Usuń</td>
+                            </tr>
+                            <%
+                                }
+                            %>
+                        </table>
                     </div>
                 </div>
 

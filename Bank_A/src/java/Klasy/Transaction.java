@@ -6,7 +6,6 @@ import Tables.Account;
 import Tables.Operation;
 import java.io.DataOutputStream;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -17,8 +16,6 @@ import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonObjectBuilder;
 import javax.json.JsonReader;
-import javax.json.JsonWriter;
-import sun.misc.IOUtils;
 
 public class Transaction {
 
@@ -104,7 +101,7 @@ public class Transaction {
             as.update(account);
             //ZAPIS OPERACJI
             OperationService os = new OperationService();
-            Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zlecony", account.getNumber(), number, title);
+            Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", account.getNumber(), number, title);
             os.persist(o);
         }
 

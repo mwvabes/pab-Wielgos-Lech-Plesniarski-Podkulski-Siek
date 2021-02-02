@@ -25,7 +25,7 @@ public class UserService {
 		loginDao.closeCurrentSessionwithTransaction();
 	}
 
-	public User findById(String id) {
+	public User findById(int id) {
 		loginDao.openCurrentSession();
 		User login = loginDao.findById(id);
 		loginDao.closeCurrentSession();
@@ -39,7 +39,7 @@ public class UserService {
 		return login.get(0);
 	}
 
-	public void delete(String id) {
+	public void delete(int id) {
 		loginDao.openCurrentSessionwithTransaction();
 		User login = loginDao.findById(id);
 		loginDao.delete(login);

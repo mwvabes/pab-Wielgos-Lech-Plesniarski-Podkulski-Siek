@@ -1,10 +1,12 @@
 
 import DAO.AccountService;
 import DAO.OperationService;
+import DAO.UserService;
 import Klasy.AccountNumber;
 import Klasy.Transaction;
 import Tables.Account;
 import Tables.Operation;
+import Tables.User;
 import java.io.DataOutputStream;
 import java.io.InputStream;
 import java.math.BigDecimal;
@@ -283,8 +285,12 @@ public class NewMain {
 //
 //        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
         
-        Transaction t = new Transaction();
-        t.receiveExternalTransaction("20210125_04");
+        //Transaction t = new Transaction();
+      //  t.receiveExternalTransaction("20210125_04");
+      
+      UserService us = new UserService();
+            User user = us.findById(18);
+            System.out.println(user.getName());
     }
 
     public static boolean makeExternalTransaction(Account account, String number, BigDecimal amount, String title) {

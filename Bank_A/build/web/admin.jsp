@@ -64,7 +64,7 @@
                 <div class="container subMenuContainer">
                     <div class="subMenu">
                         <a href="admin.jsp">Rejestracja</a>
-                        <a href="#">Moje konta <img class="submenuIcon" src="icons/expand_blue.png" /></a>
+                        <a href="klienci.jsp">Zarządzanie kontami</a>
                         <a href="#">Karty płatnicze <img class="submenuIcon" src="icons/expand_blue.png" /></a>
                         <a href="#">Ostrzeżenia <span class="redDotInfo">1</span></a>
                         <a href="#">Moje ubezpieczenia</a>
