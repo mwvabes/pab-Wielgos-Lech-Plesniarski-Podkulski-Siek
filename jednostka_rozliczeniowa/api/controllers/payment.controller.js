@@ -22,11 +22,26 @@ exports.addPaymentDisposition = (request, result) => {
     || request.body.recipientAccountnumber == undefined
     || request.body.paymentTitle == undefined
     || request.body.currency == undefined
-    || request.body.paymentAmount == undefined) {
+    || request.body.paymentAmount == undefined
+    || request.body.senderName == undefined 
+    || request.body.senderAddress == undefined
+    || request.body.recipientName == undefined
+    || request.body.recipientAddress == undefined
+    ) {
 
     result.status(400).json({
       isPaymentAccepted: false,
-      message: "Niepoprawne parametry zapytania"
+      message: "Niepoprawne parametry zapytania",
+      senderAccountnumber: request.body.senderAccountnumber !== undefined,
+      senderName: request.body.senderName !== undefined,
+      senderAddress: request.body.senderAddress !== undefined,
+      recipientAccountnumber: request.body.recipientAccountnumber !== undefined,
+      recipientName: request.body.recipientName !== undefined,
+      recipientAddress: request.body.recipientAddress !== undefined,
+      paymentTitle: request.body.paymentTitle !== undefined,
+      currency: request.body.currency !== undefined,
+      paymentAmount: request.body.paymentAmount !== undefined,
+
     })
     return
   }
@@ -98,8 +113,12 @@ exports.addPaymentDisposition = (request, result) => {
 
     const payment = new Payment({
       senderAccountnumber: senderAccountnumber.accountnumber,
+      senderName: request.body.senderName,
+      senderAddress: request.body.senderAddress,
       senderBankCode,
       recipientAccountnumber: recipientAccountnumber.accountnumber,
+      recipientName: request.body.recipientName,
+      recipientAddress: request.body.recipientAddress,
       recipientBankCode,
       paymentTitle: paymentTitle,
       paymentAmount: paymentAmount,
@@ -273,15 +292,5 @@ schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
 
 schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
   console.log("Settling payments by scheduler _03")
-  paymentData.settlePayments()
-})
-
-schedule.scheduleJob({ hour: 20, minute: 45 }, () => {
-  console.log("Settling payments by scheduler _03")
-  paymentData.settlePayments()
-})
-
-schedule.scheduleJob({ hour: 21, minute: 03 }, () => {
-  console.log("Settling payments by scheduler _06")
   paymentData.settlePayments()
 })
