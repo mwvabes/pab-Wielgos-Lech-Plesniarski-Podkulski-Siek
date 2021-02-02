@@ -11,24 +11,16 @@
     "sessionName": "_02",
     "hourClose": "12:00",
     "hourStartClearance": "12:10",
-    "hourStopClearance": "12:45",
-    "hourAnnounce": "12:50",
+    "hourStopClearance": "14:45",
+    "hourAnnounce": "14:50",
     "verifyBoundary": "1000.00"
   },
   {
     "sessionName": "_03",
-    "hourClose": "13:00",
-    "hourStartClearance": "13:10",
-    "hourStopClearance": "13:55",
-    "hourAnnounce": "13:57",
-    "verifyBoundary": "1000.00"
-  },
-  {
-    "sessionName": "_04",
-    "hourClose": "14:45",
-    "hourStartClearance": "14:46",
-    "hourStopClearance": "19:00",
-    "hourAnnounce": "19:05",
+    "hourClose": "15:00",
+    "hourStartClearance": "15:10",
+    "hourStopClearance": "17:55",
+    "hourAnnounce": "18:00",
     "verifyBoundary": "1000.00"
   }
 ]
