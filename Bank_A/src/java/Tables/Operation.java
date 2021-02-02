@@ -33,21 +33,39 @@ public class Operation {
     @Column(name = "sender_number")
     private String sender_number;
     
+    @Column(name = "sender_name")
+    private String sender_name;
+    
+    @Column(name = "sender_address")
+    private String sender_address;
+    
     @Column(name = "recipent_number")
     private String recipent_number;
+    
+    @Column(name = "recipent_name")
+    private String recipent_name;
+    
+    @Column(name = "recipent_address")
+    private String recipent_address;
     
     @Column(name = "title")
     private String title;
 
-    public Operation(String type, Date date, BigDecimal amount, String status, String sender_number, String recipent_number, String title) {
+    public Operation(String type, Date date, BigDecimal amount, String status, String sender_number, String sender_name, String sender_address, String recipent_number, String recipent_name, String recipent_address, String title) {
         this.type = type;
         this.date = date;
         this.amount = amount;
         this.status = status;
         this.sender_number = sender_number;
+        this.sender_name = sender_name;
+        this.sender_address = sender_address;
         this.recipent_number = recipent_number;
+        this.recipent_name = recipent_name;
+        this.recipent_address = recipent_address;
         this.title = title;
     }
+
+    
     
     public Operation(){
         

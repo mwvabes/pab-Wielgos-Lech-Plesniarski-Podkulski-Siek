@@ -90,7 +90,11 @@ public class EndPoint extends HttpServlet {
         JsonObject obj = rdr.readObject();
 
         String senderAccountnumber = obj.getString("senderAccountnumber").replaceAll("[^a-zA-Z0-9]", "").substring(2);
+        String snederName = obj.getString("senderName");
+        String senderAddress = obj.getString("senderAddress");
         String recipientAccountnumber = obj.getString("recipientAccountnumber").replaceAll("[^a-zA-Z0-9]", "").substring(2);
+        String recipientName = obj.getString("recipientName");
+        String recipientAddress = obj.getString("recipientAddress");
         String paymentTitle = obj.getString("paymentTitle");
         BigDecimal paymentAmount = new BigDecimal(Integer.toString(obj.getInt("paymentAmount")));
         String currency = obj.getString("currency");
@@ -101,7 +105,9 @@ public class EndPoint extends HttpServlet {
         if (currency.equals("PLN") == true) {
             if (an.isValid("PL" + senderAccountnumber) && an.isValid("PL" + recipientAccountnumber)) {
                 Transaction t = new Transaction();
-                t.receiveExpressTransaction(senderAccountnumber, recipientAccountnumber, paymentTitle, paymentAmount);
+                t.receiveExpressTransaction(senderAccountnumber, snederName, senderAddress, 
+                        recipientAccountnumber, recipientName, recipientAddress, 
+                        paymentTitle, paymentAmount);
                 message = "Przelew przyjęty";
             } else {
                 message += " | Błędny nr konta";

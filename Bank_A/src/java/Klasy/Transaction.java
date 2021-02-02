@@ -32,14 +32,24 @@ public class Transaction {
         return number.substring(2, 5).equals("102");
     }
 
-    public void makeInternalTransaction(Account account, String number, BigDecimal amount, String title) {
+    public void makeInternalTransaction(Account account, User user, String number, String name, String address, BigDecimal amount, String title) {
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
         account.setBalance(account.getBalance().subtract(amount));
         as.update(account);
         //ZAPIS OPERACJI
         OperationService os = new OperationService();
-        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", account.getNumber(), number, title);
+        Operation o = new Operation("obciążenie",
+                new Date(new java.util.Date().getTime()),
+                amount,
+                "Zrealizowany",
+                account.getNumber(),
+                user.getName() + " " + user.getLastName(),
+                user.getAddress(),
+                number,
+                name,
+                address,
+                title);
         os.persist(o);
         //UZNANIE KONTA
         Account account2 = as.findByNumber(number);
@@ -106,7 +116,17 @@ public class Transaction {
             as.update(account);
             //ZAPIS OPERACJI
             OperationService os = new OperationService();
-            Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", account.getNumber(), number, title);
+            Operation o = new Operation("obciążenie",
+                    new Date(new java.util.Date().getTime()),
+                    amount,
+                    "Zrealizowany",
+                    account.getNumber(),
+                    user.getName() + " " + user.getLastName(),
+                    user.getAddress(),
+                    number,
+                    name,
+                    address,
+                    title);
             os.persist(o);
         }
 
@@ -129,7 +149,11 @@ public class Transaction {
                 String status = result.getString("paymentStatus");
                 BigDecimal amount = new BigDecimal(Integer.toString((result.getInt("paymentAmount"))));
                 String senderAccountNumber = result.getString("senderAccountnumber").substring(2); //nr nadawcy bez PL
+                String senderName = result.getString("senderName");
+                String senderAddress = result.getString("senderAddress");
                 String recipientAccountNumber = result.getString("recipientAccountnumber").substring(2); //nr odbiorcy bez PL
+                String recipientName = result.getString("recipientName");
+                String recipientAddress = result.getString("recipientAddress");
 
                 if (status.compareTo("settled") == 0) {    //czy udany przelew
                     AccountNumber an = new AccountNumber();
@@ -146,7 +170,11 @@ public class Transaction {
                                     amount,
                                     "Zrealizowany",
                                     senderAccountNumber,
+                                    senderName,
+                                    senderAddress,
                                     recipientAccountNumber,
+                                    recipientName,
+                                    recipientAddress,
                                     result.getString("paymentTitle"));
                             os.persist(o);
                             //UZNANIE KONTA
@@ -204,7 +232,9 @@ public class Transaction {
         }
     }
 
-    public void makeExpressTransaction(String senderAccountnumber, String recipientAccountnumber, String paymentTitle, BigDecimal amount) {
+    public void makeExpressTransaction(String senderAccountnumber, String senderName, String senderAddress,
+            String recipientAccountnumber, String recipientName, String recipientAddress,
+            String paymentTitle, BigDecimal amount) {
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
         Account account = as.findByNumber(senderAccountnumber);
@@ -216,12 +246,24 @@ public class Transaction {
         as.update(account2);
         //ZAPIS OPERACJI
         OperationService os = new OperationService();
-        Operation o = new Operation("obciążenie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", senderAccountnumber, recipientAccountnumber, paymentTitle);
+        Operation o = new Operation("uznanie",
+                new Date(new java.util.Date().getTime()),
+                amount,
+                "Zrealizowany",
+                senderAccountnumber,
+                senderName,
+                senderAddress,
+                recipientAccountnumber,
+                recipientName,
+                recipientAddress,
+                paymentTitle);
         os.persist(o);
         //WYSŁANIE ZAPYTANIA DO BANKU B
     }
 
-    public void receiveExpressTransaction(String senderAccountnumber, String recipientAccountnumber, String paymentTitle, BigDecimal amount) {
+    public void receiveExpressTransaction(String senderAccountnumber, String senderName, String senderAddress,
+            String recipientAccountnumber, String recipientName, String recipientAddress,
+            String paymentTitle, BigDecimal amount) {
         //OBCIĄŻENIE KONTA
         AccountService as = new AccountService();
         Account account = as.findByNumber("57102029640000000000000002");
@@ -229,7 +271,17 @@ public class Transaction {
         as.update(account);
         //ZAPIS OPERACJI
         OperationService os = new OperationService();
-        Operation o = new Operation("uznanie", new Date(new java.util.Date().getTime()), amount, "Zrealizowany", senderAccountnumber, recipientAccountnumber, paymentTitle);
+        Operation o = new Operation("uznanie",
+                new Date(new java.util.Date().getTime()),
+                amount,
+                "Zrealizowany",
+                senderAccountnumber,
+                senderName,
+                senderAddress,
+                recipientAccountnumber,
+                recipientName,
+                recipientAddress,
+                paymentTitle);
         os.persist(o);
         //UZNANIE KONTA
         Account account2 = as.findByNumber(recipientAccountnumber);

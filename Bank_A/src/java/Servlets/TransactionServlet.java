@@ -126,7 +126,7 @@ public class TransactionServlet extends HttpServlet {
             }
 
             if (t.isInternal(number)) {   //określenie typu przelewu
-                t.makeInternalTransaction(a, number, amount, title);
+                t.makeInternalTransaction(a, u, number, name, address, amount, title);
             } else {   //przelew zewnętrzny
                 if (type.equals("standard")) {
                     if(t.makeExternalTransaction(a, u, number, name, address, amount, title) == false){
@@ -135,7 +135,8 @@ public class TransactionServlet extends HttpServlet {
                         destPage = "zlecenie_przelewu.jsp";
                     }
                 } else {
-                    t.makeExpressTransaction(a.getNumber(), number, title, amount);
+                    t.makeExpressTransaction(a.getNumber(), u.getName() + " " + u.getLastName(), u.getAddress(),
+                            number, name, address, title, amount);
                 }
             }
 
