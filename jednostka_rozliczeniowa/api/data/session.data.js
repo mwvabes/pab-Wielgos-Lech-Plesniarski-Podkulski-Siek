@@ -90,15 +90,19 @@ exports.lastlyServedSession = () => {
     return lastlyServedSession
   } else {
     let closestSession = sessionsConf.reverse().find(s => {
-      console.log(Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) + " " + Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`))
+      console.log(Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`).toLocaleString() + " " + Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`))
       return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)
     })
+
+    console.log("closest", closestSession)
 
     lastlyServedSession += operatingDate.getFullYear()
 
     lastlyServedSession += (operatingDate.getMonth() + 1) < 10 ? "0" + (operatingDate.getMonth() + 1) : (operatingDate.getMonth() + 1)
     lastlyServedSession += operatingDate.getDate() < 10 ? "0" + operatingDate.getDate()  : operatingDate.getDate()
     lastlyServedSession += closestSession.sessionName
+
+    console.log("lastly", lastlyServedSession)
 
     return lastlyServedSession
 
