@@ -164,8 +164,6 @@ exports.getIncomingPayments = (request, result) => {
     return
   }
 
-  mongoose.connect(db.url, db.attr)
-
   Payment.find({ servingSession: sess, "$or": [{
         recipientBankCode: request.query.bankCode, 
         "paymentStatus": "settled"
@@ -212,8 +210,6 @@ exports.paymentConfirmation = (request, result) => {
   }
 
   console.log("Payment confirmation body", request.body)
-
-  mongoose.connect(db.url, db.attr)
 
   if (request.body.type === "confirm") {
     Payment.update({ _id: request.body.paymentId }, { paymentStatus: "accepted" }).then(r => {
