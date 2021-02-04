@@ -31,6 +31,7 @@ exports.getCurrentSession = () => {
   else {
     let daysToAdd = 0
     let closestSession = sessionsConf.find(s => {
+      console.log(Date.parse(`01/01/1970/ ${s.hourClose}:00`) + " = " + Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`))
       return Date.parse(`01/01/1970/ ${s.hourClose}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)
     })
     if (closestSession == undefined) {
