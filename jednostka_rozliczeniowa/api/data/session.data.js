@@ -31,7 +31,6 @@ exports.getCurrentSession = () => {
   else {
     let daysToAdd = 0
     let closestSession = sessionsConf.find(s => {
-      console.log(Date.parse(`01/01/1970/ ${s.hourClose}:00`) + " = " + Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`))
       return Date.parse(`01/01/1970/ ${s.hourClose}:00`) < Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}:00`)
     })
     if (closestSession == undefined) {
@@ -74,6 +73,8 @@ exports.lastlyServedSession = () => {
   }
   else if (Date.parse(`01/01/1970/ ${sessionsConf[0].hourAnnounce}:00`) > Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)) {
     
+    console.log("Sfind: Morning")
+
     if (weekDay == 1) {
       (operatingDate.setDate(operatingDate.getDate()-3))
     } else {
@@ -89,6 +90,7 @@ exports.lastlyServedSession = () => {
     return lastlyServedSession
   } else {
     let closestSession = sessionsConf.reverse().find(s => {
+      console.log(Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) + " " + Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`))
       return Date.parse(`01/01/1970/ ${s.hourAnnounce}:00`) < Date.parse(`01/01/1970/ ${operatingDate.getHours()}:${operatingDate.getMinutes()}:00`)
     })
 
