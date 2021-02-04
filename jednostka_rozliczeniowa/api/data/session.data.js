@@ -45,7 +45,7 @@ exports.getCurrentSession = () => {
 }
 
 exports.lastlyServedSession = () => {
-  const operatingDate = new Date()
+  const operatingDate = new Date().now()
   const weekDay = operatingDate.getDay()
 
   let lastlyServedSession = ""
