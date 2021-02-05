@@ -1,22 +1,12 @@
 
-import DAO.AccountService;
-import DAO.OperationService;
-import DAO.UserService;
-import Klasy.AccountNumber;
-import Klasy.Transaction;
-import Tables.Account;
-import Tables.Operation;
-import Tables.User;
-import java.io.DataOutputStream;
 import java.io.InputStream;
-import java.math.BigDecimal;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.Date;
-import javax.json.Json;
-import javax.json.JsonObject;
-import javax.json.JsonObjectBuilder;
-import javax.json.JsonReader;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class NewMain {
 
@@ -24,14 +14,14 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        /*   LoginService ls = new LoginService();
-       // List<Login> list = ls.findAll();
-        List<Login> login = ls.find("admin", "nimda");
-        Login l = login.get(0);
-        UserService us = new UserService();
-        List<User> lu = us.findAll();
-        System.out.println(l); */
 
+        /*   LoginService ls = new LoginService();
+            // List<Login> list = ls.findAll();
+            List<Login> login = ls.find("admin", "nimda");
+            Login l = login.get(0);
+            UserService us = new UserService();
+            List<User> lu = us.findAll();
+            System.out.println(l); */
         //LoginRepositoryImpl lr = new LoginRepositoryImpl(getEnitityManager());
         // Login l2 = lr.getLogin("admin", "nimda");
         // System.out.println(l2);
@@ -58,19 +48,19 @@ public class NewMain {
 //        System.out.println(account3);
 //        
 //        System.out.println(t.getHistory(account2));
-        /*
-        AccountService as = new AccountService();
-        Account a = new Account("123", new BigDecimal(0), 0);
-        as.persist(a);
-        String N = String.valueOf(a.getId_account());
-        while(N.length() < 16){
-            N = "0" + N;
-        }
-        System.out.println(a.getId_account());
-        System.out.println(N);
-        String n = iban.GenerateAccountNumber("02964", N);
-        a.setNumber(n);
-        as.update(a);
+/*
+AccountService as = new AccountService();
+Account a = new Account("123", new BigDecimal(0), 0);
+as.persist(a);
+String N = String.valueOf(a.getId_account());
+while(N.length() < 16){
+N = "0" + N;
+}
+System.out.println(a.getId_account());
+System.out.println(N);
+String n = iban.GenerateAccountNumber("02964", N);
+a.setNumber(n);
+as.update(a);
          */
 //        String json = "{\n" +
 //                        "    \"numer_faktury\" : \"105/28112020\",\n" +
@@ -109,7 +99,7 @@ public class NewMain {
 //            wr.writeBytes(json);
 //            wr.close();
 //            connection.getInputStream();
-////            //Get Response  
+////            //Get Response
 //       //     InputStream is = 
 ////            BufferedReader rd = new BufferedReader(new InputStreamReader(is));
 //////            StringBuilder response = new StringBuilder(); // or StringBuffer if Java version 5+
@@ -210,10 +200,10 @@ public class NewMain {
 //        
 //        Transaction t = new Transaction();
 //        System.out.println(t.getSession());
-        //  AccountNumber an = new AccountNumber();
-        // System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
-        //     Transaction t = new Transaction();
-        //  t.receiveExternalTransaction("20210125_04");
+//  AccountNumber an = new AccountNumber();
+// System.out.println(an.ControlSum("PL 00 1050 4475 9393 0635 9401 7658"));
+//     Transaction t = new Transaction();
+//  t.receiveExternalTransaction("20210125_04");
 //        String password = "2";
 //        String hashed = BCrypt.hashpw(password, BCrypt.gensalt());
 //        System.out.println(hashed);
@@ -281,25 +271,28 @@ public class NewMain {
 //        Account account = as.findByIdUser("16");
 //
 //        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
-        //Transaction t = new Transaction();
-        //  t.receiveExternalTransaction("20210125_04");
-        String a1 = "&senderAccountnumber=PL13102029640000000000000018";
-        String a2 = "&senderName=Test3";
-        String a3 = "&senderAddress=Adres1";
-        String a4 = "&recipientAccountnumber=PL98105044757447294937977519";
-        String a5 = "&recipientName=Krzysztof";
-        String a6 = "&recipientAddress=Adres2";
-        String a7 = "&paymentTitle=Tutył";
-        String a8 = "&paymentAmount=100";
-        HttpURLConnection connection = null;
+//Transaction t = new Transaction();
+//  t.receiveExternalTransaction("20210125_04");
         try {
-            URL url = new URL("http://localhost/bankB/api/constructor/endpoint.php?endPoint" + a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8);
-            connection = (HttpURLConnection) url.openConnection();
-            InputStream is = connection.getInputStream(); //url.openStream();
-            JsonReader rdr = Json.createReader(is);
+            String a1 = "&senderAccountnumber=PL13102029640000000000000018";
+            String a2 = "&senderName=Test3";
+            String a3 = "&senderAddress=Adres1";
+            String a4 = "&recipientAccountnumber=PL98105044757447294937977519";
+            String a5 = "&recipientName=Krzysztof";
+            String a6 = "&recipientAddress=Adres2";
+            String a7 = "&paymentTitle=" + URLEncoder.encode("Tutył 123", StandardCharsets.UTF_8.toString());
+            String a8 = "&paymentAmount=100";
+            HttpURLConnection connection = null;
+
+    URL url = new URL("http://localhost/bankB/api/constructor/endpoint.php?endPoint" + a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8);
+    connection = (HttpURLConnection) url.openConnection();
+    InputStream is = connection.getInputStream(); //url.openStream();
+            System.out.println(a7);
+
         } catch (Exception e) {
-            System.out.println("Błąd");
+            System.out.println(e);
         }
+
     }
 
 }

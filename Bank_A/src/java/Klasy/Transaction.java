@@ -10,6 +10,8 @@ import java.io.InputStream;
 import java.math.BigDecimal;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.sql.Date;
 import java.util.List;
 import javax.json.Json;
@@ -260,11 +262,20 @@ public class Transaction {
         os.persist(o);
         //WYSŁANIE ZAPYTANIA DO BANKU B
         HttpURLConnection connection = null;
-        try{
-            
-        }
-        catch(Exception e){
-            
+        try {
+            URL url = new URL("http://localhost/bankB/api/constructor/endpoint.php?endPoint"
+                    + "&senderAccountnumber=PL" + URLEncoder.encode(senderAccountnumber, StandardCharsets.UTF_8.toString())
+                    + "&senderName=" + URLEncoder.encode(senderName, StandardCharsets.UTF_8.toString())
+                    + "&senderAddress=" + URLEncoder.encode(senderAddress, StandardCharsets.UTF_8.toString())  
+                    + "&recipientAccountnumber=PL" + URLEncoder.encode(recipientAccountnumber.replaceAll("[^a-zA-Z0-9]", ""), StandardCharsets.UTF_8.toString())
+                    + "&recipientName=" + URLEncoder.encode(recipientName, StandardCharsets.UTF_8.toString())
+                    + "&recipientAddress=" + URLEncoder.encode(recipientAddress, StandardCharsets.UTF_8.toString()) 
+                    + "&paymentTitle=" + URLEncoder.encode(paymentTitle, StandardCharsets.UTF_8.toString())
+                    + "&paymentAmount=" + URLEncoder.encode(amount.toString(), StandardCharsets.UTF_8.toString()));
+            connection = (HttpURLConnection) url.openConnection();
+            InputStream is = connection.getInputStream(); //url.openStream();
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 
