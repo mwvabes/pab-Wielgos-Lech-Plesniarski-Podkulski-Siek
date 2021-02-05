@@ -36,6 +36,8 @@ exports.getCurrentSession = () => {
     if (closestSession == undefined) {
       closestSession = sessionsConf[0]
       daysToAdd = 1
+      if (currentDate.getDay() == 5) daysToAdd+=2
+      if (currentDate.getDay() == 6) daysToAdd+=1
     }
     currentSessionAvailable = currentDate.getFullYear() + "" + ("0" + (currentDate.getMonth() + 1)).slice(-2) + "" + ("0" + (currentDate.getDate() + daysToAdd)).slice(-2) + "" + closestSession.sessionName
   }
