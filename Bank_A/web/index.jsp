@@ -20,7 +20,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- <title>Logowanie</title> -->
+        <title>Bank A</title>
 
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/global.css" />
@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="right">
                         <div class="logo">
-                            <img src="icons/ryba_logo.png" alt="">
+                            
                         </div>
                     </div>
                     <div class="left">

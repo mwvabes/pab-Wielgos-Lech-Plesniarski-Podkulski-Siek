@@ -259,6 +259,13 @@ public class Transaction {
                 paymentTitle);
         os.persist(o);
         //WYSŁANIE ZAPYTANIA DO BANKU B
+        HttpURLConnection connection = null;
+        try{
+            
+        }
+        catch(Exception e){
+            
+        }
     }
 
     public void receiveExpressTransaction(String senderAccountnumber, String senderName, String senderAddress,

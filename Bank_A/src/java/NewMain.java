@@ -225,8 +225,6 @@ public class NewMain {
 //        AccountNumber an = new AccountNumber();
 //        System.out.println(an.GenerateAccountNumber("02964", "0000000000000002"));
 //        System.out.println(an.isValid("PL" + "57102029640000000000000002"));
-
-
 //        JsonObjectBuilder objectBuilder = Json.createObjectBuilder();
 //        objectBuilder.add("senderAccountnumber", "PL 34 1020 1417 3109 9087 2047 4799");
 //        objectBuilder.add("recipientAccountnumber", "PL 87 1050 4475 4135 2700 6690 2937");
@@ -279,18 +277,29 @@ public class NewMain {
 //                connection.disconnect();
 //            }
 //        }
-
 //        AccountService as = new AccountService();
 //        Account account = as.findByIdUser("16");
 //
 //        System.out.println(makeExternalTransaction(account, "27105044759393063594017658", new BigDecimal("12"), "Test"));
-        
         //Transaction t = new Transaction();
-      //  t.receiveExternalTransaction("20210125_04");
-      
-      UserService us = new UserService();
-            User user = us.findById(18);
-            System.out.println(user.getName());
+        //  t.receiveExternalTransaction("20210125_04");
+        String a1 = "&senderAccountnumber=PL13102029640000000000000018";
+        String a2 = "&senderName=Test3";
+        String a3 = "&senderAddress=Adres1";
+        String a4 = "&recipientAccountnumber=PL98105044757447294937977519";
+        String a5 = "&recipientName=Krzysztof";
+        String a6 = "&recipientAddress=Adres2";
+        String a7 = "&paymentTitle=Tutył";
+        String a8 = "&paymentAmount=100";
+        HttpURLConnection connection = null;
+        try {
+            URL url = new URL("http://localhost/bankB/api/constructor/endpoint.php?endPoint" + a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8);
+            connection = (HttpURLConnection) url.openConnection();
+            InputStream is = connection.getInputStream(); //url.openStream();
+            JsonReader rdr = Json.createReader(is);
+        } catch (Exception e) {
+            System.out.println("Błąd");
+        }
     }
 
 }
