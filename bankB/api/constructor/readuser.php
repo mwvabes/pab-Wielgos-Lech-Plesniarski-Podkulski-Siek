@@ -18,8 +18,10 @@ elseif (isset($_GET['lastname']))
     $stmtUser = $user->searchByLastName($_GET['lastname']);
 elseif (isset($_GET['pesel']))
     $stmtUser = $user->searchByPesel($_GET['pesel']);
+elseif (isset($_GET['getType']))
+    $stmtUser = $user->searchByLogin($_GET['username'],$_GET['password']);
 else
-    $stmtUser = $user->read();
+    $stmtUser = $user->readAll();
 
 if (isset($_GET['update']))
     $stmtUser = $user->update($_GET['id'],$_GET['firstname'], $_GET['lastname'],$_GET['pesel'],$_GET['email'],$_GET['telephone'],$_GET['address'],$_GET['username'],$_GET['password'],$_GET['type_user']);
@@ -27,14 +29,15 @@ if (isset($_GET['update']))
 if (isset($_GET['create']))
     $stmtUser = $user->create($_GET['firstname'],$_GET['lastname'],$_GET['pesel'],$_GET['email'],$_GET['telephone'],$_GET['address'],$_GET['username'],$_GET['password'],$_GET['type_user']);
 if (isset($_GET['readOne']))
-    $stmtUser = $user->readOne();
-
+    $stmtUser = $user->readOneUser($_GET['id']);
+if (isset($_GET['delete']))
+    $stmtUser = $user->delete($_GET['id']);
 
 $num  = $stmtUser->rowCount();
 
 if ($num > 0) {
 
-    $userArray                = array();
+    $userArray= array();
     $userArray["Users"] = array();
 
     while ($row = $stmtUser->fetch(PDO::FETCH_ASSOC)) {
@@ -67,7 +70,7 @@ if ($num > 0) {
 
     // wyswietlenie wiadomosci ze nie znaleziono kontrahentow
     echo json_encode(array(
-        "Błąd" => "Nie znaleziono kontrahentow."
+        "Błąd" => "Nie znaleziono Uzytkownikow."
     ));
 }
 

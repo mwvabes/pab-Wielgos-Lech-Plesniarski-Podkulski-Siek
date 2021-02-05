@@ -27,7 +27,14 @@ class User
         return $stmt;
     }
 
-    function readOne($id){
+    function searchByLogin($username,$password){
+        $query = "SELECT * FROM user where username='$username' AND password='$password'";
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+
+    function readOneUser($id){
         $query = "SELECT * FROM user WHERE id = $id";
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
@@ -58,42 +65,7 @@ class User
         $stmt->execute();
         return $stmt;
     }
-    function searchByEmail($email){
-        $query = "SELECT * FROM user WHERE email LIKE '%$email%' order by email";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-    function searchByTelephone($telephone){
-        $query = "SELECT * FROM user WHERE telephone LIKE '%$telephone%' order by telephone";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-    function searchByAddress($address){
-        $query = "SELECT * FROM user WHERE address LIKE '%$address%' order by address";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-    function searchByUsername($username){
-        $query = "SELECT * FROM user WHERE username LIKE '%$username%' order by username";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-    function searchByPassword($password){
-        $query = "SELECT * FROM user WHERE password LIKE '%$password%' order by password";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
-    function searchByTypeUser($type_user){
-        $query = "SELECT * FROM user WHERE type_user LIKE '%$type_user%' order by type_user";
-        $stmt = $this->connection->prepare($query);
-        $stmt->execute();
-        return $stmt;
-    }
+
 
     function update($id, $firstname, $lastname, $pesel, $email, $telephone,$address,$username,$password,$type_user){
         $query = "UPDATE user SET firstname = '$firstname',
@@ -115,14 +87,16 @@ class User
         $username = htmlspecialchars(strip_tags($username));
         $password = htmlspecialchars(strip_tags($password));
         $type_user = htmlspecialchars(strip_tags($type_user));
-        $query = "INSERT INTO kontrahent
+        $query = "INSERT INTO user
         (firstname, lastname, pesel, email, telephone,address,username,password,type_user)
-        VALUES ('$firstname', '$lastname', '$pesel', ' $email', '$telephone', '$address',' $username', '$password', '$type_user')";
+        VALUES ('$firstname', '$lastname', '$pesel', '$email', '$telephone', '$address','$username', '$password', '$type_user')";
         $stmt  = $this->connection->prepare($query);
-        //$stmt->execute();
+
         if ($stmt->execute()) {
             return $stmt;
+
         }
+
         function getId()
         {
             $query = "SELECT id FROM user";

@@ -18,21 +18,27 @@ class Account
         $stmt->execute();
         return $stmt;
     }
-    function read_idAccount($id)
-    {
-        // zapytanie wyswietlajace kontrahentow po NIP'ie
-        $query = "SELECT * FROM account WHERE id_kontrahenta = '$id'";
-
-        // wykonanie zapytania
+    function readOneAccountUser(){
+        $query = "SELECT firstname FROM `account` inner join user on account.id_user=user.id";
         $stmt = $this->connection->prepare($query);
-
-        // execute query
         $stmt->execute();
-
         return $stmt;
     }
-    function readOne($id_account){
-        $query = "SELECT * FROM account WHERE id_account = '$id_account'";
+    function showMyAccount($id_user){
+
+        $query = "SELECT * FROM `account` where id_user='$id_user'";
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+    function readOneAccount($id_account){
+        $query = "SELECT * FROM `account` WHERE id_account = '$id_account'";
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+    function readOneAccountByNumber($account_number){
+        $query = "SELECT * FROM `account` WHERE account_number = '$account_number'";
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
         return $stmt;
@@ -63,6 +69,18 @@ class Account
     }
     function update($id_account, $account_number, $balance, $id_user){
         $query = "UPDATE account SET account_number = '$account_number', balance = '$balance', id_user = '$id_user'WHERE id_account = $id_account";
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+    function settingAccountBalancePlus($account_number, $balance){
+        $query = "UPDATE account SET balance = (balance+'$balance') WHERE account_number = '$account_number'";
+        $stmt = $this->connection->prepare($query);
+        $stmt->execute();
+        return $stmt;
+    }
+    function settingAccountBalanceMinus($account_number, $balance){
+        $query = "UPDATE account SET balance = (balance-'$balance') WHERE account_number = '$account_number'";
         $stmt = $this->connection->prepare($query);
         $stmt->execute();
         return $stmt;
