@@ -243,6 +243,9 @@ class Operation{
                             //$isPayment2=$result_payment['message'];
 
 
+
+
+
                             // send to bank a with express payment
                             $url_download_token = 'https://jr-api-express.herokuapp.com/api/auth/login';
                             $data_download_token = array('username' => 'b105', 'password' => 'operator6');
@@ -252,7 +255,7 @@ class Operation{
                             //take token
 
                             //send normal payment
-                            $url_send_normal_payment = 'https://jr-api-express.herokuapp.com/api/payment';
+                            $url_send_normal_payment = 'https://localhost:8080/Bank_A/dejlli/create';
                             $data_send_normal_payment = array(
                                 'senderAccountnumber' => $account_number,
                                 'senderName' => $sender_name,
@@ -303,18 +306,18 @@ class Operation{
     }
 
     function doPaymentBack($sender_number,$sender_name,$sender_address,$recipent_number,$recipent_name,$recipent_address,$title,$amount){
-                        $query = "UPDATE account SET balance = (balance+'$amount') WHERE account_number = 'PL98105044758332285663955814'";
-                        $stmt = $this->connection->prepare($query);
-                        $stmt->execute();
-                        if($stmt){
-                            echo 'cos';
-                        }else{
-                            echo 'cos2';
-                        }
-                        $query ="Select id_account from account where account_number='PL98105044758332285663955814'";
+                        $query ="Select id_account from account where account_number='PL98105044751144856531642383'";
                         $stmt = $this->connection->prepare($query);
                         $stmt->execute();
                         $SingleVar = $stmt->fetchColumn();
+                        $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','Not found a number: $recipent_number','$amount','save cash on bank payback acoount','$sender_number','$sender_name','$sender_address','PL98105044751144856531642383','Bank B Payback',  'Rzeszow 10a', 'gained', NOW())";
+                        $stmt = $this->connection->prepare($query);
+                        $stmt->execute();
+                        $query = "UPDATE account SET balance = (balance+'$amount') WHERE account_number = 'PL98105044751144856531642383'";
+                        $stmt = $this->connection->prepare($query);
+                        $stmt->execute();
+
+
                         //take token
                         $url_download_token = 'https://jr-api-express.herokuapp.com/api/auth/login';
                         $data_download_token = array('username' => 'b105', 'password' => 'operator6');
@@ -326,7 +329,7 @@ class Operation{
                         //send normal payment
                         $url_send_normal_payment = 'https://jr-api-express.herokuapp.com/api/payment';
                         $data_send_normal_payment = array(
-                            'senderAccountnumber' => 'PL98105044758332285663955814',
+                            'senderAccountnumber' => 'PL98105044751144856531642383',
                             'senderName' => 'Bank_B_Payback',
                             'senderAddress' => 'Bank_B_address',
                             'recipientAccountnumber' => $sender_number,
@@ -336,7 +339,6 @@ class Operation{
                             'paymentAmount' => $amount,
                             'currency' => 'PLN',
                         );
-
                         $result_payment=$this->getAcceptedPayment($url_send_normal_payment,$token,$data_send_normal_payment);
                         $result_payment =json_decode($result_payment,true);
                         $isPayment=$result_payment['isPaymentAccepted'];
@@ -344,11 +346,11 @@ class Operation{
                         if($isPayment==1){
                             $_SESSION['fails_payment']='Payment accepted. Send to recipient and realization.';
                             //save payment inside bank
-                            $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','$title','$amount','normal Payback','PL98105044758332285663955814','$recipent_name'.'Bank B Payback', '$recipent_address'.'Bank B Payback',  '$sender_number','$sender_name', '$sender_address', 'sended', NOW())";
+                            $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','PayBack for  $recipent_number','$amount','normal Payback','PL98105044751144856531642383','$recipent_name Bank B Payback', '$recipent_address Bank B Payback',  '$sender_number','$sender_name', '$sender_address', 'sended', NOW())";
                             $stmt = $this->connection->prepare($query);
                             $stmt->execute();
 
-                            $query = "UPDATE account SET balance = (balance-'$amount') WHERE account_number = 'PL98105044758332285663955814'";
+                            $query = "UPDATE account SET balance = (balance-'$amount') WHERE account_number = 'PL98105044751144856531642383'";
                             $stmt = $this->connection->prepare($query);
                             $stmt->execute();
                             if($stmt){
@@ -360,10 +362,9 @@ class Operation{
                         }else{
 
                             //save payment inside bank
-                            $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','$title','$amount','normal Payback','PL98105044758332285663955814','Bank B Payback', 'Bank B Payback',  '$sender_number','$sender_name', '$sender_address', 'declined', NOW())";
-                            $stmt = $this->connection->prepare($query);
+                            $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','payback $recipent_number','$amount','normal Payback','PL98105044751144856531642383','$recipent_name Bank B Payback', '$recipent_address Bank B Payback',  '$sender_number','$sender_name', '$sender_address', 'declined', NOW())";                            $stmt = $this->connection->prepare($query);
                             $stmt->execute();
-                            //save payment inside bank
+
 
                         }
 

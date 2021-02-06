@@ -18,7 +18,8 @@ if((isset($_GET['readAboutAccount'])))
 elseif ((isset($_GET['sent'])))
     $stmtOperation = $operation->doPayment($_GET['id_account'],$_GET['account_number'],$_GET['balance'],$_GET['amount'],$_GET['title'],$_GET['recipent_number'],$_GET['recipent_name'],$_GET['recipent_address'],$_GET['sender_name'],$_GET['sender_address'],$_GET['type_payment']);
 elseif ((isset($_GET['sentPayback'])))
-    $stmtOperation = $operation->doPaymentBack($_GET['sender_number'],$_GET['sender_address'],$_GET['sender_address'],$_GET['recipent_number'],$_GET['recipent_name'],$_GET['recipent_address'],$_GET['title'],$_GET['amount']);
+    $stmtOperation = $operation->doPaymentBack($_GET['sender_number'],$_GET['sender_name'],$_GET['sender_address'],$_GET['recipent_number'],$_GET['recipent_name'],$_GET['recipent_address'],
+        $_GET['title'],$_GET['amount']);
 elseif ((isset($_GET['readBeforePayment'])))
     $stmtOperation = $operation->readBeforePayment($_GET['id_account']);
 else

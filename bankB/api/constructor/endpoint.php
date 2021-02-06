@@ -7,10 +7,27 @@ $database=new Database();
 $db=$database->getConnection();
 
 $paymentEndPoint=new PaymentEndpoint($db);
+
 if(isset($_GET['endPoint'])) {
     $stmtpaymentEndpoint = $paymentEndPoint->doPayment2($_GET['senderAccountnumber'], $_GET['senderName'], $_GET['senderAddress'], $_GET['recipientAccountnumber'], $_GET['recipientName'], $_GET['recipientAddress'], $_GET['paymentTitle'], $_GET['paymentAmount']);
+  if(is_int($stmtpaymentEndpoint)){
+      echo json_encode(array(
+          "isThisNumber" => false,
+          "senderAccountnumber"=> $_GET['senderAccountnumber'],
+          "senderName" => $_GET['senderName'],
+          "senderAddress"=> $_GET['senderAddress'],
+          "recipientAccountnumber"=>$_GET['recipientAccountnumber'],
+          "recipientName"=> $_GET['recipientName'],
+          "recipientAddress"=>  $_GET['recipientAddress'],
+          "paymentTitle"=> $_GET['paymentTitle'],
+          "paymentAmount"=> $_GET['paymentAmount'],
+      ));
+        return ;
+    }else{
+      $num  = $stmtpaymentEndpoint->rowCount();
+  }
 
-    $num  = $stmtpaymentEndpoint->rowCount();
+
 // sprawdzanie czy znaleziono wiecej niz 0 rekordow
 }else{
     // ustawienie kodu odpowiedzi na - 404 Not found

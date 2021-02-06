@@ -80,11 +80,9 @@ $id_user=$_SESSION['zalogowany'];
 
         <?php
         if(isset($_SESSION['fails_payment'])){
-            echo '<div class="card mb-3 mr-5 ml-5 text-center">
-            <div class="card-body">
-                <h1>'.$_SESSION['fails_payment'].'<div class="Failed to send payment.</h1>
-            </div>
-        </div>';
+                echo"<div class=\"card mb-3 mr-5 ml-5 text-center\"><div class=\"card-body\"><h1>";
+                echo $_SESSION['fails_payment'];
+                echo "</h1></div></div>";
             unset($_SESSION['fails_payment']);
         }
         if (isset($_GET['set_table']) && $_GET['set_table'] == 'Logout')
@@ -347,7 +345,7 @@ $id_user=$_SESSION['zalogowany'];
                                 <div class="col-12 text-center">
                                     <div class="card mb-3 mr-5 ml-5 text-center">
                                         <div class="card-body">
-                                            <form  method="get" action="http://localhost/bankB/api/constructor/readoperation.php?sent=" target="dummyframe" onsubmit="setTimeout(function(){location.replace('http://localhost/bankB/user.php');},10);">
+                                            <form  method="get" action="http://localhost/bankB/api/constructor/readoperation.php?sent=" target="dummyframe" onsubmit="setTimeout(function(){location.replace('http://localhost/bankB/admin.php');},10);">
                                                 <input type="hidden" value="<?php echo $value->id_account; ?>" name="id_account"/>
                                                 <input type="hidden" value="<?php echo $pros=$value->id_user; ?>" name="id_user"/>
                                                 <input type="hidden" value="<?php echo $value->account_number; ?>"name="account_number" class="form-control">
@@ -411,6 +409,14 @@ $id_user=$_SESSION['zalogowany'];
                                                     <h4><strong>Recipnent's account address: </strong></h4>
                                                     <input type="text" name="recipent_address" class="form-control" required>
                                                 </div>
+                                                <div class="form-group">
+                                                <h4><strong>Type of Payment: </strong></h4>
+                                                <select class="custom-select mr-sm-2" name="type_payment">
+                                                    <option value="normal" selected>Normal</option>
+                                                    <option value="express">Express (2.50 zł extra)</option>
+
+                                                </select>
+                                        </div>
                                                 <button type="submit" name="sent" value="sent" class="btn btn-primary">Send Payment</button>
                                             </form>
                                         </div>
@@ -455,8 +461,6 @@ $id_user=$_SESSION['zalogowany'];
                 <th>Amount </th>
                 <th>Status</th>
                 <th>Date</th>
-
-                <th colspan="2">More</th>
                 </thead>
                 <tbody>
             <?php
@@ -489,17 +493,12 @@ $id_user=$_SESSION['zalogowany'];
 
                             <td><?php echo $value->status; ?></td>
                             <td><?php echo $value->date; ?></td>
-                            <td><button class="btn btn-primary btn-sm" type="submit" name="action" value="edit user">Edit User</button></td>
-                            <td><button class="btn btn-primary btn-sm" type="submit" name="action" value="delete user">Delete User</button></td>
                         </tr>
                     </form>
                     <?php
                 }?>
                 </tbody>
                 </table>
-                <form method="get">
-                    <button class="btn btn-primary btn-sm"  type="submit" name="add" value="Add User">Add New Operation</button>
-                </form>
                 </div>
                 </div>
                 <?php
@@ -906,43 +905,43 @@ $id_user=$_SESSION['zalogowany'];
                 foreach ($arr->r as $key => $value) { //przypisanie pobranych wartosci
                     $senderAccountNumber=$value->senderAccountnumber;
                     $recipentAccountNumber=$value->recipientAccountnumber;
-                    $title=$value->paymentTitle;
-                    $amount=$value->paymentAmount;
-                    $status=$value->paymentStatus;
-                    $title=rawurlencode($title);
-                    $type="normal";
-                    $senderName="normal";
-                    $senderAddress="normal";
-                    $recipientName="normal";
-                    $recipientAddress="normal";
-                    $recipentAccountNumber='PL34102014173109908720474799';
-                    $date="cos";
+                    $senderName=rawurlencode($value->senderName);
+                    $senderAddress=rawurlencode($value->senderAddress);
+                    $recipientName=rawurlencode($value->recipientName);
+                    $recipientAddress=rawurlencode($value->recipientAddress);
+                    $paymentTitle=rawurlencode($value->paymentTitle);
+                    $paymentAmount=$value->paymentAmount;
+                    $paymentStatus=$value->paymentStatus;
+
                     // sprawdzenie czy jest taki numer w banku
-                    $json1 = file_get_contents("http://localhost/bankB/api/constructor/readaccount.php?readOneAccountByNumber=&account_number=".$recipentAccountNumber);
+                    @$json1 = file_get_contents("http://localhost/bankB/api/constructor/readaccount.php?readOneAccountByNumber=&account_number=".$recipentAccountNumber);
                     if($json1){
                         $arr = json_decode($json1);
                         foreach ($arr->Accounts as $key => $value) {
                             $id_account = $value->id_account;
                         }
-                        $title=rawurlencode($title);
                         //Zapisanie przelewu otrzymanego w banku
-                        $json2 = @file_get_contents("http://localhost/bankB/api/constructor/readoperation.php?create=&id_account=".$id_account."&title=".$title."&amount=".$amount."&type_payment=".$type."&sender_number=".$senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress."&recipent_number=".$recipentAccountNumber."&recipent_address=".$recipientName."&recipent_name=".$recipientAddress."&status=".$status."&date=".$date);
+                        $json2 = @file_get_contents("http://localhost/bankB/api/constructor/readoperation.php?create=&id_account=".$id_account."&title=".$paymentTitle.
+                            "&amount=".$paymentAmount."&type_payment=outside&sender_number=".$senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress.
+                            "&recipent_number=".$recipentAccountNumber."&recipent_address=".$recipientName."&recipent_name=".$recipientAddress."&status=".$paymentStatus."&date=NOW()");
                         if($json2){//przypisanie otrzymanie kwoty
-                            $json4= @file_get_contents("http://localhost/bankB/api/constructor/readaccount.php?setAccountBalancePlus=&account_number=".$recipentAccountNumber."&balance=".$amount);
+                            echo $recipentAccountNumber." ".$paymentAmount;
+                            $json4= @file_get_contents("http://localhost/bankB/api/constructor/readaccount.php?setAccountBalancePlus=&account_number=".$recipentAccountNumber."&balance=".$paymentAmount);
                             if($json4){//powiodlo sie
-                                echo "succcess";
+                                echo "cash to recipient sucesss<br/>";
                             }else{
-                                echo "failleeed";
+                                echo "cash to recipient failed<br/>";
                             }
-                            echo "sucess";
+
                         }else{
-                            echo "failed";
+                            echo "save payment to recipient failed <br/>";
                         }
                     }else{// jesli nie znaleziono takiego numeru to zapis na zwrot bankowy i wykonanie przelewu powrotnego
-
-                        $json4=file_get_contents("http://localhost/bankB/api/constructor/readoperation.php?sentPayback=&sender_number=".$senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress."&recipent_number=".$recipentAccountNumber."&recipent_name=".$recipientName."&recipent_address=".$recipientAddress."&title=".$title."&amount=".$amount);
+                        $json4=file_get_contents("http://localhost/bankB/api/constructor/readoperation.php?sentPayback=&sender_number=".
+                            $senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress."&recipent_number=".$recipentAccountNumber.
+                            "&recipent_name=".$recipientName."&recipent_address=".$recipientAddress."&title=".$paymentTitle."&amount=".$paymentAmount);
                         if($json4){
-                            echo "succcess";
+                            echo "success send Payback";
                         }else{
                             echo "failleee payback";
                         }

@@ -78,7 +78,9 @@ $id_user=$_SESSION['zalogowany'];
         </h4>
         <?php
         if(isset($_SESSION['fails_payment'])){
-            echo "<h1>".$_SESSION['fails_payment']."</h1>";
+            echo"<div class=\"card mb-3 mr-5 ml-5 text-center\"><div class=\"card-body\"><h1>";
+            echo $_SESSION['fails_payment'];
+            echo "</h1></div></div>";
             unset($_SESSION['fails_payment']);
         }
         if (isset($_GET['set_table']) && $_GET['set_table'] == 'Logout')
