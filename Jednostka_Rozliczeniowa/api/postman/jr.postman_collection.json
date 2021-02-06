@@ -1,0 +1,47 @@
+{
+	"info": {
+		"_postman_id": "10007f78-5a38-4246-ada9-0d0c3f7265c3",
+		"name": "jr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "validateAccountNumber",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/validatenumber?accountnumber=PL 85 1050 4475 6311 7698 7831 7488 1785",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"validatenumber"
+					],
+					"query": [
+						{
+							"key": "accountnumber",
+							"value": "PL 85 1050 4475 6311 7698 7831 7488 1785"
+						}
+					]
+				},
+				"description": "Proper number: PL 40 1020 2964 5040 9093 8192 5554 4792"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

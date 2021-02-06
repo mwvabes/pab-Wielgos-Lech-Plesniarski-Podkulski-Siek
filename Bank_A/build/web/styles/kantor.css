@@ -1,0 +1,291 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #858585;
+  margin: 20px;
+}
+
+.exchangeWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #858585;
+}
+
+.exchangeCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.exchangeInputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 60px;
+  color: #858585;
+}
+
+.exchangeCard {
+  border: 1px solid #4E8098;
+  border-radius: 0px 16px 16px 0px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 15px 5px #CED3DC;
+          box-shadow: 0px 0px 15px 5px #CED3DC;
+}
+
+.exchangeWrapper label {
+  margin: 15px 5px 5px;
+}
+
+.exchangeWrapper input, .exchangeWrapper select {
+  font-family: 'Fira Sans', sans-serif;
+  color: #4E8098;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.exchangeCard button {
+  font-family: 'Fira Sans', sans-serif;
+  border: 0px;
+  padding: 10px;
+  color: #4E8098;
+  font-size: 1.6rem;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-left: 1px solid #4E8098;
+}
+
+.exchangeCard button img {
+  height: 50px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.exchangeProperties {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.exchangeResult {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.exchangeResult input {
+  color: #F9F9F9;
+  background-color: #4E8098;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.exchangeRateInfo {
+  padding: 20px;
+  border-bottom: 1px solid #CED3DC;
+}
+
+.ratings {
+  margin: 20px;
+  border: 1px solid #4E8098;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #858585;
+  max-height: 380px;
+  overflow-y: scroll;
+}
+
+.ratings .values {
+  color: #4E8098;
+  font-weight: bold;
+}
+
+.ratings::-webkit-scrollbar {
+  width: 8px;
+}
+
+.ratings::-webkit-scrollbar-track {
+  background: #CED3DC;
+}
+
+.ratings::-webkit-scrollbar-thumb {
+  background-color: #4E8098;
+  border-radius: 4px;
+  border: 1px solid #858585;
+}
+
+.ratings img {
+  height: 1.3rem;
+}
+
+.ratingHeader, .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 10px;
+  border-bottom: 1px solid #CED3DC;
+}
+
+.ratingHeader {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.rating .naming, .rating .values {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0px 10px;
+}
+
+.rating {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.rating .naming img {
+  margin-right: 10px;
+}
+
+.rating .values img {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1261px) {
+  .ratings {
+    max-width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .ratings {
+    margin: 0px;
+  }
+  .exchangeWrapper, .exchangeProperties {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .exchangeCard {
+    border: 0px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .exchangeCard button {
+    border-radius: 0px 0px 16px 16px;
+    border: 1px solid #CED3DC;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .exchangeCard button img {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    max-height: 30px;
+    padding: 0px;
+    margin-left: 20px;
+  }
+  .exchangeInputs {
+    padding: 10px 0px;
+  }
+  .exchangeCard {
+    width: 100%;
+  }
+  .title {
+    margin: 0px;
+  }
+  .ratings {
+    margin-top: 20px;
+    overflow-y: unset;
+    max-height: unset;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=kantor.css.map */

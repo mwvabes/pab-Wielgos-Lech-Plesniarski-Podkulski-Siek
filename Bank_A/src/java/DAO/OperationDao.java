@@ -1,0 +1,107 @@
+
+package DAO;
+
+import Tables.Account;
+import Tables.Operation;
+
+import java.util.List;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+
+public class OperationDao {
+    
+    private Session currentSession;
+	
+	private Transaction currentTransaction;
+
+	public OperationDao() {
+	}
+
+	public Session openCurrentSession() {
+		currentSession = getSessionFactory().openSession();
+		return currentSession;
+	}
+
+	public Session openCurrentSessionwithTransaction() {
+		currentSession = getSessionFactory().openSession();
+		currentTransaction = currentSession.beginTransaction();
+		return currentSession;
+	}
+	
+	public void closeCurrentSession() {
+		currentSession.close();
+	}
+	
+	public void closeCurrentSessionwithTransaction() {
+		currentTransaction.commit();
+		currentSession.close();
+	}
+	
+	private static SessionFactory getSessionFactory() {
+		Configuration configuration = new Configuration().configure();
+		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
+				.applySettings(configuration.getProperties());
+		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
+		return sessionFactory;
+	}
+
+	public Session getCurrentSession() {
+		return currentSession;
+	}
+
+	public void setCurrentSession(Session currentSession) {
+		this.currentSession = currentSession;
+	}
+
+	public Transaction getCurrentTransaction() {
+		return currentTransaction;
+	}
+
+	public void setCurrentTransaction(Transaction currentTransaction) {
+		this.currentTransaction = currentTransaction;
+	}
+
+	public void persist(Operation entity) {
+		getCurrentSession().save(entity);
+	}
+
+	public void update(Operation entity) {
+		getCurrentSession().update(entity);
+	}
+
+	public Operation findById(String id) {
+		Operation operation = (Operation) getCurrentSession().get(Operation.class, id);
+		return operation; 
+	}
+        
+        public List<Operation> findByNumber(String number) {
+                String hql = "select o from operation o where o.sender_number = :number or o.recipent_number = :number order by id_operation desc";
+                Query query = getCurrentSession().createQuery(hql);
+                query.setParameter("number", number);
+		List<Operation> operation = (List<Operation>) query.list();
+                return operation;
+	}
+
+	public void delete(Operation entity) {
+		getCurrentSession().delete(entity);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Operation> findAll() {
+		List<Operation> users = (List<Operation>) getCurrentSession().createQuery("from user").list();
+		return users;
+	}
+
+	public void deleteAll() {
+		List<Operation> entityList = findAll();
+		for (Operation entity : entityList) {
+			delete(entity);
+		}
+	}
+        
+    
+}

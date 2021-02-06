@@ -1,0 +1,156 @@
+$red: #A31621;
+$blue: #4E8098;
+$grey: #858585;
+$mediumgrey: #CED3DC;
+$lightgrey: #F9F9F9;
+$green: #508104;
+$greyfilter: invert(99%) sepia(1%) saturate(32%) hue-rotate(37deg) brightness(113%) contrast(89%);
+
+
+.container {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: $grey;
+  margin: 20px;
+}
+
+.contactRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: 20px;
+}
+
+.contactSection {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.contactCard {
+  flex: 3;
+  border-radius: 16px;
+  border: 1px solid $lightgrey;
+  box-shadow: 0px 0px 5px 3px $mediumgrey;
+  display: flex;
+  flex-direction: column;
+  color: $grey;
+}
+
+.contactCard ul {
+  list-style-type: disc;
+}
+
+.contactCard li {
+  margin-left: 20px;
+}
+
+.contactCardLeft {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.contactMap {
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  min-height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(./../../icons/map.png);
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.contactCardRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.contactCard a {
+  color: $blue;
+}
+
+.contactCard h2 {
+  font-size: 1.6rem;
+  color: $blue;
+  margin-bottom: 10px;
+}
+
+.contactSection img {
+  height: 55px;
+}
+
+.contactAction {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./../../icons/circlegrid_14_3.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  margin: 20px;
+  padding: 15px;
+}
+
+.contactAction button {
+  background-color: $red;
+  padding: 10px 20px;
+  border: 0px;
+  color: #FFF;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
+  min-width: 270px;
+}
+
+.contactPAction {
+  margin-top: 10px;
+  color: $blue;
+}
+
+.contactFullCard {
+  flex: 1;
+  position: relative;
+}
+
+@media screen and (max-width: 1260px) {
+  .contactSection {
+    flex-direction: column;
+  }
+
+  .contactRow, .contactCard {
+    flex-direction: column;
+  }
+
+  .contactAction button {
+    background-color: $red;
+    padding: 10px 20px;
+    border: 0px;
+    color: #FFF;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    min-width: 20px;
+  }
+
+}

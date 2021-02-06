@@ -1,0 +1,30 @@
+[
+    {
+      "bankID": "102",
+      "bankName": "PKO BP",
+      "bankUnits": [
+        {
+          "unitID": "02964",
+          "unitAddress": "Grunwaldzka 1, 21-035 Rzeszów"
+        },
+        {
+          "unitID": "01417",
+          "unitAddress": "Al. Jerozolimskie 99, 00-012 Warszawa"
+        }
+      ]
+    },
+    {
+      "bankID": "105",
+      "bankName": "ING Bank Śląski",
+      "bankUnits": [
+        {
+          "unitID": "04475",
+          "unitAddress": "Jana Pawła II 5/8, 21-035 Rzeszów"
+        },
+        {
+          "unitID": "01416",
+          "unitAddress": "Rokitnicka 20, 02-131 Warszawa"
+        }
+      ]
+    }
+  ]
