@@ -19,8 +19,8 @@
     "sessionName": "_03",
     "hourClose": "15:00",
     "hourStartClearance": "15:10",
-    "hourStopClearance": "23:55",
-    "hourAnnounce": "23:00",
+    "hourStopClearance": "17:55",
+    "hourAnnounce": "18:00",
     "verifyBoundary": "1000.00"
   }
 ]
