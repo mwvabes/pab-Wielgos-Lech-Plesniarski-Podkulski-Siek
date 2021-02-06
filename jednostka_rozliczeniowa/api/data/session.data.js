@@ -167,9 +167,9 @@ exports.getCurrentlyServedSession = () => {
   if (weekDay == 0) {
     return null
   }
-  else if (weekDay == 6) {
-    return null
-  }
+  // else if (weekDay == 6) {
+  //   return null
+  // }
   else {
 
     let session = sessionsConf.find(s => Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) > Date.parse(`01/01/1970/ ${s.hourClose}`) && Date.parse(`01/01/1970/ ${currentDate.getHours()}:${currentDate.getMinutes()}`) < Date.parse(`01/01/1970/ ${s.hourAnnounce}`))
