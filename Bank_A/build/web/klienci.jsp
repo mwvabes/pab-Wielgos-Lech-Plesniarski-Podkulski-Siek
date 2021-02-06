@@ -96,7 +96,6 @@
                                 <td>Adres</td>
                                 <td>Kontakt</td>
                                 <td>Edytuj</td>
-                                <td>Usuń</td>
                             </tr>
                             <%
                                 for (int i = 0; i < users.size(); i++) {
