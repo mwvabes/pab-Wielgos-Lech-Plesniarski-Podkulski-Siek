@@ -290,7 +290,7 @@ schedule.scheduleJob({ hour: 14, minute: 45 }, () => {
   paymentData.settlePayments()
 })
 
-schedule.scheduleJob({ hour: 16, minute: 45 }, () => {
+schedule.scheduleJob({ hour: 17, minute: 55 }, () => {
   console.log("Settling payments by scheduler _03")
   paymentData.settlePayments()
 })
