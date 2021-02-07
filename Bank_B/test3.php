@@ -57,7 +57,7 @@ function getPaymentList(){
                    $number2=$value->paymentTitle;
                    $number3=$value->paymentAmount;
                    $number4=$value->paymentStatus;
-                   $number2=rawurlencode($nu)
+                   $number2=rawurlencode($number);
                    $type="normal";
                    $senderName="normal";
                    $senderAddress="normal";

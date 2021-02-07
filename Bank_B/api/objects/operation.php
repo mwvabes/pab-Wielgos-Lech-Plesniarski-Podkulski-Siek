@@ -180,11 +180,7 @@ class Operation{
 
                             return 0;
                         }else{
-
-
-
-
-                            $_SESSION['fails_payment']="ekspresowy";
+                            $_SESSION['fails_payment']="Express Payment accepted and realized.";
                             $amount2= $amount+2.5;
 
    /* user's acc  */        $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$id_account','$title','$amount2','$type_payment','$account_number','$sender_name', '$sender_address',  '$recipent_number','$recipent_name', '$recipent_address', 'sended', NOW())";
@@ -241,11 +237,6 @@ class Operation{
                             $isPayment=$result_payment['isPaymentAccepted'];
                             // send to unit of account
                             //$isPayment2=$result_payment['message'];
-
-
-
-
-
                             // send to bank a with express payment
                             $url_download_token = 'https://jr-api-express.herokuapp.com/api/auth/login';
                             $data_download_token = array('username' => 'b105', 'password' => 'operator6');
@@ -253,7 +244,6 @@ class Operation{
                             $result = json_decode($token,true);
                             $token=$result['token'];
                             //take token
-
                             //send normal payment
                             $url_send_normal_payment = 'https://localhost:8080/Bank_A/dejlli/create';
                             $data_send_normal_payment = array(
@@ -316,8 +306,6 @@ class Operation{
                         $query = "UPDATE account SET balance = (balance+'$amount') WHERE account_number = 'PL98105044751144856531642383'";
                         $stmt = $this->connection->prepare($query);
                         $stmt->execute();
-
-
                         //take token
                         $url_download_token = 'https://jr-api-express.herokuapp.com/api/auth/login';
                         $data_download_token = array('username' => 'b105', 'password' => 'operator6');
@@ -325,7 +313,6 @@ class Operation{
                         $result = json_decode($token,true);
                         $token=$result['token'];
                         //take token
-
                         //send normal payment
                         $url_send_normal_payment = 'https://jr-api-express.herokuapp.com/api/payment';
                         $data_send_normal_payment = array(
@@ -364,18 +351,12 @@ class Operation{
                             //save payment inside bank
                             $query="INSERT INTO `operation` (`id_account`,`title`,`amount`,`type`, `sender_number`,`sender_name`,`sender_address`,`recipent_number`,`recipent_name`,`recipent_address`,`status`,`date`) VALUES ('$SingleVar','payback $recipent_number','$amount','normal Payback','PL98105044751144856531642383','$recipent_name Bank B Payback', '$recipent_address Bank B Payback',  '$sender_number','$sender_name', '$sender_address', 'declined', NOW())";                            $stmt = $this->connection->prepare($query);
                             $stmt->execute();
-
-
                         }
-
-
-
     }
     function getPaymentList(){
         $url = 'https://jr-api-express.herokuapp.com/api/auth/login';
         $url1 = 'https://jr-api-express.herokuapp.com/api/payment/getIncoming/?bankCode=105';
         $data = array('username' => 'b105', 'password' => 'operator6');
-
         $take_token=httpPost($url,$data);
         $result = json_decode($take_token,true);
         $token=$result['token'];

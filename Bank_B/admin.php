@@ -131,7 +131,7 @@ $id_user=$_SESSION['zalogowany'];
                             <td><?php echo $value->telephone; ?></td>
                             <td><?php echo $value->address; ?></td>
                             <td><?php echo $value->username; ?></td>
-                            <td><?php echo $value->password; ?></td>
+                                <td> hidden </td>
                             <td><?php echo $value->type_user; ?></td>
 
                             <?php if($value->type_user=='admin' && $value->id!=$id_user){
@@ -272,7 +272,7 @@ $id_user=$_SESSION['zalogowany'];
                             <td><?php echo $value->recipent_name; ?></td>
                             <td><?php echo $value->recipent_address; ?></td>
                             <td><?php echo $value->title; ?></td>
-                            <?php if(($value->status)=='completed'){
+                            <?php if(($value->status)=='completed' ||($value->status)=='sended'){
                                 ?><td><?php echo "-".$value->amount. " zł"; ?></td><?php
                             }else{
                                 ?><td><?php echo $value->amount." zł"; ?></td><?php
@@ -303,10 +303,14 @@ $id_user=$_SESSION['zalogowany'];
                     $arr = json_decode($json);
                     foreach ($arr->Accounts as $key => $value) {
                         ?>
+                <div class="mb-3 mr-5 ml-5 text-center">
+
                         <form method='get'>
                             <input type="hidden" value="<?php echo $value->id_account; ?>" name="id_account"/>
                             <button class="btn btn-primary" type="submit" name="action" value="do_payment">Do Payment</button>
                         </form>
+
+                </div>
                         <?php
                     }
 
@@ -861,20 +865,27 @@ $id_user=$_SESSION['zalogowany'];
                                     <div class="form-group">
                                         <h4><strong>User: </strong></h4>
                                         <?php
-                                        $json = @file_get_contents("http://localhost/bankB/api/constructor/readuser.php");
+                                        $json = @file_get_contents("http://localhost/bankB/api/constructor/readuser.php?readOne=&id=".$value->id_user."");
 
                                         if($json) {
                                         $arr = json_decode($json);
                                         ?>
-                                        <select id="select_user" name="id_user">
-                                            <?php
-                                            foreach ($arr->Users as $key => $value) {
-                                                ?>
-                                                <option value="<?php echo $value->id ?>"><?php echo"Imię: ".$value->firstname." Nazwisko: ".$value->lastname ?></option>
+                                            <select id="select_user" name="id_user">
                                                 <?php
-                                            }
-                                            ?>
-                                        </select>
+                                                foreach ($arr->Users as $key => $value) {
+                                                    if($setselected==$value->id){
+                                                        ?>
+                                                        <option  value="<?php echo $value->id ?>" selected><?php echo"".$value->firstname." ".$value->lastname." ".$value->pesel ?></option>
+                                                        <?php
+                                                    }else{
+                                                        ?>
+                                                        <option value="<?php echo $value->id ?>"><?php echo"".$value->firstname." ".$value->lastname." ".$value->pesel ?></option>
+                                                        <?php
+                                                    }
+
+                                                }
+                                                ?>
+                                            </select>
                                     </div>
                                     <button type="submit" name="delete" value="delete" class="btn btn-primary">Delete Account</button>
                                 </form>
@@ -897,6 +908,13 @@ $id_user=$_SESSION['zalogowany'];
 
         <?php
         if (isset($_GET['set_table']) && $_GET['set_table'] == 'take') {
+
+            ?>
+        <div class="card mb-3 mr-5 ml-5 text-center">
+        <div class="card-body">
+
+
+            <?php
             //pobranie listy
             $result = getPaymentList();
             //jezeli sa dostepne przelewy to wykonaj
@@ -925,12 +943,12 @@ $id_user=$_SESSION['zalogowany'];
                             "&amount=".$paymentAmount."&type_payment=outside&sender_number=".$senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress.
                             "&recipent_number=".$recipentAccountNumber."&recipent_address=".$recipientName."&recipent_name=".$recipientAddress."&status=".$paymentStatus."&date=NOW()");
                         if($json2){//przypisanie otrzymanie kwoty
-                            echo $recipentAccountNumber." ".$paymentAmount;
+
                             $json4= @file_get_contents("http://localhost/bankB/api/constructor/readaccount.php?setAccountBalancePlus=&account_number=".$recipentAccountNumber."&balance=".$paymentAmount);
                             if($json4){//powiodlo sie
-                                echo "cash to recipient sucesss<br/>";
+                                echo "<h1>Cash from sender from Bank A user: success</h1>";
                             }else{
-                                echo "cash to recipient failed<br/>";
+                                echo "<h1>Cash from sender from Bank A user: failed</h1>";
                             }
 
                         }else{
@@ -941,9 +959,9 @@ $id_user=$_SESSION['zalogowany'];
                             $senderAccountNumber."&sender_name=".$senderName."&sender_address=".$senderAddress."&recipent_number=".$recipentAccountNumber.
                             "&recipent_name=".$recipientName."&recipent_address=".$recipientAddress."&title=".$paymentTitle."&amount=".$paymentAmount);
                         if($json4){
-                            echo "success send Payback";
+                            echo "<h1>Send Payback to sender from bank A user:success</h1>";
                         }else{
-                            echo "failleee payback";
+                            echo "<h1>Send Payback to sender from bank A user:failed</h1>";
                         }
                     }
 
@@ -951,6 +969,14 @@ $id_user=$_SESSION['zalogowany'];
             }else{//nothing
 
             }
+
+            ?>
+        </div>
+        </div>
+
+            <?php
+
+
         }
         ?>
 
@@ -987,7 +1013,6 @@ function getAccountNumber($odzial)
 {
     do{
         $first=$odzial;
-
         for ($i = 1; $i <= 16; $i++) {
             $first = $first . rand(1, 9);
         }
@@ -1027,7 +1052,6 @@ function getAccountNumber($odzial)
 }
 function readAccountNumber($odzial)
 {
-
     $first=$odzial;
     $check="";
     $first1=substr($first,0,2);
@@ -1046,7 +1070,6 @@ function readAccountNumber($odzial)
     $check=$check.$first1." ";
     $first1=substr($first,24,4);
     $check=$check.$first1;
-
     return $check;
 }
 

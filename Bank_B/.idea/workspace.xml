@@ -22,13 +22,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\bankB" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\bankB" />
       <recent name="C:\xampp\htdocs\bankB\interface" />
       <recent name="C:\xampp\htdocs\bankB\sql" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bankB" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -44,7 +44,8 @@
       <workItem from="1612037148686" duration="82820000" />
       <workItem from="1612301662512" duration="152000" />
       <workItem from="1612385962347" duration="3125000" />
-      <workItem from="1612401127043" duration="93234000" />
+      <workItem from="1612401127043" duration="97387000" />
+      <workItem from="1612712066015" duration="5609000" />
     </task>
     <servers />
   </component>
@@ -80,5 +81,16 @@
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="618" y="204" width="672" height="678" key="search.everywhere.popup/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612517696194" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/api/objects/account.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
