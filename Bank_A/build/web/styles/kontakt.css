@@ -1,0 +1,206 @@
+.container {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #858585;
+  margin: 20px;
+}
+
+.contactRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+}
+
+.contactSection {
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contactCard {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-radius: 16px;
+  border: 1px solid #F9F9F9;
+  -webkit-box-shadow: 0px 0px 5px 3px #CED3DC;
+          box-shadow: 0px 0px 5px 3px #CED3DC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #858585;
+}
+
+.contactCard ul {
+  list-style-type: disc;
+}
+
+.contactCard li {
+  margin-left: 20px;
+}
+
+.contactCardLeft {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactMap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  min-height: 180px;
+  overflow: hidden;
+  position: relative;
+  background-image: url(./../../icons/map.png);
+  background-position-x: center;
+  background-position-y: center;
+}
+
+.contactCardRight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactCard a {
+  color: #4E8098;
+}
+
+.contactCard h2 {
+  font-size: 1.6rem;
+  color: #4E8098;
+  margin-bottom: 10px;
+}
+
+.contactSection img {
+  height: 55px;
+}
+
+.contactAction {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(./../../icons/circlegrid_14_3.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  margin: 20px;
+  padding: 15px;
+}
+
+.contactAction button {
+  background-color: #A31621;
+  padding: 10px 20px;
+  border: 0px;
+  color: #FFF;
+  font-size: 1.6em;
+  font-weight: bold;
+  font-family: 'Fira Sans', sans-serif;
+  min-width: 270px;
+}
+
+.contactPAction {
+  margin-top: 10px;
+  color: #4E8098;
+}
+
+.contactFullCard {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+}
+
+@media screen and (max-width: 1260px) {
+  .contactSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactRow, .contactCard {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactAction button {
+    background-color: #A31621;
+    padding: 10px 20px;
+    border: 0px;
+    color: #FFF;
+    font-size: 1.6em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    min-width: 20px;
+  }
+}
+/*# sourceMappingURL=kontakt.css.map */

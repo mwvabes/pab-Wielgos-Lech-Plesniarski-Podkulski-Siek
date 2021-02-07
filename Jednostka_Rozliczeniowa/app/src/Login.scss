@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400;700&display=swap');
+
+$blue: #0a3ec2;
+$purple: #4a0ac2;
+$grey: #3d3d3d;
+
+body {
+  background-color: #FFF;
+  font-family: 'Mukta', sans-serif;
+  color: $grey;
+  font-size: 16px;
+}
+
+.loginWrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.loginLeftWrapper {
+  flex: 2;
+  background: linear-gradient(0deg, $blue, $purple);
+  display: flex;
+}
+
+.loginLeft {
+  flex: 1;
+  color: #FFF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  box-shadow: 3px 0px 6px #868686;
+  background-image: url(./bg_circle.png);
+}
+
+.loginLeftMain {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #5950cf;
+}
+
+.loginLeftEnhance {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 120px;
+  font-weight: lighter;
+}
+
+.loginRight {
+  flex: 5;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 2rem;
+  color: $purple;
+}
+
+
+.inputsBox {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  min-width: 500px;
+}
+
+.inputsBox input {
+  font-size: 1.1rem;
+  font-family: 'Mukta', sans-serif;
+  font-weight: lighter;
+  color: $purple;
+}
+
+.inputsBox button, .inputsBox button:focus {
+  font-size: .9rem;
+  font-weight: lighter;
+  font-family: 'Mukta', sans-serif;
+  padding: 0px 30px;
+  background: linear-gradient(45deg, $blue, $purple);
+}
+
+footer {
+  font-size: .8rem;
+  color: #a5a5a5;
+}

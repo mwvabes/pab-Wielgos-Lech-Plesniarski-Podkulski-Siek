@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3b9eadb8-63f8-4086-b1f2-60553448cd75" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1nIQb56Rw0d81emDVnFl7SJy7CJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Kontrahenci" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bankB" />
+      <recent name="C:\xampp\htdocs\bankB\interface" />
+      <recent name="C:\xampp\htdocs\bankB\sql" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\bankB" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b9eadb8-63f8-4086-b1f2-60553448cd75" name="Default Changelist" comment="" />
+      <created>1611075192669</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611075192669</updated>
+      <workItem from="1611075197155" duration="10691000" />
+      <workItem from="1611439247682" duration="77048000" />
+      <workItem from="1612037148686" duration="82820000" />
+      <workItem from="1612301662512" duration="152000" />
+      <workItem from="1612385962347" duration="3125000" />
+      <workItem from="1612401127043" duration="97387000" />
+      <workItem from="1612712066015" duration="5609000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="350" y="418" key="#SQL_Dialects" timestamp="1611080291042">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="350" y="418" key="#SQL_Dialects/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1611080291042" />
+    <state x="740" y="335" key="FileChooserDialogImpl" timestamp="1612234586810">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="335" key="FileChooserDialogImpl/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612234586810" />
+    <state x="808" y="500" key="NewPhpFileDialog" timestamp="1612489363164">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="808" y="500" key="NewPhpFileDialog/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612489363164" />
+    <state x="-1799" y="100" width="1397" height="994" key="dock-window-1" timestamp="1612495008571">
+      <screen x="-1920" y="126" width="1920" height="1040" />
+    </state>
+    <state x="-1799" y="100" width="1397" height="994" key="dock-window-1/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612495008571" />
+    <state x="256" y="-18" width="1636" height="402" maximized="true" key="dock-window-2" timestamp="1612502570393">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="256" y="-18" width="1636" height="402" maximized="true" key="dock-window-2/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612502570393" />
+    <state x="590" y="280" key="run.anything.popup" timestamp="1612527630552">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="590" y="280" key="run.anything.popup/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612527630552" />
+    <state x="618" y="204" width="672" height="678" key="search.everywhere.popup" timestamp="1612517696194">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="618" y="204" width="672" height="678" key="search.everywhere.popup/-1920.126.1920.1040/0.0.1920.1160@0.0.1920.1160" timestamp="1612517696194" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/api/objects/account.php</url>
+          <line>60</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
