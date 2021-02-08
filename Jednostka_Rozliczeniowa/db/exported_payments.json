@@ -1,0 +1,4429 @@
+[{
+  "_id": {
+    "$oid": "600b59013f16410017f03a0b"
+  },
+  "senderAccountnumber": "PL631020141734643146792041294804",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL851050447563117698783174881785",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem 123",
+  "paymentAmount": 1200,
+  "delegatingSession": "20210123_04",
+  "servingSession": "20210123_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-22T23:00:17.271Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T18:11:21.972Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600c64b05ace0c00176d00ba"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Test poniżej 1000",
+  "paymentAmount": 5,
+  "delegatingSession": "20210123_04",
+  "servingSession": "20210123_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-23T18:02:24.245Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T18:11:21.972Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600c64c35ace0c00176d00bb"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Test powyżej 1000",
+  "paymentAmount": 1005,
+  "delegatingSession": "20210123_04",
+  "servingSession": "20210123_04",
+  "paymentStatus": "declined",
+  "createdAt": {
+    "$date": "2021-01-23T18:02:43.233Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-23T18:09:41.734Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600ea583bb589b0017c356dc"
+  },
+  "senderAccountnumber": "PL87105044754135270066902937",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345",
+  "paymentAmount": 240.59,
+  "delegatingSession": "20210125_02",
+  "servingSession": "20210125_02",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-01-25T11:03:31.391Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T11:58:14.378Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600ea592bb589b0017c356dd"
+  },
+  "senderAccountnumber": "PL87105044754135270066902937",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 123456",
+  "paymentAmount": 2440.63,
+  "delegatingSession": "20210125_02",
+  "servingSession": "20210125_02",
+  "paymentStatus": "declined",
+  "createdAt": {
+    "$date": "2021-01-25T11:03:46.092Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T11:58:21.556Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600ea98914acf500174a6f5c"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 123456",
+  "paymentAmount": 2440.63,
+  "delegatingSession": "20210125_02",
+  "servingSession": "20210125_02",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-01-25T11:20:41.135Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T11:20:41.135Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600ea99314acf500174a6f5d"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210125_02",
+  "servingSession": "20210125_02",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-25T11:20:51.695Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T13:45:00.018Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600f08ba77185a0017765181"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210126_01",
+  "servingSession": "20210126_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-01-25T18:06:50.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T18:06:50.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600f0cc6c8ed310017313904"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL67102029640000000000000016",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210125_04",
+  "servingSession": "20210125_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-25T18:24:06.805Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T18:33:11.452Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600f0cd8c8ed310017313905"
+  },
+  "senderAccountnumber": "PL12102014170000000000000017",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL67102029640000000000000016",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210125_04",
+  "servingSession": "20210125_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-25T18:24:24.389Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T18:33:11.454Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600f0ceec8ed310017313906"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL12102014170000000000000017",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 1240.63,
+  "delegatingSession": "20210125_04",
+  "servingSession": "20210125_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-25T18:24:46.582Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T18:33:11.454Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600f0d01c8ed310017313907"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 1240.63,
+  "delegatingSession": "20210125_04",
+  "servingSession": "20210125_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-25T18:25:05.215Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-25T18:33:11.454Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600ffd9404aa3e00173ff02b"
+  },
+  "senderAccountnumber": "PL84102029640000000000000001",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL35105014164430809416938388",
+  "recipientBankCode": "105",
+  "paymentTitle": "Zwrot nale|no[ci",
+  "paymentAmount": 1240,
+  "delegatingSession": "20210126_03",
+  "servingSession": "20210126_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-26T11:31:32.282Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-26T14:01:05.957Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60101bbd60787c001762cbf3"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 1240.63,
+  "delegatingSession": "20210126_03",
+  "servingSession": "20210126_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-26T13:40:13.442Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-26T14:01:05.957Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60101da760787c001762cbf4"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 1240.63,
+  "delegatingSession": "20210126_03",
+  "servingSession": "20210126_03",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-01-26T13:48:23.580Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-26T14:00:16.714Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60101f6dd5d07a0017bb1d67"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210126_03",
+  "servingSession": "20210126_03",
+  "paymentStatus": "declined",
+  "createdAt": {
+    "$date": "2021-01-26T13:55:57.206Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-26T14:00:18.355Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60102b38af797400173b55e9"
+  },
+  "senderAccountnumber": "PL35105014164430809416938388",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem 12345667",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210126_04",
+  "servingSession": "20210126_04",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-26T14:46:16.841Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-26T14:50:16.075Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6012e6f63dc9fb0017ae6513"
+  },
+  "senderAccountnumber": "PL27105044759393063594017658",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL13102029640000000000000018",
+  "recipientBankCode": "102",
+  "paymentTitle": "Tytuł przykładowy",
+  "paymentAmount": 1500,
+  "delegatingSession": "20210204_02",
+  "servingSession": "20210204_02",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-28T16:31:50.337Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-28T16:31:50.337Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6012e7713dc9fb0017ae6514"
+  },
+  "senderAccountnumber": "PL13102029640000000000000018",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytuł przykładowy",
+  "paymentAmount": 1500,
+  "delegatingSession": "20210129_01",
+  "servingSession": "20210129_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-01-28T16:33:53.821Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-28T16:33:53.821Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601449d87d23e000175f971e"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientBankCode": "105",
+  "paymentTitle": "Przelew",
+  "paymentAmount": 10,
+  "delegatingSession": "20210130_01",
+  "servingSession": "20210130_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-01-29T17:46:00.807Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T17:46:00.807Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60148f38cff22800178c632e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210130_01",
+  "servingSession": "20210130_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-01-29T22:42:00.501Z"
+  },
+  "updatedAt": {
+    "$date": "2021-01-29T22:42:00.501Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601586810102ee001789b19e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 240.63,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:17:05.260Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.051Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158810135d070017e34e48"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:23:44.885Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.052Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158a575ce84a00175412bc"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:33:27.018Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.052Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158bf58e7f88001709c82a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:40:21.058Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158e221a4b46001747b3d6"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:49:38.958Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158e291a4b46001747b3d7"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:49:45.221Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158e2d1a4b46001747b3d8"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:49:49.569Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158f66fa88b60017c19614"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:55:02.108Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158f66fa88b60017c19615"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:55:02.915Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158f67fa88b60017c19616"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:55:03.906Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60158f68fa88b60017c19617"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test auth",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T16:55:04.919Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601593d376979f00179826bc"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:13:55.015Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601593d576979f00179826bd"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:13:57.441Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601593d676979f00179826be"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:13:58.590Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60159d0b4e41e800171232e2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:53:15.788Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60159d204e41e800171232e3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:53:36.636Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60159d224e41e800171232e4"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T17:53:38.095Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60159fdf6f89ab0017d23e25"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210204_03",
+  "servingSession": "20210204_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T18:05:19.184Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015a2fb0b29f80017c1396a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210204_02",
+  "servingSession": "20210204_02",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T18:18:35.952Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015b301cd699b0017fc495d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T19:26:57.759Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015b3e8d0b8cb00174a8c4f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T19:30:48.312Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015ba10129ccf0017ec482f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T19:57:04.873Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015bb84cb57bd0017c55f50"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T20:03:16.622Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015ceb2ccd6be0017b21ef3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T21:25:06.427Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.053Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6015d1fae446400017c58efc"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-30T21:39:06.921Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016926f1b02ff0017d3f035"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T11:20:15.326Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016b660b1efc90017782f3a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T13:53:36.750Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016b8bae113210017afa6cf"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T14:03:38.432Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016bb3f6632a000173a61ec"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T14:14:23.215Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016bbb233af7f00172cfed3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T14:16:18.244Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016bc9d77858300178ff78c"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T14:20:13.259Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016c83333b8350017e1772a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T15:09:39.967Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016ca21a14803001776a503"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T15:17:53.221Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016ca871d8b540017bfee89"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T15:19:35.584Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016cc0f65ed330017c0f05e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T15:26:07.378Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016f045a015300017b45da2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:00:37.255Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016f048a015300017b45da3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:00:40.396Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016f63ebfe41c00177a5b1f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:26:06.774Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016f849bfe41c00177a5b20"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:34:49.736Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016fe0fbee83300175d1c48"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:59:27.380Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016fe2bbee83300175d1c49"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:59:55.555Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016fe2cbee83300175d1c4a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T18:59:56.508Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016fe5cbee83300175d1c4c"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T19:00:44.504Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016fe88bee83300175d1c4d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T19:01:28.631Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016feacbee83300175d1c4e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T19:02:04.436Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6016ffe5bee83300175d1c4f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T19:07:17.872Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60170bf27954c4001706d6cb"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T19:58:42.122Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017106911e70800173b5688"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T20:17:45.587Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.054Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601712468e903900173d26f2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T20:25:42.072Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601714d30e6b9e001764414b"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T20:36:35.265Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601718479cfb1f0017d078f7"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T20:51:19.387Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017199d3b898e0017e5bf47"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T20:57:01.308Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60171a65466a390017642949"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T21:00:21.517Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601724293aade400171f619d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T21:42:01.448Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601724ca5ae3f7001712a3f4"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-01-31T21:44:42.475Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a6e7086c2a0017611e3f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T06:59:51.675Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017a70f086c2a0017611e40"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test 2",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T07:00:31.575Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017aefc086c2a0017611e41"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test 3",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T07:34:20.685Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017b05a086c2a0017611e42"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuBem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T07:40:10.581Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017b139086c2a0017611e43"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuBem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T07:43:53.718Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017b4a9086c2a0017611e44"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuBem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_01",
+  "servingSession": "20210201_01",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-01T07:58:33.263Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:00.056Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d23f664d310017acba74"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuBem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_02",
+  "servingSession": "20210201_02",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-01T10:04:47.452Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:04:47.452Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3aa664d310017acba75"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuBem test 1",
+  "paymentAmount": 20,
+  "delegatingSession": "20210201_02",
+  "servingSession": "20210201_02",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-01T10:10:50.392Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:10:50.392Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d3fb664d310017acba76"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientBankCode": "105",
+  "paymentTitle": "Test",
+  "paymentAmount": 12,
+  "delegatingSession": "20210201_02",
+  "servingSession": "20210201_02",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-01T10:12:11.853Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:12:11.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6017d468664d310017acba77"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientBankCode": "105",
+  "paymentTitle": "Interfejs z tokenem",
+  "paymentAmount": 25,
+  "delegatingSession": "20210201_02",
+  "servingSession": "20210201_02",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-01T10:14:00.068Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:14:00.068Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601939af72a76b001713418e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_03",
+  "servingSession": "20210202_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T11:38:23.222Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T11:38:23.222Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60193a37e4aec00017b16ed2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_03",
+  "servingSession": "20210202_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T11:40:39.421Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T11:40:39.421Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60194257e4aec00017b16ed3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytuł",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T12:15:19.791Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T12:15:19.791Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60194777e4aec00017b16ed4"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderName": "Janusz Siek",
+  "senderAddress": "23ertgh",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientName": "Odbiorca",
+  "recipientAddress": "Adres",
+  "recipientBankCode": "105",
+  "paymentTitle": "TytuB",
+  "paymentAmount": 25,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T12:37:11.606Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T12:37:11.606Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195074dafad600174ed099"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:32.990Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:32.990Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195075dafad600174ed09a"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:33.981Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:33.981Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195077dafad600174ed09b"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:35.130Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:35.130Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6019507bdafad600174ed09c"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:39.112Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:39.112Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6019507bdafad600174ed09d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:39.760Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:39.760Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6019507cdafad600174ed09e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:40.330Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:40.330Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6019507cdafad600174ed09f"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:40.910Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:40.910Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195080dafad600174ed0a0"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:44.356Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:44.356Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195080dafad600174ed0a1"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:44.712Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:44.712Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195081dafad600174ed0a2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:45.084Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:45.084Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195081dafad600174ed0a3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:45.458Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:45.458Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195081dafad600174ed0a4"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:45.986Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:45.986Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195082dafad600174ed0a5"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:46.488Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:46.488Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195083dafad600174ed0a6"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:47.105Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:47.105Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195083dafad600174ed0a7"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:47.458Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:47.458Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60195084dafad600174ed0a8"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-02T13:15:48.070Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:15:48.070Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601951cfdafad600174ed0a9"
+  },
+  "senderAccountnumber": "PL67102029640000000000000016",
+  "senderName": "Janusz Siek",
+  "senderAddress": "23ertgh",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL27105044759393063594017658",
+  "recipientName": "a",
+  "recipientAddress": "Rzesz�w",
+  "recipientBankCode": "105",
+  "paymentTitle": "b",
+  "paymentAmount": 25,
+  "delegatingSession": "20210202_04",
+  "servingSession": "20210202_04",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-02T13:21:19.773Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-02T13:21:19.773Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ad5358bcbc40017c239ac"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210203_03",
+  "servingSession": "20210203_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-03T16:54:13.533Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-03T16:56:51.094Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601b8a460a445b0017025700"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T05:46:46.200Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T05:46:46.200Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601b8a5a0a445b0017025701"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T05:47:06.240Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T05:47:06.240Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601b8a5d0a445b0017025702"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T05:47:09.018Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T05:47:09.018Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbf2cc8027000170f46d2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210204_02",
+  "servingSession": "20210204_02",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-04T09:32:28.404Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:32:28.404Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601bbf62c8027000170f46d3"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210203_03",
+  "servingSession": "20210203_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-04T09:33:22.032Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T09:33:22.032Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c0358259ac6001770198c"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T14:23:20.253Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T14:23:20.253Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c035c259ac6001770198d"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T14:23:24.015Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T14:23:24.015Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c0389259ac6001770198e"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T14:24:09.594Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T14:24:09.594Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c0394259ac6001770198f"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T14:24:20.986Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T14:24:20.986Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c106e11c6b700178ddb59"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:19:10.192Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:19:10.192Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10c711c6b700178ddb5a"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:39.950Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:39.950Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10c911c6b700178ddb5b"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:41.790Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:41.790Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10ca11c6b700178ddb5c"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:42.971Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:42.971Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10cc11c6b700178ddb5d"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:44.066Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:44.066Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10d311c6b700178ddb5e"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:51.995Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:51.995Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10d511c6b700178ddb5f"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:20:53.011Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:20:53.011Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c10f411c6b700178ddb60"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:21:24.820Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:21:24.820Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c111911c6b700178ddb61"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:22:01.081Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:22:01.081Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c112811c6b700178ddb62"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:22:16.191Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:22:16.191Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c11a011c6b700178ddb63"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:24:16.862Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:24:16.862Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c11a311c6b700178ddb64"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:24:19.340Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:24:19.340Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c11fa11c6b700178ddb65"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T15:25:46.897Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T15:25:46.897Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c634e3bac8a0017c7061e"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:12:46.566Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:12:46.566Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c63983bac8a0017c7061f"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:14:00.694Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:14:00.694Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c63db3bac8a0017c70620"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:15:07.304Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:15:07.304Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c63fc3bac8a0017c70621"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:15:40.658Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:15:40.658Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c651e3bac8a0017c70622"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Marcin Wielgos",
+  "recipientAddress": "Majdan",
+  "recipientBankCode": "102",
+  "paymentTitle": "Projekt",
+  "paymentAmount": 1,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:20:30.666Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:20:30.666Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c66023bac8a0017c70623"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Marcin Wielgos",
+  "recipientAddress": "Majdan",
+  "recipientBankCode": "102",
+  "paymentTitle": "Projekt",
+  "paymentAmount": 1,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T21:24:18.130Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T21:24:18.130Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c7302ef4417001716d3a0"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Janusz Siek",
+  "recipientAddress": "Rzeszow 1a",
+  "recipientBankCode": "102",
+  "paymentTitle": "Projekt",
+  "paymentAmount": 1,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T22:19:46.128Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T22:19:46.128Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c7302ef4417001716d3a1"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Janusz Siek",
+  "recipientAddress": "Rzeszow 1a",
+  "recipientBankCode": "102",
+  "paymentTitle": "Projekt",
+  "paymentAmount": 1,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T22:19:46.986Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T22:19:46.986Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c7387ef4417001716d3a2"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Janusz Siek",
+  "recipientAddress": "Rzeszow 1a",
+  "recipientBankCode": "102",
+  "paymentTitle": "Test normal Payment",
+  "paymentAmount": 2.57,
+  "delegatingSession": "20210204_01",
+  "servingSession": "20210204_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-04T22:21:59.519Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-04T22:21:59.519Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601c932a87e56300175efffd"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Nazwa adressata Test",
+  "senderAddress": "Adres adresata test",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa Odbiorcy",
+  "recipientAddress": "Adres Odbiorcy",
+  "recipientBankCode": "102",
+  "paymentTitle": "test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T00:36:58.047Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T00:36:58.047Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ce7aaaf175700175d94c3"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzys Podkul1",
+  "senderAddress": "Skołyszyn 451",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bank B",
+  "recipientAddress": "Rzeszow 1a",
+  "recipientBankCode": "102",
+  "paymentTitle": "To JR",
+  "paymentAmount": 25.25,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T06:37:30.350Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T06:37:30.350Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601cea83af175700175d94c4"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T06:49:39.207Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T06:49:39.207Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601cf9dc0a37470017562d83"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T07:55:08.579Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T07:55:08.579Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601cfa8b0a37470017562d84"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T07:58:03.698Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T07:58:03.698Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d08df885cd60017d88180"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210205_01",
+  "servingSession": "20210205_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T08:59:11.909Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T08:59:11.909Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d6aced9b8d700170fc501"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzysztof Podkulski",
+  "senderAddress": "Skołyszyn 453",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Janusz Siek",
+  "recipientAddress": "Majdan",
+  "recipientBankCode": "102",
+  "paymentTitle": "test payment",
+  "paymentAmount": 1,
+  "delegatingSession": "20210205_01",
+  "servingSession": "20210205_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T15:57:02.613Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T15:57:02.613Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9947b8db110017d0375c"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzysztof Podkulski",
+  "senderAddress": "Skołyszyn 453",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Marcin Wielgos",
+  "recipientAddress": "Pusta Wola",
+  "recipientBankCode": "102",
+  "paymentTitle": "Marcin test",
+  "paymentAmount": 200,
+  "delegatingSession": "20210205_01",
+  "servingSession": "20210205_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T19:15:19.790Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:15:19.790Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9a88b8db110017d0375d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Nazwa odbiorcy",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Tytułem test bez zamknięcia",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-05T19:20:40.682Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:20:40.682Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9a9cb8db110017d0375e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzyś",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-05T19:21:00.983Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:21:00.983Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9afdb8db110017d0375f"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210205_01",
+  "servingSession": "20210205_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-05T19:22:37.817Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:22:37.817Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9afeb8db110017d03760"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "normal",
+  "recipientAddress": "normal",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL34102014173109908720474799",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210205_01",
+  "servingSession": "20210205_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T19:22:38.563Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:22:38.563Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9c53dee0840017210d6b"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzyś",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_01",
+  "servingSession": "20210206_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T19:28:19.361Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:28:19.361Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601d9eeaf7323c001778d7f2"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzyś",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T19:39:22.422Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T19:39:22.422Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601dab99f7323c001778d7f3"
+  },
+  "senderAccountnumber": "PL13102029640000000000000018",
+  "senderName": "Test3 Test3",
+  "senderAddress": "Rzesz�w 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "asdf",
+  "recipientAddress": "asdfb",
+  "recipientBankCode": "105",
+  "paymentTitle": "asdf",
+  "paymentAmount": 25,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-05T20:33:29.774Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-05T20:33:29.774Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e87886cd1b000171c58b9"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T12:11:52.748Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:11:52.748Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e87896cd1b000171c58ba"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T12:11:53.519Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:11:53.519Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e87c66cd1b000171c58bb"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T12:12:54.460Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:12:54.460Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e87c76cd1b000171c58bc"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T12:12:55.171Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:12:55.171Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e880d6cd1b000171c58bd"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T12:14:05.961Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:14:05.961Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e880e6cd1b000171c58be"
+  },
+  "senderAccountnumber": "PL98105044758332285663955814",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Adres nadawcy 1",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T12:14:06.689Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:14:06.689Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e90976cd1b000171c58bf"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T12:50:31.116Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:50:31.116Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e90976cd1b000171c58c0"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T12:50:31.938Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T12:50:31.938Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e937f6cd1b000171c58c1"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzysztof Podkulski",
+  "senderAddress": "Skołyszyn 453",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Janusz Siek",
+  "recipientAddress": "Rzeszow 1a",
+  "recipientBankCode": "102",
+  "paymentTitle": "test payment",
+  "paymentAmount": 28.23,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T13:02:55.558Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T13:02:55.558Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e93e76cd1b000171c58c2"
+  },
+  "senderAccountnumber": "PL98105044757447294937977519",
+  "senderName": "Krzysztof Podkulski",
+  "senderAddress": "Skołyszyn 453",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Marcin Wielgos",
+  "recipientAddress": "Skolyszyn",
+  "recipientBankCode": "102",
+  "paymentTitle": "Projekt",
+  "paymentAmount": 1,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T13:04:39.639Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T13:04:39.639Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e94546cd1b000171c58c3"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T13:06:28.770Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T13:06:28.770Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601e94556cd1b000171c58c4"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T13:06:29.522Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T13:06:29.522Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ea75570d4800017c0996d"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Nazwa nadawcy",
+  "senderAddress": "Adres nadawcy 1",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzyś",
+  "recipientAddress": "Adres odbiorcy",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_03",
+  "servingSession": "20210206_03",
+  "paymentStatus": "declined",
+  "createdAt": {
+    "$date": "2021-02-06T14:27:33.506Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T21:25:06.489Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601ea7dd70d4800017c0996e"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Adam Nowak",
+  "senderAddress": "ul. Wąska 1/3 00-300 Poznań",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzysztof Kowalski",
+  "recipientAddress": "ul. Warszawska 10, 38-400 Rzeszów",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210206_03",
+  "servingSession": "20210206_03",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T14:29:49.782Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T14:29:49.782Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601eadca70d4800017c09970"
+  },
+  "senderAccountnumber": "PL34102014173109908720474799",
+  "senderName": "Adam Nowak",
+  "senderAddress": "ul. Wąska 1/3 00-300 Poznań",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL87105044754135270066902937",
+  "recipientName": "Krzysztof Kowalski",
+  "recipientAddress": "ul. Warszawska 10, 38-400 Rzeszów",
+  "recipientBankCode": "105",
+  "paymentTitle": "Testowy",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T14:55:06.142Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T14:55:06.142Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601eaf6670d4800017c09971"
+  },
+  "senderAccountnumber": "PL12102014170000000000000017",
+  "senderName": "Jan Siek",
+  "senderAddress": "dasad",
+  "senderBankCode": "102",
+  "recipientAccountnumber": "PL98105044757447294937977519",
+  "recipientName": "Odbiorca",
+  "recipientAddress": "adres",
+  "recipientBankCode": "105",
+  "paymentTitle": "Standardowy",
+  "paymentAmount": 25,
+  "delegatingSession": "20210205_03",
+  "servingSession": "20210205_03",
+  "paymentStatus": "settled",
+  "createdAt": {
+    "$date": "2021-02-06T15:01:58.669Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T15:01:58.669Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601eb0be70d4800017c09972"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-06T15:07:42.572Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T15:07:42.572Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "601eb0bf70d4800017c09973"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-06T15:07:43.792Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-06T15:07:43.792Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200b679b51b70017ae176e"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-07T15:46:47.742Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:46:47.742Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200b689b51b70017ae176f"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:46:48.592Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:46:48.592Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200d849b51b70017ae1770"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 1,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:55:48.552Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:55:48.552Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e339b51b70017ae1771"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:58:43.366Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:58:43.366Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e369b51b70017ae1772"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:58:46.966Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:58:46.966Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e3a9b51b70017ae1773"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:58:50.486Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:58:50.486Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e3e9b51b70017ae1774"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:58:54.031Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:58:54.031Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e419b51b70017ae1775"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:58:57.550Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:58:57.550Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e459b51b70017ae1776"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:01.018Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:01.018Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e489b51b70017ae1777"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:04.656Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:04.656Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e4c9b51b70017ae1778"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:08.319Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:08.319Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e4f9b51b70017ae1779"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:11.810Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:11.810Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e539b51b70017ae177a"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:15.314Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:15.314Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e569b51b70017ae177b"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:18.853Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:18.853Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e579b51b70017ae177c"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:19.603Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:19.603Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e589b51b70017ae177d"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:20.311Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:20.311Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200e599b51b70017ae177e"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T15:59:21.294Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T15:59:21.294Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60200f2d9b51b70017ae177f"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 1,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T16:02:53.589Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:02:53.589Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6020103e9b51b70017ae1780"
+  },
+  "senderAccountnumber": "PL98105044753937718466244661",
+  "senderName": "Jan Kowalski",
+  "senderAddress": "Warszawa 20a/35 45-342",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL52102029640589242593459630",
+  "recipientName": "Bożena Kowalska",
+  "recipientAddress": "Warszawa 20a/35 45-342",
+  "recipientBankCode": "102",
+  "paymentTitle": "Żona i waciki ",
+  "paymentAmount": 255,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T16:07:26.299Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:07:26.299Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602011dd9b51b70017ae1781"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-07T16:14:21.907Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:14:21.907Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602011de9b51b70017ae1782"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T16:14:22.723Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:14:22.723Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602013219b51b70017ae1783"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-07T16:19:45.990Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:19:45.990Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602013229b51b70017ae1784"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T16:19:46.810Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:19:46.810Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602014179b51b70017ae1785"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-07T16:23:51.684Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:23:51.684Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "602014189b51b70017ae1786"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T16:23:52.674Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T16:23:52.674Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60204253a2ec530017560bfa"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 12230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "revision",
+  "createdAt": {
+    "$date": "2021-02-07T19:41:07.011Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T19:41:07.011Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60204254a2ec530017560bfb"
+  },
+  "senderAccountnumber": "PL98105044751144856531642383",
+  "senderName": "Bank_B_Payback",
+  "senderAddress": "Bank_B_address",
+  "senderBankCode": "105",
+  "recipientAccountnumber": "PL34102014173109908720474799",
+  "recipientName": "Nazwa nadawcy",
+  "recipientAddress": "Adres nadawcy 1",
+  "recipientBankCode": "102",
+  "paymentTitle": "Payback_for_no_account_number_PL87105044754135270066902937",
+  "paymentAmount": 230.93,
+  "delegatingSession": "20210208_01",
+  "servingSession": "20210208_01",
+  "paymentStatus": "accepted",
+  "createdAt": {
+    "$date": "2021-02-07T19:41:08.020Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-07T19:41:08.020Z"
+  },
+  "__v": 0
+}]
