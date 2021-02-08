@@ -1,0 +1,53 @@
+[{
+  "_id": {
+    "$oid": "600b59a54c1f3a00172f16e0"
+  },
+  "bankBalance": {
+    "$numberDecimal": "988000001220.63"
+  },
+  "bankUnits": [
+    {
+      "unitID": "02964",
+      "unitAddress": "Grunwaldzka 1, 21-035 Rzeszów"
+    },
+    {
+      "unitID": "01417",
+      "unitAddress": "Al. Jerozolimskie 99, 00-012 Warszawa"
+    }
+  ],
+  "bankID": "102",
+  "bankName": "PKO BP",
+  "createdAt": {
+    "$date": "2021-01-22T23:03:01.131Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:01.267Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "600b59a54c1f3a00172f16e1"
+  },
+  "bankBalance": {
+    "$numberDecimal": "997042.4820"
+  },
+  "bankUnits": [
+    {
+      "unitID": "04475",
+      "unitAddress": "Jana Pawła II 5/8, 21-035 Rzeszów"
+    },
+    {
+      "unitID": "02963",
+      "unitAddress": "Rokitnicka 20, 02-131 Warszawa"
+    }
+  ],
+  "bankID": "105",
+  "bankName": "ING Bank Śląski",
+  "createdAt": {
+    "$date": "2021-01-22T23:03:01.131Z"
+  },
+  "updatedAt": {
+    "$date": "2021-02-01T10:45:02.016Z"
+  },
+  "__v": 0
+}]
